@@ -1,0 +1,7 @@
+{
+  "name": "talks",
+  "version": "0.0.0",
+  "dependencies": {
+    "reveal.js": "latest"
+  }
+}
