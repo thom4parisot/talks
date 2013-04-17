@@ -1,0 +1,29 @@
+{
+  "name": "talks",
+  "version": "0.1.0",
+  "description": "Public talks provided either in English or French, about JavaScript or human-centric topics.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/oncletom/talks.git"
+  },
+  "keywords": [
+    "talks",
+    "javascript",
+    "french",
+    "english",
+    "conference",
+    "sharing",
+    "knowledge"
+  ],
+  "author": "Oncle Tom <thomas@oncle-tom.net>",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "grunt": "~0.4.1"
+  }
+}
