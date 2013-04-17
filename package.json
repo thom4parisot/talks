@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "serve -p 4000 &2>1 && open http://localhost:4000",
+    "start": "open http://localhost:4000 && serve -p 4000",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "bower install"
   },
