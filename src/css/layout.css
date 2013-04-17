@@ -1,0 +1,57 @@
+body {
+  background: #151515;
+}
+
+.reveal{
+  font-family: Optima, "Helvetica Nueue", sans-serif;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6{
+  font-family: Optima, "Helvetica Nueue", sans-serif;
+  text-transform: none;
+}
+
+.reveal pre, .reveal code{
+  font-family: "Droid Sans Mono", "Andale Mono", "Courrier New", monospace;
+}
+.reveal pre code{
+  max-height: 800px;
+}
+
+.reveal table{
+  margin: 1em 0;
+  width: 100%;
+}
+
+.reveal em,
+.reveal i{
+  color: #aaa;
+}
+
+.reveal strong,
+.reveal b{
+  color: darkorange;
+}
+
+.reveal a:not(.image){
+  color: rgba(255, 140, 0, .7);
+  text-decoration: none;
+}
+.reveal a:not(.image):hover,
+.reveal a:not(.image):focus{
+  color: rgba(255, 140, 0, 1);
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgba(255, 140, 0, .7);
+  -moz-text-decoration-color: rgba(255, 140, 0, .7);
+  text-decoration-color: rgba(255, 140, 0, .7);
+}
+
+.reveal pre{
+  font-size: 0.9em;
+  width: 100%;
+}
+
+
+.reveal .progress span{
+  background: darkorange;
+}
