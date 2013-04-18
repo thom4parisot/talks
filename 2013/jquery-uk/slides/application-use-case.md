@@ -17,7 +17,7 @@ Then, **accept the contract and relocate** or …
 
 @@@
 
-```javascript
+```
 (function jobApplication(){
   (function shortlist(data){
     (function phoneInterview(){
@@ -50,7 +50,7 @@ Then, **accept the contract and relocate** or …
 
 @@@
 
-```javascript
+```
 var $job = $.Deferred();
 
 $jobApplication
@@ -70,3 +70,5 @@ $jobApplication.resolve({
   job: "Software Engineer"
 });
 ```
+
+<small>[See on JSBin](http://jsbin.com/episez/6/edit).</small>
