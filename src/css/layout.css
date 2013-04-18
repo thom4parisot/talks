@@ -12,6 +12,10 @@ body {
   text-transform: none;
 }
 
+.reveal ol, .reveal ul{
+  margin: .5em 0;
+}
+
 .reveal pre, .reveal code{
   font-family: "Droid Sans Mono", "Andale Mono", "Courrier New", monospace;
 }
@@ -32,6 +36,8 @@ body {
 .reveal strong,
 .reveal b{
   color: darkorange;
+  font-weight: normal;
+  text-shadow: none;
 }
 
 .reveal a:not(.image){
