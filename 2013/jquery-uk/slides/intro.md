@@ -1,6 +1,6 @@
 
 # The Promise of jQuery Deferred
 
-Async workflows for maintainability sake.
+<br>
 
-<small>[jQuery UK 2013](http://events.jquery.org/2013/uk/)</small>
+<small>19th April 2013 — [jQuery UK](http://events.jquery.org/2013/uk/)</small>
