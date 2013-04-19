@@ -28,6 +28,21 @@ MyModule.prototype.init = function init(view){
 
 @@@
 
+## When to use them?
+
+Some considerations to think about to know when to use Promises.
+
+* simplifying a *workflow contract*
+* *flattening* code nesting
+* undeterminate duration *async task*
+* *coordinating* multiple async tasks
+
+<br>
+
+### *tl;dr*: modularize chained tasks.
+
+@@@
+
 ## jQuery Deferred is not Promise/A+ compliant
 
 Who cares? As long as it helps you to:
