@@ -49,6 +49,9 @@ $('input').on('click', function(e){
 
 ## Deal with race condition workflows
 
+* `then()` enables data filtering.
+* `when()` is a `done()` for multiple promises.
+
 ```
 $.when( $.getJSON('/page/1'), $.getJSON('/page/2') )
   .then(function(page1_data, page2_data){
