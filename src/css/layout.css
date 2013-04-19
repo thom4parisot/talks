@@ -28,6 +28,10 @@ body {
   max-height: 800px;
 }
 
+.reveal section p small{
+  vertical-align: middle;
+}
+
 .reveal table{
   margin: 1em 0;
   width: 100%;
