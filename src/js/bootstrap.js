@@ -19,3 +19,13 @@ Reveal.initialize({
     { src: '../../components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
   ]
 });
+
+(function(document){
+  var tag = document.createElement('link');
+  tag.rel = 'stylesheet';
+  tag.media = 'print';
+  tag.type = 'text/css';
+  tag.href = '../../components/reveal.js/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css';
+
+  document.head.appendChild(tag);
+})(document);
