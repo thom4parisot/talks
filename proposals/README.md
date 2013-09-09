@@ -8,11 +8,12 @@ They can be performed both in **English** and in **French**.
 
 ## Biography
 
-**Thomas Parisot is a Web Engineer at BBC R&D** in London, United Kingdom. He enjoys using JavaScript to craft joyful libraries and APIs, for the frontend and the backend, developing  and sharing them in the open.
+**Thomas Parisot is a Web Engineer at BBC R&D** in London, United Kingdom. He enjoys using JavaScript to craft joyful libraries and APIs, for the frontend and the backend, developing  and sharing them in the open.  
+In the past, he worked as a freelancer, in an IT department, in a nation-wide Web agency and cofounded an online intelligence startup.
 
 He is a believer of cross-disciplines learning, simple things and chance. Of course he likes cheese. Of course he likes wine. And [words](https://oncletom.io). And [making pictures](https://oncletom.io/photos/).
 
-Aside that, he co-funded the [Sud Web conference](http://sudweb.fr) in France, published a book on digital communication using blogs and enjoys night courses at the [University of the Arts London](http://www.arts.ac.uk/).
+Aside that, he co-created the [Sud Web conference](http://sudweb.fr) in France, published a book on digital communication using blogs and enjoys night courses at the [University of the Arts London](http://www.arts.ac.uk/).
 
 ![](thomas-parisot.jpg)  
 *Photo Credit*: [Mathieu Drouet / Take a Sip](http://www.takeasip.net/) (he can do cool stuff for you)
