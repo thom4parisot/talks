@@ -9,4 +9,9 @@ This is a tale about this personal failure, how to avoid it and how it nonethele
 
 ## Targeted Audience
 
+- Developer
+- Project Manager
+
 ## Twitter Story
+
+> 55 commits in a Pull Request which get rejecteed? You might want to avoid that. w/ @oncletom
