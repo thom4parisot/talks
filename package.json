@@ -5,9 +5,9 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "open http://localhost:4000 && serve -p 4000",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "bower install"
+    "start": "grunt",
+    "deploy": "grunt deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
