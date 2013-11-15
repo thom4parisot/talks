@@ -8,7 +8,9 @@ module.exports = function(grunt){
       core: {
         src: [
           '{2010..<%= now %>}/**/*',
+          '!{2010..<%= now %>}/*/*.{md,json}',
           'src/**/*',
+          '!src/layouts',
           'bower_components/reveal.js/{css,js,lib}/**/*.{css,js}',
           'bower_components/reveal.js/plugin/{markdown,highlight}/**/*.{css,js}'
         ],
@@ -21,6 +23,19 @@ module.exports = function(grunt){
         dest: 'dist/'
       }
     },
+
+   assemble: {
+     options: {
+       assets: 'dist',
+       layoutdir: 'src/layouts',
+       layout: 'presentation.hbs'
+     },
+
+     presentations: {
+       src: '{2010..<%= now %>}/*/*.md',
+       dest: 'dist/'
+     }
+   },
 
    'gh-pages': {
       gh: {
@@ -49,7 +64,8 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-gh-pages');
+  grunt.loadNpmTasks('assemble');
 
-  grunt.registerTask('default', ['copy', 'connect:dev:keepalive']);
-  grunt.registerTask('deploy', ['copy', 'gh-pages']);
+  grunt.registerTask('default', ['copy', 'assemble', 'connect:dev:keepalive']);
+  grunt.registerTask('deploy', ['copy', 'assemble', 'gh-pages']);
 };
