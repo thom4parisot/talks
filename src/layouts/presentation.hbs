@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{default page.language 'en-GB'}}">
+<head>
+  <meta charset="utf-8">
+  <title>{{page.title}}</title>
+  <meta name="description" content="{{body}}">
+  <meta name="author" content="Thomas Parisot">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="{{assets}}/bower_components/reveal.js/css/reveal.min.css">
+  <link rel="stylesheet" href="{{assets}}/src/css/reveal.css" id="theme">
+  <link rel="stylesheet" href="{{assets}}/src/css/layout.css">
+
+  <link rel="stylesheet" href="{{assets}}/bower_components/reveal.js/lib/css/zenburn.css">
+</head>
+
+<body>
+
+<div class="reveal">
+
+  <div class="slides">
+    {{#slides}}
+      <section data-markdown="slides/{{this.file}}" {{#if this.vertical}} data-vertical="\n@@@\n"{{/if}}></section>
+    {{/slides}}
+  </div>
+
+</div>
+
+<script src="{{assets}}/bower_components/reveal.js/lib/js/head.min.js"></script>
+<script src="{{assets}}/bower_components/reveal.js/js/reveal.min.js"></script>
+
+<script src="{{assets}}/src/js/bootstrap.js"></script>
+</body>
+</html>
