@@ -14,9 +14,9 @@ Reveal.initialize({
 
   // Optional libraries used to extend on reveal.js
   dependencies: [
-    { src: '../../components/reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-    { src: '../../components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-    { src: '../../components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+    { src: '/bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: '/bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: '/bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
   ]
 });
 
@@ -25,7 +25,7 @@ Reveal.initialize({
   tag.rel = 'stylesheet';
   tag.media = 'print';
   tag.type = 'text/css';
-  tag.href = '../../components/reveal.js/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css';
+  tag.href = '/bower_components/reveal.js/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css';
 
   document.head.appendChild(tag);
 })(document);
