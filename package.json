@@ -26,10 +26,12 @@
   "license": "BSD",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "punch": "~0.5.23"
+    "open": "0.0.4",
+    "serve": "~1.3.0"
   },
   "dependencies": {
-    "serve": "~1.2.0"
+    "serve": "~1.3.0",
+    "grunt": "~0.4.1",
+    "grunt-gh-pages": "~0.8.1"
   }
 }
