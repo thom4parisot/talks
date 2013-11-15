@@ -34,6 +34,14 @@ module.exports = function(grunt){
      presentations: {
        src: '{2010..<%= now %>}/*/*.md',
        dest: 'dist/'
+     },
+     indexes: {
+       src: '{2010..<%= now %>}/*/index.json',
+       dest: 'dist/',
+       options: {
+         layout: 'indexes.hbs',
+         helpers: ['./lib/hbs/index.js']
+       }
      }
    },
 

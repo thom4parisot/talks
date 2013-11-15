@@ -71,3 +71,15 @@ body {
 .reveal .progress span{
   background: darkorange;
 }
+
+.presentations-index {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+.presentations-index h2 {
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: center;
+}
