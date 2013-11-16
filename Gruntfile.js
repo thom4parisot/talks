@@ -28,12 +28,15 @@ module.exports = function(grunt){
      options: {
        assets: 'dist',
        layoutdir: 'src/layouts',
-       layout: 'presentation.hbs'
+       helpers: ['./lib/hbs/index.js']
      },
 
      presentations: {
        src: '{2010..<%= now %>}/*/*.md',
-       dest: 'dist/'
+       dest: 'dist/',
+       options: {
+         layout: 'presentation.hbs'
+       }
      },
      indexes: {
        src: '{2010..<%= now %>}/*/index.json',
@@ -41,6 +44,13 @@ module.exports = function(grunt){
        options: {
          layout: 'indexes.hbs',
          helpers: ['./lib/hbs/index.js']
+       }
+     },
+     home: {
+       src: 'index.md',
+       dest: 'dist/',
+       options: {
+         layout: 'home.hbs'
        }
      }
    },
