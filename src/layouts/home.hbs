@@ -36,7 +36,7 @@
         {{#each this.presentations}}
         <div class="col-md-4">
           <article>
-            <h2><a href="{{this.filename}}">{{this.title}}</a></h2>
+            <h2><a href="{{permalink this}}">{{this.title}}</a></h2>
 
             <div class="content">{{#markdown}} {{this.content}} {{/markdown}}</div>
 

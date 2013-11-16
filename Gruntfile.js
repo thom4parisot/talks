@@ -3,12 +3,13 @@
 module.exports = function(grunt){
   grunt.initConfig({
    'now': (new Date).getFullYear(),
+   'src': '{2009..<%= now %>}',
 
     copy: {
       core: {
         src: [
-          '{2010..<%= now %>}/**/*',
-          '!{2010..<%= now %>}/*/*.{md,json}',
+          '<%= src %>/**/*',
+          '!<%= src %>/*/*.{md,json}',
           'src/**/*',
           '!src/layouts',
           'bower_components/css.oncletom.io/dist/*.{css,js}',
@@ -33,14 +34,14 @@ module.exports = function(grunt){
      },
 
      presentations: {
-       src: '{2010..<%= now %>}/*/*.md',
+       src: '<%= src %>/*/*.md',
        dest: 'dist/',
        options: {
          layout: 'presentation.hbs'
        }
      },
      indexes: {
-       src: '{2010..<%= now %>}/*/index.json',
+       src: '<%= src %>/*/index.json',
        dest: 'dist/',
        options: {
          layout: 'indexes.hbs',
