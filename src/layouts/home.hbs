@@ -9,25 +9,47 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <link rel="stylesheet" href="{{assets}}/bower_components/reveal.js/css/reveal.min.css">
-  <link rel="stylesheet" href="{{assets}}/src/css/reveal.css" id="theme">
+  <link rel="stylesheet" href="{{assets}}/bower_components/css.oncletom.io/dist/fonts.min.css">
+  <link rel="stylesheet" href="{{assets}}/bower_components/css.oncletom.io/dist/core.min.css">
   <link rel="stylesheet" href="{{assets}}/src/css/layout.css">
-
-  <link rel="stylesheet" href="{{assets}}/bower_components/reveal.js/lib/css/zenburn.css">
 </head>
 
-<body>
+<body class="home talks">
 
-<div class="reveal">
-  {{#aggregate_by_year}}
-    <h2>{{this.year}}</h2>
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <h1 class="col-md-12"><a href="/" rel="home">oncletom.<span>io</span></a></h1>
+    </div>
+  </div>
+</header>
 
-    <ul>
-    {{#each this.presentations}}
-      <li><a href="{{this.filename}}">{{this.title}}</a></li>
-    {{/each}}
-    </ul>
-  {{/aggregate_by_year}}
+<div class="container">
+  <main role="main">
+    {{#aggregate_by_year}}
+    <section class="row">
+      <header>
+        <h1>{{this.year}}</h1>
+      </header>
+
+      <div class="content row">
+        {{#each this.presentations}}
+        <div class="col-md-4">
+          <article>
+            <h2><a href="{{this.filename}}">{{this.title}}</a></h2>
+
+            <div class="content">{{#markdown}} {{this.content}} {{/markdown}}</div>
+
+            <ul class="metadata stacked stacked-horizontal">
+              <li class="event-name"><a href="{{this.event.url}}">{{this.event.name}}</a></li>
+            </ul>
+          </article>
+        </div>
+        {{/each}}
+      </div>
+    </section>
+    {{/aggregate_by_year}}
+  </main>
 </div>
 </body>
 </html>

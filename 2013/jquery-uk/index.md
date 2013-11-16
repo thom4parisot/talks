@@ -1,6 +1,10 @@
 ---
 title: The Promise of jQuery Deferred
 language: en-GB
+event:
+  name: jQuery UK 2013
+  date: 2013-04-19
+  url: http://events.jquery.org/2013/uk/
 slides:
   -
     file: intro.md

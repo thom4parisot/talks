@@ -11,6 +11,7 @@ module.exports = function(grunt){
           '!{2010..<%= now %>}/*/*.{md,json}',
           'src/**/*',
           '!src/layouts',
+          'bower_components/css.oncletom.io/dist/*.{css,js}',
           'bower_components/reveal.js/{css,js,lib}/**/*.{css,js}',
           'bower_components/reveal.js/plugin/{markdown,highlight}/**/*.{css,js}'
         ],
@@ -84,6 +85,7 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('assemble');
 
-  grunt.registerTask('default', ['copy', 'assemble', 'connect:dev:keepalive']);
-  grunt.registerTask('deploy', ['copy', 'assemble', 'gh-pages']);
+  grunt.registerTask('default', ['build', 'connect:dev:keepalive']);
+  grunt.registerTask('build', ['copy', 'assemble']);
+  grunt.registerTask('deploy', ['build', 'gh-pages']);
 };
