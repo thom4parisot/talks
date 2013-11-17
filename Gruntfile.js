@@ -3,15 +3,25 @@
 module.exports = function(grunt){
   grunt.initConfig({
    'now': (new Date).getFullYear(),
-   'src': '{2009..<%= now %>}',
+   'src': '{2008..<%= now %>}',
 
     copy: {
       core: {
         src: [
           '<%= src %>/**/*',
-          '!<%= src %>/*/*.{md,json}',
+          '!<%= src %>/*/*.{md,json}'
+        ],
+        dest: 'dist/'
+      },
+      ui: {
+        src: [
           'src/**/*',
-          '!src/layouts',
+          '!src/layouts'
+        ],
+        dest: 'dist/'
+      },
+      dependencies: {
+        src: [
           'bower_components/css.oncletom.io/dist/*.{css,js}',
           'bower_components/reveal.js/{css,js,lib}/**/*.{css,js}',
           'bower_components/reveal.js/plugin/{markdown,highlight}/**/*.{css,js}'
@@ -78,11 +88,22 @@ module.exports = function(grunt){
           base: 'dist/'
         }
       }
+    },
+
+    watch: {
+      core: { files: '<%= copy.core.src %>', tasks: ['copy:core'] },
+      ui: { files: '<%= copy.ui.src %>', tasks: ['copy:ui'] },
+      dependencies: { files: '<%= copy.dependencies.src %>', tasks: ['copy:dependencies'] },
+      hbs: {
+        files: 'src/layouts/**/*.hbs',
+        tasks: ['assemble']
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('assemble');
 

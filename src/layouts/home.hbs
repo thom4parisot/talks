@@ -33,19 +33,21 @@
       </header>
 
       <div class="content row">
-        {{#each this.presentations}}
-        <div class="col-md-4">
+        {{#eachIndex this.presentations}}
+        <div class="col-md-{{cols ../presentations.length index}}">
           <article>
-            <h2><a href="{{permalink this}}">{{this.title}}</a></h2>
+            <h2><a href="{{permalink this.item}}">{{this.item.title}}</a></h2>
 
-            <div class="content">{{#markdown}} {{this.content}} {{/markdown}}</div>
+            <div class="content">{{#markdown}} {{this.item.content}} {{/markdown}}</div>
 
             <ul class="metadata stacked stacked-horizontal">
-              <li class="event-name"><a href="{{this.event.url}}">{{this.event.name}}</a></li>
+              <li class="event-name"><a href="{{this.item.event.url}}">{{this.item.event.name}}</a></li>
             </ul>
           </article>
         </div>
-        {{/each}}
+
+        {{#clearfix index 3}} <div class="clearfix visible-md visible-lg"></div> {{/clearfix}}
+        {{/eachIndex}}
       </div>
     </section>
     {{/aggregate_by_year}}
