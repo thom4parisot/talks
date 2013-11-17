@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Presentation Index</title>
+  <meta name="author" content="Thomas Parisot">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="{{assets}}/bower_components/css.oncletom.io/dist/fonts.min.css">
+  <link rel="stylesheet" href="{{assets}}/bower_components/css.oncletom.io/dist/core.min.css">
+  <link rel="stylesheet" href="{{assets}}/src/css/layout.css">
+</head>
+
+<body class="home talks">
+
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <h1 class="col-md-12"><a href="/" rel="home">oncletom.<span>io</span></a></h1>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <main role="main">
+    {{#aggregate_by_year}}
+    <section class="row">
+      <header>
+        <h1>{{this.year}}</h1>
+      </header>
+
+      <div class="content row">
+        {{#eachIndex this.presentations}}
+        <div class="col-md-{{cols ../presentations.length index}}">
+          <article>
+            <h2><a href="{{permalink this.item}}">{{this.item.title}}</a></h2>
+
+            <div class="content">{{#markdown}} {{this.item.content}} {{/markdown}}</div>
+
+            <ul class="metadata stacked stacked-horizontal">
+              <li class="event-name"><a href="{{this.item.event.url}}">{{this.item.event.name}}</a></li>
+            </ul>
+          </article>
+        </div>
+
+        {{#clearfix index 3}} <div class="clearfix visible-md visible-lg"></div> {{/clearfix}}
+        {{/eachIndex}}
+      </div>
+    </section>
+    {{/aggregate_by_year}}
+  </main>
+</div>
+</body>
+</html>

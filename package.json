@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "grunt",
+    "start": "grunt default",
     "deploy": "grunt deploy",
     "init": "bower install && bower update",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,7 +30,8 @@
     "grunt-contrib-connect": "~0.5.0",
     "copy": "0.0.1",
     "grunt-contrib-copy": "~0.4.1",
-    "assemble": "~0.4.27"
+    "assemble": "~0.4.27",
+    "grunt-contrib-watch": "~0.5.3"
   },
   "dependencies": {
     "grunt": "~0.4.1",

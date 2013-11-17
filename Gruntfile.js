@@ -3,14 +3,26 @@
 module.exports = function(grunt){
   grunt.initConfig({
    'now': (new Date).getFullYear(),
+   'src': '{2008..<%= now %>}',
 
     copy: {
       core: {
         src: [
-          '{2010..<%= now %>}/**/*',
-          '!{2010..<%= now %>}/*/*.{md,json}',
+          '<%= src %>/**/*',
+          '!<%= src %>/*/*.{md,json}'
+        ],
+        dest: 'dist/'
+      },
+      ui: {
+        src: [
           'src/**/*',
-          '!src/layouts',
+          '!src/layouts'
+        ],
+        dest: 'dist/'
+      },
+      dependencies: {
+        src: [
+          'bower_components/css.oncletom.io/dist/*.{css,js}',
           'bower_components/reveal.js/{css,js,lib}/**/*.{css,js}',
           'bower_components/reveal.js/plugin/{markdown,highlight}/**/*.{css,js}'
         ],
@@ -28,19 +40,29 @@ module.exports = function(grunt){
      options: {
        assets: 'dist',
        layoutdir: 'src/layouts',
-       layout: 'presentation.hbs'
+       helpers: ['./lib/hbs/index.js']
      },
 
      presentations: {
-       src: '{2010..<%= now %>}/*/*.md',
-       dest: 'dist/'
+       src: '<%= src %>/*/*.md',
+       dest: 'dist/',
+       options: {
+         layout: 'presentation.hbs'
+       }
      },
      indexes: {
-       src: '{2010..<%= now %>}/*/index.json',
+       src: '<%= src %>/*/index.json',
        dest: 'dist/',
        options: {
          layout: 'indexes.hbs',
          helpers: ['./lib/hbs/index.js']
+       }
+     },
+     home: {
+       src: 'index.md',
+       dest: 'dist/',
+       options: {
+         layout: 'home.hbs'
        }
      }
    },
@@ -66,14 +88,26 @@ module.exports = function(grunt){
           base: 'dist/'
         }
       }
+    },
+
+    watch: {
+      core: { files: '<%= copy.core.src %>', tasks: ['copy:core'] },
+      ui: { files: '<%= copy.ui.src %>', tasks: ['copy:ui'] },
+      dependencies: { files: '<%= copy.dependencies.src %>', tasks: ['copy:dependencies'] },
+      hbs: {
+        files: 'src/layouts/**/*.hbs',
+        tasks: ['assemble']
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('assemble');
 
-  grunt.registerTask('default', ['copy', 'assemble', 'connect:dev:keepalive']);
-  grunt.registerTask('deploy', ['copy', 'assemble', 'gh-pages']);
+  grunt.registerTask('default', ['build', 'connect:dev:keepalive']);
+  grunt.registerTask('build', ['copy', 'assemble']);
+  grunt.registerTask('deploy', ['build', 'gh-pages']);
 };
