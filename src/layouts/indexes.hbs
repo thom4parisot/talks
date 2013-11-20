@@ -9,19 +9,28 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <link rel="stylesheet" href="{{assets}}/bower_components/reveal.js/css/reveal.min.css">
-  <link rel="stylesheet" href="{{assets}}/src/css/reveal.css" id="theme">
+  <link rel="stylesheet" href="{{assets}}/bower_components/css.oncletom.io/dist/fonts.min.css">
+  <link rel="stylesheet" href="{{assets}}/bower_components/css.oncletom.io/dist/core.min.css">
   <link rel="stylesheet" href="{{assets}}/src/css/layout.css">
-
-  <link rel="stylesheet" href="{{assets}}/bower_components/reveal.js/lib/css/zenburn.css">
 </head>
 
-<body>
+<body class="talks indexes">
 
-<div class="reveal presentations-index">
-  {{#presentations page}}
-  <h2><a href="{{this.filename}}">{{this.title}}</a></h2>
-  {{/presentations}}
+{{> services}}
+{{> header}}
+
+<div class="container">
+  <div class="row">
+      {{#presentations page}}
+        <div class="col-md-6">
+          <article>
+            <h2><a href="{{this.filename}}">{{this.title}}</a></h2>
+
+            <a class="huge-cta" href="{{this.filename}}">Launch presentation</a>
+          </article>
+        </div>
+      {{/presentations}}
+  </div>
 </div>
 </body>
 </html>

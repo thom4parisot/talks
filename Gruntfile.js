@@ -40,10 +40,15 @@ module.exports = function(grunt){
      options: {
        assets: 'dist',
        layoutdir: 'src/layouts',
-       helpers: ['./lib/hbs/index.js'],
-       partials: 'src/partials/**/*.hbs',
+       helpers: [
+         './lib/hbs/index.js'
+       ],
+       partials: [
+         'src/partials/**/*.hbs',
+         'bower_components/css.oncletom.io/src/partials/**/*.hbs'
+       ],
        data: [
-	'bower_components/css.oncletom.io/package.json'
+	      'bower_components/css.oncletom.io/package.json'
        ]
      },
 
@@ -58,16 +63,14 @@ module.exports = function(grunt){
        src: '<%= src %>/*/index.json',
        dest: 'dist/',
        options: {
-         layout: 'indexes.hbs',
-         helpers: ['./lib/hbs/index.js']
+         layout: 'indexes.hbs'
        }
      },
      home: {
        src: 'index.md',
        dest: 'dist/',
        options: {
-	 layout: 'home.hbs',
-	 partials: 'bower_components/css.oncletom.io/src/partials/**/*.hbs'
+         layout: 'home.hbs'
        }
      }
    },

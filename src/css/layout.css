@@ -1,3 +1,9 @@
+.huge-cta {
+  display: block;
+  height: 170px;
+  line-height: 170px;
+  text-align: center;
+}
 
 .reveal{
   font-family: Optima, "Helvetica Nueue", sans-serif;
