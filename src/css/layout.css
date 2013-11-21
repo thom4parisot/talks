@@ -15,6 +15,12 @@
   text-transform: none;
 }
 
+/* head title */
+.reveal section:first-child h1 {
+  line-height: 1.1;
+  margin-bottom: 0.2em;
+}
+
 .reveal ol, .reveal ul{
   margin: .5em 0;
 }
