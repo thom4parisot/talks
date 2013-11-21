@@ -5,12 +5,14 @@
   font-size: 36px;
   font-weight: 200;
   letter-spacing: -0.02em;
-  color: #eeeeee; }
+  color: #fff;
+  text-shadow: 1px 1px 1px #222;
+}
 
 ::selection {
   color: white;
-  background: #ff5e99;
-  text-shadow: none; }
+  background: #ccd121;
+}
 
 /*********************************************
  * HEADERS
@@ -22,28 +24,32 @@
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #eeeeee;
+  color: #fff;
   font-family: "League Gothic", Impact, sans-serif;
   line-height: 0.9em;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+  text-shadow: 3px 3px 3px #222;
+}
 
 
 /*********************************************
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
+  color: #fff;
+  border-bottom: 1px solid #f5f5f5;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   -ms-transition: color .15s ease;
   -o-transition: color .15s ease;
-  transition: color .15s ease; }
+  transition: color .15s ease;
+}
 
 .reveal a:not(.image):hover {
-  text-shadow: none;
-  border: none; }
+  border-color: #ccd121;
+}
 
 /*********************************************
  * IMAGES
@@ -62,7 +68,8 @@
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
   border-color: #13daec;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
 
 /*********************************************
  * NAVIGATION CONTROLS

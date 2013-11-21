@@ -26,6 +26,7 @@ slides:
     file: to-infinity-and-beyond.md
   -
     file: thanks.md
+    background: thanks.jpg
 ---
 
 The Promise JavaScript pattern is receiving quite a lot of attention recently as popular asynchronous pattern.

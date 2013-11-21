@@ -44,18 +44,24 @@
 
 .reveal em,
 .reveal i{
-  color: whitesmoke;
+  color: #ccd121;
 }
 
 .reveal strong,
 .reveal b{
   background-color: rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid whitesmoke;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 5px;
-  color: whitesmoke;
   font-weight: normal;
-  padding: 0 5px;
+  padding: 0 0.3em;
   text-shadow: none;
+}
+
+.reveal section[data-background] {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 1em;
+  text-shadow: 2px 2px 2px #000;
 }
 
 .presentations-index {

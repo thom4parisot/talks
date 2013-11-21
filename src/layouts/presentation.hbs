@@ -24,7 +24,7 @@
 
   <div class="slides">
     {{#slides}}
-      <section data-markdown="slides/{{this.file}}" {{#if this.vertical}} data-vertical="\n@@@\n"{{/if}}></section>
+      <section data-markdown="slides/{{this.file}}"{{#if this.vertical}} data-vertical="\n@@@\n"{{/if}}{{#if this.background}} data-background="images/{{this.background}}"{{/if}}></section>
     {{/slides}}
   </div>
 
