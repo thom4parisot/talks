@@ -64,7 +64,8 @@
   text-shadow: none;
 }
 
-.reveal section[data-background] {
+.reveal section[data-background]:not(:empty),
+.reveal [data-background] section:not(:empty){
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   padding: 1em;
