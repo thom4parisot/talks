@@ -30,7 +30,7 @@
         {{#if_matches_external this.background}} data-background="{{this.background}}"{{else}}
         {{#if ../background}} data-background="images/{{../background}}"{{/if}}
         {{/if_matches_external}}
-        ></section>
+        >{{#if this.title}}<h2>{{this.title}}</h2>{{/if}}</section>
     {{/slides}}
   </div>
 

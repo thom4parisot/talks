@@ -17,7 +17,9 @@
 
 /* head title */
 .reveal section:first-child h1,
-.reveal section:first-child h2 {
+.reveal section:first-child h2,
+.reveal section h2:last-child,
+.reveal section h3:last-child{
   line-height: 1.1;
   margin-bottom: 0.2em;
 }
@@ -64,12 +66,17 @@
   text-shadow: none;
 }
 
-.reveal section[data-background]:not(:empty),
+.reveal section[data-background]:not(:empty):not(.stack),
 .reveal [data-background] section:not(:empty){
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   padding: 1em;
   text-shadow: 2px 2px 2px #000;
+}
+
+.reveal section h2:last-child,
+.reveal section h3:last-child {
+  margin-bottom: 0;
 }
 
 .presentations-index {
