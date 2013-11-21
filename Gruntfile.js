@@ -103,7 +103,10 @@ module.exports = function(grunt){
       ui: { files: '<%= copy.ui.src %>', tasks: ['copy:ui'] },
       dependencies: { files: '<%= copy.dependencies.src %>', tasks: ['copy:dependencies'] },
       hbs: {
-        files: 'src/layouts/**/*.hbs',
+        files: [
+          'src/layouts/**/*.hbs',
+          '<%= src %>/**/*.md'
+        ],
         tasks: ['assemble']
       }
     }
