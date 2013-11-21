@@ -6,7 +6,7 @@ Reveal.initialize({
   progress: true,
   history: true,
   center: true,
-  overview: false,
+  overview: true,
   rollingLinks: false,
 
   theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
