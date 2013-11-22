@@ -48,12 +48,12 @@ module.exports = function(grunt){
          'bower_components/css.oncletom.io/src/partials/**/*.hbs'
        ],
        data: [
-	      'bower_components/css.oncletom.io/package.json'
+         'bower_components/css.oncletom.io/package.json'
        ]
      },
 
      presentations: {
-       src: '<%= src %>/**/*.md',
+       src: '<%= src %>/*/*.md',
        dest: 'dist/',
        options: {
          layout: 'presentation.hbs'
@@ -102,10 +102,10 @@ module.exports = function(grunt){
       core: { files: '<%= copy.core.src %>', tasks: ['copy:core'] },
       ui: { files: '<%= copy.ui.src %>', tasks: ['copy:ui'] },
       dependencies: { files: '<%= copy.dependencies.src %>', tasks: ['copy:dependencies'] },
-      content: {
+      presentations: {
         files: [
           'src/layouts/**/*.hbs',
-          '<%= src %>/**/*.md'
+          '<%= assemble.presentations.src %>'
         ],
         tasks: ['assemble']
       }
