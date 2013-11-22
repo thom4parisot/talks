@@ -53,7 +53,7 @@ module.exports = function(grunt){
      },
 
      presentations: {
-       src: '<%= src %>/*/*.md',
+       src: '<%= src %>/**/*.md',
        dest: 'dist/',
        options: {
          layout: 'presentation.hbs'
@@ -102,7 +102,7 @@ module.exports = function(grunt){
       core: { files: '<%= copy.core.src %>', tasks: ['copy:core'] },
       ui: { files: '<%= copy.ui.src %>', tasks: ['copy:ui'] },
       dependencies: { files: '<%= copy.dependencies.src %>', tasks: ['copy:dependencies'] },
-      hbs: {
+      content: {
         files: [
           'src/layouts/**/*.hbs',
           '<%= src %>/**/*.md'
