@@ -1,20 +1,16 @@
-## BBC News
+## ![BBC News](images/bbc-news.jpeg)
 
 @@@
 
-<blockquote class="twitter-tweet" align="center" lang="en"><p><a href="https://twitter.com/oncletom">@oncletom</a> think we merged the last PR you worked on in News today, Happy to finally be making maven grunt :)</p>&mdash; Robert Kenny (@kenturamon) <a href="https://twitter.com/kenturamon/statuses/402924152816173056">November 19, 2013</a></blockquote>
+## Contexte
 
-@@@
-
-### Contexte
-
-- 2 semaines chez BBC News
+- 2 semaines dans le même lieu
 - aucune connaissance du workflow
 - aucune connaissance du code
 
 @@@
 
-### Volonté
+## Volonté
 
 - apprendre d’une équipe réputée
 - livrer en production

@@ -37,6 +37,9 @@ slides:
     file: solid-grunt/fourth-pr.md
     vertical: true
   -
+    file: solid-grunt/task-structure.md
+    vertical: true
+  -
     file: solid-grunt/third-pr-again.md
     vertical: true
   -
@@ -47,6 +50,7 @@ slides:
     vertical: true
   -
     file: solid-grunt/conclusion.md
+    vertical: true
   -
     file: solid-grunt/thanks.md
 ---
