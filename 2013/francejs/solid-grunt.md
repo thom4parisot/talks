@@ -24,4 +24,36 @@ slides:
   -
     file: solid-grunt/bbc-news.md
     vertical: true
+  -
+    file: solid-grunt/first-pr.md
+    background: first-pr.png
+  -
+    file: solid-grunt/second-pr.md
+    background: second-pr.png
+  -
+    file: solid-grunt/third-pr.md
+    vertical: true
+  -
+    file: solid-grunt/fourth-pr.md
+    vertical: true
+  -
+    file: solid-grunt/third-pr-again.md
+    vertical: true
+  -
+    file: solid-grunt/fifth-pr.md
+    vertical: true
+  -
+    file: solid-grunt/first-pr.md
+    vertical: true
+  -
+    file: solid-grunt/conclusion.md
+  -
+    file: solid-grunt/thanks.md
 ---
+
+**Grunt** est un outil populaire chez les développeurs *Node.js* et *frontend*.
+
+Je partage quelques pistes et techniques pour créer vos propres **tâches Grunt testées et maintenables**.
+
+J’en profite aussi pour évoquer cette pratique au travers d’un retour d’expérience lors d’un sprint de deux semaines dans l’équipe de [BBC News](http://m.bbc.co.uk/news).
+

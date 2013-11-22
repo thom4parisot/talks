@@ -16,6 +16,8 @@
 
 ### Volonté
 
+- apprendre d’une équipe réputée
 - livrer en production
 - ne rien casser
 - nouer des liens
+
