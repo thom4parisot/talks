@@ -167,14 +167,24 @@ Parsing CSV.
 
 @@@
 
-### Test par l'exécution
+## Test par l'exécution
 
 `assert(user.rant("ça marche pas"))`
 
 @@@
 
-### Manque de clarté du code
+## Manque de clarté du code
 
 Lecture linéaire.
 
 Code peu expressif quant à ses choix/opinions.
+
+@@@
+
+## Pourquoi ?
+
+Manque d'expérience / temps à consacrer.
+
+Peu de littérature à ce sujet.
+
+Mimétisme.

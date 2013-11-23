@@ -2,8 +2,6 @@
 
 @@@
 
-## Concept
-
 ### Configuration
 
 +
@@ -13,6 +11,10 @@
 +
 
 ### Librairie
+
++
+
+### Documentation
 
 @@@
 
@@ -126,9 +128,42 @@ describe('i18nTask.downloadSpreadsheet', function(){
 
 ## Stubber
 
-Simuler des erreurs I/O, 
+Simuler des erreurs I/O.
+
+Isoler les appels I/O.
+
+Fonctionner localement, sans infrastructure externe.
+
+@@@
 
 ```javascript
+var sinon = request('sinon');
+var gruntStub = sinon.stub(grunt.file, 'write');
 
+expect(
+  gruntStub.calledWith(
+    'dummy config valueen-GB.js',
+    'define('+dummyOutput+');'
+  )
+).to.be.ok;
 ```
 
+@@@
+
+```javascript
+// ./test/unit/lib/i18n.js
+
+var requestStub = sinon.stub(request, 'get');
+
+it('should parse properly a remote document', function(){
+  requestStub.yields(null, {statusCode: 200}, validCSVContent);
+});
+
+it('should raise an error on unexpected spreadsheet format', function(){
+  requestStub.yields(null, {statusCode: 200}, 'I am not CSV');
+});
+
+it('should fail if remote document is unavailable', function(){
+  requestStub.yields(null, {statusCode: 500});
+});
+```

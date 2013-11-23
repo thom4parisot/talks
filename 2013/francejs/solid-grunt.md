@@ -8,11 +8,13 @@ slides:
   -
     file: solid-grunt/intro.md
   -
+    background: toniglandyl.jpg
+  -
     file: solid-grunt/about-me.md
   -
-    background: //farm6.staticflickr.com/5327/10121241273_589d0dcf84_b_d.jpg
+    background: 10121241273_589d0dcf84_b_d.jpg
   -
-    background: //farm8.staticflickr.com/7325/9308903255_6f68f6ddbe_b_d.jpg
+    background: 9308903255_6f68f6ddbe_b_d.jpg
   -
     background: BristolTowerLayers-3.jpg
   -
@@ -20,7 +22,7 @@ slides:
   -
     file: solid-grunt/lessons-learned.md
     vertical: true
-    background: //farm4.staticflickr.com/3773/9676470682_3d418eeb40_b_d.jpg
+    background: 9676470682_3d418eeb40_b_d.jpg
   -
     file: solid-grunt/bbc-news.md
     vertical: true
@@ -40,19 +42,20 @@ slides:
     file: solid-grunt/task-structure.md
     vertical: true
   -
-    file: solid-grunt/third-pr-again.md
+    file: solid-grunt/task-optimisation.md
     vertical: true
   -
-    file: solid-grunt/fifth-pr.md
+    file: solid-grunt/ci.md
     vertical: true
   -
-    file: solid-grunt/first-pr.md
+    file: solid-grunt/npm-run.md
     vertical: true
   -
-    file: solid-grunt/conclusion.md
+    file: solid-grunt/outro.md
     vertical: true
   -
     file: solid-grunt/thanks.md
+    background: questions.gif
 ---
 
 **Grunt** est un outil populaire chez les développeurs *Node.js* et *frontend*.
