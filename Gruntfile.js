@@ -99,9 +99,18 @@ module.exports = function(grunt){
     },
 
     watch: {
-      core: { files: '<%= copy.core.src %>', tasks: ['copy:core'] },
-      ui: { files: '<%= copy.ui.src %>', tasks: ['copy:ui'] },
-      dependencies: { files: '<%= copy.dependencies.src %>', tasks: ['copy:dependencies'] },
+      core: {
+        files: '<%= copy.core.src %>',
+        tasks: ['copy:core']
+      },
+      ui: {
+        files: '<%= copy.ui.src %>',
+        tasks: ['copy:ui']
+      },
+      dependencies: {
+        files: '<%= copy.dependencies.src %>',
+        tasks: ['copy:dependencies']
+      },
       presentations: {
         files: [
           'src/layouts/**/*.hbs',
