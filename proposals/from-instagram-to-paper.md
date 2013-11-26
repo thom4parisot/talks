@@ -1,1 +1,0 @@
-# From Instagram to Paper using JavaScript and APIs
