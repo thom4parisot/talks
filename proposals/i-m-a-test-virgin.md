@@ -2,11 +2,11 @@
 
 You heard about *that* famous moment. A moment with a before and an after. A moment you never forget because you definitely become an adult.
 
-You know about the theory but you never practiced and worse, you don't know the gap between the fiction and the reality. Why is it so difficult?
+You know about the theory but you never practiced. Worse: you don't even know what is the gap between the fiction and the reality. Why is it so difficult?
 
-So you end up asking your parents: "Hey, how have you written your first test?"
+So you end up asking your parents: "Hey, how have you written your first test ever?"
 
-Today you date a software programme, and you'd like to know your way to commit your first taste.  
+Today, you have a date with a software programme, and you'd like to know your way to commit your first test.  
 Because testing sooner is better than later!
 
 ## Targeted Audience
