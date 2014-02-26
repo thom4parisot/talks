@@ -117,3 +117,14 @@
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/*********************************************
+ * Blockquotes
+ *********************************************/
+.reveal blockquote {
+  background: transparent;
+  box-shadow: none;
+  font-size: 1.55em;
+  margin-bottom: 1em;
+  width: 80%;
+}
