@@ -22,8 +22,6 @@ slides:
   -
     background: 8166604129_8d5056f1c8_b.jpg
   -
-    background: 8739752320_7a93319b46_b.jpg
-  -
     background: 8489312830_17628cc7d5_b.jpg
   -
     file: about-me.md
@@ -43,10 +41,33 @@ slides:
   -
     file: markdown.md
   -
-    background: markdown.png
+    background: readme-file.png
+  -
+    file: reasons.md
+    vertical: true
+  -
+    file: results.md
+    vertical: true
+  -
+    file: github.md
+    background: github.png
+  -
+    file: github-first.md
+    background: github-readme.png
+  -
+    file: editor-online.md
+    background: editor-online.png
+  -
+    file: editor-offline.md
+    background: editor-iawriter.png
+  -
+    file: benefits.md
+    vertical: true
+  -
+    file: rdd.md
   -
     file: thanks.md
-    background: thanks.jpg
+    background: 8739752320_7a93319b46_b.jpg
   -
     file: to-infinity-and-beyond.md
 ---

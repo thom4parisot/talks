@@ -1,4 +1,4 @@
-# Résumé des 12 derniers mois
+## Résumé des 12 derniers mois
 
 @@@
 
