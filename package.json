@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "grunt default",
-    "deploy": "grunt deploy",
+    "deploy": "grunt deploy && ssh oncletom 'cd talks && git pull'",
     "init": "bower install && bower update",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
