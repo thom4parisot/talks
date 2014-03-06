@@ -8,68 +8,53 @@ event:
 video:
 slides:
   -
-    file: pre-intro.md
+    file: ../../../2012/paris-web/slides/pre-intro.md
     vertical: true
     background-color: '#000'
   -
+    background: ../../../2012/paris-web/images/8251350711_b8555a3e50_b.jpg
+  -
+    background: ../../../2012/paris-web/images/8244634570_8bcfb25743_b.jpg
+  -
+    background: ../../../2012/paris-web/images/8166604129_8d5056f1c8_b.jpg
+  -
+    background: ../../../2012/paris-web/images/8489312830_17628cc7d5_b.jpg
+  -
+    file: ../../about-me.md
+  -
     file: intro.md
-  -
-    file: read-me.md
-  -
-    background: 8251350711_b8555a3e50_b.jpg
-  -
-    background: 8244634570_8bcfb25743_b.jpg
-  -
-    background: 8166604129_8d5056f1c8_b.jpg
-  -
-    background: 8489312830_17628cc7d5_b.jpg
-  -
-    file: about-me.md
-  -
-    file: lessons-learned.md
+  - 
+    file: examples-bad.md
     vertical: true
-  -
-    file: origins.md
-    background: 6954491729_d58735000a_b.jpg
+  - 
+    file: paradox.md
     vertical: true
-  -
-    file: donts.md
+  - 
+    file: context.md
     vertical: true
-  -
-    file: dos.md
+  - 
+    file: readme-file.md
     vertical: true
-  -
-    file: markdown.md
-  -
-    background: readme-file.png
-  -
+  - 
     file: reasons.md
     vertical: true
-  -
-    file: results.md
+  - 
+    file: decision.md
     vertical: true
-  -
-    file: github.md
-    background: github.png
-  -
-    file: github-first.md
-    background: github-readme.png
-  -
-    file: editor-online.md
-    background: editor-online.png
-  -
-    file: editor-offline.md
-    background: editor-iawriter.png
-  -
-    file: benefits.md
+  - 
+    file: readme-driven.md
     vertical: true
-  -
-    file: rdd.md
-  -
-    file: thanks.md
-    background: 8739752320_7a93319b46_b.jpg
-  -
-    file: to-infinity-and-beyond.md
+  - 
+    file: readme-driven-development.md
+    vertical: true
+  - 
+    file: wrap-up.md
+    vertical: true
+  - 
+    file: credits.md
+    vertical: true
+
+	
 ---
 
 C'est vendredi, jour béni de mise en production : le sysadmin est déjà à l'apéro
