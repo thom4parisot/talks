@@ -26,6 +26,10 @@ Reveal.addEventListener('ready', function(event) {
   [].slice.call(document.querySelectorAll('a > img')).forEach(function(el){
     el.parentNode.classList.add('image');
   });
+
+  [].slice.call(document.querySelectorAll('section[data-background]')).forEach(function(el){
+    el.innerHTML = el.innerHTML.trim();
+  });
 });
 
 (function(document){
