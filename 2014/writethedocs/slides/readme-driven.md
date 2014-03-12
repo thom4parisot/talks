@@ -40,8 +40,8 @@ Fix the bugs *before* writing code.
 
 @@@
 
+<!-- .slide: data-background="../chtijs/images/sketching.png" -->
+
 # Code *sketching*
 
 Fast, straight to the point and *easy*.
-
-<!-- .slide: data-background="images/sketching.png" -->
