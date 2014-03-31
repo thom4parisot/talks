@@ -16,6 +16,10 @@
 
 `#` + `*` + `**` + `!` + `[]()`
 
+<br>
+
+Markdown, RST, AsciiDoc etc.
+
 @@@
 
 # Fast
@@ -49,6 +53,14 @@ To consume and to contribute.
 # Alongside
 
 The versioned code.
+
+@@@
+
+<!-- .slide: data-background="images/api-example.png" -->
+
+# *Examples*
+
+To provide context.
 
 @@@
 

@@ -16,6 +16,7 @@ slides:
     vertical: true
   -
     file: intro.md
+    vertical: true
   -
     background: ../../../2012/paris-web/images/8251350711_b8555a3e50_b.jpg
   -

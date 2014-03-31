@@ -64,6 +64,12 @@ Time to break your code.
 
 @@@
 
+## [mdlint](https://github.com/ChrisWren/mdlint)
+
+Validates code in Markdown files.
+
+@@@
+
 <!-- .slide: data-background="images/readme-tree.jpg" -->
 
 ## [README Tree](https://github.com/DTrejo/readmetree)
