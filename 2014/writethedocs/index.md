@@ -37,9 +37,6 @@ slides:
     file: readme-file.md
     vertical: true
   -
-    file: reasons.md
-    vertical: true
-  -
     file: readme-driven.md
     vertical: true
   -

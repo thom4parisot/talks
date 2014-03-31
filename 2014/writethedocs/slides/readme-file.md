@@ -12,12 +12,54 @@
 
 @@@
 
-<!-- .slide: data-background="../chtijs/images/8721964504_6ec83240fb_b.jpg" -->
+# Simple Markup
 
-Nature abhors a vacuum.
+`#` + `*` + `**` + `!` + `[]()`
 
 @@@
 
-<!-- .slide: data-background="../chtijs/images/wip.gif" data-background-repeat="repeat" data-background-size="250px" -->
+# Fast
 
-So do the *README*.
+to *learn*, to *write* and to *read*.
+
+@@@
+
+# Pervasive
+
+HTML, PDF, JSON, text file *etc*.
+
+cf. [pandoc](http://johnmacfarlane.net/pandoc/).
+
+@@@
+
+# In a *nutshell*
+
+Who, what, when, where, why and how.
+
+@@@
+
+<!-- .slide: data-background="../../2012/paris-web/images/editor-iawriter.png" -->
+
+# Freedom
+
+To consume and to contribute.
+
+@@@
+
+# Alongside
+
+The versioned code.
+
+@@@
+
+<!-- .slide: data-background="../chtijs/images/readme-simple.png" -->
+
+# *Shallow* limits
+
+Trust your gut feelings.
+
+@@@
+
+# Content First
+
+*Technicity* stays back.
