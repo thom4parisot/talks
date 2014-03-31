@@ -1,12 +1,28 @@
 ![](../../src/img/avatar.jpg)
 
-## Thomas Parisot
+## *Thomas* Parisot
 
-Frontend / JavaScript Engineer
+@@@
 
-[![BBC R&D](../../src/img/RD-logo_500.png)](http://www.bbc.co.uk/rd)
+![](../images/pardon-my-french.jpg)
 
-<br>
+@@@
+
+![](../images/javascript.png)
+
+@@@
+
+[![BBC R&D](../images/bbc.png)](http://www.bbc.co.uk/rd)
+
+## JavaScript Engineer
+
+@@@
+
+[![Sud Web](../images/sudweb.png)](http://sudweb.fr)
+
+@@@
+
+![](../images/everyday.jpg)
 
 [oncletom.io](https://oncletom.io) –
 [@oncletom](https://twitter.com/oncletom) –
