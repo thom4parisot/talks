@@ -3,14 +3,19 @@ title: README Driven Development
 language: en-GB
 event:
   name: Write the Docs
-  date: 2014-03-30
+  date: 2014-03-31
   url: http://conf.writethedocs.org/eu/2014/
 video:
 slides:
   -
-    file: pre-intro.md
+    file: epitaph.md
     vertical: true
     background-color: '#000'
+  -
+    file: ../../about-me.md
+    vertical: true
+  -
+    file: intro.md
   -
     background: ../../../2012/paris-web/images/8251350711_b8555a3e50_b.jpg
   -
@@ -19,10 +24,6 @@ slides:
     background: ../../../2012/paris-web/images/8166604129_8d5056f1c8_b.jpg
   -
     background: ../../../2012/paris-web/images/8489312830_17628cc7d5_b.jpg
-  -
-    file: ../../about-me.md
-  -
-    file: intro.md
   -
     file: back-to-reality.md
     vertical: true

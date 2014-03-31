@@ -34,9 +34,6 @@ Time to break your code.
 
 @@@
 
-
-@@@
-
 # Pull Requests
 
 [Better to split 'em](https://oncletom.io/2013/the-55-commits-syndrome/).

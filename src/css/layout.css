@@ -17,8 +17,9 @@
 
 /* head title */
 .reveal section:first-child h1,
-.reveal section:first-child h2,
+.reveal section h1:last-child,
 .reveal section h2:last-child,
+.reveal section:first-child h2,
 .reveal section h3:last-child{
   line-height: 1.1;
   margin-bottom: 0.2em;
@@ -34,7 +35,8 @@
 .reveal code{
   background: #333;
   border-radius: 5px;
-  padding: 2px 3px;
+  color: yellow;
+  padding: 2px .2em;
 }
 .reveal pre code{
   font-size: 1.5em;
