@@ -5,16 +5,18 @@
 Comment gérer les images d'un site responsive ?
 
 On peut rendre leur taille élastique pour qu'elles s'adaptent à la taille de leur conteneur.
-Quid du poids des images ?
-Quid de l'*art direction* ?
-Quid de la puissance CPU consommée sur mobile ?
+
+- Quid du poids des images ?
+- Quid de l'*art direction* ?
+- Quid de la puissance CPU consommée sur mobile ?
 
 On peut aussi utiliser des *media queries* pour laisser le navigateur déterminer la meilleure source.
-Quid de la maintenance, surtout sans préprocesseur ?
-Quid de la complexité supplémentaire induite par la densité de pixel des écrans ?
-Quid de la génération dynamique avec un CMS ?
 
-En bref : on fait comment dans la vraie vie quand on n'a que 5 minutes pour résoudre un problème épineux ?
+- Quid de la maintenance, surtout sans préprocesseur ?
+- Quid de la complexité supplémentaire induite par la densité de pixel des écrans ?
+- Quid de la génération dynamique avec un CMS ?
+
+En bref : **on fait comment dans la vraie vie quand on n'a que 5 minutes pour résoudre un problème épineux** ?
 
 [BBC News](http://m.bbc.co.uk/news) et [The Guardian](http://next.theguardian.com) utilisent _Imager.js_,
 une solution élégante, légère et maintenable pour adresser tous ces problèmes d'un coup.
