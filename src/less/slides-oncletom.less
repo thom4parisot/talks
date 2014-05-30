@@ -1,0 +1,25 @@
+@import 'bower_components/css.oncletom.io/src/less/_variables';
+
+body {
+  transition: all .5s ease;
+}
+
+.reveal {
+  font-size: 36px;
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  text-shadow: 1px 1px 1px fade(@gray-dark, 20%);
+}
+
+.backgrounds {
+  .slide-background[style*="background-image:"] {
+    background-color: black;
+  }
+}
+
+.contrasted {
+  body {
+    background-color: @brand-darker;
+    color: #fff;
+  }
+}

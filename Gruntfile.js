@@ -61,7 +61,7 @@ module.exports = function(grunt){
        ],
        dest: 'dist/',
        options: {
-         layout: 'presentation.hbs'
+         layout: 'slides/cyneticmonkey.hbs'
        }
      },
      indexes: {
