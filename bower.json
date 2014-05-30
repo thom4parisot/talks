@@ -1,10 +1,10 @@
 {
   "name": "talks",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "dependencies": {
     "reveal.js": "latest"
   },
   "devDependencies": {
-    "css.oncletom.io": "oncletom/css.oncletom.io#1.0.0"
+    "css.oncletom.io": "oncletom/css.oncletom.io#~2.0.0"
   }
 }

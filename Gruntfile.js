@@ -16,7 +16,8 @@ module.exports = function(grunt){
       ui: {
         src: [
           'src/**/*',
-          '!src/layouts'
+          '!src/layouts',
+          '!src/less'
         ],
         dest: 'dist/'
       },
@@ -48,7 +49,8 @@ module.exports = function(grunt){
          'bower_components/css.oncletom.io/src/partials/**/*.hbs'
        ],
        data: [
-         'bower_components/css.oncletom.io/package.json'
+         'bower_components/css.oncletom.io/package.json',
+         'bower_components/css.oncletom.io/src/config.json'
        ]
      },
 
@@ -90,6 +92,16 @@ module.exports = function(grunt){
       }
     },
 
+    less: {
+      core: {
+        expand: true,
+        flatten: true,
+        ext: '.css',
+        src: 'src/less/*.less',
+        dest: 'src/css'
+      }
+    },
+
     connect: {
       dev: {
         options: {
@@ -105,6 +117,10 @@ module.exports = function(grunt){
       core: {
         files: '<%= copy.core.src %>',
         tasks: ['copy:core']
+      },
+      less: {
+        files: '<%= less.core.src %>',
+        tasks: ['less']
       },
       ui: {
         files: '<%= copy.ui.src %>',
@@ -127,10 +143,11 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('assemble');
 
   grunt.registerTask('default', ['build', 'connect:dev:keepalive']);
-  grunt.registerTask('build', ['copy', 'assemble']);
+  grunt.registerTask('build', ['less', 'copy', 'assemble']);
   grunt.registerTask('deploy', ['build', 'gh-pages']);
 };
