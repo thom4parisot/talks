@@ -9,7 +9,7 @@ external: http://www.slideshare.net/oncletom/business-logic-in-the-cloud-with-go
 video: https://www.youtube.com/watch?v=sLHEjTlOCdk
 ---
 
-Description Remember your complex Excel VBScripts or your first handmade Access+Word mailer system nightmares?
+Remember your complex Excel VBScripts or your first handmade Access+Word mailer system nightmares?
 
 Google Apps Scripts is a hidden replacing gem without having to buy a SAP licence.
 
