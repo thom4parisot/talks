@@ -30,6 +30,12 @@ Reveal.addEventListener('ready', function(event) {
   [].slice.call(document.querySelectorAll('section[data-background]')).forEach(function(el){
     el.innerHTML = el.innerHTML.trim();
   });
+
+  [].slice.call(document.querySelectorAll('section[data-markdown]')).forEach(function(section){
+    if (section.querySelectorAll('pre > code').length){
+      section.setAttribute('data-state', 'code');
+    }
+  });
 });
 
 (function(document){

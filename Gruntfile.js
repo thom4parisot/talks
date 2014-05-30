@@ -119,7 +119,7 @@ module.exports = function(grunt){
         tasks: ['copy:core']
       },
       less: {
-        files: '<%= less.core.src %>',
+        files: 'src/less/**/*.less',
         tasks: ['less']
       },
       ui: {

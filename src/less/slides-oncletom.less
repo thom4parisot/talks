@@ -4,22 +4,16 @@ body {
   transition: all .5s ease;
 }
 
-.reveal {
-  font-size: 36px;
-  font-weight: 200;
-  letter-spacing: -0.02em;
-  text-shadow: 1px 1px 1px fade(@gray-dark, 20%);
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
 }
 
-.backgrounds {
-  .slide-background[style*="background-image:"] {
-    background-color: black;
-  }
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: fade(white, 50%);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
 }
 
-.contrasted {
-  body {
-    background-color: @brand-darker;
-    color: #fff;
-  }
-}
+@import 'components/reveal-overrides';
+@import 'components/reveal-backgrounds';
