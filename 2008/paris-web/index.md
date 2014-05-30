@@ -6,7 +6,6 @@ event:
   date: 2008-11-15
   url: http://paris-web.fr/2008/
 external: http://www.slideshare.net/oncletom/dveloppement-efficace-avec-les-frameworks-css-presentation
-video:
 ---
 
 Méconnus ou dénigrés, les frameworks ou briques de développement CSS ont pourtant atteint un certain seuil de maturité.

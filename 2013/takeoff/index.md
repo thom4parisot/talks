@@ -6,7 +6,7 @@ event:
   date: 2013-01-18
   url: http://takeoffconf.com/2013
 external: http://www.slideshare.net/oncletom/business-logic-in-the-cloud-with-google-apps-scripts-16054925
-video:
+video: https://www.youtube.com/watch?v=sLHEjTlOCdk
 ---
 
 Description Remember your complex Excel VBScripts or your first handmade Access+Word mailer system nightmares?

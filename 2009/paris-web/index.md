@@ -6,7 +6,6 @@ event:
   date: 2009-10-10
   url: http://paris-web.fr/2009/
 external: http://www.slideshare.net/oncletom/le-web-en-offline-avec-gears-et-html5-2183309
-video:
 ---
 
 [Gears](http://tools.google.com/gears/) est un outil Open Source, majoritairement connu pour permettre à une page Web d’être consultable en étant déconnecté du réseau. Ce plugin pour navigateur Web propose pourtant d’autres briques utiles dans d’autres contextes, notamment les performances et le traitement d’un nombre important de données. C’est un outil unique permettant de créer des applications fonctionnelles hors-ligne et cross-brower sans avoir à recours à du client lourd (type application iPhone).

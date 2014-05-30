@@ -4,6 +4,7 @@ event:
   name: FranceJS.in(Toulouse)
   url: http://lanyrd.com/2013/francejs/
   date: 2013-11-23
+video: http://stream.toulibre.org/cdl2013/francejs/parisot-solid-grunt-code-spaghetti-beton.mp4
 slides:
   -
     file: solid-grunt/intro.md

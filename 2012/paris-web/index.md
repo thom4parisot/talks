@@ -5,7 +5,7 @@ event:
   name: Paris Web
   date: 2012-10-18
   url: http://paris-web.fr/2012/
-video:
+video: http://www.dailymotion.com/video/xur8ub_readme-un-fichier-nomme-plaisir_tech
 slides:
   -
     file: pre-intro.md
