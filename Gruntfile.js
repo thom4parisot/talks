@@ -105,6 +105,7 @@ module.exports = function(grunt){
     connect: {
       dev: {
         options: {
+          hostname: 'localhost',
           port: process.env.PORT || 3000,
           open: true,
           debug: true,
@@ -119,7 +120,10 @@ module.exports = function(grunt){
         tasks: ['copy:core']
       },
       less: {
-        files: 'src/less/**/*.less',
+        files: [
+          'src/less/**/*.less',
+          'bower_components/css.oncletom.io/**/*.{css,less}'
+        ],
         tasks: ['less']
       },
       ui: {
