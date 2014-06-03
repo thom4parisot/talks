@@ -57,7 +57,7 @@ module.exports = function(grunt){
      presentations: {
        src: [
          '<%= src %>/*/*.md',
-         '!outline.md'
+         '!<%= src %>/*/outline.md'
        ],
        dest: 'dist/',
        options: {
