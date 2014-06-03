@@ -9,11 +9,10 @@ event:
 video:
 slides:
   -
-    title: Solid Grunt
+    class: contrasted
+    file: intro-quotes.md
   -
     file: ../../about-me.md
-
-
 ---
 
 We use Grunt plugins and the `Gruntfile.js` to achieve common and repetitive tasks.
