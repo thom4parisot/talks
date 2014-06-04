@@ -25,7 +25,7 @@ module.exports = function(grunt){
         src: [
           'bower_components/css.oncletom.io/dist/*.{css,js}',
           'bower_components/reveal.js/{css,js,lib}/**/*.{css,js}',
-          'bower_components/reveal.js/plugin/{markdown,highlight}/**/*.{css,js}'
+          'bower_components/reveal.js/plugin/{markdown,highlight,notes}/**/*.{css,js,html}'
         ],
         dest: 'dist/'
       },
