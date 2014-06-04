@@ -3,6 +3,10 @@
     background-color: @brand-darker;
     color: #fff;
   }
+
+  em, i, a {
+    color: yellow;
+  }
 }
 
 .code {
@@ -16,6 +20,19 @@
       border: none;
       border-radius: 0;
       box-shadow: none;
+
+      .attribute,
+      .symbol,
+      .symbol .string,
+      .tag .title,
+      .value,
+      .css .tag {
+        color: lighten(#f92672, 15%);
+      }
+    }
+
+    pre .tag .title, pre .value, pre .css .tag {
+
     }
   }
 }
