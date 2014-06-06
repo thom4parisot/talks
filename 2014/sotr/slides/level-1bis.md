@@ -41,7 +41,9 @@ Yesterday someone talked about `grunt-http`. This is something you can do withou
 }
 ```
 
-@@@ Running the task
+@@@
+
+## Running the task
 
 ```bash
 npm run reload
