@@ -18,22 +18,38 @@ Reveal.initialize({
     { src: '../../bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
     { src: '../../bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
     { src: '../../bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
- 
+
  ]
 });
 
 Reveal.addEventListener('ready', function(event) {
   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
-  [].slice.call(document.querySelectorAll('a > img')).forEach(function(el){
+  var toArray = (function(slice, nodeList){
+    return slice.call(nodeList);
+  }).bind(null, [].slice);
+
+  toArray(document.querySelectorAll('a > img')).forEach(function(el){
     el.parentNode.classList.add('image');
   });
 
-  [].slice.call(document.querySelectorAll('section[data-background]')).forEach(function(el){
-    el.innerHTML = el.innerHTML.trim();
+  toArray(document.querySelectorAll('section[data-background]')).forEach(function(el){
+    var isEmpty = toArray(el.children).every(function(child){
+      return (typeof child.nodeValue === 'text' && child.nodeValue.trim() === '') || child.classList.contains('notes');
+    });
+
+    if (isEmpty){
+      el.classList.add('empty');
+    }
   });
 
-  [].slice.call(document.querySelectorAll('section[data-markdown]')).forEach(function(section){
+  toArray(document.querySelectorAll('section[data-markdown] > h2, section[data-markdown] > h3')).forEach(function(el){
+    if (el.nextElementSibling && el.nextElementSibling.classList.contains('notes')){
+      el.classList.add('last-child');
+    }
+  });
+
+  toArray(document.querySelectorAll('section[data-markdown]')).forEach(function(section){
     if (section.querySelectorAll('pre > code').length){
       section.setAttribute('data-state', 'code');
     }

@@ -47,7 +47,7 @@
     font-style: normal;
   }
 
-  section[data-background]:not(:empty):not(.stack),
+  section[data-background]:not(.empty):not(.stack),
   [data-background] section:not(:empty){
     background-color: fade(#fff, 70%);
     border-radius: 10px;
@@ -55,7 +55,9 @@
   }
 
   section h2:last-child,
-  section h3:last-child {
+  section h3:last-child,
+  section h2.last-child,
+  section h3.last-child {
     margin-bottom: 0;
   }
 }
