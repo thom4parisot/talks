@@ -12,7 +12,24 @@ slides:
     class: contrasted
     file: intro-quotes.md
   -
+    file: greetings.md
+  -
     file: ../../about-me.md
+  -
+    class: contrasted
+    file: title.md
+  -
+    file: story.md
+  -
+    file: level-0.md
+  -
+    file: level-1.md
+  -
+    file: level-1bis.md
+  -
+    file: level-2.md
+  -
+    file: level-3.md
 ---
 
 We use Grunt plugins and the `Gruntfile.js` to achieve common and repetitive tasks.

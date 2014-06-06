@@ -31,7 +31,7 @@ So is compiling CSS, optimising images, generating documentation, deploying Web 
 
 We do not want to think about it. We want those tasks to be performed. Not us to perform them.
 
-# Level 0: no tasks
+# Level 0: stone age
 
 Because this is how it was back in the days.
 
