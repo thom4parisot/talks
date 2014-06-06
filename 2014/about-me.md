@@ -1,31 +1,33 @@
 ![](../../src/img/avatar.jpg)
 
+<br>
+
 ## *Thomas* Parisot
 
+[oncletom.io](https://oncletom.io) –
+[@oncletom](https://twitter.com/oncletom)
+
 @@@
 
-![](../images/pardon-my-french.jpg)
+![Pardon my French](../images/pardon-my-french.jpg)
 
 @@@
 
-![](../images/javascript.png)
+![Full Stack JavaScript](../images/javascript.png)
 
 @@@
 
 [![BBC R&D](../images/bbc.png)](http://www.bbc.co.uk/rd)
 
-## JavaScript Engineer
+## Research & Development
+
+[github.com/bbcrd](https://github.com/bbcrd)  
+[bbc.co.uk/rd](http://bbc.co.uk/rd)
 
 @@@
 
 [![Sud Web](../images/sudweb.png)](http://sudweb.fr)
 
-## Curator
-
 @@@
 
-![](../images/everyday.jpg)
-
-[oncletom.io](https://oncletom.io) –
-[@oncletom](https://twitter.com/oncletom) –
-[github.com/oncletom](https://github.com/oncletom)
+<!-- .slide: data-background="../images/photography.jpg" -->

@@ -1,0 +1,45 @@
+.contrasted,
+.attention {
+  body {
+    background-color: @brand-darker;
+    color: #fff;
+  }
+
+  em, i, a {
+    color: yellow;
+  }
+}
+
+.attention {
+  body {
+    background-color: #000;
+  }
+}
+
+.code {
+  body {
+    background-color: #23241f;    //monokai background color
+    color: #fff;
+  }
+
+  .reveal {
+    pre {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+
+      .attribute,
+      .symbol,
+      .symbol .string,
+      .tag .title,
+      .value,
+      .css .tag {
+        color: lighten(#f92672, 15%);
+      }
+    }
+
+    pre .tag .title, pre .value, pre .css .tag {
+
+    }
+  }
+}

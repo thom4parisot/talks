@@ -25,7 +25,7 @@ module.exports = function(grunt){
         src: [
           'bower_components/css.oncletom.io/dist/*.{css,js}',
           'bower_components/reveal.js/{css,js,lib}/**/*.{css,js}',
-          'bower_components/reveal.js/plugin/{markdown,highlight}/**/*.{css,js}'
+          'bower_components/reveal.js/plugin/{markdown,highlight,notes}/**/*.{css,js,html}'
         ],
         dest: 'dist/'
       },
@@ -57,11 +57,11 @@ module.exports = function(grunt){
      presentations: {
        src: [
          '<%= src %>/*/*.md',
-         '!outline.md'
+         '!<%= src %>/*/outline.md'
        ],
        dest: 'dist/',
        options: {
-         layout: 'presentation.hbs'
+         layout: 'slides/cyneticmonkey.hbs'
        }
      },
      indexes: {
@@ -105,6 +105,7 @@ module.exports = function(grunt){
     connect: {
       dev: {
         options: {
+          hostname: 'localhost',
           port: process.env.PORT || 3000,
           open: true,
           debug: true,
@@ -119,7 +120,10 @@ module.exports = function(grunt){
         tasks: ['copy:core']
       },
       less: {
-        files: '<%= less.core.src %>',
+        files: [
+          'src/less/**/*.less',
+          'bower_components/css.oncletom.io/**/*.{css,less}'
+        ],
         tasks: ['less']
       },
       ui: {
