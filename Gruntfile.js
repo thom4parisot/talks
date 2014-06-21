@@ -23,7 +23,6 @@ module.exports = function(grunt){
       },
       dependencies: {
         src: [
-          'bower_components/css.oncletom.io/dist/*.{css,js}',
           'bower_components/reveal.js/{css,js,lib}/**/*.{css,js}',
           'bower_components/reveal.js/plugin/{markdown,highlight,notes}/**/*.{css,js,html}'
         ],
@@ -92,13 +91,45 @@ module.exports = function(grunt){
       }
     },
 
+    bower: 'bower_components',
     less: {
       core: {
         expand: true,
         flatten: true,
         ext: '.css',
-        src: 'src/less/*.less',
-        dest: 'src/css'
+        src: [
+          'src/less/*.less',
+          '!src/less/slides-*.less'
+        ],
+        dest: 'src/css',
+        options: {
+          paths: [
+            '<%= bower %>/css.oncletom.io/src/less',
+            '<%= bower %>/bootstrap/less'
+          ]
+        }
+      },
+      'slides-oncletom': {
+        flatten: true,
+        src: 'src/less/slides-oncletom.less',
+        dest: 'src/css/slides-oncletom.css',
+        options: {
+          paths: [
+            '<%= bower %>/css.oncletom.io/src/less',
+            '<%= bower %>/bootstrap/less'
+          ]
+        }
+      },
+      'slides-cyneticmonkey': {
+        flatten: true,
+        src: 'src/less/slides-cyneticmonkey.less',
+        dest: 'src/css/slides-cyneticmonkey.css',
+        options: {
+          paths: [
+            '<%= bower %>/css.oncletom.io-cyneticmonkey/src/less/common',
+            '<%= bower %>/bootstrap/less'
+          ]
+        }
       }
     },
 
@@ -122,7 +153,8 @@ module.exports = function(grunt){
       less: {
         files: [
           'src/less/**/*.less',
-          'bower_components/css.oncletom.io/**/*.{css,less}'
+          'bower_components/css.oncletom.io/**/*.{css,less}',
+          'bower_components/css.oncletom.io-cyneticmonkey/**/*.{css,less}'
         ],
         tasks: ['less']
       },

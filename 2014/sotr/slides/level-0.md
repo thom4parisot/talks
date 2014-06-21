@@ -2,6 +2,8 @@
 
 @@@
 
+<!-- .slide: data-state="contrasted" -->
+
 ## Sparse and manual
 
 ~~~~

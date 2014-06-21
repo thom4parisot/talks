@@ -1,6 +1,6 @@
 {
   "name": "talks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Public talks provided either in English or French, about JavaScript or human-centric topics.",
   "main": "index.js",
   "private": true,

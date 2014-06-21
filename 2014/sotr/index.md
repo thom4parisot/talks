@@ -30,6 +30,8 @@ slides:
     file: level-2.md
   -
     file: level-3.md
+  -
+    file: conclusion.md
 ---
 
 We use Grunt plugins and the `Gruntfile.js` to achieve common and repetitive tasks.
