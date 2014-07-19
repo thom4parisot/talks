@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "dependencies": {
     "reveal.js": "latest",
-    "css.oncletom.io": "oncletom/css.oncletom.io#~2.0.0",
-    "css.oncletom.io-cyneticmonkey": "oncletom/css.oncletom.io#~1.0.0"
+    "css.oncletom.io": "oncletom/css.oncletom.io#~2.2.0",
+    "css.oncletom.io-cyneticmonkey": "oncletom/css.oncletom.io#v1.0.x"
   }
 }
