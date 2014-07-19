@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "assemble": "^0.4.37",
+    "assemble-yaml": "^0.2.1",
     "grunt": "^0.4.5",
     "grunt-contrib-less": "^0.11.1",
     "grunt-gh-pages": "^0.8.1"
