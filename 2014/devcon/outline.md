@@ -33,3 +33,6 @@ flow of `npm install --save peaks.js`
 > One of the major goals of this program is to increase the technology transfer from HP Labs to the rest of the company.
 > Done correctly, internal open source allows a company to leverage the work of all of its employees, to eliminate duplicate work, and to encourage innovation.
 — http://dreamsongs.com/ihe/IHE-32.html
+
+> The BBC has traditionally been something of a fortress, a citadel; you have been either within it or outside. Hall is determined to change that. The corporation must and will become “porous”, he said. Instead of the portcullis being shut the BBC will, in the future, send its audiences out of the castle precincts and towards the work of other organisations whose values it shares.
+— http://www.theguardian.com/media/2014/aug/19/-sp-bbc-report-news-broadcasting
