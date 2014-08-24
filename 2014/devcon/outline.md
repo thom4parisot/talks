@@ -35,4 +35,5 @@ flow of `npm install --save peaks.js`
 — http://dreamsongs.com/ihe/IHE-32.html
 
 > The BBC has traditionally been something of a fortress, a citadel; you have been either within it or outside. Hall is determined to change that. The corporation must and will become “porous”, he said. Instead of the portcullis being shut the BBC will, in the future, send its audiences out of the castle precincts and towards the work of other organisations whose values it shares.
+> The BBC will, he said, share its resources and work with organisations outside, too: “If you’re paid for by everybody it’s your job to be porous. That doesn’t mean you lower standards – no, no, no. You are elitist about your standards, but you should be porous in terms of the people that you’re inviting in to share our space.”
 — http://www.theguardian.com/media/2014/aug/19/-sp-bbc-report-news-broadcasting
