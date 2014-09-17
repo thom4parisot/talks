@@ -1,11 +1,19 @@
 # On seeding and farming our source code
 
-Amongst users and consumers of open source softwares, I often encounter a silent majority of people who have genuine reasons to avoid open sourcing software.
+I never considered myself being an Open Source developer.
+But I have always learned and benefited from the Open Source nebula. So I naturally shared back, through blog posts, talks or  code.
 
-One does feel it is not useful enough. One does have no reason to change their habit. One does need to make money. One simply does not trust those hippy developers.
+Although Open Source seems nice in theory, promoting this philosophy in an organisation can be tricky: success leads to business, openness leads to protection and exposure leads to a fear of failure.
 
-I would like to show that creating and maintaining open source software is *not so different* from any daily programming habits.
+So how do we do Open Source, especially in a large organisation like the BBC? How can we plant the seeds of an organic and natural change without hurting the business nor damaging ours revenues?
 
-As a **person**: it will make you learn, give you confidence and acceptation.
-As a **culture**: it will bring discoverability, communication and explicitness amongst the code.
-As a **company**: nothing prevents to make money *and* to be open at the same time.
+# Duration
+
+15 to 20 minutes.
+
+# What you will learn
+
+- How to deal with Open Source at the BBC;
+- What and what not to open source;
+- 5 simple steps to use open source to leverage your quality – and not only for code;
+- Open Source is not only about code: it is a culture and philosophy – what difference does it make?
