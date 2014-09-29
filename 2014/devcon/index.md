@@ -1,21 +1,20 @@
 ---
-title: On seeding and farming our source code
+title: Seeding and farming Open Source code at the BBC
 language: en-GB
 layout: slides/oncletom.hbs
 event:
-  name: EBU DevCon 2014
+  name: EBU DevCon
   date: 2014-10-01
   url: https://tech.ebu.ch/devcon14
 video:
 slides:
 ---
 
-Amongst users and consumers of open source softwares, I often encounter a silent majority of people who have genuine reasons to avoid open sourcing software.
+I never considered myself being an Open Source developer.
+But I have always learned and benefited from the Open Source nebula. So I naturally shared back, through blog posts, talks or  code.
 
-One does feel it is not useful enough. One does have no reason to change their habit. One does need to make money. One simply does not trust those hippy developers.
+Although Open Source seems nice in theory, promoting this philosophy in an organisation can be tricky: success leads to business, openness leads to protection and exposure leads to a fear of failure.
 
-I would like to show that creating and maintaining open source software is *not so different* from any daily programming habits.
+So how do we do Open Source, especially in a large organisation like the BBC? How can we plant the seeds of an organic and natural change without hurting the business nor damaging ours revenues?
 
-As a **person**: it will make you learn, give you confidence and acceptation.
-As a **culture**: it will bring discoverability, communication and explicitness amongst the code.
-As a **company**: nothing prevents to make money *and* to be open at the same time.
+We will see through examples how projects like [Imager.js](https://github.com/BBC-News/Imager.js), [Peaks.js](http://waveform.prototyping.bbc.co.uk) and [TAL](https://fmtvp.github.io/tal) benefited from an Open Source collaboration between teams and external contributors. For the best.
