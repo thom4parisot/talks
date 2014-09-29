@@ -1,39 +1,67 @@
+# Outline
 
+- **Attention**: Open Source can be seen as Wonderland when you are outside of it. But if you have had to do it for the first time, you would rather fear to expose bad code and to be seen as a failure. Something is missing in between isn't it? ;
+- **Benefits**: I will bring you inside the BBC fortress to give you essential keys to understand how to do Open Source in large organisations;
+- **Credentials**: I have been working in the Web industry for the past 10 years, published a dozen of modules in the npm registry, maintainer of Imager.js and peaks.js, made a TAL Node.js middleware and wrote a blog post on how *not* to make a Pull Request (55 commits syndrome);
+- **Direction**: I will bring you through the journey of an Open Source contributor within the BBC;
+- **Conclusion**: Open Source is a journey, a culture and a capital you build one day at a time. You now have the keys to start your first contribution, to share a project for the first time or to give a second life to an existing project. Thank you!
 
-# Resources
+----
 
-- https://twitter.com/oncletom/status/425638142981726209
-- https://twitter.com/tristanf/status/403542581780692992
+# Contributing Open Source software
 
-# Notes
+- typo, a letter, a word, a sentence, a paragraph — Read the Docs
+- documentation, code examples
+- bug report, with breaking unit tests
+- feature, bugfix
 
-Different degrees of open source: reporting, issuing, fixing, improving, contributing and managing. In any case: for a single effort, the quality tends to increase, so is its discoverability and your knowledge.
+# Breaking the ice
 
-# Quotes
+- Yes, but… I'm not good enough (nope, you are the only person to think that — if you are kind you are more likely to get helped rather than mocked)
+- Yes, but… I will be blamed because I cary the reputation of my company (nope, and in case you doubt, ask a question, justify your point of view and/or accept you can be wrong)
+- Yes, but… People will mock me if I make a mistake (nope they will tell you this is not relevant to the project)
+(tale of my first PR, did not know what I was doing but I learned about phpunit and redis)
+- Yes, but… Nobody will use it (perhaps, although you would be surprised how fast it can take off with a single post on HackerNews)
 
-it is a sponge between your organisation and the outside
-it helps to discover new related works, which enhances yours at a lower cost than producing it
-it thus connect your work in
-enforces separation of concerns (less tempted to do too much for a component/module)
-it makes it more difficult to hide a debt (either technical, documentation or security): clarification of owners, process etc.
+# require('peaks.js');
 
-if you fear to lose your developers because they are more identifiable, care more about them: they will not leave because they will do open source elsewhere but because your company sucks at treating them properly.
+- use a non-strategic but useful piece of work you care about — interface to create audio snips in a Web browser
+- start small — exploratory work: canvas or SVG but both needed to read data 
+- make sure you have clear indicators (what to do, how long you can work for, definition of done — do not build an hydra but something which works, which is documented and tested)
+- make sure you are aware of the official process — paperwork to fill in, or ship it silently if you are adventurous and confident enough
+- in doubt or meanwhile, work closed source but as if it was open source 
+- tests and documentation are mandatory and a metric of quality — also good to make the project inclusive
+- `open README.md; npm install --save peaks.js; npm test`
 
-flow of `npm install --save peaks.js`
+# npm publish
 
-> When they exist, technology cannot be retained in exclusive ways.
-> A specialization advantage arises only if a supplier which incurs fixed costs can serve a number of different producers at only a small additional cost.
-> Importantly, these spillovers can also occur across sectors, as our discussion of GPTs suggests. In his study of the US machine tool sector in the 19th century, Rosenberg (1976) noted that the various downstream industries using machine tools started up at different times. For instance, firearm manufacturing emerged earlier than sewing machines, typewriters or bicycles. The growth of the firearm industry spurred the development of metal-cutting and shaping machines. Bicycle production required metal-cutting operations that were very similar to those of the firearm industry (e.g. boring, drilling, milling, planing, grinding, polishing, etc.—see Rosenberg, 1976), and thus the bicycle industry could rely upon the suppliers of metal-cutting machines that were already serving the larger firearm industry. What the suppliers had learned in producing metal-cutting machines for the firearm producers did not have to be learned again to supply bicycles producers. The commonality in the learning process across the industries, or what Rosenberg called “technological convergence”, was critical for the transmission of growth, but required the intermediation of an upstream sector.
-— https://www.bbvaopenmind.com/en/article/innovation-inside-and-outside-the-company-how-markets-for-technology-encourage-open-innovation/
+- ship it (`rm -rf .git; git commit -a -m 'Initial commit'`) (good for quality, review and confidence)
+- job done, let's do something else
+- maintenance mode: you provide minimal support and accept relevant contributions
+- knowing to say no — you lead the vision of the project, provide guidance
+- knowing to accept — is it tested? does it conform with the actual code style? what is the cost of including the code (too much, thank and explicit the needs — okay, do the modifications, merge, thank and ship it)
+- 3 levels of strategy:
+ - personal: is it a project you would work on your spare time? Is it valuable or enjoyable without being a sacrifice?
+ - group of people: is it helpful for any actual or known projects? Wait or act: they are your first buyers.
+ - company: is it helpful outside of your office walls? Pitch the project to product managers, bring some metrics if you have some.
 
-> Software companies have long realized the economic and strategic value of using and contributing code to external open source projects. But they're much slower to understand and apply the same open source methods of collaboration to their own projects internally
-— http://www.linux.com/news/featured-blogs/200-libby-clark/768164-how-samsung-is-bringing-open-source-culture-inside-the-firewall
+# Beyond 'release and forget'
 
-> In short, all of the same benefits that outside companies can get by being able to see the source code are available with internal open source.
-> One of the major goals of this program is to increase the technology transfer from HP Labs to the rest of the company.
-> Done correctly, internal open source allows a company to leverage the work of all of its employees, to eliminate duplicate work, and to encourage innovation.
-— http://dreamsongs.com/ihe/IHE-32.html
+- make the project known around you: spread the word to your colleagues
+- be present for support and questions
+- write about it (personal blog, corporate website, public registries)
+- write down features you would like to see in the project
+- sniff projects interested in the existing/future features (or wait for contributors to contribute them for you) - it is useful for them to know they save time and benefit from your experience on the topic
+- find buyers/supporters who have a better grip on the organisation than you
+- success attracts success - people hear about it
+- eventually it becomes strategic - assert the expectations, reward the donors with momentum without betraying the openness spirit
 
-> The BBC has traditionally been something of a fortress, a citadel; you have been either within it or outside. Hall is determined to change that. The corporation must and will become “porous”, he said. Instead of the portcullis being shut the BBC will, in the future, send its audiences out of the castle precincts and towards the work of other organisations whose values it shares.
-> The BBC will, he said, share its resources and work with organisations outside, too: “If you’re paid for by everybody it’s your job to be porous. That doesn’t mean you lower standards – no, no, no. You are elitist about your standards, but you should be porous in terms of the people that you’re inviting in to share our space.”
-— http://www.theguardian.com/media/2014/aug/19/-sp-bbc-report-news-broadcasting
+# Wrap-up
+
+- it is about **time**: you have it or have to find financial resources to get dedicated time
+- it is a tool to learn
+- it will not break the walls of your company but it will make them porous
+- to create bridges across the rivers separating teams
+- public interest: it fuels project's metrics
+- leadership in progress: the community becomes your team
+
