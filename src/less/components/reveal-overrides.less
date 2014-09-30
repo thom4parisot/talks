@@ -2,7 +2,10 @@
   font-size: 36px;
   font-weight: 200;
   letter-spacing: -0.02em;
-  text-shadow: 1px 1px 1px fade(@gray-dark, 30%);
+
+  &, a {
+    text-shadow: none;
+  }
 
   sup {
     top: 0;
@@ -13,7 +16,7 @@
     line-height: 0.9em;
     letter-spacing: 0.02em;
     margin-bottom: .75em;
-    text-shadow: 1px 1px 2px fade(@gray-dark, 25%);
+    text-shadow: 1px 1px fade(@gray-dark, 25%);
   }
 
   blockquote {
@@ -49,9 +52,10 @@
 
   section[data-background]:not(.empty):not(.stack),
   [data-background] section:not(:empty){
-    background-color: fade(#fff, 70%);
-    border-radius: 10px;
-    padding: 1em;
+    h2 {
+      background-color: fade(#fff, 80%);
+      padding: 1em;
+    }
   }
 
   section h2:last-child,
@@ -76,7 +80,7 @@
     }
   }
 
-  .progress {
+  .progress span {
     background: fadeout(@brand-primary, 30%)
   }
 }
