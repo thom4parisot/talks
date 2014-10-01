@@ -68,6 +68,11 @@
   text-shadow: none;
 }
 
+.reveal section .empty,
+[hidden] {
+  display: none !important;
+}
+
 .reveal section[data-background]:not(:empty):not(.stack),
 .reveal [data-background] section:not(:empty){
   background-color: rgba(0, 0, 0, 0.4);
