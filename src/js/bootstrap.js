@@ -55,13 +55,3 @@ Reveal.addEventListener('ready', function(event) {
     }
   });
 });
-
-(function(document){
-  var tag = document.createElement('link');
-  tag.rel = 'stylesheet';
-  tag.media = 'print';
-  tag.type = 'text/css';
-  tag.href = '../../bower_components/reveal.js/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css';
-
-  document.head.appendChild(tag);
-})(document);
