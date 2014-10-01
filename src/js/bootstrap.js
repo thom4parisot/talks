@@ -2,11 +2,11 @@ Reveal.initialize({
   width: 1024,
   height: 728,
 
-  controls: false,
+  controls: /(localhost|#live)/.test(location.href) !== true,
   progress: true,
   history: true,
   center: true,
-  overview: true,
+  overview: false,
   rollingLinks: false,
 
   theme: Reveal.getQueryHash().theme, // available themes are in /css/theme

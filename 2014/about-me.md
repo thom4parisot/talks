@@ -17,17 +17,17 @@
 
 @@@
 
-[![BBC R&D](../images/bbc.png)](http://www.bbc.co.uk/rd)
-
-## Research & Development
+## <span class="bbc">BBC R&D</span>
 
 [github.com/bbcrd](https://github.com/bbcrd)  
 [bbc.co.uk/rd](http://bbc.co.uk/rd)
 
 @@@
 
-[![Sud Web](../images/sudweb.png)](http://sudweb.fr)
+![I published](../images/npm.png)
+
+[npmjs.org/~oncletom](https://npmjs.org/~oncletom)
 
 @@@
 
-<!-- .slide: data-background="../images/photography.jpg" -->
+[![Sud Web](../images/sudweb.png)](http://sudweb.fr)
