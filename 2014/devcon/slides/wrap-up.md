@@ -37,3 +37,9 @@ People may like it or dislike it.
 # … a *leadership* tool
 
 Get trusted. By your team. By the community.
+
+@@@
+
+# … a *continuity* tool
+
+Open Source on top of Open Source.

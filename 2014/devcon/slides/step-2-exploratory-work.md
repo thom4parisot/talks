@@ -56,5 +56,5 @@ SVG is nice but felt harder to build a UI with.
 
 # waveform-data.js
 
-Two for One deal.
+Based on [Audacity](http://audacity.sourceforge.net/). Two for One deal.
 

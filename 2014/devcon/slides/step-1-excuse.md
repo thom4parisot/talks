@@ -18,12 +18,6 @@
 
 @@@
 
-# Non-strategic feature
-
-We had to do it anyway.
-
-@@@
-
 # We wanted to do it *well*
 
 And it was heavily wanted by editors.
@@ -42,6 +36,6 @@ And it was heavily wanted by editors.
 
 @@@
 
-# Okay…
+# “Okay…
 
-## … you have *two months*.
+## … you have *two months*”.
