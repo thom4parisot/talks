@@ -36,7 +36,7 @@ Innovative work, accountable deliverable, esteem++.
 
 # Filling *paperwork*
 
-Needs official approval to avoid any business harm.
+Justified case for openness without business risk.
 
 @@@
 
