@@ -18,4 +18,4 @@ Bug fixes, product related or quick features.
 
 # That's it!
 
-Unless if it is a strategical project.
+Unless if it is a strategic project.
