@@ -8,6 +8,30 @@ event:
   url: https://tech.ebu.ch/devcon14
 video:
 slides:
+  -
+    file: intro.md
+  -
+    file: abcd.md
+  -
+    file: ../../about-me.md
+  -
+    file: title.md
+  -
+    file: contributing.md
+  -
+    file: step-1-excuse.md
+  -
+    file: step-2-exploratory-work.md
+  -
+    file: step-3-release.md
+  -
+    file: step-4-maintenance.md
+  -
+    file: step-5-beyond.md
+  -
+    file: wrap-up.md
+  -
+    file: thank-you.md
 ---
 
 I never considered myself being an Open Source developer.
