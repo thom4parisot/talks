@@ -40,15 +40,15 @@ Needs official approval to avoid any business harm.
 
 @@@
 
-# Closed source
+# Starting *closed* source
 
 Done as it if would be open.
 
 @@@
 
-# Canvas favoured
+# *Canvas* favoured
 
-SVG experiment ends here.
+SVG is nice but felt harder to build a UI with.
 
 @@@
 

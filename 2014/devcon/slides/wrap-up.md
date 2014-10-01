@@ -1,6 +1,6 @@
 <!-- .slide: data-state="contrasted" -->
 
-# Wrapping up
+# Wrap up
 
 @@@
 
