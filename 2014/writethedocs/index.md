@@ -3,6 +3,7 @@ title: README Driven Development
 language: en-GB
 event:
   name: Write the Docs
+  location: Budapest
   date: 2014-03-31
   url: http://conf.writethedocs.org/eu/2014/
 video:

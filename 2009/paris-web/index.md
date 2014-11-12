@@ -3,6 +3,7 @@ title: Le Web en Offline avec Gears et HTML5
 language: fr-FR
 event:
   name: Paris Web
+  location: Paris
   date: 2009-10-10
   url: http://paris-web.fr/2009/
 external: http://www.slideshare.net/oncletom/le-web-en-offline-avec-gears-et-html5-2183309

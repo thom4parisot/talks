@@ -3,6 +3,7 @@ title: Industrialiser l'artisanat de l'intégration Web
 language: fr-FR
 event:
   name: Paris Web
+  location: Paris
   date: 2010-10-16
   url: http://paris-web.fr/2010/
 external: http://www.slideshare.net/oncletom/industrialiser-lartisanat-de-lintgration-web

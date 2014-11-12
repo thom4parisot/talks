@@ -3,6 +3,7 @@ title: Développement efficace avec les frameworks CSS
 language: fr-FR
 event:
   name: Paris Web
+  location: Paris
   date: 2008-11-15
   url: http://paris-web.fr/2008/
 external: http://www.slideshare.net/oncletom/dveloppement-efficace-avec-les-frameworks-css-presentation

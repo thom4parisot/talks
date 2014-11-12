@@ -4,6 +4,7 @@ language: en-GB
 layout: slides/oncletom.hbs
 event:
   name: Scotch on the Rocks
+  location: Edinburgh
   date: 2014-06-06
   url: http://www.sotr.eu/speakers.html#thomasparisot
 video:

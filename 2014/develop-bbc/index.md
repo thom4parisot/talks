@@ -1,12 +1,13 @@
 ---
-title: Open Source code at the BBC
+title: Open Source at the BBC
 language: en-GB
 layout: slides/oncletom.hbs
 event:
-  name: EBU DevCon
-  location: Geneva
-  date: 2014-10-01
-  url: https://tech.ebu.ch/devcon14
+  name: '{ develop: BBC }'
+  location: London
+  duration: 20
+  date: 2014-11-13
+  url: http://www.bbc.co.uk/academy/technology/events/article/art20141001095726612
 video:
 slides:
   -
@@ -17,6 +18,8 @@ slides:
     file: ../../about-me.md
   -
     file: title.md
+  -
+    file: context.md
   -
     file: contributing.md
   -
@@ -38,5 +41,3 @@ slides:
 Open Source can be seen as Wonderland when you are outside of it. But maybe you fear to be scalped if you contribute a wrong piece of code… Something is missing in between isn't it?
 
 So where to start? How to convince your boss it is worth it? How  to broaden the reach of the project? Especially in a large organisation like the BBC.
-
-Let’s see through the [Peaks.js waveform visualisation](http://waveform.prototyping.bbc.co.uk) journey how to pitch a project, how to ship it and how to build a momentum beyond the initial expectations.
