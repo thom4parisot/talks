@@ -34,9 +34,12 @@
             <ul class="metadata">
               <li>
                 <a href="{{this.item.event.url}}">
-                  <span class="icon-location-2"></span>{{this.item.event.name}}
+                  {{this.item.event.name}}
                 </a>
               </li>
+              {{#if this.item.event.location}}<li>
+                <span class="icon-location-2"></span>{{this.item.event.location}}
+              </li>{{/if}}
               {{#if this.item.video}}<li>
                 <a href="{{this.item.video}}">
                   <span class="icon-youtube-play"></span>Watch

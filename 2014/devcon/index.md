@@ -4,6 +4,7 @@ language: en-GB
 layout: slides/oncletom.hbs
 event:
   name: EBU DevCon
+  location: Geneva
   date: 2014-10-01
   url: https://tech.ebu.ch/devcon14
 video:

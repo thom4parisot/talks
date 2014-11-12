@@ -4,6 +4,7 @@ language: en-GB
 layout: slides/oncletom.hbs
 event:
   name: Open Knowledge Festival
+  location: Berlin
   date: 2014-07-19
   url: http://conf.writethedocs.org/eu/2014/
 video:

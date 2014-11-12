@@ -3,6 +3,7 @@ title: "L'industrialisation de l'intégration Web : la révolution de l'artisan 
 language: fr-FR
 event:
   name: Paris Web
+  location: Paris
   date: 2011-10-14
   url: http://paris-web.fr/2011/
 external: http://www.slideshare.net/oncletom/lindustrialisation-de-lintgration-web-la-rvolution-de-lartisan-devenu-ouvrier

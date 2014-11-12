@@ -3,6 +3,7 @@ title: README, un fichier nommé plaisir
 language: fr-FR
 event:
   name: ChtiJS
+  location: Lille
   date: 2014-03-06
   url: http://www.meetup.com/FranceJS/events/168885592/
 video:
@@ -23,38 +24,38 @@ slides:
     file: ../../about-me.md
   -
     file: intro.md
-  - 
+  -
     file: examples-bad.md
     vertical: true
-  - 
+  -
     file: paradox.md
     vertical: true
-  - 
+  -
     file: context.md
     vertical: true
-  - 
+  -
     file: readme-file.md
     vertical: true
-  - 
+  -
     file: reasons.md
     vertical: true
-  - 
+  -
     file: decision.md
     vertical: true
-  - 
+  -
     file: readme-driven.md
     vertical: true
-  - 
+  -
     file: readme-driven-development.md
     vertical: true
-  - 
+  -
     file: wrap-up.md
     vertical: true
-  - 
+  -
     file: credits.md
     vertical: true
 
-	
+
 ---
 
 C'est vendredi, jour béni de mise en production : le sysadmin est déjà à l'apéro
