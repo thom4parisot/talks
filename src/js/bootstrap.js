@@ -43,7 +43,7 @@ Reveal.addEventListener('ready', function(event) {
     }
   });
 
-  toArray(document.querySelectorAll('section[data-markdown] > h2, section[data-markdown] > h3')).forEach(function(el){
+  toArray(document.querySelectorAll('section[data-markdown] > h1, section[data-markdown] > h2, section[data-markdown] > h3')).forEach(function(el){
     if (el.nextElementSibling && el.nextElementSibling.classList.contains('notes')){
       el.classList.add('last-child');
     }
