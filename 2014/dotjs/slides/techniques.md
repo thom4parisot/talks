@@ -22,7 +22,9 @@
 
 @@@
 
-## Satisfaction map
+<!-- .slide: data-background="images/experience-map.jpg" -->
+
+## Experience map
 
 @@@
 
