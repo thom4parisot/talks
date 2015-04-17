@@ -8,7 +8,7 @@ event:
   duration: 20
   date: 2014-11-13
   url: http://www.bbc.co.uk/academy/technology/events/article/art20141001095726612
-video:
+video: https://s3.eu-central-1.amazonaws.com/files.oncletom.io/talks/2014/bbc-develop.mp4
 slides:
   -
     file: intro.md
