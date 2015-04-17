@@ -7,7 +7,7 @@ event:
   location: Geneva
   date: 2014-10-01
   url: https://tech.ebu.ch/devcon14
-video:
+video: https://s3.eu-central-1.amazonaws.com/files.oncletom.io/talks/2014/ebu-devcon.mp4
 slides:
   -
     file: intro.md
