@@ -6,7 +6,7 @@ event:
   location: Budapest
   date: 2014-03-31
   url: http://conf.writethedocs.org/eu/2014/
-video:
+video: https://www.youtube.com/watch?v=2ZhLaahzrOQ
 slides:
   -
     file: epitaph.md
