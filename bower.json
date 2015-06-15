@@ -1,9 +1,8 @@
 {
   "name": "talks",
-  "version": "2.1.0",
   "dependencies": {
     "reveal.js": "2.6.2",
-    "css.oncletom.io": "oncletom/css.oncletom.io#~2.3.0",
+    "css.oncletom.io": "oncletom/css.oncletom.io#~2.4.0",
     "css.oncletom.io-cyneticmonkey": "oncletom/css.oncletom.io#v1.0.x"
   }
 }
