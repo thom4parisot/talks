@@ -20,3 +20,19 @@ This talk is a technical and a functional journey to the key concepts of our mod
 
 - 45 min
 - 20 min
+
+----
+
+# Design d'architecture modulaire à la BBC
+
+Quelle est la différence entre un composant visuel, un *package* npm, une image Docker et une machine, physique ou virtuelle ? À vrai dire, *aucune* : on attend d'eux résilience, composition et fiabilité.
+
+Dans notre équipe de BBC R&D, nous avons pris le chemin de la modularité à plusieurs niveaux :
+
+- nous n'avons pas de WebApp : nous avons une application consomant des **composants React** ;
+- nous n'avons pas de génération séquentielle de métadonnées : nous avons une **boucle événementielle distribuée** faisant appel à une flotille de **conteneurs Docker** ;
+- nous n'avons pas d'architecture 3-tiers : nous avons des **conteneurs Docker** reliés entre eux et exposant des ports.
+
+Cette approche s'est révélée être utile et efficace pour prototyper rapidement en quelques itérations. Car au-delà des principes d'ingéniérie, elle a permis de **réduire la boucle de feedback** avec d'autres corps de métiers et de **faciliter la réutilisation** de notre code par d'autres équipes de la BBC.
+
+Cette présentation est un voyage technique et fonctionnel autour des concepts des architectures modulaires, de qualité et de résilience, à la fois pour les machines et les êtres humaines que nous sommes.
