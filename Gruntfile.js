@@ -11,7 +11,8 @@ module.exports = function(grunt){
           '<%= src %>/**/*',
           '!<%= src %>/*/*.{md,json}'
         ],
-        dest: 'dist/'
+        dest: 'dist/',
+        expand: true
       },
       ui: {
         src: [
@@ -19,14 +20,16 @@ module.exports = function(grunt){
           '!src/layouts',
           '!src/less'
         ],
-        dest: 'dist/'
+        dest: 'dist',
+        expand: true
       },
       dependencies: {
         src: [
           'bower_components/reveal.js/{css,js,lib}/**/*.{css,js}',
           'bower_components/reveal.js/plugin/{markdown,highlight,notes}/**/*.{css,js,html}'
         ],
-        dest: 'dist/'
+        dest: 'dist/',
+        expand: true
       },
       bower_trick: {
         expand: true,
