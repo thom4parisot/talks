@@ -112,6 +112,16 @@ module.exports = function(grunt){
           ]
         }
       },
+      'slides-bbcrd': {
+        flatten: true,
+        src: 'src/less/slides-bbcrd.less',
+        dest: 'src/css/slides-bbcrd.css',
+        options: {
+          paths: [
+            '<%= bower %>/bootstrap/less'
+          ]
+        }
+      },
       'slides-oncletom': {
         flatten: true,
         src: 'src/less/slides-oncletom.less',

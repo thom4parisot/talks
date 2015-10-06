@@ -65,22 +65,5 @@
     margin-bottom: 0;
   }
 
-  .controls {
-    div.navigate-down {
-      border-top-color: @brand-primary;
-    }
-    div.navigate-up {
-      border-bottom-color: @brand-primary;
-    }
-    div.navigate-right {
-      border-left-color: @brand-primary;
-    }
-    div.navigate-left {
-      border-right-color: @brand-primary;
-    }
-  }
-
-  .progress span {
-    background: fadeout(@brand-primary, 30%)
-  }
+  @import './controls';
 }

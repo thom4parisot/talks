@@ -1,0 +1,171 @@
+@brand-primary: #006fc9;
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+
+@gray-light:             lighten(#000, 60%);   // #999
+
+body {
+  transition: all .5s ease;
+}
+
+.reveal{
+  font-size: 36px;
+
+  &, h1, h2, h3, h4, h5 {
+    font-family: Gill Sans, sans-serif;
+    font-weight: 300;
+    line-height: 1.25;
+  }
+
+  a {
+    color: @brand-primary;
+    text-shadow: none;
+
+    &:hover, &:focus {
+      color: darken(@brand-primary, 5%);
+    }
+  }
+
+  em {
+    color: @brand-primary;
+    font-style: normal;
+  }
+
+  strong {
+    color: #fff;
+    font-weight: inherit;
+    padding: .05em .3em;
+    position: relative;
+
+    &:before {
+      background: @brand-primary;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform: skewX(-15deg);
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  blockquote {
+    border: none;
+    border-left: 5px solid @gray-light;
+    box-shadow: none;
+
+    margin: 1.5em 0;
+    padding-left: 1em;
+    text-align: left;
+    width: auto;
+
+    &, p {
+      line-height: 1.5;
+    }
+
+    &:before, &:after {
+      content: none;
+    }
+  }
+
+  small {
+    font-size: 1em;
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer {
+    bottom: -25%;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: fade(white, 50%);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+a {
+  text-shadow: 1px 1px 1px fade(black, 20%);
+}
+
+h1, h2, h3 {
+  .bbc {
+    font-family: Helvetica;
+    font-size: 1.9em;
+    font-weight: 500;
+    text-shadow: none;
+  }
+}
+
+// Backgrounds
+
+.background-light {
+  .reveal {
+    .state-background {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .slides .present {
+      color: #fff;
+      text-shadow: 1px 1px rgba(0, 0, 0, .5);
+    }
+  }
+}
+
+.background-dark {
+  .state-background {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .slides .present {
+    color: #fff;
+    text-shadow: 1px 1px rgba(255, 255, 255, .5);
+  }
+}
+
+.code {
+  .reveal {
+    em {
+      color: #ff0;
+    }
+  }
+}
+
+.contrasted {
+  .reveal {
+    .state-background {
+      background-color: @brand-primary;
+    }
+
+    .slides .present {
+      color: #fff;
+      text-shadow: 1px 1px rgba(0, 0, 0, .5);
+    }
+
+    em {
+      color: #ff0;
+    }
+
+    strong {
+      color: @brand-primary;
+      &:before {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+@import './components/code';
+@import './components/controls';
