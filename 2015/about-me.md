@@ -1,11 +1,11 @@
-![](../../src/img/avatar.jpg)
+<!-- .slide: data-background="../../src/img/thomas-parisot-landscape.jpg" data-state="background-dark" -->
 
-<br>
+## Bonjour,<br> I am **Thomas**
 
-## *Thomas* Parisot
-
+<footer>
 [oncletom.io](https://oncletom.io) –
 [@oncletom](https://twitter.com/oncletom)
+</footer>
 
 @@@
 
@@ -13,14 +13,16 @@
 
 @@@
 
-![Full Stack JavaScript](../images/javascript.png)
-
-@@@
-
 ## <span class="bbc">BBC R&D</span>
 
 [github.com/bbcrd](https://github.com/bbcrd)  
 [bbc.co.uk/rd](http://bbc.co.uk/rd)
+
+@@@
+
+![Full Stack JavaScript](../images/javascript.png)
+
+[oncletom.io/node.js](https://oncletom.io/node.js)
 
 @@@
 
