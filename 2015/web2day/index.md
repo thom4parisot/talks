@@ -8,38 +8,23 @@ event:
   duration: 45
   date: 2015-06-04
   url: http://web2day.co/programme/#jeudi-4-juin
-video:
+video: https://www.uslide.io/presentations/nQg35x6TO7S9TUi6zc1qmA
 slides:
-  -
-    file: intro.md
-  -
-    file: title.md
-  -
-    file: abcd.md
-  -
-    file: ../../about-me.md
-  -
-    file: context.md
-  -
-    file: context-webapp.md
-  -
-    file: step-1-browser.md
-  -
-    file: step-2-ui-element.md
-  -
-    file: step-3-webapp.md
-  -
-    file: step-4-container.md
-  -
-    file: step-5-system-image.md
-  -
-    file: step-6-machine.md
-  -
-    file: wrap-up.md
-  -
-    file: conclusion.md
-  -
-    file: thank-you.md
+  - file: intro.md
+  - file: title.md
+  - file: abcd.md
+  - file: ../../about-me.md
+  - file: context.md
+  - file: context-webapp.md
+  - file: step-1-browser.md
+  - file: step-2-ui-element.md
+  - file: step-3-webapp.md
+  - file: step-4-container.md
+  - file: step-5-system-image.md
+  - file: step-6-machine.md
+  - file: wrap-up.md
+  - file: conclusion.md
+  - file: thank-you.md
 ---
 
 What is the difference between a UI component, an npm package, a Docker image and a machine server? Well, *none* really: we want them to be resilient, stateless and composable.
