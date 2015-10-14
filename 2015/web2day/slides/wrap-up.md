@@ -2,7 +2,7 @@
 
 @@@
 
-<!-- .slide: data-background="images/CNV00031.jpg" -->
+<!-- .slide: data-background="images/CNV00031.jpg" data-state="background-light" -->
 
 # Wrap up
 
@@ -34,7 +34,7 @@ Immutable and *solid assets* are best to deploy. Easier to transfer. Easier to r
 
 # Automation / packaging / *provisionning*
 
-More important than monolith vs. microservice sterile debate. 
+More important than monolith vs. microservice sterile debate.
 
 @@@
 
@@ -46,7 +46,7 @@ Balance of *flexibility* and *explorability*.
 
 # Data layer
 
-Maintain the data state *outside of the app* stack. 
+Maintain the data state *outside of the app* stack.
 
 ~~~~
 

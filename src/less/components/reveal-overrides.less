@@ -1,7 +1,5 @@
 .reveal {
   font-size: 36px;
-  font-weight: 200;
-  letter-spacing: -0.02em;
 
   &, a {
     text-shadow: none;
@@ -11,13 +9,19 @@
     top: 0;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  &, h1, h2, h3, h4, h5 {
     font-family: @headings-font-family;
-    line-height: 0.9em;
-    letter-spacing: 0.02em;
-    margin-bottom: .75em;
-    text-shadow: 1px 1px fade(@gray-dark, 25%);
+    font-weight: 300;
+    line-height: 1.25;
   }
+
+  // h1, h2, h3, h4, h5, h6 {
+  //   font-family: @headings-font-family;
+  //   line-height: 0.9em;
+  //   letter-spacing: 0.02em;
+  //   margin-bottom: .75em;
+  //   text-shadow: 1px 1px fade(@gray-dark, 25%);
+  // }
 
   blockquote {
     background: transparent;
@@ -45,15 +49,34 @@
     }
   }
 
-  em, i {
-    color: @link-color;
+  a {
+    border-bottom: 1px solid @brand-primary;
+    text-decoration: none;
+  }
+
+  em {
+    color: @brand-primary;
     font-style: normal;
   }
 
-  section[data-background]:not(.empty):not(.stack),
-  [data-background] section:not(:empty) h2{
-    background-color: fade(#fff, 85%);
-    padding: 1em;
+  strong {
+    color: #fff;
+    font-weight: inherit;
+    padding: .05em .3em;
+    position: relative;
+    text-shadow: 1px 1px 1px fade(black, 20%);
+
+    &:before {
+      background: @brand-primary;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform: skewX(-15deg);
+      width: 100%;
+      z-index: -1;
+    }
   }
 
   section h1:last-child,
@@ -66,4 +89,28 @@
   }
 
   @import './controls';
+}
+
+.background-light {
+  .reveal {
+    .state-background {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .slides .present {
+      color: #fff;
+      text-shadow: 1px 1px rgba(0, 0, 0, .5);
+    }
+  }
+}
+
+.background-dark {
+  .state-background {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .slides .present {
+    color: #fff;
+    text-shadow: 1px 1px rgba(255, 255, 255, .5);
+  }
 }

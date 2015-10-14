@@ -10,14 +10,10 @@ event:
   url: https://dotjs.eu/2014
 video:
 slides:
-  -
-    file: intro.md
-  -
-    file: features.md
-  -
-    file: techniques.md
-  -
-    file: thanks.md
+  - file: intro.md
+  - file: features.md
+  - file: techniques.md
+  - file: thanks.md
 ---
 
 *ux.js* is an amazing framework which helped me to be a better developer for the past 12 months.
