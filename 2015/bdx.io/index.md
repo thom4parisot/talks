@@ -26,6 +26,7 @@ slides:
   - file: death.md
   - file: interlude.md
   - file: resilience.md
+  - file: interlude.md
   - file: friends.md
   - file: interlude.md
   - file: books.md
