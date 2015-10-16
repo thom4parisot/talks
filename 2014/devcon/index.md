@@ -1,7 +1,7 @@
 ---
 title: Open Source code at the BBC
 language: en-GB
-layout: slides/oncletom.hbs
+layout: slides/bbcrd.hbs
 event:
   name: EBU DevCon
   location: Geneva

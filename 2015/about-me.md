@@ -26,7 +26,9 @@
 
 @@@
 
-[![Sud Web](../images/sudweb.png)](http://sudweb.fr)
+![Sud Web](../images/sudweb.png)
+
+[sudweb.fr](http://sudweb.fr)
 
 @@@
 

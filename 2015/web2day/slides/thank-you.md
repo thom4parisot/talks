@@ -1,7 +1,7 @@
-<!-- .slide: data-background="images/CNV00063.jpg" -->
+<!-- .slide: data-background="images/CNV00063.jpg"  data-state="background-light" -->
 
 
-# Merci ✌️
+# Merci 👍
 
 (en Français dans le texte)
 

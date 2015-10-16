@@ -1,7 +1,7 @@
 ---
 title: Open Source at the BBC
 language: en-GB
-layout: slides/oncletom.hbs
+layout: slides/bbcrd.hbs
 event:
   name: '{ develop: BBC }'
   location: London
