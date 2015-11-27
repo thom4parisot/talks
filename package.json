@@ -5,10 +5,11 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "build": "grunt build",
     "start": "grunt default",
     "deploy": "grunt deploy",
     "init": "bower install && bower update",
-    "postinstall": "bower install",
+    "postinstall": "bower install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "grunt watch"
   },
