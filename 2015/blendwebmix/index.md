@@ -8,7 +8,7 @@ event:
   duration: 25
   date: 2015-10-28
   url: http://www.blendwebmix.com/programme/an-end-to-end-modular-architecture-at-the-bbc.html
-video:
+video: https://www.youtube.com/watch?v=unv-G5RlWkg
 slides:
   - file: intro.md
   - file: title.md

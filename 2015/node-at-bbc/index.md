@@ -8,7 +8,7 @@ event:
   duration: 30
   date: 2015-11-27
   url: https://bbc.github.io/nodejs-at-the-bbc/
-video:
+video: https://s3-eu-west-1.amazonaws.com/test-nodejs-videos-resources-dev-videosbucket-15ezktoo84itw/6.mp4
 slides:
   - file: intro.md
   - file: title.md
