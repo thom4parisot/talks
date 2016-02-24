@@ -82,94 +82,10 @@ module.exports = function(grunt){
      }
    },
 
-   'gh-pages': {
-      gh: {
-        src: [
-          '**/*',
-          '.gitignore'
-        ],
-        options: {
-          base: 'dist/'
-        }
-      }
-    },
-
-    bower: 'bower_components',
-    less: {
-      core: {
-        expand: true,
-        flatten: true,
-        ext: '.css',
-        src: [
-          'src/less/*.less',
-          '!src/less/slides-*.less'
-        ],
-        dest: 'src/css',
-        options: {
-          paths: [
-            '<%= bower %>/css.oncletom.io/src/less',
-            '<%= bower %>/bootstrap/less'
-          ]
-        }
-      },
-      'slides-bbcrd': {
-        flatten: true,
-        src: 'src/less/slides-bbcrd.less',
-        dest: 'src/css/slides-bbcrd.css',
-        options: {
-          paths: [
-            '<%= bower %>/bootstrap/less'
-          ]
-        }
-      },
-      'slides-oncletom': {
-        flatten: true,
-        src: 'src/less/slides-oncletom.less',
-        dest: 'src/css/slides-oncletom.css',
-        options: {
-          paths: [
-            '<%= bower %>/css.oncletom.io/src/less',
-            '<%= bower %>/bootstrap/less'
-          ]
-        }
-      },
-      'slides-cyneticmonkey': {
-        flatten: true,
-        src: 'src/less/slides-cyneticmonkey.less',
-        dest: 'src/css/slides-cyneticmonkey.css',
-        options: {
-          paths: [
-            '<%= bower %>/css.oncletom.io-cyneticmonkey/src/less/common',
-            '<%= bower %>/bootstrap/less'
-          ]
-        }
-      }
-    },
-
-    connect: {
-      dev: {
-        options: {
-          hostname: 'localhost',
-          port: process.env.PORT || 3000,
-          open: true,
-          debug: true,
-          base: 'dist/'
-        }
-      }
-    },
-
     watch: {
       core: {
         files: '<%= copy.core.src %>',
         tasks: ['copy:core']
-      },
-      less: {
-        files: [
-          'src/less/**/*.less',
-          'bower_components/css.oncletom.io/**/*.{css,less}',
-          'bower_components/css.oncletom.io-cyneticmonkey/**/*.{css,less}'
-        ],
-        tasks: ['less']
       },
       ui: {
         files: '<%= copy.ui.src %>',
@@ -190,13 +106,9 @@ module.exports = function(grunt){
   });
 
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('assemble');
 
-  grunt.registerTask('default', ['build', 'connect:dev:keepalive']);
-  grunt.registerTask('build', ['less', 'copy', 'assemble']);
-  grunt.registerTask('deploy', ['build', 'gh-pages']);
+  grunt.registerTask('default', ['build']);
+  grunt.registerTask('build', ['copy', 'assemble']);
 };

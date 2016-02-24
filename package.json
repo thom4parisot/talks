@@ -5,13 +5,22 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "build": "grunt build",
-    "start": "grunt default",
-    "deploy": "grunt deploy",
+    "build": "npm-run-all --parallel 'build:*' 'copy:*'",
+    "build:less": "INCLUDE_PATHS=bower_components/css.oncletom.io/src/less:bower_components/bootstrap/less npm-run-all --parallel 'build:less:*'",
+    "build:less:content": "lessc --include-path=$INCLUDE_PATHS src/less/content.less dist/src/css/content.css",
+    "build:less:fonts": "lessc --include-path=$INCLUDE_PATHS src/less/fonts.less dist/src/css/fonts.css",
+    "build:less:layout": "lessc --include-path=$INCLUDE_PATHS src/less/layout.less dist/src/css/layout.css",
+    "build:less:slides-bbcrd": "lessc --include-path=bower_components/bootstrap/less src/less/slides-bbcrd.less dist/src/css/slides-bbcrd.css",
+    "build:less:slides-oncletom": "lessc --include-path=$INCLUDE_PATHS src/less/slides-oncletom.less dist/src/css/slides-oncletom.css",
+    "build:less:slides-cyneticmonkey": "lessc --include-path=bower_components/css.oncletom.io-cyneticmonkey/src/less/common:$INCLUDE_PATHS src/less/slides-cyneticmonkey.less dist/src/css/slides-cyneticmonkey.css",
+    "start": "http-server ./dist -p 3000 -a 127.0.0.1 -o",
+    "predeploy": "npm run build",
+    "deploy": "NODE_ENV=production gh-pages -d dist",
     "init": "bower install && bower update",
     "postinstall": "bower install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "grunt watch"
+    "watch": "npm-run-all --parallel start 'watch:*'",
+    "watch:less": "chokidar 'src/less/**/*.less' -c 'npm run build:less'"
   },
   "repository": {
     "type": "git",
@@ -26,21 +35,18 @@
     "sharing",
     "knowledge"
   ],
-  "author": "Oncle Tom (https://oncletom.io)",
+  "author": "Thomas Parisot (https://oncletom.io)",
   "license": "BSD",
   "readmeFilename": "README.md",
-  "devDependencies": {
-    "bower": "^1.4.1",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-connect": "^0.11.2",
-    "grunt-contrib-copy": "^0.8.1",
-    "grunt-contrib-watch": "^0.6.1"
-  },
   "dependencies": {
-    "assemble": "^0.4.37",
+    "assemble": "^0.9.1",
+    "bower": "^1.4.1",
     "gray-matter": "^0.5.1",
-    "grunt": "^0.4.5",
-    "grunt-contrib-less": "^1.0.1",
-    "grunt-gh-pages": "^0.10.0"
+    "less": "^2.6.0",
+    "npm-run-all": "^1.5.1"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0",
+    "http-server": "^0.9.0"
   }
 }
