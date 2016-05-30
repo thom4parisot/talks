@@ -35,7 +35,7 @@ En dehors de ça, il a co-fondé [Sud Web](http://sudweb.fr), tente d'écrire un
 ----
 
 ![](thomas-parisot.jpg)  
-*Photo Credit*: [Mathieu Drouet / Take a Sip](http://www.takeasip.net/) (he can do cool stuff for you)
+*Photo Credit*: [Noems](https://twitter.com/noeems).
 
 
 ## Contact
