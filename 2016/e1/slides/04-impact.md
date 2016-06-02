@@ -14,7 +14,7 @@ Morale en baisse mais on suit.
 
 # Septembre 2012
 
-Tribunal de commerce
+Tribunal de commerce : forcer le CEO à s'arrêter.
 
 @@@
 
@@ -51,7 +51,7 @@ En cas de :
 
 # Justice
 
-Traitement équitable des plaignants et des accusés.
+Traitement équitable des plaignants et des accusés à travers différentes phases : conciliation, jugement, redressement, liquidation etc.
 
 Pas d'émotions : des faits.
 
