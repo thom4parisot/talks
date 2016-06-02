@@ -13,6 +13,7 @@ before_deploy:
 - ssh-add $TRAVIS_BUILD_DIR/id_rsa
 - git config --global user.email "build@travis-ci.org"
 - git config --global user.name "Travis CI"
+- rm .gitconfig
 
 deploy:
   provider: script
