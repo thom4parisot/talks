@@ -89,7 +89,8 @@ module.exports = function(grunt){
           '.gitignore'
         ],
         options: {
-          base: 'dist/'
+          base: 'dist/',
+          repo: 'git@github.com:oncletom/talks.git',
         }
       }
     },
