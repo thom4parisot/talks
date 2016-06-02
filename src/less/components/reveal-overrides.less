@@ -29,7 +29,28 @@
     font-size: 1.55em;
     font-style: normal;
     margin-bottom: 1em;
+    text-align: left;
     width: 80%;
+
+    p {
+      border-left: 7px solid @gray-light;
+      padding-left: 1em;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+
+    thead th {
+      border-bottom: 1px double @gray;
+      font-weight: normal;
+      padding: .7em .5em;
+    }
+
+    tbody td, tbody th {
+      border-bottom: 1px solid @gray;
+      padding: .5em;
+    }
   }
 
   ul, ol {
