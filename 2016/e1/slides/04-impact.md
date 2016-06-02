@@ -6,7 +6,7 @@
 
 # Juin…Septembre
 
-Morale en baisse mais on suit.
+Moral en baisse mais on suit.
 
 @@@
 
