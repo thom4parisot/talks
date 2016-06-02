@@ -8,9 +8,9 @@
     "build": "grunt build",
     "start": "grunt default",
     "deploy": "grunt deploy",
-    "init": "bower install && bower update",
-    "postinstall": "bower install && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "init": "bower install --no-interactive",
+    "postinstall": "npm run init && npm run build",
+    "test": "exit 0",
     "watch": "grunt watch"
   },
   "repository": {
