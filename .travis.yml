@@ -11,6 +11,8 @@ before_deploy:
 - eval "$(ssh-agent -s)"
 - chmod 600 $TRAVIS_BUILD_DIR/id_rsa
 - ssh-add $TRAVIS_BUILD_DIR/id_rsa
+- git config --global user.email "build@travis-ci.org"
+- git config --global user.name "Travis CI"
 
 deploy:
   provider: script
