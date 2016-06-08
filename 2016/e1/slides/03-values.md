@@ -4,9 +4,9 @@
 
 @@@
 
-|             | Old school          | Tech
+| Cultures    | Old school          | Tech
 | ---         | ---                 | ---
-|             | urgence             | pragmatisme
+| Décisions   | urgence             | pragmatisme, agilité
 | Objectif    | tomber du contrat   | dev plateforme innovante
 | Focus       | levée de fonds      | être bien ensemble
 | Ivresse     | argent disponible   | conditions de travail idéales

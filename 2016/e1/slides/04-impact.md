@@ -51,9 +51,9 @@ En cas de :
 
 # Justice
 
-Traitement équitable des plaignants et des accusés à travers différentes phases : conciliation, jugement, redressement, liquidation etc.
+**Traitement équitable** des plaignants et des accusés à travers différentes phases : conciliation, jugement, redressement, liquidation etc.
 
-Pas d'émotions : des faits.
+Pas d'émotions : des **faits**.
 
 @@@
 
