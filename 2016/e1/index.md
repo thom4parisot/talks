@@ -8,7 +8,7 @@ event:
   duration: 20
   date: 2016-06-02
   url: http://www.e1-conference.com
-video:
+video: https://www.youtube.com/watch?v=NVpH1w_aSUk
 slides:
   - file: intro.md
   - file: interlude.md
