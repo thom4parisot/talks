@@ -10,11 +10,11 @@
 
 ## 🇫🇷
 
-Swagger est souvent mis en avant pour sa capacité à générer la documentation d'API depuis votre code.
-
-Pourtant je pense que sa véritable force réside dans les schémas OpenAPI, agissant comme le README de votre API : quelles routes répondent quoi, quels sont les modèles de données ainsi que leur sécurité.
-
-Nous verrons comment interfacer le schéma avec des outils de validation, des contrôleurs et AWS API Gateway pour les combiner.
+> Swagger est souvent mis en avant pour sa capacité à générer la documentation d'API depuis votre code.
+> 
+> Pourtant je pense que sa véritable force réside dans les schémas OpenAPI, agissant comme le README de votre API : quelles routes répondent quoi, quels sont les modèles de données ainsi que leur sécurité.
+> 
+> Nous verrons comment interfacer le schéma avec des outils de validation, des contrôleurs et AWS API Gateway pour les combiner.
 
 # Duration
 
