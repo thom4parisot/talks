@@ -8,7 +8,7 @@ event:
   duration: 25
   date: 2015-10-07
   url: https://tech.ebu.ch/events/devcon15
-video:
+video: https://s3.eu-central-1.amazonaws.com/files.oncletom.io/talks/2015/ebu-devcon.mp4
 slides:
   - file: title.md
   - file: ../../about-me.md
