@@ -13,9 +13,9 @@
 
 @@@
 
-## <span class="bbc">BBC R&D</span>
+## <span class="bbc">BBC R&amp;D</span>
 
-[github.com/bbcrd](https://github.com/bbcrd)  
+[github.com/bbcrd](https://github.com/bbcrd)
 [bbc.co.uk/rd](http://bbc.co.uk/rd)
 
 @@@
