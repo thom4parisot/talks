@@ -30,7 +30,7 @@ Thomas previously worked at [BBC R&D][bbcrd], he co-created the [Sud Web confere
 
 Il est un fervent défenseur de l'apprentissage multidisciplinaire, de simplicité et des heureux hasards. Il aime le fromage, évidemment. Et [les mots](https://oncletom.io). Et [composer des photos](https://oncletom.io/photos/). Ou s'évader sur les sentiers de rando, avec tente et sac à dos.
 
-Thomas a précédemment travaill à [BBC R&D][bbcrd], a co-fondé [Sud Web][sudweb] et n'a aucun problème à admettre d'avoir créé une startup qui a fait faillite.
+Thomas a précédemment travaillé à [BBC R&D][bbcrd], a co-fondé [Sud Web][sudweb] et n'a aucun problème d'admettre avoir créé une startup qui a fait faillite.
 
 ----
 
