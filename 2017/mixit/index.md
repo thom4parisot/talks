@@ -15,6 +15,7 @@ slides:
   - file: ../../about-me.md
   - file: ukraine-trip.md
   - file: part-time.md
+  - file: work-labour.md
   - file: wrap-up.md
   - file: thanks.md
 ---
