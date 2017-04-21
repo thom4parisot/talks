@@ -105,4 +105,10 @@ La réduction pousse à la simplicité (penser refactoring), un peu moins de sor
 
 # Gestion de la **santé**
 
-Moral, physique.
+On s'aère, le moral, le physique.
+
+~~~~
+
+Pour soi mais aussi pour les autres, car plus détendu donc meilleures conversations.
+
+Cf. conf avec l'orchestre de jeudi matin.
