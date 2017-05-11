@@ -8,7 +8,7 @@ event:
   duration: 20
   date: 2016-11-09
   url: https://mixitconf.org/2017/travailler-moins-pour-gagner-moins
-video:
+video: https://vimeo.com/217023172
 slides:
   - file: intro.md
   - file: title.md
