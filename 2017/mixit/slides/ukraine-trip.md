@@ -16,7 +16,9 @@ Pas de jardin, envie de pratiquer mais à rien à côté de chez moi, et un stag
 
 @@@
 
-# Woofing ?
+# Woofing
+
+⏳ = 🛌 🍛
 
 ~~~~
 
@@ -26,8 +28,8 @@ Définir le woofing.
 
 # Partir 4 semaines
 
-* 2 semaines en **congés payés** (tourisme)
-* 2 semaines en congès **sans solde** (woofing)
+* 2 en **congés payés** (tourisme)
+* 2 en congès **sans solde** (woofing)
 
 ~~~~
 
@@ -61,7 +63,7 @@ Deux jours plus tard, trajet de 4h de trajet en bus.
 
 @@@
 
-<!-- .slide: data-background="images/obyrok-field.jpg" data-background-size="" -->
+<!-- .slide: data-background="images/obyrok-field.jpg" -->
 
 ~~~~
 
@@ -78,7 +80,7 @@ Cela veut dire coupe du blé à la serpe…
 
 @@@
 
-<!-- .slide: data-background="images/obyrok-braces.jpg" data-background-size="" -->
+<!-- .slide: data-background="images/obyrok-braces.jpg" -->
 
 ~~~~
 
@@ -86,7 +88,7 @@ Cela veut dire coupe du blé à la serpe…
 
 @@@
 
-<!-- .slide: data-background="images/obyrok-grind.jpg" data-background-size="" -->
+<!-- .slide: data-background="images/obyrok-grind.jpg" -->
 
 ~~~~
 
@@ -96,7 +98,7 @@ Le paradoxe est que les deux boulangers qui nous apprenaient à faire les pains 
 
 @@@
 
-<!-- .slide: data-background="images/obyrok-tractor.jpg" data-background-size="" -->
+<!-- .slide: data-background="images/obyrok-tractor.jpg" -->
 
 ~~~~
 
@@ -104,7 +106,7 @@ On forçait le trait bien sûr, il n'y avait pas _besoin_ de tout faire à la ma
 
 @@@
 
-<!-- .slide: data-background="images/obyrok-smoothies.jpg" data-background-size="" -->
+<!-- .slide: data-background="images/obyrok-smoothies.jpg" -->
 
 ~~~~
 

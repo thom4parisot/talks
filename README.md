@@ -37,6 +37,14 @@ Thomas a précédemment travaillé à [BBC R&D][bbcrd], a co-fondé [Sud Web][su
 ![](thomas-parisot.jpg)
 *Photo Credit*: [Noems](https://twitter.com/noeems).
 
+## Export
+
+Grab a PDF of any talk with [decktape](https://github.com/astefanutti/decktape).
+
+```bash
+docker run --rm -v `pwd`:/slides astefanutti/decktape https://oncletom.io/talks/:year/:conference/ slides.pdf
+```
+
 
 ## Contact
 
