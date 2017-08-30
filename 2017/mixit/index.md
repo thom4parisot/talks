@@ -6,7 +6,7 @@ event:
   name: MiXiT
   location: Lyon
   duration: 20
-  date: 2016-11-09
+  date: 2017-04-21
   url: https://mixitconf.org/2017/travailler-moins-pour-gagner-moins
 video: https://vimeo.com/217023172
 slides:
