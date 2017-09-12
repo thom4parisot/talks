@@ -15,6 +15,7 @@
 .reveal h6 {
   font-family: Optima, "Helvetica Nueue", sans-serif;
   margin-bottom: .75em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
   text-transform: none;
 }
 /* head title */
