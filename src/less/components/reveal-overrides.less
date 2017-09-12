@@ -81,23 +81,12 @@
   }
 
   strong {
+    background: fade(@brand-primary, 90%);
     color: #fff;
     font-weight: inherit;
-    padding: .05em .3em;
-    position: relative;
-    text-shadow: 1px 1px 1px fade(black, 20%);
-
-    &:before {
-      background: @brand-primary;
-      content: "";
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      transform: skewX(-15deg);
-      width: 100%;
-      z-index: -1;
-    }
+    padding-left: .3em;
+    padding-right: .3em;
+    text-shadow: 1px 1px 1px fade(black, 50%);
   }
 
   section h1:last-child,
@@ -123,6 +112,15 @@
       text-shadow: 1px 1px rgba(0, 0, 0, .5);
     }
   }
+}
+
+.background-dark,
+.background-contrasted {
+    strong {
+      background: fade(@brand-primary, 70%);
+      color: #fff;
+      text-shadow: 1px 1px 1px fade(black, 50%);
+    }
 }
 
 .background-dark {

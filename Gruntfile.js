@@ -197,7 +197,7 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('assemble');
 
-  grunt.registerTask('default', ['build', 'connect:dev:keepalive']);
+  grunt.registerTask('default', ['build', 'connect:dev:keepalive', 'watch']);
   grunt.registerTask('build', ['less', 'copy', 'assemble']);
   grunt.registerTask('deploy', ['build', 'gh-pages']);
 };
