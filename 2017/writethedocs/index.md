@@ -8,7 +8,7 @@ event:
   duration: 30
   date: 2017-09-12
   url: http://www.writethedocs.org/conf/eu/2017/speakers/#speaker-eu-2017-thomas-parisot
-video:
+video: https://www.youtube.com/watch?v=p2eAXLR3OOk
 slides:
   - file: intro.md
   - file: about-me.md
