@@ -1,10 +1,10 @@
 ---
 title: An offline admin generator with HTML 5 and Gears
 language: en-GB
+date: 2010-02-17
 event:
   name: Symfony Live
   location: Paris
-  date: 2010-02-17
   url: http://live.symfony.com/
 external: http://www.slideshare.net/oncletom/an-offline-admin-generator-with-html-5-and-gears
 video:

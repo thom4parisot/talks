@@ -1,8 +1,14 @@
----title: Open Source code at the BBClanguage: en-GBlayout: slides/bbcrd.hbsevent:
-name: EBU DevCon
-location: Geneva
+---
+title: Open Source code at the BBC
+language: en-GB
+layout: slides/bbcrd.hbs
 date: 2014-10-01
-url: https://tech.ebu.ch/devcon14video:https://s3.eu-central-1.amazonaws.com/files.oncletom.io/talks/2014/ebu-devcon.mp4slides:
+event:
+  name: EBU DevCon
+  location: Geneva
+  url: https://tech.ebu.ch/devcon14
+video: https://s3.eu-central-1.amazonaws.com/files.oncletom.io/talks/2014/ebu-devcon.mp4
+slides:
   - file: intro.md
   - file: abcd.md
   - file: ../../about-me.md

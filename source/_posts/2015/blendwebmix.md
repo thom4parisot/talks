@@ -2,11 +2,11 @@
 title: Design d'architecture modulaire à la BBC
 language: fr-FR
 layout: slides/bbcrd.hbs
+date: 2015-10-28
 event:
   name: Blend Webmix
   location: Lyon
   duration: 25
-  date: 2015-10-28
   url: http://www.blendwebmix.com/programme/an-end-to-end-modular-architecture-at-the-bbc.html
 video: https://www.youtube.com/watch?v=unv-G5RlWkg
 slides:

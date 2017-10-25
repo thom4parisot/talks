@@ -1,10 +1,10 @@
 ---
 title: Business Logic in the Cloud with Google Apps Scripts
 language: en-GB
+date: 2013-01-18
 event:
   name: TakeOff
   location: Lille
-  date: 2013-01-18
   url: http://takeoffconf.com/2013
 external: http://www.slideshare.net/oncletom/business-logic-in-the-cloud-with-google-apps-scripts-16054925
 video: https://www.youtube.com/watch?v=sLHEjTlOCdk

@@ -2,10 +2,10 @@
 title: Solid Grunt
 language: en-GB
 layout: slides/oncletom.hbs
+date: 2014-06-06
 event:
   name: Scotch on the Rocks
   location: Edinburgh
-  date: 2014-06-06
   url: http://2014.sotr.eu/speakers.html#thomasparisot
 video:
 slides:

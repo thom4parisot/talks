@@ -2,11 +2,11 @@
 title: End-to-end modular architecture at the BBC
 language: en-GB
 layout: slides/oncletom.hbs
+date: 2015-06-04
 event:
   name: Web2day
   location: Nantes
   duration: 45
-  date: 2015-06-04
   url: http://web2day.co/programme/#jeudi-4-juin
 video: https://www.uslide.io/presentations/nQg35x6TO7S9TUi6zc1qmA
 slides:
@@ -30,4 +30,3 @@ slides:
 What is the difference between a UI component, an npm package, a Docker image and a machine server? Well, *none* really: we want them to be resilient, stateless and composable.
 
 This talk is a technical and a functional journey to the key concepts of our modular architecture at BBC R&D, how we ensure its quality and scalability, amongst humans and machines.
-

@@ -1,10 +1,10 @@
 ---
 title: README, un fichier nommé plaisir
 language: fr-FR
+date: 2012-10-18
 event:
   name: Paris Web
   location: Paris
-  date: 2012-10-18
   url: http://paris-web.fr/2012/
 video: http://www.dailymotion.com/video/xur8ub_readme-un-fichier-nomme-plaisir_tech
 slides:

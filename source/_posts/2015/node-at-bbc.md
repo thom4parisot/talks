@@ -2,11 +2,11 @@
 title: End-to-end modular architecture at the BBC
 language: en-GB
 layout: slides/bbcrd.hbs
+date: 2015-11-27
 event:
   name: Node.js @ BBC
   location: Manchester
   duration: 30
-  date: 2015-11-27
   url: https://bbc.github.io/nodejs-at-the-bbc/
 video: https://s3-eu-west-1.amazonaws.com/test-nodejs-videos-resources-dev-videosbucket-15ezktoo84itw/6.mp4
 slides:

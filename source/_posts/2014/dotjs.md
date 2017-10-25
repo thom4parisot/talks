@@ -2,11 +2,11 @@
 title: UX.js
 language: en-GB
 layout: slides/oncletom.hbs
+date: 2014-11-17
 event:
   name: DotJS
   location: Paris
   duration: 4
-  date: 2014-11-17
   url: https://dotjs.eu/2014
 video:
 slides:

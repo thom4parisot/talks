@@ -2,11 +2,11 @@
 title: Rethinking applications design with Docker
 language: en-GB
 layout: slides/bbcrd.hbs
+date: 2015-10-07
 event:
   name: EBU DevCon
   location: Geneva
   duration: 25
-  date: 2015-10-07
   url: https://tech.ebu.ch/events/devcon15
 video: https://s3.eu-central-1.amazonaws.com/files.oncletom.io/talks/2015/ebu-devcon.mp4
 slides:

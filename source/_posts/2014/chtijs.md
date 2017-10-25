@@ -1,10 +1,10 @@
 ---
 title: README, un fichier nommé plaisir
 language: fr-FR
+date: 2014-03-06
 event:
   name: ChtiJS
   location: Lille
-  date: 2014-03-06
   url: http://www.meetup.com/FranceJS/events/168885592/
 video:
 slides:

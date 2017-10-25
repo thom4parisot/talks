@@ -2,11 +2,11 @@
 title: Monolithe
 language: fr-FR
 layout: slides/oncletom.hbs
+date: 2015-10-16
 event:
   name: bdx.io
   location: Bordeaux
   duration: 30
-  date: 2015-10-16
   url: http://www.bdx.io/
 video: https://www.youtube.com/watch?v=eVyRaTgaQoY
 slides:

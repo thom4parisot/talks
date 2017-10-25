@@ -28,7 +28,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-  - "**/*/{slides,images}/*"
+  - "**/*/slides/*"
 
 # Writing
 new_post_name: :year/:title.md # File name of new posts
@@ -53,8 +53,8 @@ default_category: uncategorized
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
-time_format: HH:mm:ss
+date_format: MMMM YYYY
+time_format: H:mm:ss
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -77,6 +77,33 @@ graph:
   google_plus:    ~
   facebook:       ~
   twitter:        oncletom
+  pgp:            "https://keybase.io/oncletom/pgp_keys.asc?fingerprint=46637e267871df7f255788ee893c87dfb3335e7e"
+
+webmentions:
+  url: https://webmention.io/oncletom.io
+  features:
+    pingback:   xmlrpc
+    webmention: webmention
+
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+  plugins:
+  - markdown-it-abbr
+  - markdown-it-attrs
+  - markdown-it-footnote
+  - markdown-it-ins
+  - markdown-it-sub
+  - markdown-it-sup
+
+# Content Indexing
+## See https://www.npmjs.com/package/hexo-algolia
+algolia:
+  applicationID: 'QIP7Z1PL3B'
+  apiKey: '5caf0f682ba8349e8a67872b9edde3f3'
+  indexName: 'prod_blog'
+  chunkSize: 5000
 
 archive_generator:
   per_page: 0
