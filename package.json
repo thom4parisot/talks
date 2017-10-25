@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "start": "hexo server",
-    "deploy": "gh-pages",
+    "deploy": "gh-pages --repo git@github.com:oncletom/talks.git --dist public",
+    "pretest": "hexo generate",
     "test": "exit 0"
   },
   "repository": {
