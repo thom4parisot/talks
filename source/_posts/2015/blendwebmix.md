@@ -1,7 +1,7 @@
 ---
 title: Design d'architecture modulaire à la BBC
 language: fr-FR
-layout: slides/bbcrd.hbs
+theme: bbcrd
 date: 2015-10-28
 event:
   name: Blend Webmix
@@ -12,7 +12,7 @@ video: https://www.youtube.com/watch?v=unv-G5RlWkg
 slides:
   - file: intro.md
   - file: title.md
-  - file: ../../about-me.md
+  - file: ../../_about-me.md
   - file: what-is-a-function.md
   - file: context.md
   - file: context-webapp.md

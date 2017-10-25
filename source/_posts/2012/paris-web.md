@@ -8,69 +8,25 @@ event:
   url: http://paris-web.fr/2012/
 video: http://www.dailymotion.com/video/xur8ub_readme-un-fichier-nomme-plaisir_tech
 slides:
-  -
-    file: pre-intro.md
-    vertical: true
-    background-color: '#000'
-  -
-    file: intro.md
-  -
-    file: read-me.md
-  -
-    background: 8251350711_b8555a3e50_b.jpg
-  -
-    background: 8244634570_8bcfb25743_b.jpg
-  -
-    background: 8166604129_8d5056f1c8_b.jpg
-  -
-    background: 8489312830_17628cc7d5_b.jpg
-  -
-    file: about-me.md
-  -
-    file: lessons-learned.md
-    vertical: true
-  -
-    file: origins.md
-    background: 6954491729_d58735000a_b.jpg
-    vertical: true
-  -
-    file: donts.md
-    vertical: true
-  -
-    file: dos.md
-    vertical: true
-  -
-    file: markdown.md
-  -
-    background: readme-file.png
-  -
-    file: reasons.md
-    vertical: true
-  -
-    file: results.md
-    vertical: true
-  -
-    file: github.md
-    background: github.png
-  -
-    file: github-first.md
-    background: github-readme.png
-  -
-    file: editor-online.md
-    background: editor-online.png
-  -
-    file: editor-offline.md
-    background: editor-iawriter.png
-  -
-    file: benefits.md
-    vertical: true
-  -
-    file: rdd.md
-  -
-    file: thanks.md
-    background: 8739752320_7a93319b46_b.jpg
-  -
-    file: to-infinity-and-beyond.md
+  - file: pre-intro.md
+  - file: intro.md
+  - file: read-me.md
+  - file: about-me.md
+  - file: lessons-learned.md
+  - file: origins.md
+  - file: donts.md
+  - file: dos.md
+  - file: markdown.md
+  - file: reasons.md
+  - file: results.md
+  - file: github.md
+  - file: github-first.md
+  - file: editor-online.md
+  - file: editor-offline.md
+  - file: benefits.md
+  - file: rdd.md
+  - file: thanks.md
+  - file: to-infinity-and-beyond.md
 ---
 
 Vendredi, mise en production. Vous annoncez à vos proches que pour l'apéro ce soir, c'est mort, vous êtes dé-bor-dé(e).

@@ -17,7 +17,7 @@ Then, **accept the contract and relocate** or …
 
 @@@
 
-```
+```javascript
 (function jobApplication(){
   (function shortlist(data){
     (function phoneInterview(){
@@ -50,7 +50,7 @@ Then, **accept the contract and relocate** or …
 
 @@@
 
-```
+```javascript
 var $job = $.Deferred();
 
 $jobApplication

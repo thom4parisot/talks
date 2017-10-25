@@ -1,7 +1,6 @@
 ---
 title: Travailler moins pour gagner moins
-language: fr
-layout: slides/oncletom.hbs
+language: fr-FR
 date: 2017-04-21
 event:
   name: MiXiT
@@ -12,7 +11,7 @@ video: https://vimeo.com/217023172
 slides:
   - file: intro.md
   - file: title.md
-  - file: ../../about-me.md
+  - file: ../../_about-me.md
   - file: ukraine-trip.md
   - file: part-time.md
   - file: work-labour.md

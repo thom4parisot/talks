@@ -10,7 +10,7 @@ In jQuery 1.8+: `$.ajax`, `$.animate`, `$('<selector>')`
 
 <br>
 
-```
+```javascript
 var $deferred = $.post('/cheese', {
   name: "Livarot"
 });
@@ -26,7 +26,7 @@ $deferred
 
 ## Create your first Deferred
 
-```
+```javascript
 function getDelayedUserInput(){
   var $deferred = $.Deferred();
 
@@ -52,7 +52,7 @@ $('input').on('click', function(e){
 * `then()` enables data filtering.
 * `when()` is a `done()` for multiple promises.
 
-```
+```javascript
 $.when( $.getJSON('/page/1'), $.getJSON('/page/2') )
   .then(function(page1_data, page2_data){
     return page1_data.concat(page2_data);
@@ -69,7 +69,7 @@ $.when( $.getJSON('/page/1'), $.getJSON('/page/2') )
 
 <br>
 
-```
+```javascript
 var $deferred = $.Deferred();
 var $promise = $deferred.promise();
 
@@ -90,7 +90,7 @@ $deferred.resolve("head");
 
 ## Improving our first Deferred
 
-```
+```javascript
 function getDelayedUserInput(){
   var $deferred = $.Deferred();
 
@@ -109,4 +109,3 @@ $('input').on('click', function(e){
 ```
 
 <small>[See on JSBin](http://jsbin.com/ocadol/4/edit).</small>
-

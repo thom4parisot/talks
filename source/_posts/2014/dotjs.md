@@ -1,7 +1,6 @@
 ---
 title: UX.js
 language: en-GB
-layout: slides/oncletom.hbs
 date: 2014-11-17
 event:
   name: DotJS

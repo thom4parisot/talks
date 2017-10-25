@@ -8,48 +8,17 @@ event:
   url: http://conf.writethedocs.org/eu/2014/
 video: https://www.youtube.com/watch?v=2ZhLaahzrOQ
 slides:
-  -
-    file: epitaph.md
-    vertical: true
-    background-color: '#000'
-  -
-    file: ../../about-me.md
-    vertical: true
-  -
-    file: intro.md
-    vertical: true
-  -
-    background: ../../../2012/paris-web/images/8251350711_b8555a3e50_b.jpg
-  -
-    background: ../../../2012/paris-web/images/8244634570_8bcfb25743_b.jpg
-  -
-    background: ../../../2012/paris-web/images/8166604129_8d5056f1c8_b.jpg
-  -
-    background: ../../../2012/paris-web/images/8489312830_17628cc7d5_b.jpg
-  -
-    file: back-to-reality.md
-    vertical: true
-  -
-    file: context.md
-    vertical: true
-  -
-    file: paradox.md
-    vertical: true
-  -
-    file: readme-file.md
-    vertical: true
-  -
-    file: readme-driven.md
-    vertical: true
-  -
-    file: readme-driven-development.md
-    vertical: true
-  -
-    file: wrap-up.md
-    vertical: true
-  -
-    file: credits.md
-    vertical: true
+  - file: epitaph.md
+  - file: ../../_about-me.md
+  - file: intro.md
+  - file: back-to-reality.md
+  - file: context.md
+  - file: paradox.md
+  - file: readme-file.md
+  - file: readme-driven.md
+  - file: readme-driven-development.md
+  - file: wrap-up.md
+  - file: credits.md
 
 
 ---

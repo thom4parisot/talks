@@ -1,4 +1,4 @@
-<!-- .slide: data-background="../../src/img/thomas-parisot-landscape.jpg" data-state="background-dark" -->
+<!-- .slide: data-background="../../img/thomas-parisot-landscape.jpg" data-state="background-dark" -->
 
 ## Bonjour,<br> je suis **Thomas** Parisot
 

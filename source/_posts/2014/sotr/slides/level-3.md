@@ -48,7 +48,7 @@ Hopefully no we do not need to.
 
 ## Configuration
 
-```coffeescript
+```javascript
 module.exports = function(grunt){
   grunt.initConfig({
     'i18n': {
@@ -70,7 +70,7 @@ This will load any JavaScript file within this folder and will call each module 
 
 ## Orchestration
 
-```coffeescript
+```javascript
 /* ./lib/grunt/remote-i18n.js */
 module.exports = function(grunt){
   grunt.registerTask('i18n', function(lang){
@@ -98,7 +98,7 @@ We want that file to be responsible of dealing with the task, and nothing else. 
 
 ## Business logic
 
-```coffeescript
+```javascript
 var async = require('async');
 
 module.exports = {
@@ -122,7 +122,7 @@ And here is how we expose the `i18n.js` module's business logic.
 
 ## Overall business logic view
 
-```coffeescript
+```javascript
 var async = require('async');
 
 module.exports = {
@@ -135,7 +135,7 @@ module.exports = {
 
 @@@
 
-```coffeescript
+```javascript
 var request = require('request');
 var util = require('./csv-utils.js');
 
@@ -184,7 +184,7 @@ Grunt is already tested by its team. So we are only interested to test our API. 
 
 ## Stub (I/O and third parties)
 
-```coffeescript
+```javascript
 var sinon = request('sinon');
 var gruntStub = sinon.stub(grunt.file, 'write');
 
@@ -204,7 +204,7 @@ Prevent I/O hits and simulates all the possible use cases!
 
 ## Yield edge cases
 
-```coffeescript
+```javascript
 var requestStub = sinon.stub(request, 'get');
 
 it('should parse properly a remote document', function(){

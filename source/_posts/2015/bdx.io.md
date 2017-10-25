@@ -1,7 +1,6 @@
 ---
 title: Monolithe
 language: fr-FR
-layout: slides/oncletom.hbs
 date: 2015-10-16
 event:
   name: bdx.io

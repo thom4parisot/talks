@@ -1,7 +1,7 @@
 ---
 title: End-to-end modular architecture at the BBC
 language: en-GB
-layout: slides/bbcrd.hbs
+theme: bbcrd
 date: 2015-11-27
 event:
   name: Node.js @ BBC
@@ -12,7 +12,7 @@ video: https://s3-eu-west-1.amazonaws.com/test-nodejs-videos-resources-dev-video
 slides:
   - file: intro.md
   - file: title.md
-  - file: ../../about-me.md
+  - file: ../../_about-me.md
   - file: what-is-a-function.md
   - file: context.md
   - file: context-webapp.md

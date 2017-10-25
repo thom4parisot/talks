@@ -1,7 +1,7 @@
 ---
 title: Rethinking applications design with Docker
 language: en-GB
-layout: slides/bbcrd.hbs
+theme: bbcrd
 date: 2015-10-07
 event:
   name: EBU DevCon
@@ -11,7 +11,7 @@ event:
 video: https://s3.eu-central-1.amazonaws.com/files.oncletom.io/talks/2015/ebu-devcon.mp4
 slides:
   - file: title.md
-  - file: ../../about-me.md
+  - file: ../../_about-me.md
   - file: intro-photographs.md
   - file: 01-use-case-php.md
   - file: 02-provisioning.md

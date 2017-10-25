@@ -1,7 +1,6 @@
 ---
 title: "Data for 🙋 and 🤖"
 language: en-GB
-layout: slides/oncletom.hbs
 date: 2016-11-09
 event:
   name: London School of Economics
@@ -13,7 +12,7 @@ slides:
   - file: intro.md
   - file: interlude.md
   - file: title.md
-  - file: ../../about-me.md
+  - file: ../../_about-me.md
   - file: physical-data.md
   - file: analog-data.md
   - file: analog-to-digital-metadata.md

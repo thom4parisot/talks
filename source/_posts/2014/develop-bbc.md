@@ -1,7 +1,7 @@
 ---
 title: Open Source at the BBC
 language: en-GB
-layout: slides/bbcrd.hbs
+theme: bbcrd
 date: 2014-11-13
 event:
   name: '{ develop: BBC }'
@@ -15,7 +15,7 @@ slides:
   -
     file: abcd.md
   -
-    file: ../../about-me.md
+    file: ../../_about-me.md
   -
     file: title.md
   -

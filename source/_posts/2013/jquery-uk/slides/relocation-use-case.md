@@ -13,7 +13,7 @@ And hope for an on-time payday to finally live like a new settler!
 
 ## Opening a bank account
 
-```
+```javascript
 function requestBankAccount(job, postal_address){
   var $deferred;
 
@@ -33,7 +33,7 @@ function requestBankAccount(job, postal_address){
 
 Let's assume we have a `$job` promise available in the scope.
 
-```
+```javascript
 var $address, $account, $NINo, $debitCard;
 
 $address = requestAppartment(job);

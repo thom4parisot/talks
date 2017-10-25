@@ -1,4 +1,4 @@
-![](../../src/img/avatar.jpg)
+![](../../img/avatar.jpg)
 
 <br>
 
@@ -9,11 +9,11 @@
 
 @@@
 
-![Pardon my French](../images/pardon-my-french.jpg)
+![Pardon my French](../../images/pardon-my-french.jpg)
 
 @@@
 
-![Full Stack JavaScript](../images/javascript.png)
+![Full Stack JavaScript](../../images/javascript.png)
 
 @@@
 
@@ -24,10 +24,10 @@
 
 @@@
 
-![I published](../images/npm.png)
+![I published](../../images/npm.png)
 
 [npmjs.org/~oncletom](https://npmjs.org/~oncletom)
 
 @@@
 
-[![Sud Web](../images/sudweb.png)](http://sudweb.fr)
+[![Sud Web](../../images/sudweb.png)](http://sudweb.fr)

@@ -11,23 +11,18 @@ slides:
     file: intro.md
   -
     file: application-use-case.md
-    vertical: true
   -
     file: about-me.md
   -
     file: digging-into-deferred.md
-    vertical: true
   -
     file: relocation-use-case.md
-    vertical: true
   -
     file: q-and-a.md
-    vertical: true
   -
     file: to-infinity-and-beyond.md
   -
     file: thanks.md
-    background: thanks.jpg
 ---
 
 The Promise JavaScript pattern is receiving quite a lot of attention recently as popular asynchronous pattern.

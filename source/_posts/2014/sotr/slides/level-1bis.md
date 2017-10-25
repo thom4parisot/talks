@@ -32,7 +32,7 @@ Yesterday someone talked about `grunt-http`. This is something you can do withou
 
 ## Configuration
 
-```coffeescript
+```javascript
 /* package.json */
 {
   "scripts": {

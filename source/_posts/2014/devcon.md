@@ -1,7 +1,7 @@
 ---
 title: Open Source code at the BBC
 language: en-GB
-layout: slides/bbcrd.hbs
+theme: bbcrd
 date: 2014-10-01
 event:
   name: EBU DevCon
@@ -11,7 +11,7 @@ video: https://s3.eu-central-1.amazonaws.com/files.oncletom.io/talks/2014/ebu-de
 slides:
   - file: intro.md
   - file: abcd.md
-  - file: ../../about-me.md
+  - file: ../../_about-me.md
   - file: title.md
   - file: contributing.md
   - file: step-1-excuse.md

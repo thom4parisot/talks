@@ -60,7 +60,7 @@ npm i --save grunt grunt-contrib-less
 
 ## Configuration
 
-```coffeescript
+```javascript
 /* Gruntfile.js */
 module.exports = function(grunt){
   grunt.initConfig({

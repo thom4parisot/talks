@@ -11,7 +11,7 @@ The Internet told me:
 
 Callbacks are for *easy* and *simple* uses.
 
-```
+```javascript
 nodes.value(function(item){
   return item.service_id;
 });
@@ -19,7 +19,7 @@ nodes.value(function(item){
 
 Events are for vertical code expansion.
 
-```
+```javascript
 MyModule.prototype.init = function init(view){
   view.$submit.on('click', this.handleSubmit);
   view.$document.on('click keyup', this.logEvent);

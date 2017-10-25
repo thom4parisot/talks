@@ -1,7 +1,6 @@
 ---
 title: Solid Grunt
 language: en-GB
-layout: slides/oncletom.hbs
 date: 2014-06-06
 event:
   name: Scotch on the Rocks
@@ -15,7 +14,7 @@ slides:
   -
     file: greetings.md
   -
-    file: ../../about-me.md
+    file: ../../_about-me.md
   -
     class: contrasted
     file: title.md

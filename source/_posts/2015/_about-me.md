@@ -1,4 +1,4 @@
-<!-- .slide: data-background="../../src/img/thomas-parisot-landscape.jpg" data-state="background-dark" -->
+<!-- .slide: data-background="../../img/thomas-parisot-landscape.jpg" data-state="background-dark" -->
 
 ## Bonjour,<br> I am **Thomas**
 
@@ -9,7 +9,7 @@
 
 @@@
 
-![Pardon my French](../images/pardon-my-french.jpg)
+![Pardon my French](../../images/pardon-my-french.jpg)
 
 @@@
 
@@ -20,19 +20,19 @@
 
 @@@
 
-![Full Stack JavaScript](../images/javascript.png)
+![Full Stack JavaScript](../../images/javascript.png)
 
 [oncletom.io/node.js](https://oncletom.io/node.js)
 
 @@@
 
-![Sud Web](../images/sudweb.png)
+![Sud Web](../../images/sudweb.png)
 
 [sudweb.fr](http://sudweb.fr)
 
 @@@
 
-<!-- .slide: data-background="../images/photography.jpg" -->
+<!-- .slide: data-background="../../images/photography.jpg" -->
 
 ~~~~
 

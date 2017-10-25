@@ -89,7 +89,7 @@ npm i --save grunt grunt-contrib-less
 
 Then we configure the task:
 
-```coffeescript
+```javascript
 // Gruntfile.js
 module.exports = function(grunt){
   grunt.initConfig({
@@ -133,7 +133,7 @@ Simple. Native. Less dependencies. Easier configuration.
 
 Yesterday someone talked about `grunt-http`. This is something you can do without grunt.
 
-```coffeescript
+```javascript
 /* package.json */
 {
   "scripts": {
@@ -158,7 +158,7 @@ Next up are tips and organisation tricks based on my experience and on a two wee
 
 Having a single target is easy and fast to write at first.
 
-```coffeescript
+```javascript
 grunt.initConfig({
   less: {
     all: {
@@ -172,7 +172,7 @@ grunt.initConfig({
 
 It can become long and tedious to maintain on the long run.
 
-```coffeescript
+```javascript
 grunt.initConfig({
   less: {
     all: {
@@ -193,7 +193,7 @@ grunt.initConfig({
 It is better to reflect the intent of a target.
 The UNIX-style filename patterns are also here to keep things simple.
 
-```coffeescript
+```javascript
 grunt.initConfig({
   less: {
     files: {
@@ -217,7 +217,7 @@ The next step after the target are the tasks.
 
 You can create your own simply by referring to the existing ones name:
 
-```coffeescript
+```javascript
 grunt.registerTask('build-assets', ['less', 'uglify']);
 ```
 
@@ -225,7 +225,7 @@ In that case, `build-assets` will obviously care about building he assets for yo
 
 You do not necessarily need to call all the targets of a task as well.
 
-```coffeescript
+```javascript
 grunt.registerTask('build-front', ['less:frontend', 'uglify:frontend', 'jshint', 'karma']);
 ```
 
@@ -237,7 +237,7 @@ The fast tasks are supposed to be triggered manually.
 Because you know you satisfy the prerequisites.
 Because you want to save some unneeded extra seconds of processing.
 
-```coffeescript
+```javascript
 grunt.registerTask('deploy-fast', ['rsync:production']);
 
 grunt.registerTask('deploy', ['build-assets', 'deploy-fast', 'cleanup']);
@@ -265,7 +265,7 @@ As a reminder, a Gruntfile is JavaScript and the `grunt.initConfig` expects to r
 
 So we only need to care about providing a JavaScript object as a configuration file, really.
 
-```coffeescript
+```javascript
 grunt.initConfig({
   less: require('./grunt/less.js'),
   watch: require('./grunt/watch.js')
@@ -274,7 +274,7 @@ grunt.initConfig({
 
 If you want to organise your files in a domain-oriented fashion,  we can split up the configuration this way and augment the configuration object:
 
-```coffeescript
+```javascript
 grunt.initConfig([
   require('./grunt/frontend.js'),
   require('./grunt/performance.js'),
@@ -292,7 +292,7 @@ As the name states, a variable is a way to store a reusable value in different p
 
 As they are evaluated after the `initConfig` step, it means you have access to every other part of the Gruntfile configuration at any moment:
 
-```coffeescript
+```javascript
 grunt.initConfig({
   less: {
     main: {
@@ -311,7 +311,7 @@ grunt.initConfig({
 
 You can define your own variables and use them in globbing patterns for instance:
 
-```coffeescript
+```javascript
 grunt.initConfig({
   now: (new Date).getFullYear(),
   folders: '{2008..<%= now %>}',
@@ -322,7 +322,7 @@ grunt.initConfig({
 
 And even expand over and over:
 
-```coffeescript
+```javascript
 grunt.initConfig({
   now: (new Date).getFullYear(),
   folders: '{2008..<%= now %>}',
@@ -345,7 +345,7 @@ Did you know the `<%= templates %>` are evaluated JavaScript expressions?
 
 So you could use that to reduce the amount of processed documents:
 
-```coffeescript
+```javascript
 grunt.initConfig({
   year: grunt.option('year') || '*',
 
@@ -374,7 +374,7 @@ You can achieve the same by using extra task parameters and the `grunt.task.curr
 grunt assemble:posts:2014
 ```
 
-```coffeescript
+```javascript
 grunt.initConfig({
   assemble: {
     year: '<%= grunt.task.current.args[0] || "*" %>',
@@ -403,7 +403,7 @@ grunt.registerTask('images', ['copy:standardImages', 'responsive_images', 'image
 ```
 
 To:
-```coffeescript
+```javascript
 grunt.registerTask('images', [], function () {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.task.run('copy:standardImages', 'responsive_images', 'imagemin');
@@ -424,7 +424,7 @@ I mean, why waiting for your Sass files to be compiled before processing your im
 
 `grunt-concurrent` is a neat package to decide which tasks you want to parallelise.
 
-```coffeescript
+```javascript
 grunt.initConfig({
   concurrent: {
     frontend: [
@@ -475,7 +475,7 @@ This is:
 
 We simply needs to declare the custom task in the Gruntfile:
 
-```coffeescript
+```javascript
 module.exports = function(grunt){
   grunt.initConfig({
     'i18n': {
@@ -495,7 +495,7 @@ This is where the orchestration part falls into.
 
 We want that file to be responsible of dealing with the task, and nothing else. We want it to be the last piece of code to contain references to `grunt` or anything related to its API.
 
-```coffeescript
+```javascript
 /* ./lib/grunt/remote-i18n.js */
 module.exports = function(grunt){
   grunt.registerTask('i18n', function(lang){
@@ -517,7 +517,7 @@ module.exports = function(grunt){
 
 And here is how we expose the `i18n.js` module's business logic:
 
-```coffeescript
+```javascript
 var async = require('async');
 
 module.exports = {
@@ -535,7 +535,7 @@ module.exports = {
 
 An overall view:
 
-```coffeescript
+```javascript
 var async = require('async');
 
 module.exports = {
@@ -548,7 +548,7 @@ module.exports = {
 
 And a possible take on the download action:
 
-```coffeescript
+```javascript
 var request = require('request');
 var util = require('./csv-utils.js');
 

@@ -1,7 +1,6 @@
 ---
 title: Writing a book in 2017
-language: en
-layout: slides/oncletom.hbs
+language: en-GB
 date: 2017-09-12
 event:
   name: Write the Docs

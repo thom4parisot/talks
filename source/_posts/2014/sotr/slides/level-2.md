@@ -16,7 +16,7 @@ Next up are tips and organisation tricks based on my experience and on a two wee
 
 @@@
 
-```coffeescript
+```javascript
 grunt.initConfig({
   less: {
     all: {
@@ -36,7 +36,7 @@ It can become long and tedious to maintain on the long run.
 
 @@@
 
-```coffeescript
+```javascript
 grunt.initConfig({
   less: {
     all: {
@@ -61,7 +61,7 @@ The UNIX-style filename patterns are also here to keep things simple.
 
 @@@
 
-```coffeescript
+```javascript
 grunt.initConfig({
   less: {
     files: {
@@ -93,7 +93,7 @@ The next step after the target are the tasks.
 
 ## Configuration
 
-```coffeescript
+```javascript
 grunt.registerTask('build-assets', ['less', 'uglify']);
 ```
 
@@ -109,7 +109,7 @@ You do not necessarily need to call all the targets of a task as well.
 
 ## Fine grained configuration
 
-```coffeescript
+```javascript
 grunt.registerTask('build-front', ['less:frontend', 'uglify:frontend', 'jshint', 'karma']);
 ```
 
@@ -123,7 +123,7 @@ So we can split them up as *full* tasks and *fast* tasks.
 
 ## Full and fast tasks
 
-```coffeescript
+```javascript
 grunt.registerTask('deploy-fast', ['rsync:production']);
 
 grunt.registerTask('deploy', ['build-assets', 'deploy-fast', 'cleanup']);
@@ -167,7 +167,7 @@ Organise them in a way which truly speaks within your team.
 
 ## Modular Gruntfile
 
-```coffeescript
+```javascript
 grunt.initConfig({
   less: require('./grunt/less.js'),
   watch: require('./grunt/watch.js')
@@ -186,7 +186,7 @@ So we only need to care about providing a JavaScript object as a configuration f
 
 ## Domain based modular Gruntfile
 
-```coffeescript
+```javascript
 grunt.initConfig([
   require('./grunt/frontend.js'),
   require('./grunt/performance.js'),
@@ -214,7 +214,7 @@ As the name states, a variable is a way to store a reusable value in different p
 
 @@@
 
-```coffeescript
+```javascript
 grunt.initConfig({
   less: {
     main: {
@@ -239,7 +239,7 @@ As they are evaluated after the `initConfig` step, it means you have access to e
 
 ## Variables in globbing patterns
 
-```coffeescript
+```javascript
 grunt.initConfig({
   now: (new Date).getFullYear(),
   folders: '{2008..<%= now %>}',
@@ -256,7 +256,7 @@ You can define your own variables and use them in globbing patterns for instance
 
 ## Over and over…
 
-```coffeescript
+```javascript
 grunt.initConfig({
   now: (new Date).getFullYear(),
   folders: '{2008..<%= now %>}',
@@ -276,7 +276,7 @@ grunt.initConfig({
 
 ## Command line variables
 
-```coffeescript
+```javascript
 grunt.initConfig({
   year: grunt.option('year') || '*',
 
@@ -321,7 +321,7 @@ grunt assemble:posts:2014
 
 @@@
 
-```coffeescript
+```javascript
 grunt.initConfig({
   assemble: {
     year: '<%= grunt.task.current.args[0] || "*" %>',
@@ -350,14 +350,14 @@ If your Gruntfile starts to become massive, running a task can become slow just 
 
 ## From
 
-```coffeescript
+```javascript
 grunt.loadNpmTasks('grunt-contrib-imagemin');
 grunt.registerTask('images', ['copy:standardImages', 'responsive_images', 'imagemin']);
 ```
 
 ## To
 
-```coffeescript
+```javascript
 grunt.registerTask('images', [], function () {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.task.run('copy:standardImages', 'responsive_images', 'imagemin');
@@ -400,7 +400,7 @@ I mean, why waiting for your Sass files to be compiled before processing your im
 
 ## `grunt-concurrent`
 
-```coffeescript
+```javascript
 grunt.initConfig({
   concurrent: {
     frontend: [

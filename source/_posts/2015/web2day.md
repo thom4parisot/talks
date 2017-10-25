@@ -1,7 +1,6 @@
 ---
 title: End-to-end modular architecture at the BBC
 language: en-GB
-layout: slides/oncletom.hbs
 date: 2015-06-04
 event:
   name: Web2day
@@ -13,7 +12,7 @@ slides:
   - file: intro.md
   - file: title.md
   - file: abcd.md
-  - file: ../../about-me.md
+  - file: ../../_about-me.md
   - file: context.md
   - file: context-webapp.md
   - file: step-1-browser.md

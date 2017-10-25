@@ -1,3 +1,6 @@
+<!-- .slide: data-background="images/readme-file.png" -->
+
+@@@
 
 ## Quoi ?
 
@@ -14,5 +17,3 @@
 ## Comment ?
 
 ### ça s'utilise
-
-

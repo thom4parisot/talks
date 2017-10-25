@@ -1,3 +1,5 @@
+<!-- .slide: data-background="images/9676470682_3d418eeb40_b_d.jpg" -->
+
 ## Apprentissages
 
 @@@
