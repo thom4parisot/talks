@@ -12,5 +12,5 @@ logs
 results
 
 *.log
-dist
 db.json
+public
