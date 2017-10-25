@@ -1,12 +1,12 @@
 ---
-title: "D·A·T·A for 🙋 and 🤖"
+title: "Data for 🙋 and 🤖"
 language: en-GB
 layout: slides/oncletom.hbs
+date: 2016-11-09
 event:
   name: London School of Economics
   location: London
   duration: 30
-  date: 2016-11-09
   url: http://www.lse.ac.uk/media@lse/
 audio: https://s3.eu-central-1.amazonaws.com/files.oncletom.io/talks/2016/lse.mp3
 slides:

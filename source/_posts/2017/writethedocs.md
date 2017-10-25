@@ -2,11 +2,11 @@
 title: Writing a book in 2017
 language: en
 layout: slides/oncletom.hbs
+date: 2017-09-12
 event:
   name: Write the Docs
   location: Prague
   duration: 30
-  date: 2017-09-12
   url: http://www.writethedocs.org/conf/eu/2017/speakers/#speaker-eu-2017-thomas-parisot
 video: https://www.youtube.com/watch?v=p2eAXLR3OOk
 slides:
