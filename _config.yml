@@ -1,0 +1,112 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: oncletom.io
+subtitle: Public talks about *Web technologies* and *human experience*.
+description: "Hey, I'm Thomas! A french web engineer living in London, UK. I love combining analog and digital when it comes about photography and I ought to blend more narrative research over time."
+author: Thomas Parisot
+email: hi@oncletom.io
+default_cover: https://oncletom.io/images/thomas-parisot.jpg
+language: en-GB
+timezone: Europe/London
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://oncletom.io/talks
+root: /talks/
+permalink: :year/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: ""
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+  - "**/*/slides/*"
+
+# Writing
+new_post_name: :year/:title.md # File name of new posts
+default_layout: talk
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 1
+render_drafts: true
+post_asset_folder: true
+relative_link: false
+future: true
+highlight:
+  enable: false
+  line_number: true
+  auto_detect: false
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: MMMM YYYY
+time_format: H:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 0
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: ../node_modules/hexo-theme-oncletom
+layout: talks
+
+nunjucks:
+  autoescape: true
+  throwOnUndefined: false
+  watch: false
+
+disqus_shortname: oncletom
+
+graph:
+  google_plus:    ~
+  facebook:       ~
+  twitter:        oncletom
+  pgp:            "https://keybase.io/oncletom/pgp_keys.asc?fingerprint=46637e267871df7f255788ee893c87dfb3335e7e"
+
+webmentions:
+  url: https://webmention.io/oncletom.io
+  features:
+    pingback:   xmlrpc
+    webmention: webmention
+
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+  plugins:
+  - markdown-it-abbr
+  - markdown-it-attrs
+  - markdown-it-footnote
+  - markdown-it-ins
+  - markdown-it-sub
+  - markdown-it-sup
+
+# Content Indexing
+## See https://www.npmjs.com/package/hexo-algolia
+algolia:
+  applicationID: 'QIP7Z1PL3B'
+  apiKey: '5caf0f682ba8349e8a67872b9edde3f3'
+  indexName: 'prod_blog'
+  chunkSize: 5000
+
+archive_generator:
+  per_page: 0
+  yearly: false
+  monthly: false
+  daily: false
