@@ -6,8 +6,11 @@ event:
   name: Codeurs en Seine
   location: Rouen
   duration: 45
-  url:
-video:
+  url: http://www.codeursenseine.com/2017/speakers.html#orateur-Thomas+Parisot
+with:
+  - Antoine Fauchié (https://www.quaternum.net/)
+video: ~
+cover: ../writethedocs/images/asciidoctor-runkit.png
 slides:
   - file: title.md
   - file: themes.md

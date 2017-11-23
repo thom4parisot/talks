@@ -47,7 +47,7 @@
 
 <!-- .slide: data-state="random" -->
 
-# Revenue en continu
+# Revue en continu
 
 @@@
 
