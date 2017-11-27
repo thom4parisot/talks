@@ -9,7 +9,7 @@ event:
   url: http://www.codeursenseine.com/2017/speakers.html#orateur-Thomas+Parisot
 with:
   - Antoine Fauchié (https://www.quaternum.net/)
-video: ~
+video: https://www.youtube.com/watch?v=25wCiZVLNBg
 cover: ../writethedocs/images/asciidoctor-runkit.png
 slides:
   - file: title.md
