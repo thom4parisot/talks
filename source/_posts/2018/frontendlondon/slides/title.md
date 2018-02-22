@@ -30,9 +30,3 @@ February 22<sup>nd</sup> 2018 • [Front-end London][]
 </footer>
 
 [What I learned writing a lousy tech book]: https://www.youtube.com/watch?v=w1L2SgQuv6Q
-
-@@@
-
-<!-- .slide: data-state="contrasted" -->
-
-## Context • Writer Experience • Modular Tooling • Publishers • Community Engagement
