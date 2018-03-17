@@ -1,5 +1,5 @@
 
-# Writing a book in 2017 🇬🇧
+# Writing a book in 20xx 🇬🇧
 
 > The usual way of writing a technical book is to open the Word or LibreOffice application, to write some content, to make a backup, to send it by email to the publisher and to deal with the feedbacks. And repeat.
 > 
@@ -8,6 +8,15 @@
 > It gives us a unique opportunity to approach the whole process of writing in term of "content experience", of "toolchain" and of "distribution".
 > 
 > In the end, a "book" becomes a "writing format" as we can reuse the same pattern to manage any kind of "content" — articles, publications, essays, documentation — that we can transform in physical books, e-books, interactive web pages etc.
+
+# Écrire un livre en 20xx 🇫🇷
+
+> D'habitude, les livres techniques sont écrits avec les logiciels Word ou LibreOffice. La collaboration se fait via des échanges de fichier et de commentaires par email.
+> 
+> En 2018 on peut faire autrement en utilisant des formats texte indépendants de tout logiciel, en utilisant des plates-formes collaboratives comme GitHub ou GitLab pour collecter des retours mais aussi pour transformer le texte en quelque chose de proprement lisible.
+> 
+> C'est une opportunité de repenser l'approche de publication dans son ensemble en prenant en compte l'expérience d'écriture, l'outillage et la distribution.
+
 
 # Notes
 
