@@ -18,19 +18,19 @@ You can find eventual talks in the [`proposals/`](proposals) folder. For sure I 
 
 ### English
 
-**Thomas Parisot is a Senior Web Engineer at [dtc innovation][dtc-innovation]** in London, United Kingdom. His work there involves compelling user experience prototypes, to design social economy web apps and to craft excellent JavaScript Open Source projects.
+**Code, facilitation and research at [dtc innovation][dtc-innovation]**, a small cooperative company. My work involves compelling user experience prototypes, action-research on the field and shaping libre software projects.
 
-He is a believer of cross-disciplines learning, simple things and chance. Of course he likes cheese. And [words](https://oncletom.io). And [making pictures][photography]. And hiking with his rucksack in nature.
+I believe in cross-disciplines learning, simple things and autonomy. And I love eating cheese on a slice of homemade sourdough bread. As well as [painting emotions on film][photography]. And camping in the wild.
 
-Thomas previously worked at [BBC R&D][bbcrd], he co-created the [Sud Web conference][sudweb], and has no problem to admit he co-founded a startup which failed.
+I used to work at [BBC R&D][bbcrd] and to co-organise the [Sud Web conference][sudweb]. I once created a startup and I'm okay to admit it failed miserably.
 
 ### Français
 
-**Thomas Parisot est *Senior Web Engineer* à [dtc innovation][dtc-innovation]** à Londres, au Royaume-Uni (et on y mange bien ;-)). Ses efforts se portent sur la création de prototypes intelligibles, de webapps pour l'économie sociale et solidaire et de *designer* de solides librairies JavaScript Open Source.
+**Code, facilitation et recherche à [dtc innovation][dtc-innovation]**, une petite coopérative d'innovation numérique. Je m'implique dans la réalisation de prototypes, de recherche sur le terrain et de façonner des projets open source.
 
-Il est un fervent défenseur de l'apprentissage multidisciplinaire, de simplicité et des heureux hasards. Il aime le fromage, évidemment. Et [les mots](https://oncletom.io). Et [composer des photos][photography]. Ou s'évader sur les sentiers de rando, avec tente et sac à dos.
+Je crois beaucoup dans l'apprentissage multidisciplinaire, les choses simples et l'autonomie. J'adore manger du fromage sur une tranche de pain au levain que j'aurais cuit au four. Et [transposer mes émotions sur film analogique][photography]. Et camper au vert.
 
-Thomas a précédemment travaillé à [BBC R&D][bbcrd], a co-fondé [Sud Web][sudweb] et n'a aucun problème d'admettre avoir créé une startup qui a fait faillite.
+Avant je travaillais à [la R&D de la BBC][bbcrd] et je co-organisais la conférence [Sud Web][sudweb]. J'ai aussi co-fondé une startup mais chuis OK d'admettre qu'on a bien foiré.
 
 ----
 
@@ -48,7 +48,7 @@ docker run --rm -v `pwd`:/slides astefanutti/decktape https://oncletom.io/talks/
 
 ## Contact
 
-*Location*: London, United Kingdom
+*Location*: 🎒, France.
 
 * **Twitter**: [@oncletom](https://twitter.com/oncletom)
 * **Github**: [@oncletom](https://github.com/oncletom)
