@@ -9,7 +9,7 @@ event:
   location: Lyon
   duration: 50
   url: https://mixitconf.org/en/2018/se-liberer-des-entreprises-pour-creer-son-equilibre-et-payer-ses-factures
-cover: images/peak-district-train.jpg
+cover: images/londres-river-lea.jpg
 video:
 slides:
   - file: title.md
