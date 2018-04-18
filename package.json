@@ -4,9 +4,10 @@
   "description": "Public talks provided either in English or French, about JavaScript or human-centric topics.",
   "private": true,
   "scripts": {
+    "build": "hexo generate --bail",
     "start": "hexo server",
     "deploy": "gh-pages --repo git@github.com:oncletom/talks.git --dist public",
-    "pretest": "hexo generate",
+    "new": "hexo new",
     "test": "exit 0"
   },
   "repository": {
@@ -26,7 +27,7 @@
   "license": "BSD",
   "readmeFilename": "README.md",
   "hexo": {
-    "version": "3.5.0"
+    "version": "3.6.0"
   },
   "dependencies": {
     "babel": "^6.5.2",
