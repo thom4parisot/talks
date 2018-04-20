@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "build": "hexo generate --bail",
+    "build:pdf": "decktape reveal \"https://oncletom.io/talks/$YEAR/$EVENT/\" slides-thomas-parisot.pdf",
     "start": "hexo server",
     "deploy": "gh-pages --repo git@github.com:oncletom/talks.git --dist public",
     "new": "hexo new",
@@ -44,5 +45,8 @@
     "hexo-server": "^0.2.0",
     "hexo-theme-oncletom": "github:oncletom/hexo-theme",
     "markdown-it-attrs": "^1.2.1"
+  },
+  "devDependencies": {
+    "decktape": "^2.8.0"
   }
 }

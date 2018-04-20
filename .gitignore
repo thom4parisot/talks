@@ -14,3 +14,4 @@ results
 *.log
 db.json
 public
+*.pdf

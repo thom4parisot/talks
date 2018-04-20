@@ -39,12 +39,11 @@ Avant je travaillais à [la R&D de la BBC][bbcrd] et je co-organisais la confér
 
 ## Export
 
-Grab a PDF of any talk with [decktape](https://github.com/astefanutti/decktape).
-
 ```bash
-docker run --rm -v `pwd`:/slides astefanutti/decktape https://oncletom.io/talks/:year/:conference/ slides.pdf
+$ YEAR=2018 EVENT=mixit npm run build:pdf
 ```
 
+Thank you [decktape](https://github.com/astefanutti/decktape) for the amazing tooling export!
 
 ## Contact
 
