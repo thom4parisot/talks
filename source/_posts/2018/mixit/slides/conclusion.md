@@ -19,4 +19,4 @@ Quelles sont mes envies ?
 
 # ~~Entreprise~~ libérée
 
-C'est toi qui sait quand tu es libérée.
+C'est toi qui sais quand tu es libérée.
