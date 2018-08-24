@@ -8,7 +8,7 @@ event:
   duration: 30
   url: https://www.frontendlondon.co.uk/archive#fel45
 cover: images/peak-district-train.jpg
-video:
+video: https://www.youtube.com/watch?v=ac_QcHv-tyo
 slides:
   - file: intro.md
   - file: title.md
