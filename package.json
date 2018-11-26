@@ -9,7 +9,9 @@
     "start": "hexo server",
     "deploy": "gh-pages --repo git@github.com:oncletom/talks.git --dist public",
     "new": "hexo new",
-    "test": "exit 0"
+    "test": "exit 0",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -45,9 +47,11 @@
     "hexo-renderer-markdown-it": "^3.4.1",
     "hexo-server": "^0.3.3",
     "hexo-theme-oncletom": "github:oncletom/hexo-theme",
-    "markdown-it-attrs": "^1.2.1"
+    "markdown-it-attrs": "^1.2.1",
+    "snyk": "^1.110.2"
   },
   "devDependencies": {
     "decktape": "^2.9.0"
-  }
+  },
+  "snyk": true
 }
