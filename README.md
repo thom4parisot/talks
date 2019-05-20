@@ -26,11 +26,11 @@ I used to work at [BBC R&D][bbcrd] and to co-organise the [Sud Web conference][s
 
 ### Français
 
-**Code, facilitation et recherche à [dtc innovation][dtc-innovation]**, une petite coopérative d'innovation numérique. Je m'implique dans la réalisation de prototypes, de recherche sur le terrain et de façonner des projets open source.
+Je développe des produits, services et communs numériques en allant à la rencontre des usagers. J'utilise une combinaison de technologies web, de pratiques agiles et de pédagogie active pour mettre à l'aise les personnes avec qui je travaille, et pour travailler sur ce qui a du sens.
 
-Je crois beaucoup dans l'apprentissage multidisciplinaire, les choses simples et l'autonomie. J'adore manger du fromage sur une tranche de pain au levain que j'aurais cuit au four. Et [transposer mes émotions sur film analogique][photography]. Et camper au vert.
+Je crois beaucoup à l'apprentissage multidisciplinaire, au travail convivial et à l'autonomie. J'essaie d'apporter mes connaissances et mon énergie de manière bénévole à des associations locales, en œuvrant à la restauration de la biodiversité et du vivant.
 
-Avant je travaillais à [la R&D de la BBC][bbcrd] et je co-organisais la conférence [Sud Web][sudweb]. J'ai aussi co-fondé une startup mais chuis OK d'admettre qu'on a bien foiré.
+Avant je travaillais dans [le département R&D de la BBC](https://bbc.co.uk/rd) et je co-organisais la conférence [Sud Web](https://sudweb.fr). J'ai aussi co-fondé une startup et [on s'est bien raté](https://www.youtube.com/watch?v=NVpH1w_aSUk).
 
 ----
 
@@ -47,7 +47,7 @@ Thank you [decktape](https://github.com/astefanutti/decktape) for the amazing to
 
 ## Contact
 
-*Location*: 🎒, France.
+*Location*: Crest, Drôme Valley, France.
 
 * **Twitter**: [@oncletom](https://twitter.com/oncletom)
 * **Github**: [@oncletom](https://github.com/oncletom)
