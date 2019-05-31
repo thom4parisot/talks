@@ -37,7 +37,7 @@
     "gh-pages": "^1.2.0",
     "hexo": "^3.8.0",
     "hexo-algolia": "^1.2.5",
-    "hexo-cli": "^1.0.4",
+    "hexo-cli": "^2.0.0",
     "hexo-generator-feed": "^1.2.2",
     "hexo-generator-index": "^0.2.0",
     "hexo-renderer-ejs": "^0.3.1",
