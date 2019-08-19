@@ -1,6 +1,6 @@
 ---
 title: Monolithe
-language: fr-FR
+lang: fr
 date: 2015-10-16
 event:
   name: bdx.io

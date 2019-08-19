@@ -1,6 +1,6 @@
 ---
 title: README Driven Development
-language: en-GB
+lang: en-GB
 date: 2014-07-19
 event:
   name: Open Knowledge Festival

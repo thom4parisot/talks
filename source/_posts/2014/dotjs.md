@@ -1,6 +1,6 @@
 ---
 title: UX.js
-language: en-GB
+lang: en-GB
 date: 2014-11-17
 event:
   name: DotJS

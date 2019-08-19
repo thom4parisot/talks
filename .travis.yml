@@ -1,24 +1,13 @@
-language: node_js
-node_js: v8
+lang: node_js
+node_js: v10
 sudo: false
-addons:
-  ssh_known_hosts: github.com
-
-before_install:
-- openssl aes-256-cbc -K $encrypted_887dc6951db4_key -iv $encrypted_887dc6951db4_iv -in id_rsa.enc -out $TRAVIS_BUILD_DIR/id_rsa -d
-
-before_deploy:
-- eval "$(ssh-agent -s)"
-- chmod 600 $TRAVIS_BUILD_DIR/id_rsa
-- ssh-add $TRAVIS_BUILD_DIR/id_rsa
-- git config --global user.email "build@travis-ci.org"
-- git config --global user.name "Travis CI"
 
 script: npm run build
 
 deploy:
-  provider: script
-  script: npm run deploy
-  skip_cleanup: true
+  provider: pages
+  github-token: $GH_TOKEN
+  local-dir: ./public
+  skip-cleanup: true
   on:
     branch: master

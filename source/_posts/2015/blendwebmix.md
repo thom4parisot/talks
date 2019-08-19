@@ -1,6 +1,6 @@
 ---
 title: Design d'architecture modulaire à la BBC
-language: fr-FR
+lang: fr
 theme: bbcrd
 date: 2015-10-28
 event:

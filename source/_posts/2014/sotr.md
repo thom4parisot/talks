@@ -1,6 +1,6 @@
 ---
 title: Solid Grunt
-language: en-GB
+lang: en-GB
 date: 2014-06-06
 event:
   name: Scotch on the Rocks

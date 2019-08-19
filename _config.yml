@@ -4,11 +4,14 @@
 
 # Site
 title: oncletom.io
-subtitle: Public talks about *Web technologies* and *human experience*.
+subtitle: Public talks, workshops and events about Web technologies and human experience.
+description: |
+  I develop my ideas and share the knowledge by using many formats, ranging
+  from public speaking, collaborative workshops and down-to-earth events (free or paid).
 author: Thomas Parisot
 email: hi@oncletom.io
 default_cover: https://oncletom.io/images/thomas-parisot.jpg
-language: en-GB
+lang: en-GB
 timezone: Europe/London
 
 # URL
@@ -70,30 +73,17 @@ nunjucks:
   throwOnUndefined: false
   watch: false
 
-disqus_shortname: oncletom
-
-graph:
-  google_plus:    ~
-  facebook:       ~
-  twitter:        oncletom
-  pgp:            "https://keybase.io/oncletom/pgp_keys.asc?fingerprint=46637e267871df7f255788ee893c87dfb3335e7e"
-
-webmentions:
-  url: https://webmention.io/oncletom.io
-  features:
-    pingback:   xmlrpc
-    webmention: webmention
 
 markdown:
   render:
     html: true
     xhtmlOut: false
   anchors:
-    level: 2
+    level: 1
     collisionSuffix: 'v'
-    permalink: false
+    permalink: true
     permalinkClass: header-anchor
-    # permalinkSymbol: ¶
+    permalinkSymbol: §
   plugins:
   - markdown-it-abbr
   - markdown-it-attrs

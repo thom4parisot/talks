@@ -1,6 +1,6 @@
 ---
 title: End-to-end modular architecture at the BBC
-language: en-GB
+lang: en-GB
 date: 2015-06-04
 event:
   name: Web2day

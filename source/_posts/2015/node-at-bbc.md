@@ -1,6 +1,6 @@
 ---
 title: End-to-end modular architecture at the BBC
-language: en-GB
+lang: en-GB
 theme: bbcrd
 date: 2015-11-27
 event:

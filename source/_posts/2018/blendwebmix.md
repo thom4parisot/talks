@@ -1,6 +1,6 @@
 ---
 title: Smart Citizen • Vers une production de données citoyennes
-language: fr
+lang: fr
 date: 2018-10-24
 with:
   - Noémie Girard (https://noemiegirard.co/)

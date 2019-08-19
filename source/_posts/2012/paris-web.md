@@ -1,6 +1,6 @@
 ---
 title: README, un fichier nommé plaisir
-language: fr-FR
+lang: fr
 date: 2012-10-18
 event:
   name: Paris Web

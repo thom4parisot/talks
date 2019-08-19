@@ -1,6 +1,6 @@
 ---
 title: Writing a book in 2017
-language: en-GB
+lang: en-GB
 date: 2017-09-12
 event:
   name: Write the Docs

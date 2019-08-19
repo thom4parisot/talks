@@ -1,6 +1,6 @@
 ---
 title: Travailler moins pour gagner moins
-language: fr-FR
+lang: fr
 date: 2017-04-21
 event:
   name: MiXiT

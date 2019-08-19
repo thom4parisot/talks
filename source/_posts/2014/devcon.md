@@ -1,6 +1,6 @@
 ---
 title: Open Source code at the BBC
-language: en-GB
+lang: en-GB
 theme: bbcrd
 date: 2014-10-01
 event:

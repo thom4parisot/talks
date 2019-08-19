@@ -1,6 +1,6 @@
 ---
 title: README Driven Development
-language: en-GB
+lang: en-GB
 date: 2014-03-31
 event:
   name: Write the Docs

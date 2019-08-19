@@ -1,6 +1,6 @@
 ---
 title: Business Logic in the Cloud with Google Apps Scripts
-language: en-GB
+lang: en-GB
 date: 2013-01-18
 event:
   name: TakeOff

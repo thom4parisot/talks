@@ -1,6 +1,6 @@
 ---
 title: Rethinking applications design with Docker
-language: en-GB
+lang: en-GB
 theme: bbcrd
 date: 2015-10-07
 event:

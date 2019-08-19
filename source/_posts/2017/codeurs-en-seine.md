@@ -1,6 +1,6 @@
 ---
 title: README.book
-language: fr-FR
+lang: fr
 date: 2017-11-23
 event:
   name: Codeurs en Seine

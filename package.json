@@ -7,7 +7,6 @@
     "build": "hexo generate --bail",
     "build:pdf": "decktape reveal \"https://oncletom.io/talks/$YEAR/$EVENT/\" slides-thomas-parisot.pdf",
     "start": "hexo server",
-    "deploy": "gh-pages --repo git@github.com:oncletom/talks.git --dist public",
     "new": "hexo new",
     "test": "exit 0"
   },
@@ -28,26 +27,24 @@
   "license": "BSD",
   "readmeFilename": "README.md",
   "hexo": {
-    "version": "3.6.0"
+    "version": "3.9.0"
   },
   "dependencies": {
     "babel": "^6.5.2",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-stage-0": "^6.5.0",
-    "gh-pages": "^1.2.0",
-    "hexo": "^3.8.0",
-    "hexo-algolia": "^1.2.5",
-    "hexo-cli": "^1.0.4",
+    "hexo": "^3.9.0",
+    "hexo-algolia": "^1.3.1",
+    "hexo-cli": "^2.0.0",
     "hexo-generator-feed": "^1.2.2",
     "hexo-generator-index": "^0.2.0",
     "hexo-renderer-ejs": "^0.3.1",
-    "hexo-renderer-less": "^1.0.0",
     "hexo-renderer-markdown-it": "^3.4.1",
     "hexo-server": "^0.3.3",
     "hexo-theme-oncletom": "github:oncletom/hexo-theme",
-    "markdown-it-attrs": "^1.2.1"
+    "markdown-it-attrs": "^3.0.1"
   },
   "devDependencies": {
-    "decktape": "^2.9.0"
+    "decktape": "^2.9.3"
   }
 }

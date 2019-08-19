@@ -1,6 +1,6 @@
 ---
 title: "Data for 🙋 and 🤖"
-language: en-GB
+lang: en-GB
 date: 2016-11-09
 event:
   name: London School of Economics

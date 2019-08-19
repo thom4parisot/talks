@@ -1,6 +1,6 @@
 ---
 title: README, un fichier nommé plaisir
-language: fr-FR
+lang: fr
 date: 2014-03-06
 event:
   name: ChtiJS

@@ -1,6 +1,6 @@
 ---
 title: Industrialiser l'artisanat de l'intégration Web
-language: fr-FR
+lang: fr
 date: 2010-10-16
 event:
   name: Paris Web

@@ -1,6 +1,6 @@
 ---
 title: Writing a book in 2018
-language: en-GB
+lang: en-GB
 date: 2018-02-22
 event:
   name: Front-end London

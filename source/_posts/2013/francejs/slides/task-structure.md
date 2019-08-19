@@ -64,7 +64,7 @@ module.exports = function i18nTask(grunt){
       // …
     },
 
-    locateLanguage: function(csv, props, done){
+    locatelang: function(csv, props, done){
       // …
     },
 

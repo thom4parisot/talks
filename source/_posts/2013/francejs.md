@@ -1,6 +1,6 @@
 ---
 title: Solid Grunt
-language: fr-FR
+lang: fr
 date: 2013-11-23
 event:
   name: FranceJS

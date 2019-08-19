@@ -1,6 +1,6 @@
 ---
 title: Le Web en Offline avec Gears et HTML5
-language: fr-FR
+lang: fr
 date: 2009-10-10
 event:
   name: Paris Web
