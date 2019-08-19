@@ -25,7 +25,7 @@ permalink_defaults:
 source_dir: source
 public_dir: public
 tag_dir: tags
-archive_dir: ""
+archive_dir: false
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
@@ -99,9 +99,3 @@ algolia:
   apiKey: '5caf0f682ba8349e8a67872b9edde3f3'
   indexName: 'prod_blog'
   chunkSize: 5000
-
-archive_generator:
-  per_page: 0
-  yearly: false
-  monthly: false
-  daily: false
