@@ -157,7 +157,7 @@ module.exports = {
 
 ## Tests
 
-```coffescript
+```javascript
 var download = require('../lib/i18n.js').download;
 
 describe('download', function(){

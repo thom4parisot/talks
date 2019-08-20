@@ -2,10 +2,7 @@
 
 ## Bonjour,<br> I am **Thomas**
 
-<footer>
-[oncletom.io](https://oncletom.io) –
-[@oncletom](https://twitter.com/oncletom)
-</footer>
+[oncletom.io](https://oncletom.io) – [@oncletom](https://twitter.com/oncletom) {.footer}
 
 @@@
 

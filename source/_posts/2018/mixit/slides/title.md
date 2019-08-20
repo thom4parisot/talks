@@ -2,8 +2,6 @@
 
 … pour créer son équilibre et payer ses factures
 
-<footer>
-19 avril 2018 — [MiXiT][]
-</footer>
+19 avril 2018 — [MiXiT][] {.footer}
 
 [MiXiT]: https://mixitconf.org/2018/

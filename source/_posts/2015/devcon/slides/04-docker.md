@@ -10,7 +10,7 @@
 
 @@@
 
-```
+```dockerfile
 # Dockerfile
 FROM ubuntu:trusty
 

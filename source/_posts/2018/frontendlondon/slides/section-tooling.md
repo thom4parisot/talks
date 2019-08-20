@@ -91,7 +91,6 @@ A ~~picture~~ video is worth 1000 words (when you can play a video)
 @@@
 
 <video data-autoplay src="https://oncletom.io/node.js/chapter-09/videos/browser-sync.mp4"></video>
-</section>
 
 @@@
 
@@ -103,7 +102,7 @@ A ~~picture~~ video is worth 1000 words (when you can play a video)
 
 @@@
 
-## Built with Asciidoctor*.js*
+## Built with Asciidoctor<em>.js</em>
 
 Building a Node.js book with Node.js 🙌
 
@@ -148,16 +147,14 @@ Run and tweak code in your browser.
 
 ![](images/asciidoctor-bash-dollar.png)
 
-<footer>
-Hat tip to [Remy Sharp][] <br>
-👉 [remysharp.com/2017/03/27/dollar-in-code-examples](https://remysharp.com/2017/03/27/dollar-in-code-examples)
-</footer>
+Hat tip to [Remy Sharp][] <br> 👉 [remysharp.com/2017/03/27/dollar-in-code-examples][dollar-code] {.footer}
 
+[dollar-code]: https://remysharp.com/2017/03/27/dollar-in-code-examples
 [Remy Sharp]: https://remysharp.com/
 
 @@@
 
-## MDN web docs _macro_
+## MDN web docs _macro_
 
 Expand it to an admonition block • eg: `mdn::global[RegExp]`
 

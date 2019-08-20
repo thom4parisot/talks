@@ -11,9 +11,7 @@ A 🥖🧀 living in 🇬🇧
 full stack engineer, user research, open source, <br>
 agile facilitation, mentoring, etc.
 
-<footer>
-[https://oncletom.io]() • [@oncletom](https://twitter.com/oncletom)
-</footer>
+[https://oncletom.io]() • [@oncletom](https://twitter.com/oncletom) {.footer}
 
 @@@
 
@@ -23,6 +21,4 @@ a not-for-profit **cooperative company**<br>
 open source and open data projects<br>
 Bordeaux • London • Montréal
 
-<footer>
-[dtc-innovation.org](https://dtc-innovation.org/)
-</footer>
+[dtc-innovation.org](https://dtc-innovation.org/) {.footer}

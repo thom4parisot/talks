@@ -2,7 +2,7 @@
 
 # Once upon a time…
 
-<footer>(when I was a PHP developer…)</footer>
+(when I was a PHP developer…) {.footer}
 
 @@@
 
@@ -10,8 +10,8 @@
 
 @@@
 
-```sh
-scp -Cr ./src production:/var/www/my-cool-website
+```bash
+$ scp -Cr ./src production:/var/www/my-cool-website
 ```
 
 @@@

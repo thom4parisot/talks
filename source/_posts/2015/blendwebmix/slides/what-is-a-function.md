@@ -38,7 +38,7 @@ L'erreur est un signal, ce n'est pas rien.
 - le produit de la fonction n'est **pas persisté** par la fonction
 - **reproductible** à l'infini*\**
 
-<footer>*\** moyennant un environnement favorable</footer>
+*\** moyennant un environnement favorable {.footer}
 
 ~~~~
 

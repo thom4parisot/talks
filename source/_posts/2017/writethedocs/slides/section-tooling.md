@@ -76,7 +76,6 @@ A ~~picture~~ video is worth 1000 words.
 @@@
 
 <video data-autoplay src="https://oncletom.io/node.js/chapter-04/videos/browser-sync.mp4"></video>
-</section>
 
 @@@
 
@@ -88,7 +87,7 @@ A ~~picture~~ video is worth 1000 words.
 
 @@@
 
-## Built with Asciidoctor*.js*
+## Built with Asciidoctor<em>.js</em>
 
 Building a Node.js book with Node.js 🙌
 

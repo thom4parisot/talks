@@ -55,7 +55,7 @@ git clone https://github.com/oncletom/nodebook
 
 ```adoc
 = Hello, AsciiDoc!
-:author: Doc Writer <doc@example.com>
+:author: Doc Writer &lt;doc@example.com&gt;
 :toclevel: 4
 
 An introduction to http://asciidoc.org[AsciiDoc].

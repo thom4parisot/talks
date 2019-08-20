@@ -2,10 +2,7 @@
 
 ## Bonjour,<br> je suis **Thomas** Parisot
 
-<footer>
-[oncletom.io](https://oncletom.io) –
-[@oncletom](https://twitter.com/oncletom)
-</footer>
+[oncletom.io](https://oncletom.io) – [@oncletom](https://twitter.com/oncletom) {.footer}
 
 @@@
 
@@ -19,6 +16,4 @@ code, node.js, pain, permaculture, photographie etc.
 
 innovation numérique au service du bien commun
 
-<footer>
-[dtc-innovation.org](https://dtc-innovation.org/)
-</footer>
+[dtc-innovation.org](https://dtc-innovation.org/) {.footer}
