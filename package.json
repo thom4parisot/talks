@@ -38,7 +38,7 @@
     "hexo-renderer-ejs": "^0.3.1",
     "hexo-renderer-markdown-it": "^3.4.1",
     "hexo-server": "^0.3.3",
-    "hexo-theme-oncletom": "github:oncletom/hexo-theme#v2.7.2",
+    "hexo-theme-oncletom": "github:oncletom/hexo-theme#v2.8.0",
     "markdown-it-attrs": "^3.0.1"
   },
   "devDependencies": {
