@@ -1,7 +1,7 @@
 ---
 title: Write the Docs Paris
 lang: fr
-layout: meetup
+layout: conference
 date: 2019-06-13
 with:
   - Bastien Guerry (https://bzg.fr)
