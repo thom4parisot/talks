@@ -1,7 +1,7 @@
 ---
 title: Sud Web
 lang: fr
-type: conference
+layout: conference
 date: 2012-05-25
 event:
   location: Toulouse

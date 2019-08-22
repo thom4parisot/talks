@@ -1,7 +1,7 @@
 ---
 title: Sud Web
 lang: fr
-type: conference
+layout: conference
 date: 2015-05-29
 event:
   location: Montpellier

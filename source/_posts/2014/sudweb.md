@@ -1,7 +1,7 @@
 ---
 title: Sud Web
 lang: fr
-type: conference
+layout: conference
 date: 2014-05-16
 event:
   location: Toulouse

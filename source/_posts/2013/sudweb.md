@@ -1,7 +1,7 @@
 ---
 title: Sud Web
 lang: fr
-type: conference
+layout: conference
 date: 2013-05-17
 event:
   location: Avignon
