@@ -18,11 +18,11 @@ You can find eventual talks in the [`proposals/`](proposals) folder. For sure I 
 
 ### English
 
-**Code, facilitation and research at [dtc innovation][dtc-innovation]**, a small cooperative company. My work involves compelling user experience prototypes, action-research on the field and shaping libre software projects.
+I develop digital products and services for the greater good by combining UX research and software development practices. On my spare time, I bake sourdough bread for friends and family.
+ 
+I am also the author of "Node.js, learning by doing", a book published in French at Éditions Eyrolles (ISBN : 978-2212139938).
 
-I believe in cross-disciplines learning, simple things and autonomy. And I love eating cheese on a slice of homemade sourdough bread. As well as [painting emotions on film][photography]. And camping in the wild.
-
-I used to work at [BBC R&D][bbcrd] and to co-organise the [Sud Web conference][sudweb]. I once created a startup and I'm okay to admit it failed miserably.
+I used to work at BBC R&D and to co-organise the Sud Web conference.
 
 ### Français
 
