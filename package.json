@@ -4,6 +4,7 @@
   "description": "Public talks provided either in English or French, about JavaScript or human-centric topics.",
   "private": true,
   "scripts": {
+    "prepare": "export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1",
     "build": "hexo generate --bail",
     "build:pdf": "decktape reveal \"https://oncletom.io/talks/$YEAR/$EVENT/\" slides-thomas-parisot.pdf",
     "start": "hexo server",
@@ -41,7 +42,7 @@
     "hexo-theme-oncletom": "github:oncletom/hexo-theme#master",
     "markdown-it-attrs": "^3.0.1"
   },
-  "devDependencies": {
+  "optionalDependencies": {
     "decktape": "^2.9.3"
   }
 }
