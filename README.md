@@ -18,19 +18,29 @@ You can find eventual talks in the [`proposals/`](proposals) folder. For sure I 
 
 ### English
 
-I develop digital products and services for the greater good by combining UX research and software development practices. On my spare time, I bake sourdough bread for friends and family.
- 
-I am also the author of "Node.js, learning by doing", a book published in French at Éditions Eyrolles (ISBN : 978-2212139938).
+I design and develop digital services for the greater good by combining
+UX research and agile practices.
+On my spare time, I bake sourdough bread for friends and family.
+
+I am also the author of "Node.js, learning by doing",
+a book published in French at Éditions Eyrolles (ISBN : 978-2212139938).
 
 I used to work at BBC R&D and to co-organise the Sud Web conference.
 
 ### Français
 
-Je développe des produits, services et communs numériques en allant à la rencontre des usagers. J'utilise une combinaison de technologies web, de pratiques agiles et de pédagogie active pour mettre à l'aise les personnes avec qui je travaille, et pour travailler sur ce qui a du sens.
+Je conçois, accompagne et développe des services numériques en allant à la
+rencontre des usagers.
+J'utilise une combinaison de technologies web, de pratiques agiles et de pédagogie active
+pour mettre à l'aise les personnes avec qui je travaille.
 
-Je crois beaucoup à l'apprentissage multidisciplinaire, au travail convivial et à l'autonomie. J'essaie d'apporter mes connaissances et mon énergie de manière bénévole à des associations locales, en œuvrant à la restauration de la biodiversité et du vivant.
+Je crois beaucoup à l'apprentissage multidisciplinaire, au travail convivial et à l'autonomie.
+J'apporter mes connaissances et mon énergie de manière bénévole à des
+associations locales, en œuvrant à la restauration de la biodiversité et du vivant.
 
-Avant je travaillais dans [le département R&D de la BBC](https://bbc.co.uk/rd) et je co-organisais la conférence [Sud Web](https://sudweb.fr). J'ai aussi co-fondé une startup et [on s'est bien raté](https://www.youtube.com/watch?v=NVpH1w_aSUk).
+Avant je travaillais dans [le département R&D de la BBC](https://bbc.co.uk/rd)
+et je co-organisais la conférence [Sud Web](https://sudweb.fr).
+J'ai aussi co-fondé une startup et [on s'est bien raté](https://www.youtube.com/watch?v=NVpH1w_aSUk).
 
 ----
 
@@ -53,7 +63,6 @@ Thank you [decktape](https://github.com/astefanutti/decktape) for the amazing to
 * **Github**: [@oncletom](https://github.com/oncletom)
 * **Website**: [oncletom.io](https://oncletom.io)
 
-[dtc-innovation]: https://dtc-innovation.org/
 [bbcrd]: http://www.bbc.co.uk/rd
 [sudweb]: https://sudweb.fr/
 [photography]: https://oncletom.io/photography/
