@@ -7,7 +7,7 @@ event:
   name: Paris Web
   location: Paris
   url: http://paris-web.fr/2010/
-external: http://www.slideshare.net/oncletom/industrialiser-lartisanat-de-lintgration-web
+external: //files.oncletom.io/slides/2010/parisweb-industrialiser-lartisanat-de-lintgration-web.pdf
 video:
 ---
 

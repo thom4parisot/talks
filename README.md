@@ -6,7 +6,7 @@ Public talks provided either in English or French, about JavaScript or human-cen
 
 Since March 2013, all slides are baked in HTML using the nice [reveal.js](https://github.com/hakimel/reveal.js/).
 
-Prior to March 2013, slides are [available on my Slideshare account](http://www.slideshare.net/oncletom/presentations).
+Prior to March 2013, slides are PDF exports of Keynote/OpenOffice presentations.
 
 ## Available Topics
 
