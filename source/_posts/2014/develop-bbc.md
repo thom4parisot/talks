@@ -8,7 +8,7 @@ event:
   location: London
   duration: 20
   url: http://www.bbc.co.uk/academy/technology/events/article/art20141001095726612
-video: https://s3.eu-central-1.amazonaws.com/files.oncletom.io/talks/2014/bbc-develop.mp4
+video: https://files.oncletom.io/talks/2014/bbc-develop.mp4
 slides:
   -
     file: intro.md

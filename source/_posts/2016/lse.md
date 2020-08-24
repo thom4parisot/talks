@@ -7,7 +7,7 @@ event:
   location: London
   duration: 30
   url: http://www.lse.ac.uk/media@lse/
-audio: https://s3.eu-central-1.amazonaws.com/files.oncletom.io/talks/2016/lse.mp3
+audio: https://files.oncletom.io/talks/2016/lse.mp3
 slides:
   - file: intro.md
   - file: interlude.md

@@ -8,7 +8,7 @@ event:
   location: Geneva
   duration: 25
   url: https://tech.ebu.ch/events/devcon15
-video: https://s3.eu-central-1.amazonaws.com/files.oncletom.io/talks/2015/ebu-devcon.mp4
+video: https://files.oncletom.io/talks/2015/ebu-devcon.mp4
 slides:
   - file: title.md
   - file: ../../_about-me.md
