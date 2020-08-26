@@ -6,7 +6,7 @@ event:
   name: Web2day
   location: Nantes
   duration: 45
-  url: http://web2day.co/programme/#jeudi-4-juin
+  url: https://2015.web2day.co/programme/#jeudi-4-juin
 video: https://www.uslide.io/presentations/nQg35x6TO7S9TUi6zc1qmA
 slides:
   - file: intro.md

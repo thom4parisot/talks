@@ -6,7 +6,7 @@ event:
   name: London School of Economics
   location: London
   duration: 30
-  url: http://www.lse.ac.uk/media@lse/
+  url: https://www.lse.ac.uk/media-and-communications/media-lse
 audio: https://files.oncletom.io/talks/2016/lse.mp3
 slides:
   - file: intro.md
