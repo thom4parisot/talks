@@ -12,7 +12,7 @@ video: http://www.dailymotion.com/video/xp5wtt_industrialisation-de-l-integratio
 
 Le développement Web frontend – multiplicité de compétences – est l'apanage des experts … ou des stagiaires. Développer, c'est Java, C# ou PHP.
 
-L'omniprésence des interfaces recourant à HTML induit un recours à des points de repère, tant pour les développeurs, les chefs de projet que les acheteurs. C'est une des idées qui en est ressortie de l'atelier [Industrialiser l'artisanat du développement HTML](http://www.paris-web.fr/2010/programme/industrialiser-lartisanat-de-lintegration-html.php) à Paris Web 2010.
+L'omniprésence des interfaces recourant à HTML induit un recours à des points de repère, tant pour les développeurs, les chefs de projet que les acheteurs. C'est une des idées qui en est ressortie de l'atelier [Industrialiser l'artisanat du développement HTML](https://www.paris-web.fr/2010/ateliers/industrialiser-lartisanat-de-lintegration-html.php) à Paris Web 2010.
 
 Depuis, l'eau a coulé sous les ponts et une liste de bonnes pratiques de développement frontend est en cours de réalisation. Nous verrons comment et pourquoi l'alimenter, entre autre pour des besoins d'industrialisation des projets.
 

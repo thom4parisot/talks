@@ -8,10 +8,10 @@ event:
   name: BlendWebMix
   location: Lyon
   duration: 40
-  url: https://www.blendwebmix.com/programme/conferences/smart-citizen-vers-une-production-de-donnees-citoyennes/
+  url: https://2018.blendwebmix.com/programme/conferences/smart-citizen-vers-une-production-de-donnees-citoyennes/
 cover: images/filwood-community-centre.jpg
 video: https://www.youtube.com/watch?v=D8PeqAlTykI
-external: https://mind-the-gaps.org/2018/10/24/blendwebmix
+external: https://dtc-innovation.github.io/mind-the-gaps/2018/10/24/blendwebmix
 ---
 À quoi ressemble une ville intelligente ?
 Ce qu’on perçoit actuellement des ‘Smart Cities’ évoque de la captation massive de données sur les transports ou la qualité de l’air, mais il est difficile de voir au-delà de ces usages.
