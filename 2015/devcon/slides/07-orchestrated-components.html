@@ -1,0 +1,42 @@
+<!-- .slide: data-state="contrasted" -->
+<h2 id="Orchestrated-components"><a class="header-anchor" href="#Orchestrated-components">§</a><strong>Orchestrated</strong> components</h2>
+<p>@@@</p>
+<h2 id="What-if-I-need…"><a class="header-anchor" href="#What-if-I-need…">§</a>What if I need…</h2>
+<ul>
+<li>a <em>Rails</em> application (w/ Ruby 2.1.7)</li>
+<li><em>ElasticSearch</em> (1.4)</li>
+<li><em>PostgreSQL</em> (9.3)</li>
+<li><em>Redis</em> (3.0)</li>
+<li>?</li>
+</ul>
+<p>@@@</p>
+<h2 id="docker-compose-to-the-rescue"><a class="header-anchor" href="#docker-compose-to-the-rescue">§</a><strong>docker-compose</strong> to the rescue</h2>
+<ul>
+<li>no more <em>complicated README</em></li>
+<li>easier than doing everything by hand</li>
+<li>acts as a <em>technical documentation</em> of needed resources</li>
+<li>spins up a stack from scratch in minutes</li>
+<li>ability to scale up/down individual containers</li>
+</ul>
+<p>@@@</p>
+<h2 id="docker-compose-yml"><a class="header-anchor" href="#docker-compose-yml">§</a>docker-compose.yml</h2>
+<pre><code class="language-bash">web:
+  build: .
+  links:
+    - db
+    - search
+    - queue
+  environment:
+    - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres
+    - ELASTICSEARCH_URL=http://search:9200
+    - REDIS_URL=redis://queue:6379
+queue:
+  image: redis:3.0
+
+db:
+  image: postgres:9.3
+  - POSTGRES_PASSWORD=postgres
+
+search:
+  image: elasticsearch:1.4
+</code></pre>

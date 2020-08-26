@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head><meta charset="utf-8">
+<title>Writing a book in 2018 • oncletom.io</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="preload" href="/assets/icons.svg">
+<link rel="preload" href="/assets/avatar.jpg">
+<link rel="preload" href="/images/publications/nodejs-cover.png">
+<link rel="stylesheet" href="/talks/styles/slides.css?v=v3.2.0">
+<link rel="stylesheet" href="/talks/styles/slides/theme-oncletom.css?v=v3.2.0">
+<meta name="viewport" content="initial-scale=1.0">
+<!-- generated via https://realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#D4C492">
+<meta name="msapplication-TileColor" content="#D4C492">
+<meta name="theme-color" content="#D4C492">
+<link rel="pgpkey" href="https://keybase.io/oncletom/pgp_keys.asc?fingerprint=FD7AA82DF0BB977542BB4F44CB88AA7D815E0D6B">
+<meta name="description" content="The usual way of writing a technical book is to open the Word or LibreOffice application, to write some content, to make a backup, to send it by email to the publisher and to deal with the feedbacks. And repeat.&amp;#10;However in 2018 we can do differently by using open formats like Asciidoc, by using version control to propagate changes, by using collaborative platforms like GitHub or GitLab to collate feedbacks in any form as well as transforming text and code into readable and interactive artefacts.&amp;#10;It gives us a unique opportunity to approach the whole process of writing in term of “content experience”, of “toolchain” and of “distribution”.&amp;#10;In the end, a “book” becomes a “writing format” as we can reuse the same pattern to manage any kind of “content” — articles, publications, essays, documentation — that we can transform in physical books, e-books, interactive web pages etc.">
+<meta name="keywords" content="">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io" href="https://oncletom.io/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Photography" href="https://oncletom.io/photography/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Talks" href="https://oncletom.io/talks/feed/">
+<link rel="author" href="Thomas Parisot">
+<link rel="canonical" data-disqus-shortname="oncletom" href="https://oncletom.io/talks/2018/frontendlondon/">
+
+<link rel="prefetch" href="https://oncletom.io/talks/2017/codeurs-en-seine/">
+<link rel="prefetch" href="https://oncletom.io/talks/2018/mixit/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@oncletom">
+<meta name="twitter:creator" content="@oncletom">
+<meta name="twitter:image" content="https://oncletom.io/talks/talks/images/peak-district-train.jpg">
+<meta name="twitter:description" content="The usual way of writing a technical book is to open the Word or LibreOffice application, to write some content, to make a backup, to send it by email to the publisher and to deal with the feedbacks. And repeat.&amp;#10;However in 2018 we can do differently by using open formats like Asciidoc, by using version control to propagate changes, by using collaborative platforms like GitHub or GitLab to collate feedbacks in any form as well as transforming text and code into readable and interactive artefacts.&amp;#10;It gives us a unique opportunity to approach the whole process of writing in term of “content experience”, of “toolchain” and of “distribution”.&amp;#10;In the end, a “book” becomes a “writing format” as we can reuse the same pattern to manage any kind of “content” — articles, publications, essays, documentation — that we can transform in physical books, e-books, interactive web pages etc.">
+<meta property="og:title" content="Writing a book in 2018">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://oncletom.io/talks/2018/frontendlondon/">
+<meta property="og:image" content="https://oncletom.io/talks/talks/images/peak-district-train.jpg">
+<meta property="og:description" content="The usual way of writing a technical book is to open the Word or LibreOffice application, to write some content, to make a backup, to send it by email to the publisher and to deal with the feedbacks. And repeat.&amp;#10;However in 2018 we can do differently by using open formats like Asciidoc, by using version control to propagate changes, by using collaborative platforms like GitHub or GitLab to collate feedbacks in any form as well as transforming text and code into readable and interactive artefacts.&amp;#10;It gives us a unique opportunity to approach the whole process of writing in term of “content experience”, of “toolchain” and of “distribution”.&amp;#10;In the end, a “book” becomes a “writing format” as we can reuse the same pattern to manage any kind of “content” — articles, publications, essays, documentation — that we can transform in physical books, e-books, interactive web pages etc.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:site_name" content="oncletom.io">
+<link rel="me" href="https://masto.oncletom.io/@thomas">
+<link rel="pingback" href="https://webmention.io/oncletom.io/xmlrpc">
+<link rel="webmention" href="https://webmention.io/oncletom.io/webmention">
+<meta property="algolia:search" data-application-id="QIP7Z1PL3B" data-api-key="5caf0f682ba8349e8a67872b9edde3f3" data-index-name="prod_blog">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+<body class="home site-talks content-post">
+<div class="reveal">
+  <main class="slides" lang="en-GB">
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/peak-district-train.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/peak-district-edale.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/peak-district-bench.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/peak-district-snake-valley.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/peak-district-bleaklow.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># Writing a book <br> in 2018
+
+February 22<sup>nd</sup> 2018 • [Front-end London][] {.footer}
+
+[Front-end London]:  https://www.frontendlondon.co.uk/archive#fel45
+
+@@@
+
+# Writing a _technical_<br>book in 2018
+
+February 22<sup>nd</sup> 2018 • [Front-end London][] {.footer}
+
+[Front-end London]:  https://www.frontendlondon.co.uk/archive#fel45
+
+@@@
+
+# A _developer_ <br> _writing_ a book <br> printed on _paper_ <small>in an open source way<small>
+
+@@@
+
+# A journey about <br> a *web developer* and <br> a *book publisher*.
+
+<small>Not so much about how painful it is to write an actual 300 pages book.
+<br>Watch [What I learned writing a lousy tech book][] (WTD 2014).<small> {.footer}
+
+[What I learned writing a lousy tech book]: https://www.youtube.com/watch?v=w1L2SgQuv6Q
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="../../img/thomas-parisot-landscape.jpg" data-state="background-dark" -->
+
+## Hi, I'm **Thomas**
+
+A 🥖🧀 living in 🇬🇧
+
+@@@
+
+## software designer
+
+full stack engineer, user research, open source, <br>
+agile facilitation, mentoring, etc.
+
+[https://oncletom.io]() • [@oncletom](https://twitter.com/oncletom) {.footer}
+
+@@@
+
+## ~~BBC R&D~~ dtc innovation
+
+a not-for-profit **cooperative company**<br>
+open source and open data projects<br>
+Bordeaux • London • Montréal
+
+[dtc-innovation.org](https://dtc-innovation.org/) {.footer}
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+## Context • Writer Experience • Modular Tooling • Publishers • Community Engagement
+
+@@@
+
+<!-- .slide: data-state="contrasted" -->
+
+# 🕐 2008
+
+@@@
+
+## Me: <q>Fancy a short essay on blah?</q>
+
+## <!-- .element: class="fragment" --> Publisher: <q>Sure! Actually a _book_ would be better!</q>
+
+## <!-- .element: class="fragment" --> Me: 😅
+
+@@@
+
+<!-- .slide: data-background="images/3867487466_835ff4dcf1_b.jpg" -->
+
+@@@
+
+
+![](images/book.png)
+
+@@@
+
+<!-- .slide: data-background="images/book-edits-ui.png" -->
+
+
+@@@
+
+<!-- .slide: data-background="images/book-edits-diffs.png" -->
+
+@@@
+
+<!-- .slide: data-background="images/editor-reviews.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/editor-fixes.png" data-background-size="contain" -->
+
+
+@@@
+
+<!-- .slide: data-state="contrasted" -->
+
+# 🕐 2014
+
+@@@
+
+## Me: <q>Fancy a _Node.js_ book?</q>
+
+
+## <!-- .element: class="fragment" --> Publisher: <q>Sure! send me your <abbr>_ODT_</abbr> copy in 6 months.</q>
+
+## <!-- .element: class="fragment" --> Me: 😅
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+## Context • **Writer Experience** • Modular Tooling • Publishers • Community Engagement
+
+@@@
+
+## **Playful**
+
+Learning by doing, fully working examples.
+
+@@@
+
+## **Friendly**
+
+No assumption on who the reader is, close to the common language.
+
+@@@
+
+## **Open**
+
+To read online, to contribute, to review.
+
+@@@
+
+## What does it mean, <br> to <q>write a _book as a software_ application?</q>
+
+@@@
+
+```sh
+git clone https://github.com/oncletom/nodebook
+```
+
+@@@
+
+<!-- .slide: data-background="images/github-content.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/github-git.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/github-collaboration.png" data-background-size="contain" -->
+
+@@@
+
+## _Comfortable_ syntax
+
+[Asciidoc][] predates Markdown. [Asciidoctor][] is a superset written in Ruby and JavaScript.
+
+[Asciidoc]: http://www.methods.co.nz/asciidoc/
+[Asciidoctor]: https://asciidoctor.org/
+
+@@@
+
+```adoc
+= Hello, AsciiDoc!
+:author: Doc Writer &lt;doc@example.com&gt;
+:toclevel: 4
+
+An introduction to http://asciidoc.org[AsciiDoc].
+
+== First Section
+
+* item 1
+* item 2
+
+[source,ruby]
+puts "Hello, World!"
+```
+
+@@@
+
+## _Comfortable_ writing software
+
+@@@
+
+<!-- .slide: data-background="images/writing-with-ia-writer.png" data-background-size="contain" -->
+
+@@@
+
+## _Comfortable_ code editor
+
+@@@
+
+<!-- .slide: data-background="images/atom-asciidoctor.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/atom-asciidoct-menu.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/atom-asciidoctor-rendering.png" data-background-size="contain" -->
+
+@@@
+
+## ~~Developing~~ Writing in the open
+
+@@@
+
+<!-- .slide: data-background="images/github-contrib.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/github-contrib-fix.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/github-contrib-diff.png" data-background-size="contain" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+## Context • Writer Experience • **Modular Tooling** • Publishers • Community Engagement
+
+
+@@@
+
+## Writing _Code_
+
+@@@
+
+
+<!-- .slide: data-background="images/asciidoctor-code.png" data-background-size="contain" -->
+
+@@@
+
+
+<!-- .slide: data-background="images/asciidoctor-code-include.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/asciidoctor-code-rendered.png" data-background-size="contain" -->
+
+@@@
+
+## Code _quality_ for free
+
+@@@
+
+<!-- .slide: data-background="images/writing-code-linting.png" data-background-size="contain" -->
+
+@@@
+
+## Asciidoc on GitHub is not enough
+
+@@@
+
+<!-- .slide: data-background="images/github-asciidoc.png" data-background-size="contain" -->
+
+@@@
+
+## _Building_ the book
+
+```sh
+$ make build-html
+```
+
+@@@
+
+<!-- .slide: data-background="images/build-makefile.png" data-background-size="contain" -->
+
+@@@
+
+## _Automating_ all the way
+
+Repeated manual tasks are good candidates.
+
+@@@
+
+<!-- .slide: data-background="images/book-build.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/book-build-config.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/book-build-perks.png" data-background-size="contain" -->
+
+
+@@@
+
+## _Packaged_ code and content
+
+What if I could do `npm install nodebook`?
+
+@@@
+
+<!-- .slide: data-background="images/book-npm.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/book-cli.png" data-background-size="contain" -->
+
+@@@
+
+## _Media_ query
+
+A ~~picture~~ video is worth 1000 words (when you can play a video)
+
+@@@
+
+<video data-autoplay src="https://oncletom.io/node.js/chapter-09/videos/browser-sync.mp4"></video>
+
+@@@
+
+<!-- .slide: data-background="images/asciidoctor-video.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/asciidoctor-dynamic-blocks.png" data-background-size="contain" -->
+
+@@@
+
+## Built with Asciidoctor<em>.js</em>
+
+Building a Node.js book with Node.js 🙌
+
+@@@
+
+<!-- .slide: data-background="images/community-build.png" data-background-size="contain" -->
+
+@@@
+
+## ✨ Extending _Asciidoctor.js_ ✨
+
+
+@@@
+
+## _Interactive_ code
+
+
+Run and tweak code in your browser.
+
+@@@
+
+
+<!-- .slide: data-background="images/plain-code-example.png" data-background-size="" -->
+
+@@@
+
+<!-- .slide: data-background="images/runner-demo.gif" data-background-size="contain" -->
+
+
+@@@
+
+## Grab it on _npm_
+
+👉 [npmjs.com/asciidoctor-extension-interactive-runner][runner]
+
+[runner]: http://npmjs.com/asciidoctor-extension-interactive-runner
+
+
+@@@
+
+## Copy/paste bash commands
+
+![](images/asciidoctor-bash-dollar.png)
+
+Hat tip to [Remy Sharp][] <br> 👉 [remysharp.com/2017/03/27/dollar-in-code-examples][dollar-code] {.footer}
+
+[dollar-code]: https://remysharp.com/2017/03/27/dollar-in-code-examples
+[Remy Sharp]: https://remysharp.com/
+
+@@@
+
+## MDN web docs _macro_
+
+Expand it to an admonition block • eg: `mdn::global[RegExp]`
+
+@@@
+
+![](images/asciidoc-macro-rendered.png)
+
+@@@
+
+![](images/asciidoc-macro-source.png)
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+## Context • Writer Experience • Modular Tooling • **Publishers** • Community Engagement
+
+@@@
+
+## Publishers are good at _publishing_
+
+Sourcing authors • Styling ODT files • Sending to printer • Shipping to stores • Payroll and taxes
+
+@@@
+
+## Publishers could be good at _GitHub_
+
+Text reviews (grammar, spelling) • tasks automation
+
+@@@
+
+<!-- .slide: data-background="images/editor-contributions.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/editor-contributions-comments.png" data-background-size="contain" -->
+
+@@@
+
+## Good at _books_
+
+@@@
+
+<!-- .slide: data-background="images/book-order.png" data-background-size="contain" -->
+
+@@@
+
+## Less good at _dealing with content_
+
+@@@
+
+<!-- .slide: data-background="images/book-web.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/book-npm.png" data-background-size="contain" -->
+
+@@@
+
+## _Hamster wheel_ syndrome
+
+Not enough time nor vision to streamline
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+## Context • Writer Experience • Modular Tooling • Publishers • **Community Engagement**
+
+@@@
+
+## 2017 writing residency
+
+3 months writing in _trains_, visiting _friends_ and learning from _peers_.
+
+@@@
+
+![](images/nomadic-residency-ping.png)
+
+@@@
+
+![](images/nomadic-residency-thankyou.png)
+
+@@@
+
+## _Meetups_
+
+Reality check • each crowd has their own problems/culture/focuses.
+
+@@@
+
+![](images/nomadic-residency-meetup.png)
+
+
+@@@
+
+## _Workshops_
+
+2h mob programming sessions • reading out loud •
+<br> pair writing • code reviews
+
+@@@
+
+<!-- .slide: data-background="images/workshop-writing.jpg" data-state="background-dark" -->
+
+@@@
+
+<!-- .slide: data-background="images/workshop-mob.jpg" data-state="background-dark" -->
+
+@@@
+
+<!-- .slide: data-background="images/workshop-mob-lunch.jpg" data-state="background-dark" -->
+
+@@@
+
+## _Energy_ management
+
+Writing is strenuous. We have a _different pace_. Finding a balance in writting _alone_, _social_ workshops and _triaging_ issues on GitHub.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# Wrap up
+
+@@@
+
+## _No_ dialogue ➡️ _poor_ writing experience
+
+Publishers in hamster wheels • Writers don't know about alternatives.
+
+@@@
+
+<!-- .slide: data-background="images/oreilly-atlas.png" data-background-size="contain" data-background-color="#fff" -->
+
+@@@
+
+## Writing _correlates_ tooling
+
+Text ∞ Feedback ∞ Feature ∞ Feedback
+
+@@@
+
+## _Derivable_ content
+
+Paper (offline) • web (interactive) • npm (all in one)
+
+@@@
+
+## _Debuggable_ content
+
+Agile practices apply to writing.
+
+@@@
+
+## Modularity
+
+Building blocks _on top of_ content.
+
+@@@
+
+## What about _non-developer_ writers?
+
+@@@
+
+<!-- .slide: data-background="images/docgist.png" data-background-size="contain" -->
+
+@@@
+
+## _Licensing_ is fuzzy
+
+Do contributors get paid for a paragraph? Or raising issues on GitHub?
+
+@@@
+
+## _Balance_
+
+Pacing out the _content_ structure, writing _pace_. Finishing things helps!
+
+~~~~
+
+_Failed_ attempts: Nights + week-ends, part time, etc.
+
+Reminder: writing long form is strenuous (at least for me).
+
+@@@
+
+## Writing should be _fun_
+
+If it is not, it's about making it a _creative activity_.
+
+@@@
+
+## Next: _ship it_!
+
+ETA June 2018. 4 years later, not too bad…
+
+@@@
+
+## Next: Sciences du Design
+
+_Featured article_ about mixing software/text/tooling for publishing purposes.
+
+[sciences-du-design.org/en](http://www.sciences-du-design.org/en/) {.footer}
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>
+
+<!-- .slide: data-background="../../2017/mixit/images/basile-seagul.jpg" data-state="background-light" -->
+
+# Merci 😊
+
+Give a shout to [@oncletom](https://twitter.com/oncletom) or talk to me later.
+
+@@@
+
+
+<!-- .slide: data-background="../../2017/mixit/images/basile-seagul.jpg" -->
+</textarea>
+        </section>
+      
+  </main>
+</div>
+
+<script src="/talks/assets/js/slides.bundle.js" type="module"></script>
+<script src="/talks/vendor/notes/notes.js" defer></script>
+
+
+<script src="/talks/assets/js/main.js?v=3.2.0" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<h2 id="Killing-the-FUD"><a class="header-anchor" href="#Killing-the-FUD">§</a>Killing the FUD</h2>
+<p>The Internet told me:</p>
+<ul>
+<li>the Promises are <em>everything</em></li>
+<li>the Promises are <em>Evil</em></li>
+</ul>
+<p>@@@</p>
+<h2 id="Callback-vs-Promise-vs-Event"><a class="header-anchor" href="#Callback-vs-Promise-vs-Event">§</a>Callback vs. Promise vs. Event</h2>
+<p>Callbacks are for <em>easy</em> and <em>simple</em> uses.</p>
+<pre><code class="language-javascript">nodes.value(function(item){
+  return item.service_id;
+});
+</code></pre>
+<p>Events are for vertical code expansion.</p>
+<pre><code class="language-javascript">MyModule.prototype.init = function init(view){
+  view.$submit.on('click', this.handleSubmit);
+  view.$document.on('click keyup', this.logEvent);
+};
+</code></pre>
+<p>@@@</p>
+<h2 id="When-to-use-them"><a class="header-anchor" href="#When-to-use-them">§</a>When to use them?</h2>
+<p>Some considerations to think about to know when to use Promises.</p>
+<ul>
+<li>simplifying a <em>workflow contract</em></li>
+<li><em>flattening</em> code nesting</li>
+<li>undeterminate duration <em>async task</em></li>
+<li><em>coordinating</em> multiple async tasks</li>
+</ul>
+<br>
+<h3 id="tl-dr-modularize-chained-tasks"><a class="header-anchor" href="#tl-dr-modularize-chained-tasks">§</a><em>tl;dr</em>: modularize chained tasks.</h3>
+<p>@@@</p>
+<h2 id="jQuery-Deferred-is-not-Promise-A-compliant"><a class="header-anchor" href="#jQuery-Deferred-is-not-Promise-A-compliant">§</a>jQuery Deferred is not Promise/A+ compliant</h2>
+<p>Who cares? As long as it helps you to:</p>
+<ul>
+<li>simplify your code</li>
+<li>keep your code maintainable (for you and your peers)</li>
+</ul>
+<p>@@@</p>
+<h2 id="Remember-kids"><a class="header-anchor" href="#Remember-kids">§</a>Remember kids</h2>
+<p>Patterns and tools help to <em>solve problems</em>.</p>
+<p><strong>You</strong> solve the <em>problems</em>.</p>
+<p>FUD solves <em>nothing</em>.</p>

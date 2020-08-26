@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head><meta charset="utf-8">
+<title>Monolithe • oncletom.io</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="preload" href="/assets/icons.svg">
+<link rel="preload" href="/assets/avatar.jpg">
+<link rel="preload" href="/images/publications/nodejs-cover.png">
+<link rel="stylesheet" href="/talks/styles/slides.css?v=v3.2.0">
+<link rel="stylesheet" href="/talks/styles/slides/theme-oncletom.css?v=v3.2.0">
+<meta name="viewport" content="initial-scale=1.0">
+<!-- generated via https://realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#D4C492">
+<meta name="msapplication-TileColor" content="#D4C492">
+<meta name="theme-color" content="#D4C492">
+<link rel="pgpkey" href="https://keybase.io/oncletom/pgp_keys.asc?fingerprint=FD7AA82DF0BB977542BB4F44CB88AA7D815E0D6B">
+<meta name="description" content="En 2015, nombreuses sont les discussions qui portent, débattent et haranguent&amp;#10;les développeurs pour savoir si oui ou non, ce soir c’est monolithe ou&amp;#10;microservices au repas.&amp;#10;Alors, monolithe, microservices … ou les deux ?">
+<meta name="keywords" content="">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io" href="https://oncletom.io/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Photography" href="https://oncletom.io/photography/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Talks" href="https://oncletom.io/talks/feed/">
+<link rel="author" href="Thomas Parisot">
+<link rel="canonical" data-disqus-shortname="oncletom" href="https://oncletom.io/talks/2015/bdx.io/">
+
+<link rel="prefetch" href="https://oncletom.io/talks/2015/devcon/">
+<link rel="prefetch" href="https://oncletom.io/talks/2015/blendwebmix/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@oncletom">
+<meta name="twitter:creator" content="@oncletom">
+<meta name="twitter:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta name="twitter:description" content="En 2015, nombreuses sont les discussions qui portent, débattent et haranguent&amp;#10;les développeurs pour savoir si oui ou non, ce soir c’est monolithe ou&amp;#10;microservices au repas.&amp;#10;Alors, monolithe, microservices … ou les deux ?">
+<meta property="og:title" content="Monolithe">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://oncletom.io/talks/2015/bdx.io/">
+<meta property="og:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta property="og:description" content="En 2015, nombreuses sont les discussions qui portent, débattent et haranguent&amp;#10;les développeurs pour savoir si oui ou non, ce soir c’est monolithe ou&amp;#10;microservices au repas.&amp;#10;Alors, monolithe, microservices … ou les deux ?">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:site_name" content="oncletom.io">
+<link rel="me" href="https://masto.oncletom.io/@thomas">
+<link rel="pingback" href="https://webmention.io/oncletom.io/xmlrpc">
+<link rel="webmention" href="https://webmention.io/oncletom.io/webmention">
+<meta property="algolia:search" data-application-id="QIP7Z1PL3B" data-api-key="5caf0f682ba8349e8a67872b9edde3f3" data-index-name="prod_blog">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+<body class="home site-talks content-post">
+<div class="reveal">
+  <main class="slides" lang="fr">
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/channel-islands/DSC_6648.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/channel-islands/DSC_6648.jpg" -->
+
+# Monolithe
+
+16 Octobre 2015 — [bdx.io](http://www.bdx.io/) {.footer}
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/B286722-R1-27-28.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/DSC_7994.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/ménerbes/B292736-R1-18-18A.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/uk/DSC_6485.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/uk/DSC_6480.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/DSC_1509.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/DSC_0163.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/DSC_9835.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/channel-islands/CNV00023.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/channel-islands/CNV00073.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/channel-islands/DSC_6671.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/channel-islands/DSC_6716.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># 🍵
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/DSC_2389.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/IMG_0024.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/iceland/Scan-130109-0016.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/iceland/Scan-130126-0025.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/DSC_9521.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># 🍵
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/uk/B286722-R1-07-8.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/uk/B286722-R1-10-11.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/uk/B290516-R1-00-1.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/uk/B290516-R2-04-5.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/uk/DSC_6487.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># 🍵
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/ukraine/7A4EE282-BC2E-422C-949B-D227FC475833.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/ukraine/28A90CF6-C319-46C5-AA56-2309B5F073D4.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/ukraine/67F5C623-0DB2-4A69-8B6F-B178820F3D77.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/ukraine/5595C6F9-90E0-410A-A477-38C40361ED79.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/ukraine/A0615DEC-8F73-4D90-9FF7-18050BD2F961.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/ukraine/AD0D76E9-4D49-431F-96CF-D2CDBFC6A899.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/ukraine/B294232-R1-00-1.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/ukraine/B294761-R3-04-5.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/ukraine/B294761-R3-09-10.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/ukraine/CE1A4F7D-840A-4E0C-8FE4-DBF22FE3DC54.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># 🍵
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/Scan-130130-0010.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/Scan-130130-0036.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/DSC_2378.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/Scan-120618-0001.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/Scan-130101-0023.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/DSC_8260.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/DSC_1720.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># 🍵
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/family/B290516-R3-01-2.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/family/B290516-R3-00-1.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/family/B294232-R3-08-9.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/ménerbes/DSC_9094.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># 🍵
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/iceland/DSC_4194.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/iceland/DSC_4294.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/iceland/DSC_4336.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/iceland/DSC_4404.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/iceland/DSC_4421.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/iceland/DSC_4493.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/iceland/DSC_4603.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/iceland/DSC_4613.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/iceland/Scan-130126-0013.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># 🍵
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/friends/DSC_8946.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/friends/DSC_7581.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/friends/B290803-R2-05-6.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/friends/DSC_5729.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/friends/DSC_5730.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/Scan-130130-0008.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/friends/B290516-R2-02-3.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/friends/B290516-R1-04-5.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/friends/B290516-R1-05-6.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># 🍵
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/friends/Scan-130101-0036.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/DBD2DF5E-6D89-4105-AC89-2881D447EE4F.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/DSC_3270.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/DSC_8288.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/DSC_8682.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/DSC_9848.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># 🍵
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/friends/B290516-R1-08-9.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/B292836-R1-16-17.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/B292836-R1-17-18.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># 🍵
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/DSC_1951.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/B286181-R1-10-11.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/A129C2BC-D5D4-4EDF-A6BF-24B3D7DC5FE5.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/ukraine/7E1FB711-CFFA-4327-8AD9-4173D18C856C.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/ukraine/B294232-R2-03-4.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># 🍵
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/ukraine/B294761-R1-01-2.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/ukraine/B294761-R2-04-5.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/ukraine/C44552A2-1D65-4EE7-834F-4419B43A7AFA.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/uk/CNV00031.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/uk/CNV00036.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/uk/DSC_6762.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/uk/DSC_8901.jpg" -->
+</textarea>
+        </section>
+      
+  </main>
+</div>
+
+<script src="/talks/assets/js/slides.bundle.js" type="module"></script>
+<script src="/talks/vendor/notes/notes.js" defer></script>
+
+
+<script src="/talks/assets/js/main.js?v=3.2.0" type="module"></script>
+</body>
+</html>

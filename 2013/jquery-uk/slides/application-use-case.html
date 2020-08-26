@@ -1,0 +1,58 @@
+<h2 id="Tale-Of-A-UK-Job-Application"><a class="header-anchor" href="#Tale-Of-A-UK-Job-Application">§</a>Tale Of A UK Job Application</h2>
+<h3 id="And-Pardon-my-French"><a class="header-anchor" href="#And-Pardon-my-French">§</a><em>And Pardon my French</em></h3>
+<ol>
+<li>Submitting an application form</li>
+<li>Being shortlisted</li>
+<li>Phone Interview</li>
+<li>Technical Interview</li>
+<li>Physical Interview</li>
+<li>Salary Negociation</li>
+</ol>
+<p>Then, <strong>accept the contract and relocate</strong> or …</p>
+<p>@@@</p>
+<h2 id="Let’s-translate-that-in-JavaScript…"><a class="header-anchor" href="#Let’s-translate-that-in-JavaScript…">§</a>Let’s translate that in JavaScript…</h2>
+<p>@@@</p>
+<pre><code class="language-javascript">(function jobApplication(){
+  (function shortlist(data){
+    (function phoneInterview(){
+      (function technicalInterview(data){
+        (function physicalInterview(){
+          (function salaryNegociation(payload){
+            if (payload.job){
+              acceptContract() &amp;&amp; relocate();
+            }
+            else throw SyntaxError(&quot;Too bad…&quot;);
+          })({ job: &quot;Software Engineer&quot; });
+        })();
+      })({ script: &quot;eval('alert(true);')&quot; });
+    })();
+  })({ why: &quot;I speak JavaScript!&quot; });
+})();
+
+</code></pre>
+<p>@@@</p>
+<h2 id="Badge-Unlocked-Pyramid-of-Doom"><a class="header-anchor" href="#Badge-Unlocked-Pyramid-of-Doom">§</a>Badge Unlocked: <em>Pyramid</em> of Doom!</h2>
+<p><img src="images/doom.jpg" alt=""></p>
+<p>@@@</p>
+<h2 id="Promisification"><a class="header-anchor" href="#Promisification">§</a>Promisification!</h2>
+<p>@@@</p>
+<pre><code class="language-javascript">var $job = $.Deferred();
+
+$jobApplication
+  .progress( updateApplicationState )
+  .done( acceptContract )
+  .done( relocate )
+  .fail( keepCalmAndDrinkWine );
+
+$jobApplication
+  .notify({ state: &quot;shortlist&quot; })
+  .notify({ state: &quot;phone_interview&quot; })
+  .notify({ state: &quot;technical_interview&quot; })
+  .notify({ state: &quot;physical_interview&quot; })
+  .notify({ state: &quot;salary_negociation&quot; });
+
+$jobApplication.resolve({
+  job: &quot;Software Engineer&quot;
+});
+</code></pre>
+<p><small><a href="http://jsbin.com/episez/6/edit">See on JSBin</a>.</small></p>

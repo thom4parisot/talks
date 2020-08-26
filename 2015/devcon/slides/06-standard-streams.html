@@ -1,0 +1,23 @@
+<!-- .slide: data-state="contrasted" -->
+<h2 id="Standard-streams-containers"><a class="header-anchor" href="#Standard-streams-containers">§</a><strong>Standard streams</strong> containers</h2>
+<p>@@@</p>
+<h2 id="Interop-exchange-format"><a class="header-anchor" href="#Interop-exchange-format">§</a><em>Interop</em> exchange format</h2>
+<p>There are already plenty of tools. <em>Language agnostic</em>.</p>
+<pre><code class="language-bash">echo something | docker run -i &lt;container&gt;
+</code></pre>
+<pre><code>
+```bash
+echo 'http://www3.ebu.ch/news/2015/09/media-companies-get-personal-at'  | docker run -i freebird/feature-processor-render-html
+```
+
+@@@
+
+## Infinite combinations
+
+```bash
+echo something | docker run -i &lt;container&gt; | awk '{print $n}' | docker run -i &lt;other-container&gt;
+```
+
+</code></pre>
+<pre><code class="language-bash">echo 'http://www3.ebu.ch/news/2015/09/media-companies-get-personal-at'  | docker run -i freebird/feature-processor-render-html  | jq -r '.&quot;http://freebird.prototyping.bbc.co.uk/ns#html&quot;' | docker run -i freebird/feature-processor-item-body | jq -r '.&quot;http://schema.org/text&quot;'
+</code></pre>

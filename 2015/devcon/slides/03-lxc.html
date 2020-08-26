@@ -1,0 +1,51 @@
+<!-- .slide: data-state="contrasted" -->
+<h2 id="Enters-LXC"><a class="header-anchor" href="#Enters-LXC">§</a>Enters <strong>LXC</strong></h2>
+<p>(circa 2008)</p>
+<p>@@@</p>
+<h2 id="LXC-wraps-an-app-and-an-OS-system-in-a-rootfs-partition"><a class="header-anchor" href="#LXC-wraps-an-app-and-an-OS-system-in-a-rootfs-partition">§</a>LXC wraps an <em>app</em> and an <em>OS system</em> in a <em>rootfs</em> partition</h2>
+<p>@@@</p>
+<pre><code class="language-bash"># build.sh
+$ lxc-create -t ubuntu -n nodejs-app --release trusty
+$ lxc-start -n nodejs-app --daemon
+$ cp ./src /var/lib/lxc/nodejs-app/rootfs
+$ lxc-attach -n nodejs-app
+
+$$ apt-get install nodejs -y
+$$ npm install
+^A^D
+
+$ lxc-stop -n nodejs
+</code></pre>
+<p>@@@</p>
+<h2 id="From-the-host-perspective"><a class="header-anchor" href="#From-the-host-perspective">§</a>From the <em>host</em> perspective</h2>
+<pre><code class="language-bash">docker@default:~$ ps fx
+  PID TTY      STAT   TIME COMMAND
+    2 ?        S      0:00 [kthreadd]
+    3 ?        S      0:01  \_ [ksoftirqd/0]
+    5 ?        S&lt;     0:00  \_ [kworker/0:0H]
+    7 ?        S      0:00  \_ [rcu_sched]
+    8 ?        S      0:00  \_ [rcu_bh]
+    9 ?        S      0:00  \_ [migration/0]
+   10 ?        S&lt;     0:00  \_ [khelper]
+  987 ?        S      0:00 ntpd -d -n -p pool.ntp.org
+…
+19086 pts/0    Ss+    0:00 /bin/sh -c npm start
+19115 pts/0    Sl+    0:00  \_ npm
+19124 pts/0    S+     0:00      \_ sh -c static -p ${PORT:-5000} dist/
+19125 pts/0    Sl+    0:00          \_ node /app/node_modules/.bin/static -p 5000 dist/
+…
+</code></pre>
+<p>@@@</p>
+<h2 id="From-the-container-perspective"><a class="header-anchor" href="#From-the-container-perspective">§</a>From the <em>container</em> perspective</h2>
+<pre><code class="language-bash">app@aa05e05fc3ae:~$ ps fx
+  PID TTY      STAT   TIME COMMAND
+    1 ?        Ss+    0:00 /bin/sh -c npm start
+   28 ?        Sl+    0:00 npm
+   37 ?        S+     0:00  \_ sh -c static -p ${PORT:-5000} dist/
+   38 ?        Sl+    0:00      \_ node /app/node_modules/.bin/static -p 5000 dist/
+</code></pre>
+<p>@@@</p>
+<h2 id="One-benefit-self-contained"><a class="header-anchor" href="#One-benefit-self-contained">§</a>One benefit: <strong>self contained</strong></h2>
+<p>Container is not aware of its parent host.</p>
+<p>@@@</p>
+<h2 id="But-not-trans-portable"><a class="header-anchor" href="#But-not-trans-portable">§</a>But <em>not (trans)portable</em></h2>

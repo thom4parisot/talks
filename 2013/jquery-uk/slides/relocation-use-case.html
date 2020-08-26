@@ -1,0 +1,39 @@
+<h2 id="Tale-of-a-country-relocation"><a class="header-anchor" href="#Tale-of-a-country-relocation">§</a>Tale of a country relocation</h2>
+<p>Let’s use another real life example <small>(that’s still better than <em>Hello world examples</em>)</small>.</p>
+<ol>
+<li>opening a bank account</li>
+<li>finding a new place to live</li>
+<li>request a NINo</li>
+<li>ask for a debit card</li>
+</ol>
+<p>And hope for an on-time payday to finally live like a new settler!</p>
+<p>@@@</p>
+<h2 id="Opening-a-bank-account"><a class="header-anchor" href="#Opening-a-bank-account">§</a>Opening a bank account</h2>
+<pre><code class="language-javascript">function requestBankAccount(job, postal_address){
+  var $deferred;
+
+  // expect an 'account' object to be resolved
+  $deferred = $.post('http://bank.com/account', {
+    job: job,
+    address: postal_address
+  });
+
+  return $deferred.promise();
+}
+</code></pre>
+<p>@@@</p>
+<h2 id="Assembling-the-workflow"><a class="header-anchor" href="#Assembling-the-workflow">§</a>Assembling the workflow</h2>
+<p>Let’s assume we have a <code>$job</code> promise available in the scope.</p>
+<pre><code class="language-javascript">var $address, $account, $NINo, $debitCard;
+
+$address = requestAppartment(job);
+
+$.when($job, $address).done(function(job, address){
+  $account = requestBankAccount(job, address);
+  $NINo = requestNINo(job, address);
+
+  $account.done(function(account){
+    $debitCard = requestDebitCard(account, address);
+  });
+});
+</code></pre>

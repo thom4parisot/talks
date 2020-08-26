@@ -1,0 +1,28 @@
+<!-- .slide: data-state="contrasted" -->
+<h1 id="5-System-image"><a class="header-anchor" href="#5-System-image">§</a>#5 System image</h1>
+<p>@@@</p>
+<p><img src="images/system-image.png" alt=""></p>
+<p>@@@</p>
+<pre><code class="language-bash">vagrant up
+
+packer build
+
+aws ec2 create-image
+</code></pre>
+<p>@@@</p>
+<h2 id="stdin-env-variables"><a class="header-anchor" href="#stdin-env-variables">§</a><code>stdin</code> = env variables</h2>
+<p>@@@</p>
+<h2 id="stdout-file"><a class="header-anchor" href="#stdout-file">§</a><code>stdout</code> = file</h2>
+<p>a.k.a. <em>Golden image</em>.</p>
+<p>@@@</p>
+<h2 id="stderr-varies"><a class="header-anchor" href="#stderr-varies">§</a><code>stderr</code> = <em>varies</em></h2>
+<p>Linux exit codes.</p>
+<p>@@@</p>
+<h2 id="State-predictable"><a class="header-anchor" href="#State-predictable">§</a>State = <em>predictable</em></h2>
+<p>Mountable filesystem and executable environment.</p>
+<p>@@@</p>
+<h2 id="Reproducibility-exact"><a class="header-anchor" href="#Reproducibility-exact">§</a>Reproducibility = <em>exact</em></h2>
+<p>(re)start from predictable point.</p>
+<p>@@@</p>
+<h2 id="Chef-puppet-Ansible"><a class="header-anchor" href="#Chef-puppet-Ansible">§</a>Chef, puppet, Ansible?</h2>
+<p>Reproducible provisioning. Consecutive provisioning does not guarantee state though.</p>

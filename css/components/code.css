@@ -1,0 +1,66 @@
+pre {
+  background: var(--code-background);
+  color: var(--code-foreground);
+}
+
+p code {
+  color: var(--dark-accent);
+}
+
+figure.highlight {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+figure.highlight figcaption {
+  color: var(--dark-accent);
+  font-family: var(--type-code);
+}
+
+figure.highlight table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+figure.highlight table td {
+  padding: 0;
+}
+
+figure.highlight pre {
+  line-height: 1.75;
+  margin: 0;
+  padding: 1rem;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+figure.highlight .gutter pre {
+  border: 2px solid var(--light-accent);
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  text-align: right;
+  user-select: none;
+}
+
+figure.highlight .code pre {
+  border: 2px solid var(--light-accent);
+  border-left: none;
+  border-radius: 0 10px 10px 0;
+  max-width: 70vw;
+  overflow-x: auto;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+figure.highlight .hljs {
+  padding: 0 !important;
+}
+
+@media (width >= 768px) {
+
+  figure.highlight {
+    margin-left: -6rem;
+    margin-right: -6rem;
+  }
+}

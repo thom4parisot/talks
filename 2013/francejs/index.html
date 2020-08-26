@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head><meta charset="utf-8">
+<title>Solid Grunt • oncletom.io</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="preload" href="/assets/icons.svg">
+<link rel="preload" href="/assets/avatar.jpg">
+<link rel="preload" href="/images/publications/nodejs-cover.png">
+<link rel="stylesheet" href="/talks/styles/slides.css?v=v3.2.0">
+<link rel="stylesheet" href="/talks/styles/slides/theme-oncletom.css?v=v3.2.0">
+<meta name="viewport" content="initial-scale=1.0">
+<!-- generated via https://realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#D4C492">
+<meta name="msapplication-TileColor" content="#D4C492">
+<meta name="theme-color" content="#D4C492">
+<link rel="pgpkey" href="https://keybase.io/oncletom/pgp_keys.asc?fingerprint=FD7AA82DF0BB977542BB4F44CB88AA7D815E0D6B">
+<meta name="description" content="Grunt est un outil populaire chez les développeurs Node.js et frontend.&amp;#10;Je partage quelques pistes et techniques pour créer vos propres tâches Grunt testées et maintenables.&amp;#10;J’en profite aussi pour évoquer cette pratique au travers d’un retour d’expérience lors d’un sprint de deux semaines dans l’équipe de BBC News.">
+<meta name="keywords" content="">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io" href="https://oncletom.io/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Photography" href="https://oncletom.io/photography/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Talks" href="https://oncletom.io/talks/feed/">
+<link rel="author" href="Thomas Parisot">
+<link rel="canonical" data-disqus-shortname="oncletom" href="https://oncletom.io/talks/2013/francejs/">
+
+<link rel="prefetch" href="https://oncletom.io/talks/2013/sudweb/">
+<link rel="prefetch" href="https://oncletom.io/talks/2014/chtijs/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@oncletom">
+<meta name="twitter:creator" content="@oncletom">
+<meta name="twitter:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta name="twitter:description" content="Grunt est un outil populaire chez les développeurs Node.js et frontend.&amp;#10;Je partage quelques pistes et techniques pour créer vos propres tâches Grunt testées et maintenables.&amp;#10;J’en profite aussi pour évoquer cette pratique au travers d’un retour d’expérience lors d’un sprint de deux semaines dans l’équipe de BBC News.">
+<meta property="og:title" content="Solid Grunt">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://oncletom.io/talks/2013/francejs/">
+<meta property="og:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta property="og:description" content="Grunt est un outil populaire chez les développeurs Node.js et frontend.&amp;#10;Je partage quelques pistes et techniques pour créer vos propres tâches Grunt testées et maintenables.&amp;#10;J’en profite aussi pour évoquer cette pratique au travers d’un retour d’expérience lors d’un sprint de deux semaines dans l’équipe de BBC News.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:site_name" content="oncletom.io">
+<link rel="me" href="https://masto.oncletom.io/@thomas">
+<link rel="pingback" href="https://webmention.io/oncletom.io/xmlrpc">
+<link rel="webmention" href="https://webmention.io/oncletom.io/webmention">
+<meta property="algolia:search" data-application-id="QIP7Z1PL3B" data-api-key="5caf0f682ba8349e8a67872b9edde3f3" data-index-name="prod_blog">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+<body class="home site-talks content-post">
+<div class="reveal">
+  <main class="slides" lang="fr">
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># Solid Grunt
+
+## Du code spaghetti au code béton
+
+<small>23 novembre 2013 — [FranceJS.in(Toulouse)](http://lanyrd.com/2013/francejs/)</small>
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>![](../../img/avatar.jpg)
+
+## Thomas Parisot
+
+Frontend / JavaScript Engineer
+
+[![BBC R&D](../../img/RD-logo_500.png)](http://www.bbc.co.uk/rd)
+
+<br>
+
+[oncletom.io](https://oncletom.io) –
+[@oncletom](https://twitter.com/oncletom) –
+[github.com/oncletom](https://github.com/oncletom)
+
+@@@
+
+<!-- .slide: data-background="images/10121241273_589d0dcf84_b_d.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/9308903255_6f68f6ddbe_b_d.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/BristolTowerLayers-3.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/everyday.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/9676470682_3d418eeb40_b_d.jpg" -->
+
+## Apprentissages
+
+@@@
+
+### J'aime les ~~`while()`~~ boucles.
+
+@@@
+
+### J'aime les ~~`pattern`~~ répétitions.
+
+@@@
+
+### J'aime les ~~`border-radius`~~ lignes et courbes.
+
+@@@
+
+### Photographie
+
+Elle s'est nourrie de mon code.
+
+Elle a nourri mon code.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>## ![BBC News](images/bbc-news.jpeg)
+
+@@@
+
+## Contexte
+
+- 2 semaines dans le même lieu
+- aucune connaissance du workflow
+- aucune connaissance du code
+
+@@@
+
+## Volonté
+
+- apprendre d’une équipe réputée
+- livrer en production
+- ne rien casser
+- nouer des liens
+
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/first-pr.png" -->
+
+## Pull Request #1
+
+Dépendances frontend versionnées.
+
+-20K lignes de code.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/second-pr.png" -->
+
+## Pull Request #2
+
+~~doublon~~ + rationalisation.
+
+-10K lignes de code.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>## Pull Request #3
+
+@@@
+
+```javascript
+grunt.initConfig({
+  sass: {
+    /* content dynamically generated */
+  },
+  generateJS: {
+    dest: '<%= dir.static_js %>/module/translations/',
+    src: 'https://docs.google.com/spreadsheet/pub?key=xxx&output=csv'
+  },
+  generateINI: {
+    dest: './core/src/main/BBC/News/Translation/',
+    src: 'https://docs.google.com/spreadsheet/pub?key=xxx&output=csv'
+  }
+});
+
+grunt.registerTask('default', ['jshint', 'sass_compile:dev']);
+```
+
+@@@
+
+## Analyse
+
+- 17 tâches maison
+- des “surtâches”
+- des potentiels doublons pour “faire juste ce qu’on veut”
+- des configurations implicites
+
+@@@
+
+## Bref
+
+### *Envie de tout réécrire*
+
+Syndrôme classique ;-)
+
+@@@
+
+## Objectifs
+
+### *Challenger* l’idée par l’équipe
+
+### Ouvrir la PR le plus tôt possible
+
+Permet de susciter des remarques des principaux intéressés.
+
+### Améliorer la qualité
+
+Et éduquer par l’exemple.</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>## Pull Request #4
+
+Automatiser les fichiers de traduction.
+
+@@@
+
+```javascript
+grunt.registerTask('generateJS', 'Generate JS translation file for chosen language.', function(language) {
+  function normaliseInput(string)  {
+    var length = string.length,
+    i = 0,
+    newString = "";
+
+    while (i < length) {
+      if (i === 0) {
+        newString += string.charAt(i).toUpperCase();
+      } else {
+        newString += string.charAt(i).toLowerCase()
+      }
+
+      i++
+    }
+
+    return newString;
+  }
+
+  var language = language || 'English';
+  language = normaliseInput(language);
+
+  var csv = grunt.file.read('./webapp/static/js/module/translations/variables.csv');
+  // This will parse a delimited string into an array of
+  // arrays. The default delimiter is the comma, but this
+  // can be overriden in the second argument.
+  function CSVToArray( strData, strDelimiter ){
+    // Check to see if the delimiter is defined. If not,
+    // then default to comma.
+    strDelimiter = (strDelimiter || ",");
+
+    // Create a regular expression to parse the CSV values.
+    var objPattern = new RegExp(
+      (
+        // Delimiters.
+        "(\\" + strDelimiter + "|\\r?\\n|\\r|^)" +
+
+        // Quoted fields.
+        "(?:\"([^\"]*(?:\"\"[^\"]*)*)\"|" +
+
+        // Standard fields.
+        "([^\"\\" + strDelimiter + "\\r\\n]*))"
+      ),
+      "gi"
+      );
+
+
+    // Create an array to hold our data. Give the array
+    // a default empty first row.
+    var arrData = [[]];
+
+    // Create an array to hold our individual pattern
+    // matching groups.
+    var arrMatches = null;
+
+
+    // Keep looping over the regular expression matches
+    // until we can no longer find a match.
+    while (arrMatches = objPattern.exec( strData )){
+
+      // Get the delimiter that was found.
+      var strMatchedDelimiter = arrMatches[ 1 ];
+
+      // Check to see if the given delimiter has a length
+      // (is not the start of string) and if it matches
+      // field delimiter. If id does not, then we know
+      // that this delimiter is a row delimiter.
+      if (
+        strMatchedDelimiter.length &&
+        (strMatchedDelimiter != strDelimiter)
+        ){
+
+        // Since we have reached a new row of data,
+        // add an empty row to our data array.
+        arrData.push( [] );
+
+      }
+
+
+      // Now that we have our delimiter out of the way,
+      // let's check to see which kind of value we
+      // captured (quoted or unquoted).
+      if (arrMatches[ 2 ]){
+
+        // We found a quoted value. When we capture
+        // this value, unescape any double quotes.
+        var strMatchedValue = arrMatches[ 2 ].replace(
+          new RegExp( "\"\"", "g" ),
+          "\""
+          );
+
+      } else {
+
+        // We found a non-quoted value.
+        var strMatchedValue = arrMatches[ 3 ];
+
+      }
+
+
+      // Now that we have our value string, let's add
+      // it to the data array.
+      arrData[ arrData.length - 1 ].push( strMatchedValue );
+    }
+
+    // Return the parsed data.
+    return( arrData );
+  }
+
+  var array = CSVToArray(csv);
+
+  var propertyNames = array[0];
+
+
+  var length = array.length, i = 0;
+  var languageWanted;
+
+  // locate the language wanted
+  for (i ; i < length; i++) {
+    var currentLanguage = array[i][1];
+    if (currentLanguage == language) {
+      languageWanted = array[i];
+      break;
+    }
+  }
+
+  //create the file needed for /define/'language'.js
+  var languageString = 'define({';
+  var fourSpaces = "    ";
+  length = propertyNames.length;
+  //make i = 2 to skip language.code and language.name being saved into the file
+  i = 2;
+  for (i ; i < length; i++) {
+    languageString += "\n";
+    languageString += fourSpaces + propertyNames[i] + " : '" + languageWanted[i] + "'";
+    if (i + 1 !== length) {
+        languageString += ",";
+      } else {
+        languageString += "\n";
+      }
+  }
+
+  languageString += "});";
+  var languageCode = languageWanted[0];
+  grunt.file.write('./webapp/static/js/module/translations/' + languageCode + '.js', languageString);
+  grunt.file.delete('./webapp/static/js/module/translations/variables.csv');
+});
+```
+
+@@@
+
+## Le cas typique
+
+Et le MVP idéal.
+
+@@@
+
+## Réinvente la roue
+
+Parsing CSV.
+
+@@@
+
+## Test par l'exécution
+
+`assert(user.rant("ça marche pas"))`
+
+@@@
+
+## Manque de clarté du code
+
+Lecture linéaire.
+
+Code peu expressif quant à ses choix/opinions.
+
+@@@
+
+## Pourquoi ?
+
+Manque d'expérience / temps à consacrer.
+
+Peu de littérature à ce sujet.
+
+Mimétisme.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>## Structurer une tâche Grunt
+
+@@@
+
+### Configuration
+
++
+
+### Orchestration
+
++
+
+### Librairie
+
++
+
+### Documentation
+
+@@@
+
+## Configuration
+
+```bash
+grunt translateJS:english
+```
+
+@@@
+
+## Orchestration
+
+```javascript
+// ./tasks/translate.js
+var async = require('async');
+
+module.exports = function(grunt){
+  var steps = require('./lib/i18n.js')(grunt);
+
+  // callable as `grunt translateJS:<lang>`
+  grunt.registerTask('translateJS', function(lang){
+    grunt.config.set('language', lang);
+
+    async.waterfall([
+      steps.downloadSpreadsheet.bind(steps),
+      steps.locateLanguage.bind(steps),
+      steps.createJSFile.bind(steps)
+    ], this.async());
+
+  });
+};
+```
+
+@@@
+
+## Librairie
+
+```javascript
+// ./lib/i18n.js
+var request = require('request');
+
+module.exports = function i18nTask(grunt){
+	return {
+
+    downloadSpreadsheet: function(done){
+      // …
+    },
+
+    locatelang: function(csv, props, done){
+      // …
+    },
+
+    createJSFile: function(sheet, props, done){
+      // …
+    }
+
+
+  };
+};
+```
+
+@@@
+
+```javascript
+// ./lib/i18n.js
+
+module.exports = function i18nTask(grunt){
+  return {
+
+  downloadSpreadsheet: function(done) {
+    var url = grunt.config.get('i18nUrl');
+
+  request.get(url, function (error, response, body) {
+    if (error) throw Error('Request error');
+    if (response.statusCode !== 200) throw Error('Could not find  translation spreadsheet');
+    if (!body) throw Error('Spreadsheet body is empty');
+
+    var csv = util.CSVToArray(body);
+    var props = spreadsheet[0].slice(2);
+    done(null, csv, props);
+  });
+
+  }
+};
+```
+
+@@@
+
+## Tester
+
+```javascript
+// ./test/unit/lib/i18n.js
+
+describe('i18nTask.downloadSpreadsheet', function(){
+  it('should parse properly a remote document', function(){
+    // …
+  });
+
+  it('should raise an error on unexpected spreadsheet format', function(){
+    // …
+  });
+
+  it('should fail if remote document is unavailable', function(){
+    // …
+  });
+});
+```
+
+@@@
+
+## Stubber
+
+Simuler des erreurs I/O.
+
+Isoler les appels I/O.
+
+Fonctionner localement, sans infrastructure externe.
+
+@@@
+
+```javascript
+var sinon = request('sinon');
+var gruntStub = sinon.stub(grunt.file, 'write');
+
+expect(
+  gruntStub.calledWith(
+    'dummy config valueen-GB.js',
+    'define('+dummyOutput+');'
+  )
+).to.be.ok;
+```
+
+@@@
+
+```javascript
+// ./test/unit/lib/i18n.js
+
+var requestStub = sinon.stub(request, 'get');
+
+it('should parse properly a remote document', function(){
+  requestStub.yields(null, {statusCode: 200}, validCSVContent);
+});
+
+it('should raise an error on unexpected spreadsheet format', function(){
+  requestStub.yields(null, {statusCode: 200}, 'I am not CSV');
+});
+
+it('should fail if remote document is unavailable', function(){
+  requestStub.yields(null, {statusCode: 500});
+});
+```
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>## Optimiser une tâche
+
+@@@
+
+## Implicite
+
+`grunt sass_compile:arabic`
+
+```javascript
+grunt.registerTask('sass_compile', function(){ … });
+
+grunt.initConfig({
+  sass: {
+    /* content dynamically generated by custom task */
+  }
+});
+```
+
+@@@
+
+## Explicite et verbeux
+
+`grunt sass:arabic`
+
+```javascript
+grunt.initConfig({
+  sass: {
+    news: { … },
+    arabic: { … },
+    journalism: { … },
+    portuguese: { … },
+    // 20 autres services
+    production: { … }
+  }
+});
+```
+
+@@@
+
+## Dynamique
+
+`grunt sass:service:arabic`
+
+```javascript
+grunt.initConfig({
+  sass: {
+    service: {
+      expand: true,
+      ext: '.css',
+      cwd: 'webapp/static/sass/',
+      dest: 'webapp/static/stylesheets/',
+      src: 'services/<%= grunt.task.current.args[0] %>/*.scss'
+    }
+  }
+});
+```
+
+cf. [Dynamic Grunt Targets Using Templates](https://oncletom.io/2013/dynamic-grunt-targets-using-templates/)
+
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>## Intégration continue
+
+CI avec Maven.
+
+@@@
+
+```xml
+  <configuration>
+    <tasks>
+      <exec executable="npm" dir="${project.basedir}" failonerror="true">
+        <arg value="test" />
+      </exec>
+    </tasks>
+  </configuration>
+```
+
+@@@
+
+## `npm test`
+
+@@@
+
+## `package.json`
+
+```javascript
+{
+  "scripts": {
+    "test": "grunt jshint && grunt test"
+  },
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.9"
+  }
+}
+```
+
+@@@
+
+### `npm install -g grunt-cli`
+
+vs.
+
+### `npm install --save grunt-cli`
+
+@@@
+
+## Isolation du contexte global
+
+`npm run <task>` regarde dans `./node_modules`.
+
+Permet de maitriser la stack.
+
+`npm` devient la seule dépendance système.</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>## `npm run`
+
+@@@
+
+### `npm run jshint`
+
+vs.
+
+### `grunt jshint`
+
+@@@
+
+## `npm run jshint`
+
+```bash
+npm install --save jshint
+```
+
+```javascript
+{
+  "scripts": {
+    "jshint": "jshint --config .jshintrc lib/**/*.js"
+  }
+}
+```
+
+@@@
+
+## `grunt jshint`
+
+```bash
+npm install --save grunt grunt-contrib-jshint
+```
+
+```javascript
+grunt.initConfig({
+  jshint: {
+    all: {
+      src: 'lib/**/*.js'
+    },
+    options: {
+      jshintrc: '.jshintrc'
+    }
+  }
+});
+```</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>
+<blockquote class="twitter-tweet" align="center" lang="en"><p><a target="_blank" rel="noopener" href="https://twitter.com/oncletom">@oncletom</a> think we merged the last PR you worked on in News today, Happy to finally be making maven grunt :)</p>&mdash; Robert Kenny (@kenturamon) <a target="_blank" rel="noopener" href="https://twitter.com/kenturamon/statuses/402924152816173056">November 19, 2013</a></blockquote>
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/questions.gif" -->
+
+## Questions ?
+## Conversations ?
+</textarea>
+        </section>
+      
+  </main>
+</div>
+
+<script src="/talks/assets/js/slides.bundle.js" type="module"></script>
+<script src="/talks/vendor/notes/notes.js" defer></script>
+
+
+<script src="/talks/assets/js/main.js?v=3.2.0" type="module"></script>
+</body>
+</html>

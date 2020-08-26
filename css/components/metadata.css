@@ -1,0 +1,34 @@
+h1 + ul.metadata,
+h2 + ul.metadata,
+h3 + ul.metadata {
+  margin: -1rem 0 2.5rem;
+}
+
+h3 + ul.metadata,
+.h3 + ul.metadata {
+  margin-top: calc(-1.75rem + 0.25rem);
+}
+
+h4 + ul.metadata,
+.h4 + ul.metadata {
+  margin-top: calc(-1.5rem + 0.25rem);
+}
+
+li ul.metadata {
+  margin-bottom: .5em;
+}
+
+.metadata {
+  color: var(--dark-accent);
+}
+
+.metadata--type {
+  font-weight: bold;
+}
+
+.metadata--artifacts {
+  display: block !important;
+}
+  .metadata--artifacts:empty::before {
+    display: none;
+  }

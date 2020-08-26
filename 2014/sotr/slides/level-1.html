@@ -1,0 +1,76 @@
+<h2 id="Level-1-using-a-task-runner"><a class="header-anchor" href="#Level-1-using-a-task-runner">§</a>Level 1: using a <em>task</em> runner</h2>
+<!-- .slide: data-background="images/day1.jpg" -->
+<p>@@@</p>
+<!-- .slide: data-state="attention" -->
+<pre><code>
+So enters Grunt.
+
+The last time I gave a talk about grunt, the first question during the Q&amp;A was… *what is grunt?*
+
+But you should already know it with the past 3 or 4 talks mentioning this tool ;-)
+
+@@@
+
+&lt;!-- .slide: data-state=&quot;contrasted&quot; --&gt;
+
+## Grunt is a *task* runner
+
+But what is a *task*?
+
+&lt;!-- .element: class=&quot;fragment&quot; data-fragment-index=&quot;1&quot; --&gt;
+
+@@@
+
+## A *task* is a *repeatable* action with a *predictable* outcome.
+
+@@@
+
+## A *bridge* between your codebase and your workflow.
+
+</code></pre>
+<p>Grunt acts as a <em>bridge</em> between your <em>project codebase</em> and a <em>set of actions</em>.</p>
+<p>Grunt has no opinion on the nature of the tasks you should<br>
+perform.</p>
+<p>Grunt neither enforces a particular workflow.</p>
+<p>@@@</p>
+<h2 id="Less"><a class="header-anchor" href="#Less">§</a><em>Less</em></h2>
+<p>One <em>task</em> amongst ~3000.</p>
+<p>@@@</p>
+<h2 id="Setup"><a class="header-anchor" href="#Setup">§</a>Setup</h2>
+<pre><code class="language-bash">npm i -g grunt-cli
+npm i --save grunt grunt-contrib-less
+</code></pre>
+<p>@@@</p>
+<h2 id="Configuration"><a class="header-anchor" href="#Configuration">§</a>Configuration</h2>
+<pre><code class="language-javascript">/* Gruntfile.js */
+module.exports = function(grunt){
+  grunt.initConfig({
+    less: {
+      all: {
+        src: 'src/less/**/*.less',
+        dest: 'dist/stylesheets'
+      } 
+    }
+  });
+};
+</code></pre>
+<p>@@@</p>
+<h2 id="Running-the-task"><a class="header-anchor" href="#Running-the-task">§</a>Running the task</h2>
+<pre><code class="language-bash">grunt less
+</code></pre>
+<p>@@@</p>
+<!-- .slide: data-background="images/job-done.gif" -->
+<h2 id="Job-done"><a class="header-anchor" href="#Job-done">§</a>Job done!</h2>
+<p>Configuration + workflow are shared &lt;3</p>
+<pre><code>
+Now the configuration is *shared* amongst your project.
+Anybody who has access to your code can perform any task they want or need.
+
+Sharing your tooling is sharing the knowledge.
+It acts as a documentation of the *process*.
+
+And anybody comfortable with JavaScript can run and/or configure tasks. Which broadens and eases the adoption of prior painful and cumbersome tasks.
+
+@@@
+
+## But what *if*…</code></pre>

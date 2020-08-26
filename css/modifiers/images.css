@@ -1,0 +1,17 @@
+img.is-responsive {
+  max-width: 100%;
+}
+
+img.is-avatar {
+  border-radius: 4px;
+
+  ul &,
+  ol & {
+    vertical-align: middle;
+  }
+}
+
+img.is-cover {
+  object-fit: cover;
+  width: 100%;
+}

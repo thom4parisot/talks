@@ -1,0 +1,20 @@
+button {
+  cursor: pointer;
+}
+
+button.action,
+input[type="button"].action,
+input[type="submit"].action {
+  font-weight: bold;
+}
+  button a {
+    color: var(--dark-shade);
+    text-decoration: none;
+  }
+
+button[disabled],
+input[type="button"],
+input[type="submit"] {
+  color: var(--light-accent);
+  cursor: not-allowed;
+}

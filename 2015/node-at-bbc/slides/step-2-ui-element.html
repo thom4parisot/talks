@@ -1,0 +1,60 @@
+<!-- .slide: data-state="contrasted" -->
+<h1 id="2-UI-component"><a class="header-anchor" href="#2-UI-component">§</a>#2 <strong>UI</strong> component</h1>
+<p>@@@</p>
+<p><img src="images/tile.png" alt=""></p>
+<p>@@@</p>
+<p><img src="images/card.png" alt=""></p>
+<p>@@@</p>
+<p><img src="images/oneliner.png" alt=""></p>
+<p>@@@</p>
+<pre><code class="language-javascript">import { Cover } from '@project/element'
+
+React.render(Cover, { … })
+</code></pre>
+<p>@@@</p>
+<h2 id="Autonomous"><a class="header-anchor" href="#Autonomous">§</a><strong>Autonomous</strong></h2>
+<p>We <em>bundle</em> CSS, images et tooling.</p>
+<p>@@@</p>
+<pre><code class="language-javascript">require('./cover.scss');
+
+import { Component } from 'react';
+
+exports default class Cover extends Component {
+  render (){
+    let className = this.state.active ? 'active' : '';
+
+    return (&lt;div className={className}&gt;
+      &lt;h1&gt;{this.props.title}&lt;/h1&gt;
+    &lt;/div&gt;);
+  }
+}
+</code></pre>
+<p>@@@</p>
+<h2 id="browserify-all-the-way"><a class="header-anchor" href="#browserify-all-the-way">§</a><strong>browserify</strong> all the way!</h2>
+<p><em>transforms</em> are isolated and chainables.</p>
+<p>@@@</p>
+<!-- .slide: data-background="images/npm-private-registry.png" data-state="background-light" -->
+<h2 id="npm-publish"><a class="header-anchor" href="#npm-publish">§</a><code>npm publish</code></h2>
+<pre><code>
+`.npmrc` pour cibler le registre privé.
+
+@@@
+
+&lt;!-- .slide: data-background=&quot;images/webapp-rails.png&quot; data-state=&quot;background-light&quot; --&gt;
+
+## **Movable**
+
+(iframe rendering, then react-rails, then gulp, then pure npm)
+
+@@@
+
+&lt;!-- .slide: data-state=&quot;contrasted&quot; --&gt;
+
+# **Demo**
+
+@@@
+
+&gt; This is how I'd like to work on all the projects I am involved in.
+
+— Diego, UI designer
+</code></pre>

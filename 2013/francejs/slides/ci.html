@@ -1,0 +1,34 @@
+<h2 id="Integration-continue"><a class="header-anchor" href="#Integration-continue">§</a>Intégration continue</h2>
+<p>CI avec Maven.</p>
+<p>@@@</p>
+<pre><code class="language-xml">  &lt;configuration&gt;
+    &lt;tasks&gt;
+      &lt;exec executable=&quot;npm&quot; dir=&quot;${project.basedir}&quot; failonerror=&quot;true&quot;&gt;
+        &lt;arg value=&quot;test&quot; /&gt;
+      &lt;/exec&gt;
+    &lt;/tasks&gt;
+  &lt;/configuration&gt;
+</code></pre>
+<p>@@@</p>
+<h2 id="npm-test"><a class="header-anchor" href="#npm-test">§</a><code>npm test</code></h2>
+<p>@@@</p>
+<h2 id="package-json"><a class="header-anchor" href="#package-json">§</a><code>package.json</code></h2>
+<pre><code class="language-javascript">{
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;grunt jshint &amp;&amp; grunt test&quot;
+  },
+  &quot;dependencies&quot;: {
+    &quot;grunt&quot;: &quot;~0.4.1&quot;,
+    &quot;grunt-cli&quot;: &quot;~0.1.9&quot;
+  }
+}
+</code></pre>
+<p>@@@</p>
+<h3 id="npm-install-g-grunt-cli"><a class="header-anchor" href="#npm-install-g-grunt-cli">§</a><code>npm install -g grunt-cli</code></h3>
+<p>vs.</p>
+<h3 id="npm-install-save-grunt-cli"><a class="header-anchor" href="#npm-install-save-grunt-cli">§</a><code>npm install --save grunt-cli</code></h3>
+<p>@@@</p>
+<h2 id="Isolation-du-contexte-global"><a class="header-anchor" href="#Isolation-du-contexte-global">§</a>Isolation du contexte global</h2>
+<p><code>npm run &lt;task&gt;</code> regarde dans <code>./node_modules</code>.</p>
+<p>Permet de maitriser la stack.</p>
+<p><code>npm</code> devient la seule dépendance système.</p>

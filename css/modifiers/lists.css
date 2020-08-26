@@ -1,0 +1,56 @@
+ul.is-inline,
+ol.is-inline {
+  padding-left: 0;
+}
+
+ul.is-inline > li,
+ol.is-inline > li {
+  display: inline;
+}
+
+.is-dotted > li:not(:first-of-type):before {
+  content: "•";
+  padding-right: .3em;
+}
+.is-dotted > li.metadata--artifacts:before {
+  content: "";
+  padding-right: 0;
+}
+
+ul.is-discrete,
+ol.is-discrete {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+ul.with-metadata > li,
+ol.with-metadata > li {
+  display: flex;
+  margin-bottom: .3rem;
+}
+  ul.with-metadata > li .metadata,
+  ol.with-metadata > li .metadata {
+    align-self: flex-start;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 2;
+    min-width: 120px;
+    text-transform: uppercase;
+  }
+  ul.with-metadata h2,
+  ul.with-metadata h3,
+  ul.with-metadata h4 {
+    padding-top: 0;
+  }
+
+  .with-metadata > li .metadata + * {
+    margin-top: 0;
+  }
+  .with-metadata > li .metadata + .message {
+    background: transparent;
+    white-space: pre-line;
+  }
+
+  ul.with-metadata > li div:first-child {
+    margin-left: 120px;
+  }

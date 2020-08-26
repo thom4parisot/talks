@@ -1,0 +1,102 @@
+<!-- .slide: data-state="contrasted" -->
+<h2 id="Best-practices"><a class="header-anchor" href="#Best-practices">§</a><strong>Best</strong> practices</h2>
+<p>@@@</p>
+<h2 id="The-order-matters"><a class="header-anchor" href="#The-order-matters">§</a>The <strong>order</strong> matters</h2>
+<ul>
+<li><em>first</em> line which changes invalidates the rest</li>
+<li>so <code>COPY</code> instructions as late as possible</li>
+</ul>
+<p>@@@</p>
+<h2 id="Explicit-FROM-statement"><a class="header-anchor" href="#Explicit-FROM-statement">§</a><strong>Explicit</strong> FROM statement</h2>
+<pre><code>FROM ubuntu:14.04
+</code></pre>
+<p>is better than</p>
+<pre><code>FROM ubuntu
+</code></pre>
+<pre><code>
+Remember, we want predictability: next major of Ubuntu should not break next deploy.
+
+@@@
+
+## Use tools you **know**
+
+(or want to learn about)
+
+To monitor, automate, deploy etc.
+
+@@@
+
+## **Simplify** commands
+
+We use *Makefile* for consistency.
+
+```bash
+# builds Docker image
+make build
+
+# runs tests in containers
+make test
+
+# pushed the image to our own registry
+make push
+```
+
+</code></pre>
+<p>As a bonus what works for a developer works for the CI too.</p>
+<p>@@@</p>
+<h2 id="Watch-out-CPU-architecture"><a class="header-anchor" href="#Watch-out-CPU-architecture">§</a>Watch out <strong>CPU architecture</strong></h2>
+<ul>
+<li>Some apps checks for CPU at runtime</li>
+<li>ARM needs different packages and base images</li>
+</ul>
+<p>@@@</p>
+<h2 id="How-do-you-address-security"><a class="header-anchor" href="#How-do-you-address-security">§</a>How do you address <strong>security</strong>?</h2>
+<ul>
+<li>What if someone gains access to your container?</li>
+<li>OpenAM network driver?</li>
+</ul>
+<p>@@@</p>
+<h2 id="Manage-outside-of-containers"><a class="header-anchor" href="#Manage-outside-of-containers">§</a>Manage <strong>outside</strong> of containers</h2>
+<p><em>syslog</em> driver is a good choice.</p>
+<pre><code class="language-bash">$ cat /etc/default/docker
+
+DOCKER_OPTS=&quot;--log-driver=syslog&quot;
+</code></pre>
+<pre><code>
+Forward with rsyslog/kibana etc. Plenty of tooling already out there.
+
+
+@@@
+
+## **Own** your images
+
+We build on top of a *baseimage* and derive to optimised stack images.
+
+```bash
+FROM bbcrd/baseimage
+
+…
+```
+
+```bash
+FROM bbcrd/node:4.x
+
+…
+```
+
+</code></pre>
+<ul>
+<li>can be better for security than some random image found on Docker Hub</li>
+<li>easier to spread custom utilities (image cleanup)</li>
+<li>enforces practices in your org</li>
+<li>tailored to your needs</li>
+<li>you can automate the rebuilds daily</li>
+</ul>
+<p>@@@</p>
+<h2 id="Suitable-for-development-too"><a class="header-anchor" href="#Suitable-for-development-too">§</a>Suitable for <strong>development</strong> too</h2>
+<p>Inject work directory and enable auto-reload.</p>
+<pre><code class="language-bash">docker run -ti \
+  -v $(pwd)/src:/app/src:ro \
+  -p 0.0.0.0:5000:3000 \
+  oncletom/devcon-nodejs-app npm run start-dev
+</code></pre>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head><meta charset="utf-8">
+<title>README, un fichier nommé plaisir • oncletom.io</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="preload" href="/assets/icons.svg">
+<link rel="preload" href="/assets/avatar.jpg">
+<link rel="preload" href="/images/publications/nodejs-cover.png">
+<link rel="stylesheet" href="/talks/styles/slides.css?v=v3.2.0">
+<link rel="stylesheet" href="/talks/styles/slides/theme-oncletom.css?v=v3.2.0">
+<meta name="viewport" content="initial-scale=1.0">
+<!-- generated via https://realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#D4C492">
+<meta name="msapplication-TileColor" content="#D4C492">
+<meta name="theme-color" content="#D4C492">
+<link rel="pgpkey" href="https://keybase.io/oncletom/pgp_keys.asc?fingerprint=FD7AA82DF0BB977542BB4F44CB88AA7D815E0D6B">
+<meta name="description" content="Vendredi, mise en production. Vous annoncez à vos proches que pour l’apéro ce soir, c’est mort, vous êtes dé-bor-dé(e).&amp;#10;Un mauvais clic plus tard, le site est mort. Ambiance fin du monde pendant que vos amis s’amusent.&amp;#10;Si vous aviez su que la rédaction du README de votre projet vous aurait permis non seulement de préserver votre apéro sacré, mais en plus de livrer le cœur léger, vous l’auriez sûrement écrit plus tôt.&amp;#10;Avant que le monde ne s’effondre sur lui-même, nous ferons encore mieux : 15 minutes c’est juste ce qu’il faut pour créer un code robuste.">
+<meta name="keywords" content="">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io" href="https://oncletom.io/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Photography" href="https://oncletom.io/photography/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Talks" href="https://oncletom.io/talks/feed/">
+<link rel="author" href="Thomas Parisot">
+<link rel="canonical" data-disqus-shortname="oncletom" href="https://oncletom.io/talks/2012/paris-web/">
+
+<link rel="prefetch" href="https://oncletom.io/talks/2012/sudweb/">
+<link rel="prefetch" href="https://oncletom.io/talks/2013/takeoff/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@oncletom">
+<meta name="twitter:creator" content="@oncletom">
+<meta name="twitter:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta name="twitter:description" content="Vendredi, mise en production. Vous annoncez à vos proches que pour l’apéro ce soir, c’est mort, vous êtes dé-bor-dé(e).&amp;#10;Un mauvais clic plus tard, le site est mort. Ambiance fin du monde pendant que vos amis s’amusent.&amp;#10;Si vous aviez su que la rédaction du README de votre projet vous aurait permis non seulement de préserver votre apéro sacré, mais en plus de livrer le cœur léger, vous l’auriez sûrement écrit plus tôt.&amp;#10;Avant que le monde ne s’effondre sur lui-même, nous ferons encore mieux : 15 minutes c’est juste ce qu’il faut pour créer un code robuste.">
+<meta property="og:title" content="README, un fichier nommé plaisir">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://oncletom.io/talks/2012/paris-web/">
+<meta property="og:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta property="og:description" content="Vendredi, mise en production. Vous annoncez à vos proches que pour l’apéro ce soir, c’est mort, vous êtes dé-bor-dé(e).&amp;#10;Un mauvais clic plus tard, le site est mort. Ambiance fin du monde pendant que vos amis s’amusent.&amp;#10;Si vous aviez su que la rédaction du README de votre projet vous aurait permis non seulement de préserver votre apéro sacré, mais en plus de livrer le cœur léger, vous l’auriez sûrement écrit plus tôt.&amp;#10;Avant que le monde ne s’effondre sur lui-même, nous ferons encore mieux : 15 minutes c’est juste ce qu’il faut pour créer un code robuste.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:site_name" content="oncletom.io">
+<link rel="me" href="https://masto.oncletom.io/@thomas">
+<link rel="pingback" href="https://webmention.io/oncletom.io/xmlrpc">
+<link rel="webmention" href="https://webmention.io/oncletom.io/webmention">
+<meta property="algolia:search" data-application-id="QIP7Z1PL3B" data-api-key="5caf0f682ba8349e8a67872b9edde3f3" data-index-name="prod_blog">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+<body class="home site-talks content-post">
+<div class="reveal">
+  <main class="slides" lang="fr">
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>> N'écrivez jamais un *mot court* si un *paragraphe entier* améliore les affaires.
+
+— Senior consultant IBM
+
+@@@
+
+> N'écrivez jamais un *mot long* si un mot *court* fait l'affaire.
+
+— George Orwell
+
+@@@
+
+<!-- .slide: data-background="images/8251350711_b8555a3e50_b.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/8244634570_8bcfb25743_b.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/8166604129_8d5056f1c8_b.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/8489312830_17628cc7d5_b.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>
+# README
+
+## un fichier nommé plaisir
+
+
+<small>19 octobre 2012 — [Paris Web](http://paris-web.fr/2012/)</small>
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>## READ*/ME*</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>![](../../img/avatar.jpg)
+
+## Thomas Parisot
+
+Frontend / JavaScript Engineer
+
+[![BBC R&D](../../img/RD-logo_500.png)](http://www.bbc.co.uk/rd)
+
+<br>
+
+[oncletom.io](https://oncletom.io) –
+[@oncletom](https://twitter.com/oncletom) –
+[github.com/oncletom](https://github.com/oncletom)
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>## Résumé des 12 derniers mois
+
+@@@
+
+## 100% *JavaScript*
+
+### Node.js, Chrome
+
+@@@
+
+## *Startup* life
+
+Le cash a été brûlé</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/6954491729_d58735000a_b.jpg" -->
+
+## Origines
+
+@@@
+
+## Dialoguer — parler + écouter
+
+### Ateliers Paris Web 2011
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>
+## Ce qu'on ne voulait pas
+
+@@@
+
+## Pas de specs
+
+
+@@@
+
+## Vraiment pas de specs !
+
+
+
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>
+## Ce qu'on voulait
+
+@@@
+
+## KISS
+
+
+@@@
+
+## Et pas vraiment davantage
+
+
+
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>
+## Revenons au sujet
+
+
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/readme-file.png" -->
+
+@@@
+
+## Quoi ?
+
+### à quoi ça sert ?
+
+@@@
+
+## Comment ?
+
+### install / update / dev / deploy …
+
+@@@
+
+## Comment ?
+
+### ça s'utilise
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>
+## Contexte
+
+- 4 développeurs
+- télétravail
+- sprints de 2 semaines
+- priorisation à la journée
+
+@@@
+
+## Bilan ?
+
+@@@
+
+## #WIN
+
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/github.png" -->
+
+## Github
+
+simple et pratique
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/github-readme.png" -->
+
+## 1<sup>er</sup>
+
+élement visible
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/editor-online.png" -->
+
+## Modifiable en ligne
+
+parfait pour corriger une typo
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/editor-iawriter.png" -->
+
+## Logiciels
+
+IA Writer, StackEdit, GitLab, ~~redmine~~
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>
+## À jour
+
+car *toujours* visible
+
+@@@
+
+## 0
+
+apprentissage
+
+@@@
+
+## Simple
+
+`#` + `*` + `**` + `[]()` + `![]()` + ` ``` `
+
+@@@
+
+## Rapide à écrire
+
+ça laisse du temps pour causer
+
+@@@
+
+## Facile pour en discuter
+
+car lecture et compréhension facile
+
+@@@
+
+## Tester
+
+sans tester
+
+@@@
+
+![](images/testing-by-writing.png)
+
+@@@
+
+## Testabilité
+
+facilite les tests
+
+@@@
+
+![](images/tests.png)
+
+@@@
+
+## Compatible
+
+TDD, BDD, WTFDD</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>
+## RDD
+
+### README Driven Development
+
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/8739752320_7a93319b46_b.jpg" -->
+
+## Merci :-)
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>## Littérature
+
+
+* Crédits photo
+ * [Thanh](http://clients.tranches-de-vie.com/index.php/2011/paris-web-2011/1015-ateliers/img-0275)
+
+* Ils en parlent :
+ * [Tom Preston-Werner](http://tom.preston-werner.com/2010/08/23/readme-driven-development.html)
+ * [Mark Rickerby](http://www.slideshare.net/maetl/readme-driven-development-12783652)
+
+* [github.com/moonmaster9000/specdown](https://github.com/moonmaster9000/specdown)</textarea>
+        </section>
+      
+  </main>
+</div>
+
+<script src="/talks/assets/js/slides.bundle.js" type="module"></script>
+<script src="/talks/vendor/notes/notes.js" defer></script>
+
+
+<script src="/talks/assets/js/main.js?v=3.2.0" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!-- .slide: data-state="contrasted" -->
+<h1 id="4-Container"><a class="header-anchor" href="#4-Container">§</a>#4 <strong>Container</strong></h1>
+<p>@@@</p>
+<p><img src="images/dockerfile.png" alt=""></p>
+<p>@@@</p>
+<pre><code class="language-bash">docker run -ti \
+  -p 5000:5000 \
+  -e STREAM_API_URL=https://... \
+  bbcrd/webapp
+</code></pre>
+<p>@@@</p>
+<h2 id="Application-as-a-function"><a class="header-anchor" href="#Application-as-a-function">§</a><em>Application</em> as a <strong>function</strong></h2>
+<p><code>docker run -d ...</code> * <code>n</code></p>
+<p>@@@</p>
+<h2 id="Dependances-systeme"><a class="header-anchor" href="#Dependances-systeme">§</a>Dépendances <strong>système</strong></h2>
+<p>Application + dépendances {langage, système, ressources).</p>
+<p>@@@</p>
+<h2 id="Integration-Continue"><a class="header-anchor" href="#Integration-Continue">§</a><strong>Intégration Continue</strong></h2>
+<p><code>docker-compose -f ci.yml run npm test</code></p>
+<p>(mais on le cache derrière un <code>make test</code>)</p>
+<p>@@@</p>
+<h2 id="Le-CPU-compte"><a class="header-anchor" href="#Le-CPU-compte">§</a>Le <strong>CPU</strong> compte</h2>
+<p>(x86, ARMv6 etc.)</p>
+<p>@@@</p>
+<!-- .slide: data-background="images/docker-hub.png" data-state="background-light" -->
+<h2 id="docker-push"><a class="header-anchor" href="#docker-push">§</a><code>docker push</code></h2>
+<p>@@@</p>
+<!-- .slide: data-state="contrasted" -->
+<h1 id="Demo-sympa"><a class="header-anchor" href="#Demo-sympa">§</a><strong>Demo sympa</strong></h1>

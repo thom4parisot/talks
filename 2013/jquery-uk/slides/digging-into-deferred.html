@@ -1,0 +1,85 @@
+<h2 id="Digging-into-jQuery-Deferred"><a class="header-anchor" href="#Digging-into-jQuery-Deferred">§</a>Digging into jQuery.Deferred</h2>
+<p>Learning to use Promises, the soft way.</p>
+<p>@@@</p>
+<h2 id="Consume-the-API"><a class="header-anchor" href="#Consume-the-API">§</a>Consume the API</h2>
+<p>In jQuery 1.8+: <code>$.ajax</code>, <code>$.animate</code>, <code>$('&lt;selector&gt;')</code></p>
+<br>
+<pre><code class="language-javascript">var $deferred = $.post('/cheese', {
+  name: &quot;Livarot&quot;
+});
+
+$deferred
+  .done( syncLocalStorage )
+  .done( updateUI )
+  .fail( displayError )
+  .always( logNetworkResponse );
+</code></pre>
+<p>@@@</p>
+<h2 id="Create-your-first-Deferred"><a class="header-anchor" href="#Create-your-first-Deferred">§</a>Create your first Deferred</h2>
+<pre><code class="language-javascript">function getDelayedUserInput(){
+  var $deferred = $.Deferred();
+
+  setTimeout(function(){
+    $deferred.resolve(prompt(&quot;Anything to say?&quot;));
+  }, 1000);
+
+  return $deferred;
+}
+
+$('input').on('click', function(e){
+  getDelayedUserInput().done(function(user_input){
+    $(e.target).val(user_input);
+  });
+});
+</code></pre>
+<p><small><a href="http://jsbin.com/ocadol/3/edit">See on JSBin</a>.</small></p>
+<p>@@@</p>
+<h2 id="Deal-with-race-condition-workflows"><a class="header-anchor" href="#Deal-with-race-condition-workflows">§</a>Deal with race condition workflows</h2>
+<ul>
+<li><code>then()</code> enables data filtering.</li>
+<li><code>when()</code> is a <code>done()</code> for multiple promises.</li>
+</ul>
+<pre><code class="language-javascript">$.when( $.getJSON('/page/1'), $.getJSON('/page/2') )
+  .then(function(page1_data, page2_data){
+    return page1_data.concat(page2_data);
+  })
+  .done( displayCombinedData )
+  .fail( displayError );
+</code></pre>
+<p>@@@</p>
+<h2 id="Sharing-safely-your-Deferred"><a class="header-anchor" href="#Sharing-safely-your-Deferred">§</a>Sharing safely your Deferred</h2>
+<p><code>jQuery.Deferred</code> vs. <code>Deferred.promise()</code>.</p>
+<br>
+<pre><code class="language-javascript">var $deferred = $.Deferred();
+var $promise = $deferred.promise();
+
+$promise.done(function(value){
+  console.log(&quot;Oh my &quot;+value);
+});
+
+// $promise is read-only
+$promise.resolve(&quot;gosh&quot;);
+
+// will log 'Oh my head'
+$deferred.resolve(&quot;head&quot;);
+</code></pre>
+<p><small><a href="http://jsbin.com/uzokam/1/edit">See on JSBin</a>.</small></p>
+<p>@@@</p>
+<h2 id="Improving-our-first-Deferred"><a class="header-anchor" href="#Improving-our-first-Deferred">§</a>Improving our first Deferred</h2>
+<pre><code class="language-javascript">function getDelayedUserInput(){
+  var $deferred = $.Deferred();
+
+  setTimeout(function(){
+    $deferred.resolve(prompt(&quot;Anything to say?&quot;));
+  }, 1000);
+
+  return $deferred.promise(); // now safe
+}
+
+$('input').on('click', function(e){
+  getDelayedUserInput().done(function(user_input){
+    $(e.target).val(user_input);
+  });
+});
+</code></pre>
+<p><small><a href="http://jsbin.com/ocadol/4/edit">See on JSBin</a>.</small></p>

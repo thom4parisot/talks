@@ -1,0 +1,18 @@
+.read-more a,
+a.read-more {
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.read-more a:hover,
+.read-more a:focus,
+a.read-more:hover,
+a.read-more:focus {
+  color: var(--dark-accent);
+}
+
+  .read-more a::after,
+  a.read-more::after {
+    content: "→";
+    display: inline-block;
+  }

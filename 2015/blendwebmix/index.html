@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head><meta charset="utf-8">
+<title>Design d&#39;architecture modulaire à la BBC • oncletom.io</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="preload" href="/assets/icons.svg">
+<link rel="preload" href="/assets/avatar.jpg">
+<link rel="preload" href="/images/publications/nodejs-cover.png">
+<link rel="stylesheet" href="/talks/styles/slides.css?v=v3.2.0">
+<link rel="stylesheet" href="/talks/styles/slides/theme-bbcrd.css?v=v3.2.0">
+<meta name="viewport" content="initial-scale=1.0">
+<!-- generated via https://realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#D4C492">
+<meta name="msapplication-TileColor" content="#D4C492">
+<meta name="theme-color" content="#D4C492">
+<link rel="pgpkey" href="https://keybase.io/oncletom/pgp_keys.asc?fingerprint=FD7AA82DF0BB977542BB4F44CB88AA7D815E0D6B">
+<meta name="description" content="Quelle est la différence entre un composant visuel, un package npm, une image Docker et une machine, physique ou virtuelle ? À vrai dire, aucune : on attend d’eux résilience, composition et fiabilité.&amp;#10;Cette présentation est un voyage technique et fonctionnel autour des concepts des architectures modulaires, de qualité et de résilience, à la fois pour les machines et les êtres humaines que nous sommes.">
+<meta name="keywords" content="">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io" href="https://oncletom.io/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Photography" href="https://oncletom.io/photography/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Talks" href="https://oncletom.io/talks/feed/">
+<link rel="author" href="Thomas Parisot">
+<link rel="canonical" data-disqus-shortname="oncletom" href="https://oncletom.io/talks/2015/blendwebmix/">
+
+<link rel="prefetch" href="https://oncletom.io/talks/2015/bdx.io/">
+<link rel="prefetch" href="https://oncletom.io/talks/2015/node-at-bbc/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@oncletom">
+<meta name="twitter:creator" content="@oncletom">
+<meta name="twitter:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta name="twitter:description" content="Quelle est la différence entre un composant visuel, un package npm, une image Docker et une machine, physique ou virtuelle ? À vrai dire, aucune : on attend d’eux résilience, composition et fiabilité.&amp;#10;Cette présentation est un voyage technique et fonctionnel autour des concepts des architectures modulaires, de qualité et de résilience, à la fois pour les machines et les êtres humaines que nous sommes.">
+<meta property="og:title" content="Design d&#39;architecture modulaire à la BBC">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://oncletom.io/talks/2015/blendwebmix/">
+<meta property="og:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta property="og:description" content="Quelle est la différence entre un composant visuel, un package npm, une image Docker et une machine, physique ou virtuelle ? À vrai dire, aucune : on attend d’eux résilience, composition et fiabilité.&amp;#10;Cette présentation est un voyage technique et fonctionnel autour des concepts des architectures modulaires, de qualité et de résilience, à la fois pour les machines et les êtres humaines que nous sommes.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:site_name" content="oncletom.io">
+<link rel="me" href="https://masto.oncletom.io/@thomas">
+<link rel="pingback" href="https://webmention.io/oncletom.io/xmlrpc">
+<link rel="webmention" href="https://webmention.io/oncletom.io/webmention">
+<meta property="algolia:search" data-application-id="QIP7Z1PL3B" data-api-key="5caf0f682ba8349e8a67872b9edde3f3" data-index-name="prod_blog">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+<body class="home site-talks content-post">
+<div class="reveal">
+  <main class="slides" lang="fr">
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/2015-03-17_08.01.36.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/2015-03-19_07.22.53.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/2015-03-17_07.16.05.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/2015-03-18_05.09.53.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/2015-03-18_05.15.35.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>
+# Design d'*architecture modulaire* à la BBC
+
+
+28 octobre 2015 — [Blend Webmix](http://2015.blendwebmix.com/) {.footer}
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="../../img/thomas-parisot-landscape.jpg" data-state="background-dark" -->
+
+## Bonjour,<br> I am **Thomas**
+
+[oncletom.io](https://oncletom.io) – [@oncletom](https://twitter.com/oncletom) {.footer}
+
+@@@
+
+![Pardon my French](../../images/pardon-my-french.jpg)
+
+@@@
+
+## <span class="bbc">BBC R&amp;D</span>
+
+[github.com/bbcrd](https://github.com/bbcrd)
+[bbc.co.uk/rd](http://bbc.co.uk/rd)
+
+@@@
+
+![Full Stack JavaScript](../../images/javascript.png)
+
+[oncletom.io/node.js](https://oncletom.io/node.js)
+
+@@@
+
+![Sud Web](../../images/sudweb.png)
+
+[sudweb.fr](http://sudweb.fr)
+
+@@@
+
+<!-- .slide: data-background="../../images/photography.jpg" -->
+
+~~~~
+
+And photography.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# C'est quoi une **fonction** ?
+
+@@@
+
+## `fn(...args)`
+
+@@@
+
+## `let result = fn(...args)`
+
+@@@
+
+## `try { fn(...args) }`
+## `catch (err) { ... }`
+
+~~~~
+
+L'erreur est un signal, ce n'est pas rien.
+
+@@@
+
+## `let emitter = fn(...args)`
+## `emitter.on('success', ...)`
+
+@@@
+
+## `fn(...args).then(...)`
+
+@@@
+
+<!-- .slide: data-state="contrasted" -->
+
+## Bref, une fonction c'est …
+
+- à entrée identique, sortie **identique**
+- le produit de la fonction n'est **pas persisté** par la fonction
+- **reproductible** à l'infini*\**
+
+*\** moyennant un environnement favorable {.footer}
+
+~~~~
+
+Matrices d'environnement : versions d'interpréteur, de navigateur etc.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+## <span class="bbc">BBC R&D</span>
+
+C'est quoi ?
+
+@@@
+
+# Équipes **pluridisciplinaires**
+
+Ingénieurs, UX, design, science etc.
+
+@@@
+
+# Prototypage
+
+Itérations de 2 semaines, **analyse**, exploration.
+
+@@@
+
+# **Pivot**
+
+Au-delà de l'idée : partenaires, directions politiques, résultats de recherche etc.
+
+@@@
+
+# Qualité & **flexibilité**
+
+@@@
+
+# Coder = **faciliter**
+
+~~~~
+
+Jeter le code n'est pas grave tant que c'est dans l'optique projet.
+
+C'est un peu comme l'exemple d'agriculture pris auparavant.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/webapp-mockup.png" data-state="background-light" -->
+
+# Example
+
+@@@
+
+<!-- .slide: data-background="images/webapp-mockup.png" -->
+
+@@@
+
+<!-- .slide: data-state="contrasted" -->
+
+# C'est quoi une **Web app** ?
+
+@@@
+
+Une Web app est un *rendu navigateur* de *code HTML* servi par un *serveur HTTP*
+compilé ou *interprété* par un *programme* puis mis à disposition sur une *machine informatique*.
+
+<small>(Accessoirement, ces données transitent de manière intelligible *uniquement*
+ entre vous et le serveur sans captation par un tiers — même si vous lui confiez vos impôts)</small>
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# #1 **Navigateur**
+
+@@@
+
+![](images/browser.png)
+
+@@@
+
+## `open URL`
+
+@@@
+
+## `echo URL | open`
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# #2 Élément **graphique**
+
+@@@
+
+![](images/tile.png)
+
+@@@
+
+![](images/card.png)
+
+@@@
+
+![](images/oneliner.png)
+
+@@@
+
+```javascript
+import { Cover } from '@project/element'
+
+React.render(Cover, { … })
+```
+
+@@@
+
+## **Autonomie**
+
+On *embarque* CSS, images et outillage.
+
+@@@
+
+```javascript
+require('./cover.scss');
+
+import { Component } from 'react';
+
+exports default class Cover extends Component {
+  render (){
+    let className = this.state.active ? 'active' : '';
+
+    return (<div className={className}>
+      <h1>{this.props.title}</h1>
+    </div>);
+  }
+}
+```
+
+@@@
+
+## **browserify** all the way!
+
+*transforms* isolés et chainables.
+
+@@@
+
+<!-- .slide: data-background="images/npm-private-registry.png" data-state="background-light" -->
+
+## `npm publish`
+
+~~~~
+
+`.npmrc` pour cibler le registre privé.
+
+@@@
+
+> C'est comme ça que j'aimerais travailler sur tous mes projets.
+
+— Diego, UI designer
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# #3 **Application**
+
+@@@
+
+![](images/webapp.png)
+
+@@@
+
+```bash
+npm install --save @project/element
+
+PORT=3000 npm start
+
+# static -p ${PORT:-5000} --gzip dist/
+```
+
+@@@
+
+## ENV = **portabilité**
+
+(penser arguments de fonction)
+
+@@@
+
+## Problème
+
+`npm install` marche pas à tous les coups.
+
+~~~~
+
+Package version can be deleted, semver madness, registry can be down.
+
+@@@
+
+## `npm pack`
+
+Extraction solide
+
+@@@
+
+<!-- .slide: data-background="images/webapp-rails.png" data-state="background-light" -->
+
+## **Transportabilité**
+
+(rendu iframe, puis rails-react puis gulp)
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# #4 **Container**
+
+@@@
+
+![](images/dockerfile.png)
+
+@@@
+
+```bash
+docker run -ti \
+  -p 5000:5000 \
+  -e STREAM_API_URL=https://... \
+  bbcrd/webapp
+```
+
+@@@
+
+## *Application* as a **function**
+
+`docker run -d ...` * `n`
+
+@@@
+
+## Dépendances **système**
+
+Application + dépendances {langage, système, ressources).
+
+@@@
+
+## **Intégration Continue**
+
+`docker-compose -f ci.yml run npm test`
+
+(mais on le cache derrière un `make test`)
+
+@@@
+
+## Le **CPU** compte
+
+(x86, ARMv6 etc.)
+
+@@@
+
+<!-- .slide: data-background="images/docker-hub.png" data-state="background-light" -->
+
+## `docker push`
+
+@@@
+
+<!-- .slide: data-state="contrasted" -->
+
+# **Demo sympa**
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# #5 **Machine**
+
+@@@
+
+<!-- .slide: data-background="images/machine.png" -->
+
+@@@
+
+```bash
+aws ec2 run-instances --image-id=... --user-data=...
+
+aws ec2 create-tags --tags ... --resources i-...
+```
+
+@@@
+
+## *Machine* as a **function**
+
+@@@
+
+## **OS** comme artéfact
+
+`AWS_ACCESS_KEY_ID=... packer build search-app.json`
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# #6 **Data**
+
+@@@
+
+```bash
+curl -X POST -d '{ "uri": "...", "callback_url": "..." }' \
+  https://api.../analyse
+```
+
+@@@
+
+<!-- .slide: data-background="images/data-sequential-parallel.jpg" data-state="background-light" -->
+
+## **Code** = *data*
+
+@@@
+
+<!-- .slide: data-background="images/data-sequential-parallel.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/distributed-event-loop.png" data-state="background-light" -->
+
+## **Event loop distribuée**
+
+@@@
+
+<!-- .slide: data-background="images/data-dependencies-tree.jpg" data-state="background-light" -->
+
+
+## Arbre de dépendance
+
+@@@
+
+<!-- .slide: data-background="images/data-dependencies-tree.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/CNV00031.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/CNV00031.jpg" data-state="background-light" -->
+
+# **Récap**
+
+@@@
+
+Une Web app est un *rendu navigateur* de *code HTML* servi par un *serveur HTTP*
+compilé ou *interprété* par un *programme* puis mis à disposition sur une *machine informatique*.
+
+@@@
+
+Une Web app est un ensemble de *composants visuels* organisés selon des *règles métiers* et servi
+par un *processus encapsulé* et *orchestré* par une machine *pré-parée*.
+
+@@@
+
+<!-- .slide: data-background="images/stack-schema.jpg" -->
+
+@@@
+
+# **Composition**
+
+*Ajouter* et *combiner* — pas d'attente implicite.
+
+@@@
+
+# **State**
+
+*Explicite* plutôt qu'implicite.
+
+@@@
+
+# **Fonctions**
+
+Interfaces pures. État interne isolé. Reproductibles à souhait.
+
+@@@
+
+# **Artéfacts**
+
+Persistance de nos *sorties*.
+
+Transférable, étiquetables et reproductibles.
+
+@@@
+
+# **Découvrabilité**
+
+Chaque niveau, par votre équipe et d'autres équipes.
+
+**Fonction** > *Framework*
+
+@@@
+
+# **Données**
+
+Liant entre nos *systèmes*. Leur *débit* impacte la santé des fonctions.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/everyday.jpg" -->
+
+~~~~
+
+Although we talked about programming, humans are also good at repetition. As human beings, we need variables and variability to maintain our sanity, and to sustain a good *state* of mind.
+
+@@@
+
+<!-- .slide: data-background="images/everyday.jpg" data-state="background-light"  -->
+
+# Merci 👍
+</textarea>
+        </section>
+      
+  </main>
+</div>
+
+<script src="/talks/assets/js/slides.bundle.js" type="module"></script>
+<script src="/talks/vendor/notes/notes.js" defer></script>
+
+
+<script src="/talks/assets/js/main.js?v=3.2.0" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<h2 id="Pull-Request-3"><a class="header-anchor" href="#Pull-Request-3">§</a>Pull Request #3</h2>
+<p>@@@</p>
+<pre><code class="language-javascript">grunt.initConfig({
+  sass: {
+    /* content dynamically generated */
+  },
+  generateJS: {
+    dest: '&lt;%= dir.static_js %&gt;/module/translations/',
+    src: 'https://docs.google.com/spreadsheet/pub?key=xxx&amp;output=csv'
+  },
+  generateINI: {
+    dest: './core/src/main/BBC/News/Translation/',
+    src: 'https://docs.google.com/spreadsheet/pub?key=xxx&amp;output=csv'
+  }
+});
+
+grunt.registerTask('default', ['jshint', 'sass_compile:dev']);
+</code></pre>
+<p>@@@</p>
+<h2 id="Analyse"><a class="header-anchor" href="#Analyse">§</a>Analyse</h2>
+<ul>
+<li>17 tâches maison</li>
+<li>des “surtâches”</li>
+<li>des potentiels doublons pour “faire juste ce qu’on veut”</li>
+<li>des configurations implicites</li>
+</ul>
+<p>@@@</p>
+<h2 id="Bref"><a class="header-anchor" href="#Bref">§</a>Bref</h2>
+<h3 id="Envie-de-tout-reecrire"><a class="header-anchor" href="#Envie-de-tout-reecrire">§</a><em>Envie de tout réécrire</em></h3>
+<p>Syndrôme classique ;-)</p>
+<p>@@@</p>
+<h2 id="Objectifs"><a class="header-anchor" href="#Objectifs">§</a>Objectifs</h2>
+<h3 id="Challenger-l’idee-par-l’equipe"><a class="header-anchor" href="#Challenger-l’idee-par-l’equipe">§</a><em>Challenger</em> l’idée par l’équipe</h3>
+<h3 id="Ouvrir-la-PR-le-plus-tot-possible"><a class="header-anchor" href="#Ouvrir-la-PR-le-plus-tot-possible">§</a>Ouvrir la PR le plus tôt possible</h3>
+<p>Permet de susciter des remarques des principaux intéressés.</p>
+<h3 id="Ameliorer-la-qualite"><a class="header-anchor" href="#Ameliorer-la-qualite">§</a>Améliorer la qualité</h3>
+<p>Et éduquer par l’exemple.</p>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head><meta charset="utf-8">
+<title>Open Source code at the BBC • oncletom.io</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="preload" href="/assets/icons.svg">
+<link rel="preload" href="/assets/avatar.jpg">
+<link rel="preload" href="/images/publications/nodejs-cover.png">
+<link rel="stylesheet" href="/talks/styles/slides.css?v=v3.2.0">
+<link rel="stylesheet" href="/talks/styles/slides/theme-bbcrd.css?v=v3.2.0">
+<meta name="viewport" content="initial-scale=1.0">
+<!-- generated via https://realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#D4C492">
+<meta name="msapplication-TileColor" content="#D4C492">
+<meta name="theme-color" content="#D4C492">
+<link rel="pgpkey" href="https://keybase.io/oncletom/pgp_keys.asc?fingerprint=FD7AA82DF0BB977542BB4F44CB88AA7D815E0D6B">
+<meta name="description" content="Open Source can be seen as Wonderland when you are outside of it. But maybe you fear to be scalped if you contribute a wrong piece of code… Something is missing in between isn’t it?&amp;#10;So where to start? How to convince your boss it is worth it? How  to broaden the reach of the project? Especially in a large organisation like the BBC.&amp;#10;Let’s see through the Peaks.js waveformvisualisation journey how to pitch a project, how to ship it and how to build a momentum beyond the initial expectations.">
+<meta name="keywords" content="">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io" href="https://oncletom.io/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Photography" href="https://oncletom.io/photography/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Talks" href="https://oncletom.io/talks/feed/">
+<link rel="author" href="Thomas Parisot">
+<link rel="canonical" data-disqus-shortname="oncletom" href="https://oncletom.io/talks/2014/devcon/">
+
+<link rel="prefetch" href="https://oncletom.io/talks/2014/okfestival/">
+<link rel="prefetch" href="https://oncletom.io/talks/2014/develop-bbc/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@oncletom">
+<meta name="twitter:creator" content="@oncletom">
+<meta name="twitter:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta name="twitter:description" content="Open Source can be seen as Wonderland when you are outside of it. But maybe you fear to be scalped if you contribute a wrong piece of code… Something is missing in between isn’t it?&amp;#10;So where to start? How to convince your boss it is worth it? How  to broaden the reach of the project? Especially in a large organisation like the BBC.&amp;#10;Let’s see through the Peaks.js waveformvisualisation journey how to pitch a project, how to ship it and how to build a momentum beyond the initial expectations.">
+<meta property="og:title" content="Open Source code at the BBC">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://oncletom.io/talks/2014/devcon/">
+<meta property="og:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta property="og:description" content="Open Source can be seen as Wonderland when you are outside of it. But maybe you fear to be scalped if you contribute a wrong piece of code… Something is missing in between isn’t it?&amp;#10;So where to start? How to convince your boss it is worth it? How  to broaden the reach of the project? Especially in a large organisation like the BBC.&amp;#10;Let’s see through the Peaks.js waveformvisualisation journey how to pitch a project, how to ship it and how to build a momentum beyond the initial expectations.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:site_name" content="oncletom.io">
+<link rel="me" href="https://masto.oncletom.io/@thomas">
+<link rel="pingback" href="https://webmention.io/oncletom.io/xmlrpc">
+<link rel="webmention" href="https://webmention.io/oncletom.io/webmention">
+<meta property="algolia:search" data-application-id="QIP7Z1PL3B" data-api-key="5caf0f682ba8349e8a67872b9edde3f3" data-index-name="prod_blog">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+<body class="home site-talks content-post">
+<div class="reveal">
+  <main class="slides" lang="en-GB">
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/menerbes.jpg" -->
+
+### oncletom.io/talks/2014/devcon/
+
+@@@
+
+<!-- .slide: data-background="images/menerbes.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/B292836-R1-10-11-LR.jpg" -->
+@@@
+
+<!-- .slide: data-background="images/B292736-R1-18-18A-LR.jpg" -->
+@@@
+
+<!-- .slide: data-background="images/B292736-R2-00-0A-LR.jpg" -->
+
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/wonderland.jpg" data-credit="http://sharpwriter.deviantart.com/art/Welcome-to-the-Internet-Please-Follow-me-322248378" -->
+
+~~~~
+
+Open Source can be seen as Wonderland when you are outside of it.
+
+@@@
+
+<!-- .slide: data-background="images/3219475925_25f5665712_b.jpg" data-credit="https://www.flickr.com/photos/27313890@N00/3219475925" -->
+
+~~~~
+
+But if you have had to do it for the first time, you would rather fear to expose bad code and to be seen as a failure. 
+
+@@@
+
+## No *in between*…
+
+@@@
+
+<!-- .slide: data-background="images/mario-bros-castle.jpg" data-credit="http://hd4desktop.com/4459-mario-dual-bros-castle-flag-hd-wallpaper/" -->
+
+~~~~
+
+I will bring you inside the BBC fortress to give you essential keys to understand how to do Open Source in large organisations</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>![](../../img/avatar.jpg)
+
+<br>
+
+## *Thomas* Parisot
+
+[oncletom.io](https://oncletom.io) –
+[@oncletom](https://twitter.com/oncletom)
+
+@@@
+
+![Pardon my French](../../images/pardon-my-french.jpg)
+
+@@@
+
+![Full Stack JavaScript](../../images/javascript.png)
+
+@@@
+
+## <span class="bbc">BBC R&D</span>
+
+[github.com/bbcrd](https://github.com/bbcrd)  
+[bbc.co.uk/rd](http://bbc.co.uk/rd)
+
+@@@
+
+![I published](../../images/npm.png)
+
+[npmjs.org/~oncletom](https://npmjs.org/~oncletom)
+
+@@@
+
+[![Sud Web](../../images/sudweb.png)](http://sudweb.fr)
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>
+# Open Source at the BBC
+
+<small>1st October 2014 — [DevCon 2014](https://tech.ebu.ch/devcon14)</small></textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># What can I *do*?
+
+@@@
+
+<!-- .slide: data-background="images/contribute-doc.jpg" -->
+
+# Words
+
+Typo, wording, clearer sentence or paragraph.
+
+@@@
+
+<!-- .slide: data-background="images/contribute-doc.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/contribute-readme-before.png" -->
+
+# Docs
+
+Fix the pain of the next user.
+
+@@@
+
+<!-- .slide: data-background="images/contribute-readme-before.png" -->
+
+@@@
+
+<!-- .slide: data-background="images/contribute-readme-after.png" -->
+
+@@@
+
+# Bug reports
+
+Tests are much appreciated!
+
+@@@
+
+# Improvements
+
+Feature ideas, bug fix etc.</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/snippets-video.jpg" -->
+
+# Finding an *excuse*
+
+@@@
+
+<!-- .slide: data-background="images/snippets-video.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/snippets-audio.jpg" -->
+
+# But for *audio*?
+
+@@@
+
+<!-- .slide: data-background="images/snippets-audio.jpg" -->
+
+@@@
+
+# We wanted to do it *well*
+
+And it was heavily wanted by editors.
+
+@@@
+
+<!-- .slide: data-background="images/peaks-early-prototype.jpg" -->
+
+# Can we do *that*?
+
+… and Open Source, please.
+
+@@@
+
+<!-- .slide: data-background="images/peaks-early-prototype.jpg" -->
+
+@@@
+
+# “Okay…
+
+## … you have *two months*”.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# *Clear* indicators
+
+@@@
+
+# *Time*
+
+Two months — user study, tests, doc…
+
+@@@
+
+# Definition of *done*
+
+Visualise audio archives and snip bits of them.
+
+@@@
+
+# *Risk*
+
+Which technology between SVG and Canvas?
+
+@@@
+
+# *Metrics*
+
+Innovative work, accountable deliverable, esteem++.
+
+@@@
+
+<!-- .slide: data-state="contrasted" -->
+
+# *Exploratory* work
+
+@@@
+
+# Filling *paperwork*
+
+Justified case for openness without business risk.
+
+@@@
+
+# Starting *closed* source
+
+Done as it if would be open.
+
+@@@
+
+# *Canvas* favoured
+
+SVG is nice but felt harder to build a UI with.
+
+@@@
+
+<!-- .slide: data-background="images/peaks-svg.png" -->
+
+# waveform-data.js
+
+Based on [Audacity](http://audacity.sourceforge.net/). Two for One deal.
+
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# Ship it, ship it!
+
+@@@
+
+# `rm -rf .git`
+
+No history in public.
+
+@@@
+
+# *README*.md
+
+Solid API user documentation.
+
+@@@
+
+# `npm test`
+
+Ensure quality in IE9, Chrome and Firefox with *karma* and *Travis CI*.
+
+@@@
+
+# `npm i peaks.js`
+
+Install should be as easy as that.
+
+@@@
+
+<!-- .slide: data-background="images/peaks.png" -->
+
+# `npm publish`
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# Now what?
+
+@@@
+
+# *Spread* the word
+
+Blog about it, demo it to colleagues.
+
+@@@
+
+# *Maintenance* mode
+
+Bug fixes, product related or quick features.
+
+@@@
+
+# That's it!
+
+Unless if it is a strategic project.</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# *Beyond*…
+
+@@@
+
+# First *circle* recommenders
+
+Provide support to colleagues.
+
+@@@
+
+# *Key* features
+
+Open issues, document the implementation.
+
+@@@
+
+# Finding *supporters*
+
+Product owners in your team, in other teams.
+
+@@@
+
+# Sniffing *buyers*
+
+Supportive demo, get notified of upcoming projects.
+
+@@@
+
+# Collecting *metrics*
+
+Activity, usage, external products.
+
+@@@
+
+<!-- .slide: data-background="images/peaks-won.png" -->
+
+# Building a *momentum*
+
+@@@
+
+<!-- .slide: data-background="images/peaks-auphonic.png" -->
+
+@@@
+
+<!-- .slide: data-background="images/peaks-sidekick.png" --></textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# Wrap up
+
+@@@
+
+<!-- .slide: data-state="contrasted" -->
+
+# *Open* Source is…
+
+@@@
+
+# … *time* and effort
+
+To maintain, to support and to care about.
+
+@@@
+
+# … a tool to *learn*
+
+Only douchebags will blame you.
+
+@@@
+
+# … a *visibility* tool
+
+To your team. To other teams and organisations.
+
+@@@
+
+# … a *culture* change tool
+
+People may like it or dislike it.
+
+@@@
+
+# … a *leadership* tool
+
+Get trusted. By your team. By the community.
+
+@@@
+
+# … a *continuity* tool
+
+Open Source on top of Open Source.</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>
+<!-- .slide: data-background="images/everyday-september.jpg" data-state="background-light" -->
+
+# Thank you!
+</textarea>
+        </section>
+      
+  </main>
+</div>
+
+<script src="/talks/assets/js/slides.bundle.js" type="module"></script>
+<script src="/talks/vendor/notes/notes.js" defer></script>
+
+
+<script src="/talks/assets/js/main.js?v=3.2.0" type="module"></script>
+</body>
+</html>

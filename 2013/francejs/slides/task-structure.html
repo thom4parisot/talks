@@ -1,0 +1,137 @@
+<h2 id="Structurer-une-tache-Grunt"><a class="header-anchor" href="#Structurer-une-tache-Grunt">§</a>Structurer une tâche Grunt</h2>
+<p>@@@</p>
+<h3 id="Configuration"><a class="header-anchor" href="#Configuration">§</a>Configuration</h3>
+<ul>
+<li></li>
+</ul>
+<h3 id="Orchestration"><a class="header-anchor" href="#Orchestration">§</a>Orchestration</h3>
+<ul>
+<li></li>
+</ul>
+<h3 id="Librairie"><a class="header-anchor" href="#Librairie">§</a>Librairie</h3>
+<ul>
+<li></li>
+</ul>
+<h3 id="Documentation"><a class="header-anchor" href="#Documentation">§</a>Documentation</h3>
+<p>@@@</p>
+<h2 id="Configuration-v2"><a class="header-anchor" href="#Configuration-v2">§</a>Configuration</h2>
+<pre><code class="language-bash">grunt translateJS:english
+</code></pre>
+<p>@@@</p>
+<h2 id="Orchestration-v2"><a class="header-anchor" href="#Orchestration-v2">§</a>Orchestration</h2>
+<pre><code class="language-javascript">// ./tasks/translate.js
+var async = require('async');
+
+module.exports = function(grunt){
+  var steps = require('./lib/i18n.js')(grunt);
+
+  // callable as `grunt translateJS:&lt;lang&gt;`
+  grunt.registerTask('translateJS', function(lang){
+    grunt.config.set('language', lang);
+
+    async.waterfall([
+      steps.downloadSpreadsheet.bind(steps),
+      steps.locateLanguage.bind(steps),
+      steps.createJSFile.bind(steps)
+    ], this.async());
+
+  });
+};
+</code></pre>
+<p>@@@</p>
+<h2 id="Librairie-v2"><a class="header-anchor" href="#Librairie-v2">§</a>Librairie</h2>
+<pre><code class="language-javascript">// ./lib/i18n.js
+var request = require('request');
+
+module.exports = function i18nTask(grunt){
+	return {
+
+    downloadSpreadsheet: function(done){
+      // …
+    },
+
+    locatelang: function(csv, props, done){
+      // …
+    },
+
+    createJSFile: function(sheet, props, done){
+      // …
+    }
+
+
+  };
+};
+</code></pre>
+<p>@@@</p>
+<pre><code class="language-javascript">// ./lib/i18n.js
+
+module.exports = function i18nTask(grunt){
+  return {
+
+  downloadSpreadsheet: function(done) {
+    var url = grunt.config.get('i18nUrl');
+
+  request.get(url, function (error, response, body) {
+    if (error) throw Error('Request error');
+    if (response.statusCode !== 200) throw Error('Could not find  translation spreadsheet');
+    if (!body) throw Error('Spreadsheet body is empty');
+
+    var csv = util.CSVToArray(body);
+    var props = spreadsheet[0].slice(2);
+    done(null, csv, props);
+  });
+
+  }
+};
+</code></pre>
+<p>@@@</p>
+<h2 id="Tester"><a class="header-anchor" href="#Tester">§</a>Tester</h2>
+<pre><code class="language-javascript">// ./test/unit/lib/i18n.js
+
+describe('i18nTask.downloadSpreadsheet', function(){
+  it('should parse properly a remote document', function(){
+    // …
+  });
+
+  it('should raise an error on unexpected spreadsheet format', function(){
+    // …
+  });
+
+  it('should fail if remote document is unavailable', function(){
+    // …
+  });
+});
+</code></pre>
+<p>@@@</p>
+<h2 id="Stubber"><a class="header-anchor" href="#Stubber">§</a>Stubber</h2>
+<p>Simuler des erreurs I/O.</p>
+<p>Isoler les appels I/O.</p>
+<p>Fonctionner localement, sans infrastructure externe.</p>
+<p>@@@</p>
+<pre><code class="language-javascript">var sinon = request('sinon');
+var gruntStub = sinon.stub(grunt.file, 'write');
+
+expect(
+  gruntStub.calledWith(
+    'dummy config valueen-GB.js',
+    'define('+dummyOutput+');'
+  )
+).to.be.ok;
+</code></pre>
+<p>@@@</p>
+<pre><code class="language-javascript">// ./test/unit/lib/i18n.js
+
+var requestStub = sinon.stub(request, 'get');
+
+it('should parse properly a remote document', function(){
+  requestStub.yields(null, {statusCode: 200}, validCSVContent);
+});
+
+it('should raise an error on unexpected spreadsheet format', function(){
+  requestStub.yields(null, {statusCode: 200}, 'I am not CSV');
+});
+
+it('should fail if remote document is unavailable', function(){
+  requestStub.yields(null, {statusCode: 500});
+});
+</code></pre>

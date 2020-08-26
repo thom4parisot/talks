@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head><meta charset="utf-8">
+<title>Travailler moins pour gagner moins • oncletom.io</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="preload" href="/assets/icons.svg">
+<link rel="preload" href="/assets/avatar.jpg">
+<link rel="preload" href="/images/publications/nodejs-cover.png">
+<link rel="stylesheet" href="/talks/styles/slides.css?v=v3.2.0">
+<link rel="stylesheet" href="/talks/styles/slides/theme-oncletom.css?v=v3.2.0">
+<meta name="viewport" content="initial-scale=1.0">
+<!-- generated via https://realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#D4C492">
+<meta name="msapplication-TileColor" content="#D4C492">
+<meta name="theme-color" content="#D4C492">
+<link rel="pgpkey" href="https://keybase.io/oncletom/pgp_keys.asc?fingerprint=FD7AA82DF0BB977542BB4F44CB88AA7D815E0D6B">
+<meta name="description" content="Il y a un an j’ai décidé de passer à temps partiel, ou plutôt aux week-end de trois jours. Est-ce que ça m’aide à rattraper mon retard dans Game of Throne, augmenter le nombre d’heures que j’alloue à ma veille technique ou bien à passer pour quelqu’un qui n’aime pas travailler ?&amp;#10;À vrai dire, j’ai surtout pu augmenter ma qualité de vie malgré ma baisse de salaire, ainsi que dédier ce temps à du bénévolat, m’aérer l’esprit et voir du pays en me fatigant un peu moins.">
+<meta name="keywords" content="">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io" href="https://oncletom.io/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Photography" href="https://oncletom.io/photography/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Talks" href="https://oncletom.io/talks/feed/">
+<link rel="author" href="Thomas Parisot">
+<link rel="canonical" data-disqus-shortname="oncletom" href="https://oncletom.io/talks/2017/mixit/">
+
+<link rel="prefetch" href="https://oncletom.io/talks/2016/lse/">
+<link rel="prefetch" href="https://oncletom.io/talks/2017/writethedocs/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@oncletom">
+<meta name="twitter:creator" content="@oncletom">
+<meta name="twitter:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta name="twitter:description" content="Il y a un an j’ai décidé de passer à temps partiel, ou plutôt aux week-end de trois jours. Est-ce que ça m’aide à rattraper mon retard dans Game of Throne, augmenter le nombre d’heures que j’alloue à ma veille technique ou bien à passer pour quelqu’un qui n’aime pas travailler ?&amp;#10;À vrai dire, j’ai surtout pu augmenter ma qualité de vie malgré ma baisse de salaire, ainsi que dédier ce temps à du bénévolat, m’aérer l’esprit et voir du pays en me fatigant un peu moins.">
+<meta property="og:title" content="Travailler moins pour gagner moins">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://oncletom.io/talks/2017/mixit/">
+<meta property="og:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta property="og:description" content="Il y a un an j’ai décidé de passer à temps partiel, ou plutôt aux week-end de trois jours. Est-ce que ça m’aide à rattraper mon retard dans Game of Throne, augmenter le nombre d’heures que j’alloue à ma veille technique ou bien à passer pour quelqu’un qui n’aime pas travailler ?&amp;#10;À vrai dire, j’ai surtout pu augmenter ma qualité de vie malgré ma baisse de salaire, ainsi que dédier ce temps à du bénévolat, m’aérer l’esprit et voir du pays en me fatigant un peu moins.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:site_name" content="oncletom.io">
+<link rel="me" href="https://masto.oncletom.io/@thomas">
+<link rel="pingback" href="https://webmention.io/oncletom.io/xmlrpc">
+<link rel="webmention" href="https://webmention.io/oncletom.io/webmention">
+<meta property="algolia:search" data-application-id="QIP7Z1PL3B" data-api-key="5caf0f682ba8349e8a67872b9edde3f3" data-index-name="prod_blog">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+<body class="home site-talks content-post">
+<div class="reveal">
+  <main class="slides" lang="fr">
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# #ValeurTravail
+
+@@@
+
+> (…) c'est par le travail que l’on peut devenir celui ou celle que l’on a envie d’être.
+
+— Emmanuel Macron, 2016
+
+~~~~
+
+> La première, c’est le travail. Car oui, je considère que le travail est une valeur. Parce que c’est la première source d’émancipation individuelle et parce que c’est le moyen le plus puissant de se libérer du déterminisme : c’est par le travail que l’on peut devenir celui ou celle que l’on a envie d’être. C’est parce que je crois au travail que je me suis inscrit en classes préparatoires et que j’ai tenu à passer ensuite les concours républicains.
+
+@@@
+
+> Travailler plus pour gagner plus
+
+— Nicolas Sarkozy, 2007
+
+~~~~
+
+> Il faut laisser ceux qui veulent travailler plus pour gagner plus le faire
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># Travailler moins pour gagner moins
+
+22 avril 2017 — [MiXiT](https://mixitconf.org/2017) {.footer}
+
+~~~~
+
+Déroule en trois parties :
+
+1. odyssée personnelle de mon passage à la semaine de travail de 4 jours
+2. la mise en pratique du temps partiel
+3. qu'est-ce qu'on gagne à travailler moins
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="../../img/thomas-parisot-landscape.jpg" data-state="background-dark" -->
+
+## Bonjour,<br> je suis **Thomas** Parisot
+
+[oncletom.io](https://oncletom.io) – [@oncletom](https://twitter.com/oncletom) {.footer}
+
+@@@
+
+## software designer
+
+code, node.js, pain, permaculture, photographie etc.
+
+@@@
+
+## dtc innovation
+
+innovation numérique au service du bien commun
+
+[dtc-innovation.org](https://dtc-innovation.org/) {.footer}
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/bec-hellouin-bottes.jpg" data-background-size="contain" -->
+
+~~~~
+
+Mars 2015, je travaille à plein temps à BBC R&D à Londres.
+
+Je viens de suivre mon premier stage de permaculture à la ferme du Bec-Hellouin en Normandie.
+
+@@@
+
+<!-- .slide: data-background="images/fountayne-road.jpg" data-background-size="" -->
+
+~~~~
+
+Pas de jardin, envie de pratiquer mais à rien à côté de chez moi, et un stage coûte cher… comparablement moins cher : une semaine coûte moins qu'une seule journée de formation JavaScript mais bon, sorti de sa propre poche …
+
+@@@
+
+# Woofing
+
+⏳ = 🛌 🍛
+
+~~~~
+
+Définir le woofing.
+
+@@@
+
+# Partir 4 semaines
+
+* 2 en **congés payés** (tourisme)
+* 2 en congès **sans solde** (woofing)
+
+~~~~
+
+Pour aller jusqu'au bout de la démarche et faire du woofing vraiment non-rémunéré.
+
+@@@
+
+# **Ukraine** 🇺🇦
+
+~~~~
+
+Aller quelque part que je connais peu, une amie là bas pas vue depuis longtemps et pays qui a quelques fermes référencées sur les sites de woofing.
+
+@@@
+
+<!-- .slide: data-background="images/kyiv-pipe.jpg" data-background-size="" -->
+
+~~~~
+
+J'arrive là mais sur place, je n'ai toujours pas de confirmation de la part de la ferme. Se pose la question d'y aller ou pas.
+
+Ma pote me dit qu'un de ses amis possède une ferme dans le village d'Obyrok. C'est à la campagne, elle me recommande les gens.
+
+@@@
+
+<!-- .slide: data-background="images/kyiv-obyrok.png" data-background-size="" -->
+
+~~~~
+
+Deux jours plus tard, trajet de 4h de trajet en bus.
+
+@@@
+
+<!-- .slide: data-background="images/obyrok-field.jpg" -->
+
+~~~~
+
+Pendant 4 jours on fabrique le pain comme il y a 1 ou 2 siècles, avant l'introduction des animaux et de la mécanisation dans le processus.
+
+@@@
+
+<!-- .slide: data-background="images/obyrok-serp.jpg" data-background-size="" -->
+
+~~~~
+
+Cela veut dire coupe du blé à la serpe…
+
+
+@@@
+
+<!-- .slide: data-background="images/obyrok-braces.jpg" -->
+
+~~~~
+
+… assembler les bottes à la main …
+
+@@@
+
+<!-- .slide: data-background="images/obyrok-grind.jpg" -->
+
+~~~~
+
+… battre les fagots, trier les grains pour ensuite les mouliner à la meule et faire du pain au levain, cuits dans des fours en pierre.
+
+Le paradoxe est que les deux boulangers qui nous apprenaient à faire les pains (pour la quasi centaine de participants) étaient des ukrainients qui avaient appris en France.
+
+@@@
+
+<!-- .slide: data-background="images/obyrok-tractor.jpg" -->
+
+~~~~
+
+On forçait le trait bien sûr, il n'y avait pas _besoin_ de tout faire à la main ni de maintenir cette pratique en activité. C'était pour la beauté du geste.
+
+@@@
+
+<!-- .slide: data-background="images/obyrok-smoothies.jpg" -->
+
+~~~~
+
+Passé le festival, je reste une semaine de plus en _woofing_ à m'occuper du jardin potager, des poules, visiter les environs etc.
+
+J'aurais été laissé en autonomie et pu appliquer pendant une semaine les connaissances de permaculture apprises quelques mois auparavant.
+
+@@@
+
+<!-- .slide: data-background="images/obyrok-river.jpg" data-background-size="" -->
+
+~~~~
+
+Pendant les heures chaudes de la journée, on part explorer les environs avec les deux autres bénévoles et on profite des choses simples de la vie dans la campagne ukrainienne, à savoir se baigner dans la rivière.
+
+Parce que bon, pourquoi avoir des piscines individuelles qui coûtent cher quand tu peux descendre dans le cours d'eau le plus proche ?
+
+@@@
+
+<!-- .slide: data-background="images/obyrok-house.jpg" data-background-size="" -->
+
+~~~~
+
+Je quitte la ferme après une semaine de temps long mais de temps doux, en forme comme jamais avec deux satisfactions :
+
+* avoir appris à faire quelque chose que je pensais impossible auparavant (le pain)
+* avoir pu être capable de gérer le jardin en autonomie en réutilisant mes connaissances
+
+@@@
+
+<!-- .slide: data-background="images/odessa-tram.jpg" data-background-size="" -->
+
+@@@
+
+<!-- .slide: data-background="images/carpathian.jpg" data-background-size="" -->
+
+@@@
+
+<!-- .slide: data-background="images/london-river.jpg" data-background-size="" -->
+
+~~~~
+
+En rentrant à Londres je me demande : comment renouveler cette expérience, plus régulièrement et si possible bénévolement.
+
+Et mais… en fait j'ai été bénévole, sur mon temps libre mais en dehors de mes week-end et de mes soirées.
+
+Il me faudrait donc :
+
+1. trouver une ferme à distance cyclable ;
+2. utiliser un jour de semaine pour y aller
+
+@@@
+
+<!-- .slide: data-background="images/flexible-working-application-form.png" data-background-size="" -->
+
+~~~~
+
+En septembre 2015 je pose ma demande de passage en 'Flexible Working' et demande un passage à 4 jours de travail par semaine.
+
+Il se trouve que je suis le premier à le demander pour une raison autre que paternité/maternité.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# Temps partiel au quotidien
+
+@@@
+
+<!-- .slide: data-state="contrasted" -->
+
+# Temps **libéré**
+
+@@@
+
+# Pour faire **quoi** ?
+
+@@@
+
+# …
+
+@@@
+
+# Pas assez
+
+De temps, d'expérience.
+
+@@@
+
+# Envies
+
+De faire, de vivre, d'apprendre, de voir.
+
+@@@
+
+<!-- .slide: data-background="images/farm-beds.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/farm-salads.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/farm-lunch.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/bread-pizza.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/bread-failed.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/bread-cheese.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/dunkirk-kitchen.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/travel.jpg" -->
+
+@@@
+
+# 🗓
+
+Jour·s **fixe·s**, jour·s **flottant·s**
+
+
+@@@
+
+# Gestion du **temps**
+
+Réunions, horaires.
+
+~~~~
+
+Même quantité de travail en moins de temps ?
+
+@@@
+
+# Gestion du **travail**
+
+Distribution des compétences, connecter les métiers, déléguer.
+
+~~~~
+
+> Il n'est pas complètement clair comment le monde souffrirait de la disparition des directeurs généraux d'entreprises, les lobbyistes, chercheurs en RP, télémarketeurs etc.
+
+— David Graeber, 2015
+
+@@@
+
+# Gestion de l'**argent**
+
+20% de travail en moins = 20% de salaire en moins
+
+~~~~
+
+La réduction pousse à la simplicité (penser refactoring), un peu moins de sorties le vendredi soir.
+
+> Making a commodity becoming a treat
+
+@@@
+
+# Gestion de la **santé**
+
+On s'aère, le moral, le physique.
+
+~~~~
+
+Pour soi mais aussi pour les autres, car plus détendu donc meilleures conversations.
+
+Cf. conf avec l'orchestre de jeudi matin.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# Travailler moins ? 🤔
+
+@@@
+
+# Émancipation par le **faire**
+
+@@@
+
+
+<!-- .slide: data-background="images/biennal-design.jpg" -->
+
+@@@
+
+
+<!-- .slide: data-background="images/biennal-disconnection.jpg" -->
+
+~~~~
+
+> Les compétences manuelles et intellectuelles sont de plus en plus séparées.
+
+> Est-ce qu'un monde moins productif peut incarner la reconnexion entre la tête et la main ?
+
+@@@
+
+<!-- .slide: data-background="images/richard-sennett.png" data-background-size="contain" -->
+
+~~~~
+
+> http://alaindebotton.com/work/extract/
+> "The Pleasures and Sorrows", Alain de Botton
+
+@@@
+
+<!-- .slide: data-background="images/francaises-francais.jpg" data-background-size="contain" -->
+
+
+~~~~
+
+http://lemonde.fr/francaises-francais/article/2017/03/09/a-la-croix-rousse-ils-tentent-le-travailler-moins_5092210_4999913.html
+
+> Pour pouvoir lire, continuer à écrire, voir mes amis. Tout ce qu’on peut faire quand on a un week-end de quatre jours.
+
+> Aujourd’hui menuisier, il s’organise pour passer deux après-midis par semaine à l’antenne croix-roussienne des Compagnons bâtisseurs, une association qui apprend aux habitants à bricoler pour qu’ils puissent réaliser eux-mêmes leurs travaux.
+
+@@@
+
+> Ce que je veux, c’est vivre.
+
+— Nicolas D., 2017
+
+@@@
+
+# **Vivre** (bien|mieux)
+
+Repos, se reconnecter avec soi-même.
+
+~~~~
+
+cc [@RisingLinda](https://twitter.com/RisingLinda)
+
+@@@
+
+# Carrière = 📈 ?
+
+Plus de salaire, plus de croissance ?
+
+~~~~
+
+On peut faire autrement que le _plus_. Pérennité et durabilité, des gens et des objets comme signaux de santé.
+
+@@@
+
+# Alternatives
+
+Temps flexible, proximité, télétravail, revenu universel etc.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# En résumé
+
+@@@
+
+# Artisans du **nous**
+
+Pas de recette mais des outils.
+
+@@@
+
+# Identité
+
+Développement **personnel** mieux intégré à **notre environnement**.
+
+@@@
+
+# **Rythme** de vie
+
+Cultiver un **équilibre** et des **valeurs**.
+
+@@@
+
+<!-- .slide: data-state="contrasted" -->
+
+> Take your pleasure seriously
+
+— Ray & Charles Eames
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/talk-notes.jpg" -->
+
+@@@
+
+<!-- .slide: data-state="contrasted" -->
+
+# #ValeurTravail
+
+@@@
+
+<!-- .slide: data-state="contrasted" -->
+
+# #Valeurs
+
+@@@
+
+
+<!-- .slide: data-background="images/basile-seagul.jpg" data-state="background-light" -->
+
+# Merci 😊
+
+@@@
+
+
+<!-- .slide: data-background="images/basile-seagul.jpg" -->
+</textarea>
+        </section>
+      
+  </main>
+</div>
+
+<script src="/talks/assets/js/slides.bundle.js" type="module"></script>
+<script src="/talks/vendor/notes/notes.js" defer></script>
+
+
+<script src="/talks/assets/js/main.js?v=3.2.0" type="module"></script>
+</body>
+</html>

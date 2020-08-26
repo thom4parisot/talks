@@ -1,0 +1,64 @@
+@import 'normalize.css';
+@import '../includes/_fonts.css';
+@import '../includes/_variables.css';
+
+@import '../components/slides/_reveal-overrides.css';
+@import '../components/slides/_reveal-backgrounds.css';
+
+:root {
+  --brand-color:           #006fc9;
+  --dark-accent:           #006fc9;
+  --link-foreground:       #006fc9;
+
+  --type-headlines:    Gill Sans, sans-serif;
+
+  --light-accent:          #495057;
+  --light-shade:           #999;
+}
+
+.reveal {
+  strong {
+    background: transparent;
+    color: #fff;
+    display: inline-block;
+    font-weight: inherit;
+    padding: .05em .3em;
+    position: relative;
+
+    &:before {
+      background: var(--brand-color);
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform: skewX(-15deg);
+      width: 100%;
+      z-index: -1;
+    }
+  }
+}
+
+.contrasted {
+  .reveal {
+    .state-background {
+      background-color: var(--brand-color);
+    }
+
+    .slides .present {
+      color: #fff;
+      text-shadow: 1px 1px rgba(0, 0, 0, .5);
+    }
+
+    em {
+      color: #ff0;
+    }
+
+    strong {
+      color: var(--brand-color);
+      &:before {
+        background-color: #fff;
+      }
+    }
+  }
+}

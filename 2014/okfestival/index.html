@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head><meta charset="utf-8">
+<title>README Driven Development • oncletom.io</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="preload" href="/assets/icons.svg">
+<link rel="preload" href="/assets/avatar.jpg">
+<link rel="preload" href="/images/publications/nodejs-cover.png">
+<link rel="stylesheet" href="/talks/styles/slides.css?v=v3.2.0">
+<link rel="stylesheet" href="/talks/styles/slides/theme-oncletom.css?v=v3.2.0">
+<meta name="viewport" content="initial-scale=1.0">
+<!-- generated via https://realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#D4C492">
+<meta name="msapplication-TileColor" content="#D4C492">
+<meta name="theme-color" content="#D4C492">
+<link rel="pgpkey" href="https://keybase.io/oncletom/pgp_keys.asc?fingerprint=FD7AA82DF0BB977542BB4F44CB88AA7D815E0D6B">
+<meta name="description" content="The README has become the new documentation entrypoint.&amp;#10;From nothing to something, the README will improve the quality of your project.&amp;#10;And more than that, you can even design your project and shape its future by&amp;#10;following the same pattern.">
+<meta name="keywords" content="">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io" href="https://oncletom.io/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Photography" href="https://oncletom.io/photography/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Talks" href="https://oncletom.io/talks/feed/">
+<link rel="author" href="Thomas Parisot">
+<link rel="canonical" data-disqus-shortname="oncletom" href="https://oncletom.io/talks/2014/okfestival/">
+
+<link rel="prefetch" href="https://oncletom.io/talks/2014/sotr/">
+<link rel="prefetch" href="https://oncletom.io/talks/2014/devcon/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@oncletom">
+<meta name="twitter:creator" content="@oncletom">
+<meta name="twitter:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta name="twitter:description" content="The README has become the new documentation entrypoint.&amp;#10;From nothing to something, the README will improve the quality of your project.&amp;#10;And more than that, you can even design your project and shape its future by&amp;#10;following the same pattern.">
+<meta property="og:title" content="README Driven Development">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://oncletom.io/talks/2014/okfestival/">
+<meta property="og:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta property="og:description" content="The README has become the new documentation entrypoint.&amp;#10;From nothing to something, the README will improve the quality of your project.&amp;#10;And more than that, you can even design your project and shape its future by&amp;#10;following the same pattern.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:site_name" content="oncletom.io">
+<link rel="me" href="https://masto.oncletom.io/@thomas">
+<link rel="pingback" href="https://webmention.io/oncletom.io/xmlrpc">
+<link rel="webmention" href="https://webmention.io/oncletom.io/webmention">
+<meta property="algolia:search" data-application-id="QIP7Z1PL3B" data-api-key="5caf0f682ba8349e8a67872b9edde3f3" data-index-name="prod_blog">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+<body class="home site-talks content-post">
+<div class="reveal">
+  <main class="slides" lang="en-GB">
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>> Never use a *long word* where a *short* one will do.
+
+— George Orwell
+
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>![](../../img/avatar.jpg)
+
+<br>
+
+## *Thomas* Parisot
+
+[oncletom.io](https://oncletom.io) –
+[@oncletom](https://twitter.com/oncletom)
+
+@@@
+
+![Pardon my French](../../images/pardon-my-french.jpg)
+
+@@@
+
+![Full Stack JavaScript](../../images/javascript.png)
+
+@@@
+
+## <span class="bbc">BBC R&D</span>
+
+[github.com/bbcrd](https://github.com/bbcrd)  
+[bbc.co.uk/rd](http://bbc.co.uk/rd)
+
+@@@
+
+![I published](../../images/npm.png)
+
+[npmjs.org/~oncletom](https://npmjs.org/~oncletom)
+
+@@@
+
+[![Sud Web](../../images/sudweb.png)](http://sudweb.fr)
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>
+# README
+
+## Driven Development
+
+
+<small>19th July 2014 — [Write the Docs @ OKFestival](http://conf.writethedocs.org/eu/2014/unconf-berlin.html)</small></textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/readme.png" -->
+
+@@@
+
+<!-- .slide: data-background="images/tom-preston-werner.png" -->
+
+@@@
+
+<!-- .slide: data-background="../../2012/paris-web/images/8251350711_b8555a3e50_b.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="../../2012/paris-web/images/8244634570_8bcfb25743_b.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="../../2012/paris-web/images/8166604129_8d5056f1c8_b.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="../../2012/paris-web/images/8489312830_17628cc7d5_b.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># Back to reality
+
+Or how I figured out the usual *complexity* of things.
+
+@@@
+
+<!-- .slide: data-background="../chtijs/images/readme-almost-fair.png" -->
+
+@@@
+
+<!-- .slide: data-background="../chtijs/images/readme-none.png" -->
+
+@@@
+
+<!-- .slide: data-background="../chtijs/images/readme-man.png" -->
+
+@@@
+
+<!-- .slide: data-background="../chtijs/images/readme-too-short.png" -->
+
+@@@
+
+<!-- .slide: data-background="../chtijs/images/specs.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># State of *2011*
+
+@@@
+
+<!-- .slide: data-background="../../2012/paris-web/images/6954491729_d58735000a_b.jpg" -->
+
+# Paris Web
+
+To converse = to speak + to listen.
+
+@@@
+
+<!-- .slide: data-background="images/team-invincible.jpg" -->
+
+# Startup
+
+4 developers, *trust* et remote working.
+
+@@@
+
+# Striving for *simplicity*
+
+~~Specifications~~, sprints and coffee machine.
+
+@@@
+
+# Choosing the *tools*
+
+GitHub, JavaScript and `npm install`.
+
+@@@
+
+# 1..*5* projects
+
+@@@
+
+## How do you *install* it?
+
+@@@
+
+## How can I *update* it already?
+
+@@@
+
+## What is the command line to *run the tests*?
+
+@@@
+
+# #wanted
+
+## Better *documentation*.
+
+<small>Reward is obviously a bottle of wine</small></textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># Paradox
+
+Or how we easily waste our *efforts*.
+
+@@@
+
+# Time
+
+*invested* to create.
+
+@@@
+
+# Pleasure
+
+to create *useful* software.
+
+@@@
+
+# Satisfaction
+
+*to share* our work and findings.
+
+@@@
+
+<!-- .slide: data-background="../chtijs/images/standards.png" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># README
+
+## ------ -----------
+
+@@@
+
+<!-- .slide: data-background="../../2012/paris-web/images/github-readme.png" -->
+
+# Evidence
+
+*First* file usually displayed.
+
+@@@
+
+# Simple Markup
+
+`#` + `*` + `**` + `!` + `[]()`
+
+<br>
+
+Markdown, RST, AsciiDoc etc.
+
+@@@
+
+# Fast
+
+to *read*, to *learn* and to *write*.
+
+@@@
+
+# Pervasive
+
+HTML, PDF, JSON, text file *etc*.
+
+cf. [pandoc](http://johnmacfarlane.net/pandoc/).
+
+@@@
+
+# In a *nutshell*
+
+Who, what, when, where, why and how.
+
+@@@
+
+<!-- .slide: data-background="../../2012/paris-web/images/editor-iawriter.png" -->
+
+# Freedom
+
+To consume and to contribute.
+
+@@@
+
+# Alongside
+
+The *versioned* code.
+
+@@@
+
+<!-- .slide: data-background="images/api-example.png" -->
+
+# Examples
+
+To provide *context*.
+
+@@@
+
+<!-- .slide: data-background="../chtijs/images/readme-simple.png" -->
+
+# *Shallow* limits
+
+Trust your gut feelings.
+
+@@@
+
+# Content First
+
+*Technicity* stays back.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># README
+
+## *Driven* -----------
+
+@@@
+
+## What do you *mean*?
+
+@@@
+
+## It's not only about *existing* projects.
+
+@@@
+
+## It's about *ideas* and *new* projects.
+
+@@@
+
+<!-- .slide: data-background="../chtijs/images/readme-first.png" -->
+
+# *Before* writing code.
+
+@@@
+
+# Crystal *clear*
+
+With ourself, our team and contributors.
+
+@@@
+
+<!-- .slide: data-background="../../2012/paris-web/images/testing-by-writing.png" -->
+
+# *Designing* code.
+
+@@@
+
+# Collecting *feedbacks*
+
+Fix the bugs *before* writing code.
+
+@@@
+
+<!-- .slide: data-background="../chtijs/images/sketching.png" -->
+
+# Code *sketching*
+
+Fast, straight to the point and *easy*.</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># README
+
+## Driven *Development*
+
+@@@
+
+<!-- .slide: data-background="../../2012/paris-web/images/testing-by-writing.png" -->
+
+## From *text*…
+
+@@@
+
+<!-- .slide: data-background="../../2012/paris-web/images/tests.png" -->
+
+## … to *code*.
+
+@@@
+
+# *Complexity* detection
+
+Time to break your code.
+
+@@@
+
+<!-- .slide: data-background="images/code-split-before.png" data-background-size="100%" data-background-color="white" -->
+
+@@@
+
+<!-- .slide: data-background="images/code-split-module.png" data-background-size="75%" data-background-color="white" -->
+
+@@@
+
+<!-- .slide: data-background="images/code-split-config.png" data-background-size="75%" data-background-color="white" -->
+
+@@@
+
+# Pull Requests
+
+[Better to split 'em](https://oncletom.io/2013/the-55-commits-syndrome/).
+
+@@@
+
+<!-- .slide: data-background="../chtijs/images/pull-request.png" -->
+
+## Issue the *intention*
+
+@@@
+
+<!-- .slide: data-background="images/pr-validation.png" -->
+
+## Request for *validation*
+
+@@@
+
+<!-- .slide: data-background="images/pr-agreement.png" -->
+
+## Implement on *agreement*
+
+@@@
+
+<!-- .slide: data-background="images/pr-other.png" -->
+
+## Eventually *someone else* will do it
+
+@@@
+
+## mdlint
+
+Validates code in Markdown files.
+[github.com/ChrisWren/mdlint](https://github.com/ChrisWren/mdlint)
+
+@@@
+
+<!-- .slide: data-background="images/readme-tree.jpg" -->
+
+## README Tree
+
+[github.com/DTrejo/readmetree](https://github.com/DTrejo/readmetree)
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># *Wrap*ping up
+
+@@@
+
+# Single *entrypoint*
+
+`README.md`
+
+@@@
+
+# Shared *vision*
+
+You + people.
+
+@@@
+
+# Explicit *intentions*
+
+6W.
+
+@@@
+
+# Easier *dialogue*
+
+Because part of the process.
+
+@@@
+
+# Faster *time to code*
+
+(with better quality).
+
+@@@
+
+# *Simple*
+
+If not, there is a problem.</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># That's it!
+
+@@@
+
+# Credits
+
+* https://xkcd.com/927/
+* [Thanh](http://clients.tranches-de-vie.com/index.php/2011/paris-web-2011/1015-ateliers/img-0275)</textarea>
+        </section>
+      
+  </main>
+</div>
+
+<script src="/talks/assets/js/slides.bundle.js" type="module"></script>
+<script src="/talks/vendor/notes/notes.js" defer></script>
+
+
+<script src="/talks/assets/js/main.js?v=3.2.0" type="module"></script>
+</body>
+</html>

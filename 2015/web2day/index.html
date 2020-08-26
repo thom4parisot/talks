@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head><meta charset="utf-8">
+<title>End-to-end modular architecture at the BBC • oncletom.io</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="preload" href="/assets/icons.svg">
+<link rel="preload" href="/assets/avatar.jpg">
+<link rel="preload" href="/images/publications/nodejs-cover.png">
+<link rel="stylesheet" href="/talks/styles/slides.css?v=v3.2.0">
+<link rel="stylesheet" href="/talks/styles/slides/theme-oncletom.css?v=v3.2.0">
+<meta name="viewport" content="initial-scale=1.0">
+<!-- generated via https://realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#D4C492">
+<meta name="msapplication-TileColor" content="#D4C492">
+<meta name="theme-color" content="#D4C492">
+<link rel="pgpkey" href="https://keybase.io/oncletom/pgp_keys.asc?fingerprint=FD7AA82DF0BB977542BB4F44CB88AA7D815E0D6B">
+<meta name="description" content="What is the difference between a UI component, an npm package, a Docker image and a machine server? Well, none really: we want them to be resilient, stateless and composable.&amp;#10;This talk is a technical and a functional journey to the key concepts of our modular architecture at BBC R&amp;amp;D, how we ensure its quality and scalability, amongst humans and machines.">
+<meta name="keywords" content="">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io" href="https://oncletom.io/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Photography" href="https://oncletom.io/photography/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Talks" href="https://oncletom.io/talks/feed/">
+<link rel="author" href="Thomas Parisot">
+<link rel="canonical" data-disqus-shortname="oncletom" href="https://oncletom.io/talks/2015/web2day/">
+
+<link rel="prefetch" href="https://oncletom.io/talks/2015/sudweb/">
+<link rel="prefetch" href="https://oncletom.io/talks/2015/devcon/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@oncletom">
+<meta name="twitter:creator" content="@oncletom">
+<meta name="twitter:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta name="twitter:description" content="What is the difference between a UI component, an npm package, a Docker image and a machine server? Well, none really: we want them to be resilient, stateless and composable.&amp;#10;This talk is a technical and a functional journey to the key concepts of our modular architecture at BBC R&amp;amp;D, how we ensure its quality and scalability, amongst humans and machines.">
+<meta property="og:title" content="End-to-end modular architecture at the BBC">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://oncletom.io/talks/2015/web2day/">
+<meta property="og:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta property="og:description" content="What is the difference between a UI component, an npm package, a Docker image and a machine server? Well, none really: we want them to be resilient, stateless and composable.&amp;#10;This talk is a technical and a functional journey to the key concepts of our modular architecture at BBC R&amp;amp;D, how we ensure its quality and scalability, amongst humans and machines.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:site_name" content="oncletom.io">
+<link rel="me" href="https://masto.oncletom.io/@thomas">
+<link rel="pingback" href="https://webmention.io/oncletom.io/xmlrpc">
+<link rel="webmention" href="https://webmention.io/oncletom.io/webmention">
+<meta property="algolia:search" data-application-id="QIP7Z1PL3B" data-api-key="5caf0f682ba8349e8a67872b9edde3f3" data-index-name="prod_blog">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+<body class="home site-talks content-post">
+<div class="reveal">
+  <main class="slides" lang="en-GB">
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/CNV00023.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/CNV00024.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/CNV00015.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/CNV00059.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/CNV00052.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/CNV00026.jpg" --></textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>
+# <abbr title=end-to-end>e2e</abbr> modular architecture at the BBC
+
+<small>4th June 2015 — [web2day](http://web2day.co)</small></textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# Node + React + Docker…
+
+*Hype* Driven Development?
+
+~~~~
+
+It is more than just names. It is about concepts, common concept.
+
+And actually the language does not matter much.
+
+@@@
+
+## State + immutability + functions
+
+It's all and only about that.
+
+~~~~
+
+How are they related? And are they a concern to the previous concepts?
+@@@
+
+## `stdin` + `stdout` + `stderr`
+
+It's all and only about that.
+
+~~~~
+
+How are they related? And are they a concern to the previous concepts?</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="../../img/thomas-parisot-landscape.jpg" data-state="background-dark" -->
+
+## Bonjour,<br> I am **Thomas**
+
+[oncletom.io](https://oncletom.io) – [@oncletom](https://twitter.com/oncletom) {.footer}
+
+@@@
+
+![Pardon my French](../../images/pardon-my-french.jpg)
+
+@@@
+
+## <span class="bbc">BBC R&amp;D</span>
+
+[github.com/bbcrd](https://github.com/bbcrd)
+[bbc.co.uk/rd](http://bbc.co.uk/rd)
+
+@@@
+
+![Full Stack JavaScript](../../images/javascript.png)
+
+[oncletom.io/node.js](https://oncletom.io/node.js)
+
+@@@
+
+![Sud Web](../../images/sudweb.png)
+
+[sudweb.fr](http://sudweb.fr)
+
+@@@
+
+<!-- .slide: data-background="../../images/photography.jpg" -->
+
+~~~~
+
+And photography.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+## <span class="bbc">BBC R&D</span>
+
+Some additional context.
+
+@@@
+
+# *Multi-disciplinary* team
+
+Engineering, UX, design, science etc.
+
+@@@
+
+# Prototyping
+
+Iterate, *analyse*, explore.
+
+@@@
+
+# Pivot
+
+Stakeholders, partnerships, user study *findings* etc.
+
+@@@
+
+# Quality ~ *flexibility*
+
+~~~~
+
+Both are important. We need both.
+
+@@@
+
+# *Flow* > block
+
+~~~~
+
+You don't want to be pushed back by your code design.
+You want to bin code because you want it, not because you need to rewrite it.
+
+
+
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/massive-warehouse.jpg" -->
+
+# Example
+
+@@@
+
+![](images/webapp-demo.gif)
+
+@@@
+
+<!-- .slide: data-state="contrasted" -->
+
+# Webapp
+
+- Web interface <!-- .element: class="fragment" -->
+- Visual elements <!-- .element: class="fragment" -->
+- Data interface <!-- .element: class="fragment" -->
+- Web Application <!-- .element: class="fragment" -->
+- Host system <!-- .element: class="fragment" -->
+- Host machine <!-- .element: class="fragment" -->
+
+~~~~
+
+It is more than a single page you push over FTP.</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# #1 Browser
+
+@@@
+
+![](images/browser.png)
+
+@@@
+
+```bash
+open 'http://localhost:3000'
+```
+
+@@@
+
+## `stdin` = URL
+
+@@@
+
+## `stdout` = screen buffer
+
+@@@
+
+## `stderr` = *Aw snap*
+
+![](images/aw-snap.jpg)
+
+@@@
+
+## State = *navigation controls*
+
+`Cmd + R`, URL, Save as…
+
+@@@
+
+## Reproducibility = *varies*
+
+Static vs. dynamic, Web application changed or not, DNS outage, in memory data etc.</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# #2 UI Element
+
+@@@
+
+![](images/ui-element.png)
+
+@@@
+
+```javascript
+import Component from './lib/Cover.jsx'
+
+React.render(Component, { … })
+```
+
+@@@
+
+## `stdin` = state data
+
+@@@
+
+## `stdout` = React Element
+
+Renders as HTML, DOM tree.
+
+@@@
+
+## `stderr` = *varies*
+
+Syntax, runtime.
+
+@@@
+
+## State = *predictable*
+
+It is only a JavaScript object.
+
+@@@
+
+## Reproducibility = *exact*
+
+Same data should guaranty same behaviour.
+
+@@@
+
+```javascript
+exports Cover extends React.Element {
+  render(){
+    let className = this.state.active ? 'active' : '';
+
+    return (<div className={className}>
+      <h1>{this.props.title}</h1>
+    </div>);
+  }
+}
+```
+
+@@@
+
+## browserify!
+
+Scoped assets, isolated transforms.
+
+@@@
+
+```javascript
+// index.js
+require('./stylesheet.scss');
+
+module.exports = {
+	Cover: require('./lib/Cover.jsx')
+};
+```</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# #3 WebApp
+
+@@@
+
+![](images/webapp.png)
+
+@@@
+
+```bash
+PORT=3000 npm start
+
+# static -p ${PORT:-5000} --gzip dist/
+```
+
+@@@
+
+## `stdin` = env variables
+
+@@@
+
+## `stdout` = i/o
+
+HTTP responses.
+
+@@@
+
+## `stderr` = *varies*
+
+HTTP error codes, SEGFAULT, network misconfiguration. 
+
+@@@
+
+## State = *varies*
+
+In memory, data store, ephemeral files.
+
+~~~~
+
+Nothing guarantees its integrity.
+
+@@@
+
+## Reproducibility = *should*
+
+Same args should produce same result. Depends of integrity.
+
+@@@
+
+## `npm install`
+
+Cannot be guaranteed.
+
+~~~~
+
+Package version can be deleted, semver madness, registry can be down.
+
+@@@
+
+## `npm shrinkwrap`
+
+Guarantees exact same version.
+
+@@@
+
+## `npm pack`
+
+Guarantees exact same artefacts.</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# #4 Container
+
+@@@
+
+![](images/dockerfile.png)
+
+@@@
+
+```bash
+docker run -ti -p 5000:5000 bbcrd/webapp
+```
+
+@@@
+
+## `stdin` = env variables, `VOLUME`
+
+@@@
+
+## `stdout` = i/o
+
+HTTP responses.
+
+@@@
+
+## `stderr` = *varies*
+
+Same as Webapp + Docker bugs. 
+
+@@@
+
+## State = *predictable*
+
+Data store, `VOLUME`, container to image, void containers.
+
+@@@
+
+## Reproducibility = *exact*
+
+(re)start from predictable point.
+
+@@@
+
+## `docker {push,pull}`
+
+Move install state over network.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# #5 System image
+
+@@@
+
+![](images/system-image.png)
+
+@@@
+
+```bash
+vagrant up
+
+packer build
+
+aws ec2 create-image
+```
+
+@@@
+
+## `stdin` = env variables
+
+@@@
+
+## `stdout` = file
+
+a.k.a. *Golden image*.
+
+@@@
+
+## `stderr` = *varies*
+
+Linux exit codes.
+
+@@@
+
+## State = *predictable*
+
+Mountable filesystem and executable environment.
+
+@@@
+
+## Reproducibility = *exact*
+
+(re)start from predictable point.
+
+@@@
+
+## Chef, puppet, Ansible?
+
+Reproducible provisioning. Consecutive provisioning does not guarantee state though.
+
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# #6 Machine
+
+@@@
+
+```bash
+aws ec2 run-instances --image-id=... --user-data=...
+
+aws ec2 create-tags --tags ... --resources i-... 
+```
+
+@@@
+
+## `stdin` = machine tags, user data
+
+@@@
+
+## `stdout` = i/o
+
+Network connections, local filesystem.
+
+@@@
+
+## `stderr` = *varies*
+
+Guru meditation, monitoring alerts, internal logs. 
+
+@@@
+
+## State = *mostly predictable*
+
+Load and app issues will interfere (like memory leaks, memory swap etc.).
+
+@@@
+
+## Reproducibility = *exact*
+
+If from immutable image.
+
+@@@
+
+## Chef, puppet, Ansible?
+
+Install time increased, state not guaranteed.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/CNV00031.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/CNV00031.jpg" data-state="background-light" -->
+
+# Wrap up
+
+@@@
+
+# Composition
+
+*Add* and *combine* — no implicit expectation.
+
+@@@
+
+# State
+
+*Explicit* over implicit.
+
+@@@
+
+# Functions
+
+Simplest interface. Their internal state does not leak. Reproducible from input/arguments.
+
+@@@
+
+# Artifacts
+
+Immutable and *solid assets* are best to deploy. Easier to transfer. Easier to reproduce.
+
+@@@
+
+# Automation / packaging / *provisionning*
+
+More important than monolith vs. microservice sterile debate.
+
+@@@
+
+# Mono-myth
+
+Balance of *flexibility* and *explorability*.
+
+@@@
+
+# Data layer
+
+Maintain the data state *outside of the app* stack.
+
+~~~~
+
+And if no data layer, provide an API client package.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/everyday.jpg" -->
+
+~~~~
+
+Although we talked about programming, humans are also good at repetition. As human beings, we need variables and variability to maintain our sanity, and to sustain a good *state* of mind.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/CNV00063.jpg"  data-state="background-light" -->
+
+
+# Merci 👍
+
+(en Français dans le texte)
+
+@@@
+
+<!-- .slide: data-background="images/CNV00063.jpg" -->
+</textarea>
+        </section>
+      
+  </main>
+</div>
+
+<script src="/talks/assets/js/slides.bundle.js" type="module"></script>
+<script src="/talks/vendor/notes/notes.js" defer></script>
+
+
+<script src="/talks/assets/js/main.js?v=3.2.0" type="module"></script>
+</body>
+</html>

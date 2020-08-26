@@ -1,0 +1,14 @@
+svg {
+  fill: var(--light-accent);
+  height: .9em;
+  width: .9em;
+}
+
+.icon {
+  margin: 0;
+  vertical-align: text-bottom;
+}
+
+.icon.icon--auto {
+  width: auto;
+}

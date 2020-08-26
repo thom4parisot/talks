@@ -1,0 +1,83 @@
+.tiles {
+  display: grid;
+  padding: 0;
+  grid-template-columns: 1fr;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  list-style: none;
+}
+
+.tiles:empty {
+  display: none;
+}
+
+@media (width >= 768px) {
+  .tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tile .cover.is-square img {
+    position: absolute;
+  }
+}
+
+@media (width > 1024px) {
+  .tiles {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.tile {
+  position: relative;
+}
+  .tile.tile--portrait {
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+  }
+    .tile.tile--portrait .cover {
+      float: left;
+      margin-right: .5rem;
+      max-height: 120px;
+      max-width: 100%;
+    }
+    .tile.tile--portrait [itemprop="name"] {
+      font-weight: bold;
+    }
+
+
+  .tile .cover.is-square {
+    border-radius: 0;
+    position: relative;
+  }
+    .tile .cover.is-square img {
+      object-fit: cover;
+      width: 100%;
+    }
+
+  .tile a[rel="bookmark"] {
+    background: var(--light-shade);
+    padding: .5rem 1rem;
+    margin: .5rem 0;
+    position: absolute;
+  }
+  .tiles > :nth-child(2n+1) .tile a[rel="bookmark"] {
+    bottom: 0;
+    left: 0;
+  }
+  .tiles > :nth-child(2n+2) .tile a[rel="bookmark"] {
+    bottom: unset;
+    top: 0;
+    left: 0;
+  }
+  .tiles > :nth-child(2n+4) .tile a[rel="bookmark"] {
+    bottom: unset;
+    left: unset;
+    right: 0;
+    top: 0;
+  }
+  .tiles > :nth-child(2n+5) .tile a[rel="bookmark"] {
+    bottom: 0;
+    left: unset;
+    right: 0;
+    top: unset;
+  }

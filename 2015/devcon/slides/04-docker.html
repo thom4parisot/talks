@@ -1,0 +1,25 @@
+<!-- .slide: data-state="contrasted" -->
+<h2 id="Enters-Docker"><a class="header-anchor" href="#Enters-Docker">§</a>Enters <strong>Docker</strong></h2>
+<p>(circa 2013)</p>
+<p>@@@</p>
+<h2 id="Docker-wraps-build-instructions-and-an-OS-system-in-layered-partitions"><a class="header-anchor" href="#Docker-wraps-build-instructions-and-an-OS-system-in-layered-partitions">§</a>Docker wraps <em>build instructions</em> and an <em>OS system</em> in <em>layered partitions</em></h2>
+<p>@@@</p>
+<pre><code class="language-dockerfile"># Dockerfile
+FROM ubuntu:trusty
+
+RUN apt-get install -y nodejs
+COPY package.json /app/package.json
+RUN npm install
+
+EXPOSE 3000
+
+CMD [&quot;npm&quot;, &quot;start&quot;]
+</code></pre>
+<p>@@@</p>
+<h2 id="Multiple-benefits"><a class="header-anchor" href="#Multiple-benefits">§</a>Multiple <strong>benefits</strong></h2>
+<ul>
+<li>all the benefits of LXC</li>
+<li>simpler instructions than LXC</li>
+<li>portable images (Docker Hub, private registries, tar exports)</li>
+<li>easier to address networking and partition mounting</li>
+</ul>

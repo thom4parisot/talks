@@ -1,0 +1,45 @@
+<!-- .slide: data-state="contrasted" -->
+<h1 id="2-UI-Element"><a class="header-anchor" href="#2-UI-Element">§</a>#2 UI Element</h1>
+<p>@@@</p>
+<p><img src="images/ui-element.png" alt=""></p>
+<p>@@@</p>
+<pre><code class="language-javascript">import Component from './lib/Cover.jsx'
+
+React.render(Component, { … })
+</code></pre>
+<p>@@@</p>
+<h2 id="stdin-state-data"><a class="header-anchor" href="#stdin-state-data">§</a><code>stdin</code> = state data</h2>
+<p>@@@</p>
+<h2 id="stdout-React-Element"><a class="header-anchor" href="#stdout-React-Element">§</a><code>stdout</code> = React Element</h2>
+<p>Renders as HTML, DOM tree.</p>
+<p>@@@</p>
+<h2 id="stderr-varies"><a class="header-anchor" href="#stderr-varies">§</a><code>stderr</code> = <em>varies</em></h2>
+<p>Syntax, runtime.</p>
+<p>@@@</p>
+<h2 id="State-predictable"><a class="header-anchor" href="#State-predictable">§</a>State = <em>predictable</em></h2>
+<p>It is only a JavaScript object.</p>
+<p>@@@</p>
+<h2 id="Reproducibility-exact"><a class="header-anchor" href="#Reproducibility-exact">§</a>Reproducibility = <em>exact</em></h2>
+<p>Same data should guaranty same behaviour.</p>
+<p>@@@</p>
+<pre><code class="language-javascript">exports Cover extends React.Element {
+  render(){
+    let className = this.state.active ? 'active' : '';
+
+    return (&lt;div className={className}&gt;
+      &lt;h1&gt;{this.props.title}&lt;/h1&gt;
+    &lt;/div&gt;);
+  }
+}
+</code></pre>
+<p>@@@</p>
+<h2 id="browserify"><a class="header-anchor" href="#browserify">§</a>browserify!</h2>
+<p>Scoped assets, isolated transforms.</p>
+<p>@@@</p>
+<pre><code class="language-javascript">// index.js
+require('./stylesheet.scss');
+
+module.exports = {
+	Cover: require('./lib/Cover.jsx')
+};
+</code></pre>

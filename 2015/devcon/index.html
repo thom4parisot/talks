@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head><meta charset="utf-8">
+<title>Rethinking applications design with Docker • oncletom.io</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="preload" href="/assets/icons.svg">
+<link rel="preload" href="/assets/avatar.jpg">
+<link rel="preload" href="/images/publications/nodejs-cover.png">
+<link rel="stylesheet" href="/talks/styles/slides.css?v=v3.2.0">
+<link rel="stylesheet" href="/talks/styles/slides/theme-bbcrd.css?v=v3.2.0">
+<meta name="viewport" content="initial-scale=1.0">
+<!-- generated via https://realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#D4C492">
+<meta name="msapplication-TileColor" content="#D4C492">
+<meta name="theme-color" content="#D4C492">
+<link rel="pgpkey" href="https://keybase.io/oncletom/pgp_keys.asc?fingerprint=FD7AA82DF0BB977542BB4F44CB88AA7D815E0D6B">
+<meta name="description" content="Docker has shaken the software world by making LXC a commodity. Now&amp;#10;that the universal runtime container runC is born, what is its impact on&amp;#10;us, developers?&amp;#10;We will investigate what Docker really is, how to think in term of layers&amp;#10;and containers, and what are the key best practice in term of design and&amp;#10;security. Demonstrator can be found on GitHub.">
+<meta name="keywords" content="">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io" href="https://oncletom.io/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Photography" href="https://oncletom.io/photography/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Talks" href="https://oncletom.io/talks/feed/">
+<link rel="author" href="Thomas Parisot">
+<link rel="canonical" data-disqus-shortname="oncletom" href="https://oncletom.io/talks/2015/devcon/">
+
+<link rel="prefetch" href="https://oncletom.io/talks/2015/web2day/">
+<link rel="prefetch" href="https://oncletom.io/talks/2015/bdx.io/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@oncletom">
+<meta name="twitter:creator" content="@oncletom">
+<meta name="twitter:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta name="twitter:description" content="Docker has shaken the software world by making LXC a commodity. Now&amp;#10;that the universal runtime container runC is born, what is its impact on&amp;#10;us, developers?&amp;#10;We will investigate what Docker really is, how to think in term of layers&amp;#10;and containers, and what are the key best practice in term of design and&amp;#10;security. Demonstrator can be found on GitHub.">
+<meta property="og:title" content="Rethinking applications design with Docker">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://oncletom.io/talks/2015/devcon/">
+<meta property="og:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta property="og:description" content="Docker has shaken the software world by making LXC a commodity. Now&amp;#10;that the universal runtime container runC is born, what is its impact on&amp;#10;us, developers?&amp;#10;We will investigate what Docker really is, how to think in term of layers&amp;#10;and containers, and what are the key best practice in term of design and&amp;#10;security. Demonstrator can be found on GitHub.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:site_name" content="oncletom.io">
+<link rel="me" href="https://masto.oncletom.io/@thomas">
+<link rel="pingback" href="https://webmention.io/oncletom.io/xmlrpc">
+<link rel="webmention" href="https://webmention.io/oncletom.io/webmention">
+<meta property="algolia:search" data-application-id="QIP7Z1PL3B" data-api-key="5caf0f682ba8349e8a67872b9edde3f3" data-index-name="prod_blog">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+<body class="home site-talks content-post">
+<div class="reveal">
+  <main class="slides" lang="en-GB">
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># Rethinking applications design with **Docker**
+
+7th October 2015 — [EBU DevCon](https://tech.ebu.ch/events/devcon15) {.footer}
+
+@@@
+
+## Disclaimer
+
+This is *not* a talk about **microservices**.
+
+This is a talk about **reproducibility**. {.fragment}
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="../../img/thomas-parisot-landscape.jpg" data-state="background-dark" -->
+
+## Bonjour,<br> I am **Thomas**
+
+[oncletom.io](https://oncletom.io) – [@oncletom](https://twitter.com/oncletom) {.footer}
+
+@@@
+
+![Pardon my French](../../images/pardon-my-french.jpg)
+
+@@@
+
+## <span class="bbc">BBC R&amp;D</span>
+
+[github.com/bbcrd](https://github.com/bbcrd)
+[bbc.co.uk/rd](http://bbc.co.uk/rd)
+
+@@@
+
+![Full Stack JavaScript](../../images/javascript.png)
+
+[oncletom.io/node.js](https://oncletom.io/node.js)
+
+@@@
+
+![Sud Web](../../images/sudweb.png)
+
+[sudweb.fr](http://sudweb.fr)
+
+@@@
+
+<!-- .slide: data-background="../../images/photography.jpg" -->
+
+~~~~
+
+And photography.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>
+<!-- .slide: data-background="images/28A90CF6-C319-46C5-AA56-2309B5F073D4.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/1C32794D-A1FA-4264-98E2-C4EEE5101E6A.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/1A28291B-304D-459D-831B-59FF55A1E6C7.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/C44552A2-1D65-4EE7-834F-4419B43A7AFA.jpg" -->
+
+@@@
+
+<!-- .slide: data-background="images/IMG_0041.jpg" -->
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+# Once upon a time…
+
+(when I was a PHP developer…) {.footer}
+
+@@@
+
+<!-- .slide: data-background="images/code-to-deploy.png" -->
+
+@@@
+
+```bash
+$ scp -Cr ./src production:/var/www/my-cool-website
+```
+
+@@@
+
+<!-- .slide: data-background="images/cat.gif" -->
+
+@@@
+
+<!-- .slide: data-background="images/deploy-broken.png" -->
+
+@@@
+
+## *Multiple* points of failure
+
+- software (typo) <!-- .element: class="fragment" -->
+- transfer (incomplete, no gatekeeper) <!-- .element: class="fragment" -->
+- execution (runtime failure) <!-- .element: class="fragment" -->
+- host system itself <!-- .element: class="fragment" -->
+
+@@@
+
+<!-- .slide: data-state="contrasted" -->
+
+## Not *reproducible* because hardly *repeatable*
+
+@@@
+
+## What "*install PHP5*" means
+
+```bash
+# Ubuntu
+$ apt-get install php5 libapache2-mod-php5 php5-curl
+$ php --version
+> PHP 5.5.9 (cli)
+
+# CentOS 6
+$ yum install php curl curl-devel
+$ php --version
+> PHP 5.4.16 (cli)
+```
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+## There is a ~~startup~~/~~app~~/*solution* for that
+
+@@@
+
+## **Provisionning** systems
+
+Puppet, Chef, Ansible etc.
+
+@@@
+
+
+<!-- .slide: data-background="images/chef-tutorial.png" -->
+
+
+@@@
+
+
+<!-- .slide: data-background="images/chef-tutorial.png" -->
+
+## **Provisionning** is *easy*
+
+
+@@@
+
+<!-- .slide: data-background="images/chef-tutorial.png" -->
+
+## **Provisionning** is easy*?*
+
+
+@@@
+
+## Double bill
+
+Learning what you *need* and its *abstraction*.
+
+@@@
+
+<!-- .slide: data-state="contrasted" -->
+
+## *Deploy target* is **far** away from *dev machine*
+
+And the *build machine*, and the *integration machine*, and…
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+## Enters **LXC**
+
+(circa 2008)
+
+@@@
+
+## LXC wraps an *app* and an *OS system* in a *rootfs* partition
+
+@@@
+
+```bash
+# build.sh
+$ lxc-create -t ubuntu -n nodejs-app --release trusty
+$ lxc-start -n nodejs-app --daemon
+$ cp ./src /var/lib/lxc/nodejs-app/rootfs
+$ lxc-attach -n nodejs-app
+
+$$ apt-get install nodejs -y
+$$ npm install
+^A^D
+
+$ lxc-stop -n nodejs
+```
+
+@@@
+
+## From the *host* perspective
+
+```bash
+docker@default:~$ ps fx
+  PID TTY      STAT   TIME COMMAND
+    2 ?        S      0:00 [kthreadd]
+    3 ?        S      0:01  \_ [ksoftirqd/0]
+    5 ?        S<     0:00  \_ [kworker/0:0H]
+    7 ?        S      0:00  \_ [rcu_sched]
+    8 ?        S      0:00  \_ [rcu_bh]
+    9 ?        S      0:00  \_ [migration/0]
+   10 ?        S<     0:00  \_ [khelper]
+  987 ?        S      0:00 ntpd -d -n -p pool.ntp.org
+…
+19086 pts/0    Ss+    0:00 /bin/sh -c npm start
+19115 pts/0    Sl+    0:00  \_ npm
+19124 pts/0    S+     0:00      \_ sh -c static -p ${PORT:-5000} dist/
+19125 pts/0    Sl+    0:00          \_ node /app/node_modules/.bin/static -p 5000 dist/
+…
+```
+
+@@@
+
+## From the *container* perspective
+
+```bash
+app@aa05e05fc3ae:~$ ps fx
+  PID TTY      STAT   TIME COMMAND
+    1 ?        Ss+    0:00 /bin/sh -c npm start
+   28 ?        Sl+    0:00 npm
+   37 ?        S+     0:00  \_ sh -c static -p ${PORT:-5000} dist/
+   38 ?        Sl+    0:00      \_ node /app/node_modules/.bin/static -p 5000 dist/
+```
+
+@@@
+
+## One benefit: **self contained**
+
+Container is not aware of its parent host.
+
+@@@
+
+## But *not (trans)portable*
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+## Enters **Docker**
+
+(circa 2013)
+
+@@@
+
+## Docker wraps *build instructions* and an *OS system* in *layered partitions*
+
+@@@
+
+```dockerfile
+# Dockerfile
+FROM ubuntu:trusty
+
+RUN apt-get install -y nodejs
+COPY package.json /app/package.json
+RUN npm install
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
+```
+
+@@@
+
+## Multiple **benefits**
+
+- all the benefits of LXC
+- simpler instructions than LXC
+- portable images (Docker Hub, private registries, tar exports)
+- easier to address networking and partition mounting
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+## **Single** component
+
+@@@
+
+## **Immutable** build
+
+```bash
+docker build -t oncletom/devcon-nodejs-app
+
+Step 0 : FROM node:4-slim
+ ---> 81876916bca2
+Step 1 : WORKDIR /app
+ ---> Using cache
+ ---> 44a4f0b3ef85
+Step 2 : COPY package.json ./package.json
+ ---> Using cache
+ ---> 48cf3e569dc8
+Step 3 : RUN npm install
+...
+```
+
+@@@
+
+## Run
+
+```bash
+docker run -ti oncletom/devcon-nodejs-app
+```
+
+@@@
+
+## **Explicit** behaviour
+
+Nothing happened unless *requested*.
+
+@@@
+
+## Port binding w/ *host*
+
+```bash
+# docker run -p [net-interface:host-port]:internal-port <image>
+docker run -ti -p 0.0.0.0:5000:3000 oncletom/devcon-nodejs-app
+```
+
+@@@
+
+## Port binding w/ *containers*
+
+```bash
+docker run -d --name app oncletom/devcon-nodejs-app
+
+docker run -ti --link "app:app_alias" oncletom/devcon-nodejs-app <command>
+```
+
+~~~~
+
+```
+docker run -ti --link "app:app_alias" oncletom/devcon-nodejs-app env
+docker run -ti --link "app:app_alias" oncletom/devcon-nodejs-app ping app_alias
+docker run -ti --link "app:app_alias" oncletom/devcon-nodejs-app curl http://app:app_alias:3000
+```
+
+
+@@@
+
+## **Runtime** configuration
+
+```bash
+docker run -e KEY_VALUE --env-file=.env-file <container>
+```
+
+```
+# .env-file
+NODE_ENV=test
+DATABASE_URL=postgresql://host:port/db?pool=25
+```
+
+Think [Twelve-Factor](http://12factor.net/). {.footer}
+
+~~~~
+
+```
+docker run -ti --rm -p 0.0.0.0:5000:3000 -e MOTD="Hello Devcon" oncletom/devcon-nodejs-app
+```
+
+@@@
+
+## Multiply!
+
+```bash
+docker run -d -P oncletom/devcon-nodejs-app
+docker run -d -P oncletom/devcon-nodejs-app
+docker run -d -P oncletom/devcon-nodejs-app
+docker run -d -P oncletom/devcon-nodejs-app
+docker run -d -P oncletom/devcon-nodejs-app
+
+# …
+
+docker ps
+```
+
+~~~~
+
+```
+docker inspect -f '{{range $p, $conf := .NetworkSettings.Ports}}{{(index $conf 0).HostPort}}{{end}}' $(docker ps -q)
+```
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+## **Standard streams** containers
+
+@@@
+
+## *Interop* exchange format
+
+There are already plenty of tools. *Language agnostic*.
+
+```bash
+echo something | docker run -i <container>
+```
+
+~~~~
+
+```bash
+echo 'http://www3.ebu.ch/news/2015/09/media-companies-get-personal-at'  | docker run -i freebird/feature-processor-render-html
+```
+
+@@@
+
+## Infinite combinations
+
+```bash
+echo something | docker run -i <container> | awk '{print $n}' | docker run -i <other-container>
+```
+
+~~~~
+
+```bash
+echo 'http://www3.ebu.ch/news/2015/09/media-companies-get-personal-at'  | docker run -i freebird/feature-processor-render-html  | jq -r '."http://freebird.prototyping.bbc.co.uk/ns#html"' | docker run -i freebird/feature-processor-item-body | jq -r '."http://schema.org/text"'
+```
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+## **Orchestrated** components
+
+@@@
+
+## What if I need…
+
+- a *Rails* application (w/ Ruby 2.1.7)
+- *ElasticSearch* (1.4)
+- *PostgreSQL* (9.3)
+- *Redis* (3.0)
+- ?
+
+@@@
+
+## **docker-compose** to the rescue
+
+- no more *complicated README*
+- easier than doing everything by hand
+- acts as a *technical documentation* of needed resources
+- spins up a stack from scratch in minutes
+- ability to scale up/down individual containers
+
+@@@
+
+## docker-compose.yml
+
+```bash
+web:
+  build: .
+  links:
+    - db
+    - search
+    - queue
+  environment:
+    - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres
+    - ELASTICSEARCH_URL=http://search:9200
+    - REDIS_URL=redis://queue:6379
+queue:
+  image: redis:3.0
+
+db:
+  image: postgres:9.3
+  - POSTGRES_PASSWORD=postgres
+
+search:
+  image: elasticsearch:1.4
+```
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+## **Continuous** Integration
+
+
+@@@
+
+<!-- .slide: data-background="images/continuous-integration.png" -->
+
+@@@
+
+```bash
+docker-compose up -d
+
+docker-compose run web bundle exec rails test
+```
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+## Other (and fun) purposes
+
+@@@
+
+## *Build* systems
+
+- Documentation generators (to run in CI)
+- Spawnables CI agents
+
+@@@
+
+## *Training* materials
+
+- Operating system agnostic demonstrators
+- Clonable environments
+
+@@@
+
+## Running **system apps** (like Spotify)
+
+https://blog.jessfraz.com/post/docker-containers-on-the-desktop/
+
+(All your sockets are belong to us!) {.footer}
+
+@@@
+
+## Embedded hardware
+
+- ARM builds for Raspberry Pi
+- Distributed deploy (w/ [resin.io](https://resin.io))
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+## **Best** practices
+
+@@@
+
+## The **order** matters
+
+- *first* line which changes invalidates the rest
+- so `COPY` instructions as late as possible
+
+@@@
+
+## **Explicit** FROM statement
+
+```
+FROM ubuntu:14.04
+```
+
+is better than
+
+```
+FROM ubuntu
+```
+
+~~~~
+
+Remember, we want predictability: next major of Ubuntu should not break next deploy.
+
+@@@
+
+## Use tools you **know**
+
+(or want to learn about)
+
+To monitor, automate, deploy etc.
+
+@@@
+
+## **Simplify** commands
+
+We use *Makefile* for consistency.
+
+```bash
+# builds Docker image
+make build
+
+# runs tests in containers
+make test
+
+# pushed the image to our own registry
+make push
+```
+
+~~~~
+
+As a bonus what works for a developer works for the CI too.
+
+@@@
+
+## Watch out **CPU architecture**
+
+- Some apps checks for CPU at runtime
+- ARM needs different packages and base images
+
+@@@
+
+## How do you address **security**?
+
+- What if someone gains access to your container?
+- OpenAM network driver?
+
+@@@
+
+## Manage **outside** of containers
+
+*syslog* driver is a good choice.
+
+```bash
+$ cat /etc/default/docker
+
+DOCKER_OPTS="--log-driver=syslog"
+```
+
+~~~~
+
+Forward with rsyslog/kibana etc. Plenty of tooling already out there.
+
+
+@@@
+
+## **Own** your images
+
+We build on top of a *baseimage* and derive to optimised stack images.
+
+```bash
+FROM bbcrd/baseimage
+
+…
+```
+
+```bash
+FROM bbcrd/node:4.x
+
+…
+```
+
+~~~~
+
+- can be better for security than some random image found on Docker Hub
+- easier to spread custom utilities (image cleanup)
+- enforces practices in your org
+- tailored to your needs
+- you can automate the rebuilds daily
+
+@@@
+
+## Suitable for **development** too
+
+Inject work directory and enable auto-reload.
+
+```bash
+docker run -ti \
+  -v $(pwd)/src:/app/src:ro \
+  -p 0.0.0.0:5000:3000 \
+  oncletom/devcon-nodejs-app npm run start-dev
+```
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-state="contrasted" -->
+
+## Conclusion
+
+@@@
+
+## Reusable as a **whole**
+
+System included.
+
+@@@
+
+## **Isolated** services
+
+No chance to mess up with *system packages*.
+
+@@@
+
+## **Composable** stacks
+
+Legacy apps and modern ones.
+Installable at all time. Now and in 5 years (hopefully).
+
+(want to try out *Go*, *Node.js* or *Spark*?) {.footer}
+
+@@@
+
+## Testable **systems**
+
+Dependencies included.
+
+@@@
+
+## **Consistency**
+
+What works **here** works **there**.
+
+
+~~~~
+
+Running a container should not be that different from your actual way of running
+regular applications.
+
+@@@
+
+> In principle, **the work of art has always been reproducible**. Objects made by humans could always be copied by humans. (…) But the **technological reproduction** of artworks is something *new*.
+
+– *Walter Benjamin*, The Work of Art in the age of Mechanical Reproduction (1936)
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template># Merci !*\**
+
+\* *en français dans le texte* {.footer}
+</textarea>
+        </section>
+      
+  </main>
+</div>
+
+<script src="/talks/assets/js/slides.bundle.js" type="module"></script>
+<script src="/talks/vendor/notes/notes.js" defer></script>
+
+
+<script src="/talks/assets/js/main.js?v=3.2.0" type="module"></script>
+</body>
+</html>

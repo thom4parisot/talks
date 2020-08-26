@@ -1,0 +1,168 @@
+<h2 id="Pull-Request-4"><a class="header-anchor" href="#Pull-Request-4">§</a>Pull Request #4</h2>
+<p>Automatiser les fichiers de traduction.</p>
+<p>@@@</p>
+<pre><code class="language-javascript">grunt.registerTask('generateJS', 'Generate JS translation file for chosen language.', function(language) {
+  function normaliseInput(string)  {
+    var length = string.length,
+    i = 0,
+    newString = &quot;&quot;;
+
+    while (i &lt; length) {
+      if (i === 0) {
+        newString += string.charAt(i).toUpperCase();
+      } else {
+        newString += string.charAt(i).toLowerCase()
+      }
+
+      i++
+    }
+
+    return newString;
+  }
+
+  var language = language || 'English';
+  language = normaliseInput(language);
+
+  var csv = grunt.file.read('./webapp/static/js/module/translations/variables.csv');
+  // This will parse a delimited string into an array of
+  // arrays. The default delimiter is the comma, but this
+  // can be overriden in the second argument.
+  function CSVToArray( strData, strDelimiter ){
+    // Check to see if the delimiter is defined. If not,
+    // then default to comma.
+    strDelimiter = (strDelimiter || &quot;,&quot;);
+
+    // Create a regular expression to parse the CSV values.
+    var objPattern = new RegExp(
+      (
+        // Delimiters.
+        &quot;(\\&quot; + strDelimiter + &quot;|\\r?\\n|\\r|^)&quot; +
+
+        // Quoted fields.
+        &quot;(?:\&quot;([^\&quot;]*(?:\&quot;\&quot;[^\&quot;]*)*)\&quot;|&quot; +
+
+        // Standard fields.
+        &quot;([^\&quot;\\&quot; + strDelimiter + &quot;\\r\\n]*))&quot;
+      ),
+      &quot;gi&quot;
+      );
+
+
+    // Create an array to hold our data. Give the array
+    // a default empty first row.
+    var arrData = [[]];
+
+    // Create an array to hold our individual pattern
+    // matching groups.
+    var arrMatches = null;
+
+
+    // Keep looping over the regular expression matches
+    // until we can no longer find a match.
+    while (arrMatches = objPattern.exec( strData )){
+
+      // Get the delimiter that was found.
+      var strMatchedDelimiter = arrMatches[ 1 ];
+
+      // Check to see if the given delimiter has a length
+      // (is not the start of string) and if it matches
+      // field delimiter. If id does not, then we know
+      // that this delimiter is a row delimiter.
+      if (
+        strMatchedDelimiter.length &amp;&amp;
+        (strMatchedDelimiter != strDelimiter)
+        ){
+
+        // Since we have reached a new row of data,
+        // add an empty row to our data array.
+        arrData.push( [] );
+
+      }
+
+
+      // Now that we have our delimiter out of the way,
+      // let's check to see which kind of value we
+      // captured (quoted or unquoted).
+      if (arrMatches[ 2 ]){
+
+        // We found a quoted value. When we capture
+        // this value, unescape any double quotes.
+        var strMatchedValue = arrMatches[ 2 ].replace(
+          new RegExp( &quot;\&quot;\&quot;&quot;, &quot;g&quot; ),
+          &quot;\&quot;&quot;
+          );
+
+      } else {
+
+        // We found a non-quoted value.
+        var strMatchedValue = arrMatches[ 3 ];
+
+      }
+
+
+      // Now that we have our value string, let's add
+      // it to the data array.
+      arrData[ arrData.length - 1 ].push( strMatchedValue );
+    }
+
+    // Return the parsed data.
+    return( arrData );
+  }
+
+  var array = CSVToArray(csv);
+
+  var propertyNames = array[0];
+
+
+  var length = array.length, i = 0;
+  var languageWanted;
+
+  // locate the language wanted
+  for (i ; i &lt; length; i++) {
+    var currentLanguage = array[i][1];
+    if (currentLanguage == language) {
+      languageWanted = array[i];
+      break;
+    }
+  }
+
+  //create the file needed for /define/'language'.js
+  var languageString = 'define({';
+  var fourSpaces = &quot;    &quot;;
+  length = propertyNames.length;
+  //make i = 2 to skip language.code and language.name being saved into the file
+  i = 2;
+  for (i ; i &lt; length; i++) {
+    languageString += &quot;\n&quot;;
+    languageString += fourSpaces + propertyNames[i] + &quot; : '&quot; + languageWanted[i] + &quot;'&quot;;
+    if (i + 1 !== length) {
+        languageString += &quot;,&quot;;
+      } else {
+        languageString += &quot;\n&quot;;
+      }
+  }
+
+  languageString += &quot;});&quot;;
+  var languageCode = languageWanted[0];
+  grunt.file.write('./webapp/static/js/module/translations/' + languageCode + '.js', languageString);
+  grunt.file.delete('./webapp/static/js/module/translations/variables.csv');
+});
+</code></pre>
+<p>@@@</p>
+<h2 id="Le-cas-typique"><a class="header-anchor" href="#Le-cas-typique">§</a>Le cas typique</h2>
+<p>Et le MVP idéal.</p>
+<p>@@@</p>
+<h2 id="Reinvente-la-roue"><a class="header-anchor" href="#Reinvente-la-roue">§</a>Réinvente la roue</h2>
+<p>Parsing CSV.</p>
+<p>@@@</p>
+<h2 id="Test-par-l’execution"><a class="header-anchor" href="#Test-par-l’execution">§</a>Test par l’exécution</h2>
+<p><code>assert(user.rant(&quot;ça marche pas&quot;))</code></p>
+<p>@@@</p>
+<h2 id="Manque-de-clarte-du-code"><a class="header-anchor" href="#Manque-de-clarte-du-code">§</a>Manque de clarté du code</h2>
+<p>Lecture linéaire.</p>
+<p>Code peu expressif quant à ses choix/opinions.</p>
+<p>@@@</p>
+<h2 id="Pourquoi"><a class="header-anchor" href="#Pourquoi">§</a>Pourquoi ?</h2>
+<p>Manque d’expérience / temps à consacrer.</p>
+<p>Peu de littérature à ce sujet.</p>
+<p>Mimétisme.</p>

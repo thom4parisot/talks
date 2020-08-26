@@ -1,0 +1,34 @@
+<!-- .slide: data-state="contrasted" -->
+<h1 id="3-Application"><a class="header-anchor" href="#3-Application">§</a>#3 <strong>Application</strong></h1>
+<p>@@@</p>
+<p><img src="images/webapp.png" alt=""></p>
+<p>@@@</p>
+<pre><code class="language-bash">npm install --save @project/element
+
+PORT=3000 npm start
+
+# static -p ${PORT:-5000} --gzip dist/
+</code></pre>
+<p>@@@</p>
+<h2 id="ENV-portabilite"><a class="header-anchor" href="#ENV-portabilite">§</a>ENV = <strong>portabilité</strong></h2>
+<p>(penser arguments de fonction)</p>
+<p>@@@</p>
+<h2 id="Probleme"><a class="header-anchor" href="#Probleme">§</a>Problème</h2>
+<p><code>npm install</code> marche pas à tous les coups.</p>
+<pre><code>
+Package version can be deleted, semver madness, registry can be down.
+
+@@@
+
+## `npm pack`
+
+Extraction solide
+
+@@@
+
+&lt;!-- .slide: data-background=&quot;images/webapp-rails.png&quot; data-state=&quot;background-light&quot; --&gt;
+
+## **Transportabilité**
+
+(rendu iframe, puis rails-react puis gulp)
+</code></pre>

@@ -1,0 +1,24 @@
+<!-- .slide: data-state="contrasted" -->
+<h1 id="6-Machine"><a class="header-anchor" href="#6-Machine">§</a>#6 Machine</h1>
+<p>@@@</p>
+<pre><code class="language-bash">aws ec2 run-instances --image-id=... --user-data=...
+
+aws ec2 create-tags --tags ... --resources i-... 
+</code></pre>
+<p>@@@</p>
+<h2 id="stdin-machine-tags-user-data"><a class="header-anchor" href="#stdin-machine-tags-user-data">§</a><code>stdin</code> = machine tags, user data</h2>
+<p>@@@</p>
+<h2 id="stdout-i-o"><a class="header-anchor" href="#stdout-i-o">§</a><code>stdout</code> = i/o</h2>
+<p>Network connections, local filesystem.</p>
+<p>@@@</p>
+<h2 id="stderr-varies"><a class="header-anchor" href="#stderr-varies">§</a><code>stderr</code> = <em>varies</em></h2>
+<p>Guru meditation, monitoring alerts, internal logs.</p>
+<p>@@@</p>
+<h2 id="State-mostly-predictable"><a class="header-anchor" href="#State-mostly-predictable">§</a>State = <em>mostly predictable</em></h2>
+<p>Load and app issues will interfere (like memory leaks, memory swap etc.).</p>
+<p>@@@</p>
+<h2 id="Reproducibility-exact"><a class="header-anchor" href="#Reproducibility-exact">§</a>Reproducibility = <em>exact</em></h2>
+<p>If from immutable image.</p>
+<p>@@@</p>
+<h2 id="Chef-puppet-Ansible"><a class="header-anchor" href="#Chef-puppet-Ansible">§</a>Chef, puppet, Ansible?</h2>
+<p>Install time increased, state not guaranteed.</p>

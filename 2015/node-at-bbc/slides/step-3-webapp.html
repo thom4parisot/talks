@@ -1,0 +1,32 @@
+<!-- .slide: data-state="contrasted" -->
+<h1 id="3-Application"><a class="header-anchor" href="#3-Application">§</a>#3 <strong>Application</strong></h1>
+<p>@@@</p>
+<p><img src="images/webapp.png" alt=""></p>
+<p>@@@</p>
+<pre><code class="language-bash">npm install --save @project/element
+
+PORT=3000 npm start
+
+# static -p ${PORT:-5000} --gzip dist/
+</code></pre>
+<p>@@@</p>
+<h2 id="ENV-portability"><a class="header-anchor" href="#ENV-portability">§</a>ENV = <strong>portability</strong></h2>
+<p>(think of it as a function argument)</p>
+<p>@@@</p>
+<h2 id="Problem"><a class="header-anchor" href="#Problem">§</a>Problem</h2>
+<p><code>npm install</code> can fail (for various reasons).</p>
+<pre><code>
+Package version can be deleted, semver madness, registry can be down.
+
+@@@
+
+## `npm pack`
+
+Solid artifact.
+
+@@@
+
+## Something is **missing**
+
+Install, build and and run are lost in a README. 
+</code></pre>

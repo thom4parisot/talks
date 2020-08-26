@@ -1,0 +1,30 @@
+<h2 id="npm-run"><a class="header-anchor" href="#npm-run">§</a><code>npm run</code></h2>
+<p>@@@</p>
+<h3 id="npm-run-jshint"><a class="header-anchor" href="#npm-run-jshint">§</a><code>npm run jshint</code></h3>
+<p>vs.</p>
+<h3 id="grunt-jshint"><a class="header-anchor" href="#grunt-jshint">§</a><code>grunt jshint</code></h3>
+<p>@@@</p>
+<h2 id="npm-run-jshint-v2"><a class="header-anchor" href="#npm-run-jshint-v2">§</a><code>npm run jshint</code></h2>
+<pre><code class="language-bash">npm install --save jshint
+</code></pre>
+<pre><code class="language-javascript">{
+  &quot;scripts&quot;: {
+    &quot;jshint&quot;: &quot;jshint --config .jshintrc lib/**/*.js&quot;
+  }
+}
+</code></pre>
+<p>@@@</p>
+<h2 id="grunt-jshint-v2"><a class="header-anchor" href="#grunt-jshint-v2">§</a><code>grunt jshint</code></h2>
+<pre><code class="language-bash">npm install --save grunt grunt-contrib-jshint
+</code></pre>
+<pre><code class="language-javascript">grunt.initConfig({
+  jshint: {
+    all: {
+      src: 'lib/**/*.js'
+    },
+    options: {
+      jshintrc: '.jshintrc'
+    }
+  }
+});
+</code></pre>

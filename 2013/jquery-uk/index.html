@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head><meta charset="utf-8">
+<title>The Promise of jQuery Deferred • oncletom.io</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="preload" href="/assets/icons.svg">
+<link rel="preload" href="/assets/avatar.jpg">
+<link rel="preload" href="/images/publications/nodejs-cover.png">
+<link rel="stylesheet" href="/talks/styles/slides.css?v=v3.2.0">
+<link rel="stylesheet" href="/talks/styles/slides/theme-oncletom.css?v=v3.2.0">
+<meta name="viewport" content="initial-scale=1.0">
+<!-- generated via https://realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#D4C492">
+<meta name="msapplication-TileColor" content="#D4C492">
+<meta name="theme-color" content="#D4C492">
+<link rel="pgpkey" href="https://keybase.io/oncletom/pgp_keys.asc?fingerprint=FD7AA82DF0BB977542BB4F44CB88AA7D815E0D6B">
+<meta name="description" content="The Promise JavaScript pattern is receiving quite a lot of attention recently as popular asynchronous pattern.&amp;#10;This talk presents the way to understand the concept, how to learn using them step by step and how to design your software based on a real world example.">
+<meta name="keywords" content="">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io" href="https://oncletom.io/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Photography" href="https://oncletom.io/photography/feed/">
+<link rel="alternate" type="application/rss+xml" title="oncletom.io • Talks" href="https://oncletom.io/talks/feed/">
+<link rel="author" href="Thomas Parisot">
+<link rel="canonical" data-disqus-shortname="oncletom" href="https://oncletom.io/talks/2013/jquery-uk/">
+
+<link rel="prefetch" href="https://oncletom.io/talks/2013/takeoff/">
+<link rel="prefetch" href="https://oncletom.io/talks/2013/sudweb/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@oncletom">
+<meta name="twitter:creator" content="@oncletom">
+<meta name="twitter:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta name="twitter:description" content="The Promise JavaScript pattern is receiving quite a lot of attention recently as popular asynchronous pattern.&amp;#10;This talk presents the way to understand the concept, how to learn using them step by step and how to design your software based on a real world example.">
+<meta property="og:title" content="The Promise of jQuery Deferred">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://oncletom.io/talks/2013/jquery-uk/">
+<meta property="og:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta property="og:description" content="The Promise JavaScript pattern is receiving quite a lot of attention recently as popular asynchronous pattern.&amp;#10;This talk presents the way to understand the concept, how to learn using them step by step and how to design your software based on a real world example.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:site_name" content="oncletom.io">
+<link rel="me" href="https://masto.oncletom.io/@thomas">
+<link rel="pingback" href="https://webmention.io/oncletom.io/xmlrpc">
+<link rel="webmention" href="https://webmention.io/oncletom.io/webmention">
+<meta property="algolia:search" data-application-id="QIP7Z1PL3B" data-api-key="5caf0f682ba8349e8a67872b9edde3f3" data-index-name="prod_blog">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+<body class="home site-talks content-post">
+<div class="reveal">
+  <main class="slides" lang="en-GB">
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>
+# The Promise of jQuery Deferred
+
+
+<small>19th April 2013 — [jQuery UK](http://events.jquery.org/2013/uk/)</small>
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>## Tale Of A UK Job Application
+
+### *And Pardon my French*
+
+1. Submitting an application form
+1. Being shortlisted
+1. Phone Interview
+1. Technical Interview
+1. Physical Interview
+1. Salary Negociation
+
+Then, **accept the contract and relocate** or …
+
+@@@
+
+## Let's translate that in JavaScript…
+
+@@@
+
+```javascript
+(function jobApplication(){
+  (function shortlist(data){
+    (function phoneInterview(){
+      (function technicalInterview(data){
+        (function physicalInterview(){
+          (function salaryNegociation(payload){
+            if (payload.job){
+              acceptContract() && relocate();
+            }
+            else throw SyntaxError("Too bad…");
+          })({ job: "Software Engineer" });
+        })();
+      })({ script: "eval('alert(true);')" });
+    })();
+  })({ why: "I speak JavaScript!" });
+})();
+
+```
+
+@@@
+
+## Badge Unlocked: *Pyramid* of Doom!
+
+![](images/doom.jpg)
+
+
+@@@
+
+## Promisification!
+
+@@@
+
+```javascript
+var $job = $.Deferred();
+
+$jobApplication
+  .progress( updateApplicationState )
+  .done( acceptContract )
+  .done( relocate )
+  .fail( keepCalmAndDrinkWine );
+
+$jobApplication
+  .notify({ state: "shortlist" })
+  .notify({ state: "phone_interview" })
+  .notify({ state: "technical_interview" })
+  .notify({ state: "physical_interview" })
+  .notify({ state: "salary_negociation" });
+
+$jobApplication.resolve({
+  job: "Software Engineer"
+});
+```
+
+<small>[See on JSBin](http://jsbin.com/episez/6/edit).</small>
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>![](../../img/avatar.jpg)
+
+## Thomas Parisot
+
+Frontend / JavaScript Engineer
+
+[![BBC R&D](../../img/RD-logo_500.png)](http://www.bbc.co.uk/rd)
+
+<br>
+
+[oncletom.io](https://oncletom.io) –
+[@oncletom](https://twitter.com/oncletom) –
+[github.com/oncletom](https://github.com/oncletom)
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>## Digging into jQuery.Deferred
+
+Learning to use Promises, the soft way.
+
+@@@
+
+## Consume the API
+
+In jQuery 1.8+: `$.ajax`, `$.animate`, `$('<selector>')`
+
+<br>
+
+```javascript
+var $deferred = $.post('/cheese', {
+  name: "Livarot"
+});
+
+$deferred
+  .done( syncLocalStorage )
+  .done( updateUI )
+  .fail( displayError )
+  .always( logNetworkResponse );
+```
+
+@@@
+
+## Create your first Deferred
+
+```javascript
+function getDelayedUserInput(){
+  var $deferred = $.Deferred();
+
+  setTimeout(function(){
+    $deferred.resolve(prompt("Anything to say?"));
+  }, 1000);
+
+  return $deferred;
+}
+
+$('input').on('click', function(e){
+  getDelayedUserInput().done(function(user_input){
+    $(e.target).val(user_input);
+  });
+});
+```
+<small>[See on JSBin](http://jsbin.com/ocadol/3/edit).</small>
+
+@@@
+
+## Deal with race condition workflows
+
+* `then()` enables data filtering.
+* `when()` is a `done()` for multiple promises.
+
+```javascript
+$.when( $.getJSON('/page/1'), $.getJSON('/page/2') )
+  .then(function(page1_data, page2_data){
+    return page1_data.concat(page2_data);
+  })
+  .done( displayCombinedData )
+  .fail( displayError );
+```
+
+@@@
+
+## Sharing safely your Deferred
+
+`jQuery.Deferred` vs. `Deferred.promise()`.
+
+<br>
+
+```javascript
+var $deferred = $.Deferred();
+var $promise = $deferred.promise();
+
+$promise.done(function(value){
+  console.log("Oh my "+value);
+});
+
+// $promise is read-only
+$promise.resolve("gosh");
+
+// will log 'Oh my head'
+$deferred.resolve("head");
+```
+
+<small>[See on JSBin](http://jsbin.com/uzokam/1/edit).</small>
+
+@@@
+
+## Improving our first Deferred
+
+```javascript
+function getDelayedUserInput(){
+  var $deferred = $.Deferred();
+
+  setTimeout(function(){
+    $deferred.resolve(prompt("Anything to say?"));
+  }, 1000);
+
+  return $deferred.promise(); // now safe
+}
+
+$('input').on('click', function(e){
+  getDelayedUserInput().done(function(user_input){
+    $(e.target).val(user_input);
+  });
+});
+```
+
+<small>[See on JSBin](http://jsbin.com/ocadol/4/edit).</small>
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>## Tale of a country relocation
+
+Let's use another real life example <small>(that's still better than *Hello world examples*)</small>.
+
+1. opening a bank account
+1. finding a new place to live
+1. request a NINo
+1. ask for a debit card
+
+And hope for an on-time payday to finally live like a new settler!
+
+@@@
+
+## Opening a bank account
+
+```javascript
+function requestBankAccount(job, postal_address){
+  var $deferred;
+
+  // expect an 'account' object to be resolved
+  $deferred = $.post('http://bank.com/account', {
+    job: job,
+    address: postal_address
+  });
+
+  return $deferred.promise();
+}
+```
+
+@@@
+
+## Assembling the workflow
+
+Let's assume we have a `$job` promise available in the scope.
+
+```javascript
+var $address, $account, $NINo, $debitCard;
+
+$address = requestAppartment(job);
+
+$.when($job, $address).done(function(job, address){
+  $account = requestBankAccount(job, address);
+  $NINo = requestNINo(job, address);
+
+  $account.done(function(account){
+    $debitCard = requestDebitCard(account, address);
+  });
+});
+```
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>## Killing the FUD
+
+The Internet told me:
+
+* the Promises are *everything*
+* the Promises are *Evil*
+
+@@@
+
+## Callback vs. Promise vs. Event
+
+Callbacks are for *easy* and *simple* uses.
+
+```javascript
+nodes.value(function(item){
+  return item.service_id;
+});
+```
+
+Events are for vertical code expansion.
+
+```javascript
+MyModule.prototype.init = function init(view){
+  view.$submit.on('click', this.handleSubmit);
+  view.$document.on('click keyup', this.logEvent);
+};
+```
+
+@@@
+
+## When to use them?
+
+Some considerations to think about to know when to use Promises.
+
+* simplifying a *workflow contract*
+* *flattening* code nesting
+* undeterminate duration *async task*
+* *coordinating* multiple async tasks
+
+<br>
+
+### *tl;dr*: modularize chained tasks.
+
+@@@
+
+## jQuery Deferred is not Promise/A+ compliant
+
+Who cares? As long as it helps you to:
+
+* simplify your code
+* keep your code maintainable (for you and your peers)
+
+@@@
+
+## Remember kids
+
+Patterns and tools help to *solve problems*.
+
+**You** solve the *problems*.
+
+FUD solves *nothing*.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>## To infinity and beyond!
+
+* [jQuery Deferred API](http://api.jquery.com/category/deferred-object/)
+* [CommonJS Promise/A+](https://github.com/promises-aplus)
+* [ECMAScript Promises](http://wiki.ecmascript.org/doku.php?id=strawman:concurrency)
+* [DOM Future](http://dom.spec.whatwg.org/#futures)
+* Libraries: [async](https://github.com/caolan/async),
+[ff](https://github.com/gameclosure/ff),
+[q](https://github.com/kriskowal/q)</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/thanks.jpg" -->
+
+## Thanks everybody
+
+Have a question? Come *talk* / *tweet* / *email* to me.
+</textarea>
+        </section>
+      
+  </main>
+</div>
+
+<script src="/talks/assets/js/slides.bundle.js" type="module"></script>
+<script src="/talks/vendor/notes/notes.js" defer></script>
+
+
+<script src="/talks/assets/js/main.js?v=3.2.0" type="module"></script>
+</body>
+</html>

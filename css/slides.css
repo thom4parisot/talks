@@ -1,0 +1,68 @@
+@import '../../node_modules/reveal.js/css/reveal.css';
+@import './includes/highlight.css';
+
+body {
+  background: #fafafa;
+  color: #333;
+  transition: all .5s ease;
+}
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: fade(white, 50%);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.reveal {
+  /* h1 {
+    font-size: 3.77em;
+  }
+
+  h2 {
+    font-size: 2.11em;
+  }
+
+  h3 {
+    font-size: 1.55em;
+  }
+
+  h4 {
+    font-size: 1em;
+  } */
+
+  video,
+  iframe,
+  img {
+    max-height: 95vh;
+    max-width: 100%;
+  }
+
+  h1, h2, h3 {
+    .bbc {
+      font-family: Helvetica;
+      font-size: 1.9em;
+      font-weight: 500;
+      text-shadow: none;
+    }
+  }
+
+  footer,
+  .footer {
+    bottom: -25%;
+    position: absolute;
+    width: 100%;
+  }
+
+  [data-state="random-color"] h1,
+  [data-state="random-color"] h2,
+  [data-state="random-color"] h3,
+  [data-state="random-color"] h4,
+  [data-state="random-color"] h5,
+  [data-state="random-color"] p {
+    font-family: inherit;
+  }
+}
