@@ -28,21 +28,21 @@
   "license": "BSD",
   "readmeFilename": "README.md",
   "hexo": {
-    "version": "3.9.0"
+    "version": "5.1.1"
   },
   "dependencies": {
-    "hexo": "^3.9.0",
+    "hexo": "^5.1.1",
     "hexo-algolia": "^1.3.1",
-    "hexo-cli": "^2.0.0",
-    "hexo-generator-feed": "^1.2.2",
-    "hexo-generator-index": "^0.2.1",
-    "hexo-renderer-ejs": "^0.3.1",
-    "hexo-renderer-markdown-it": "^3.4.1",
-    "hexo-server": "^0.3.3",
-    "hexo-theme-oncletom": "github:oncletom/hexo-theme#master",
-    "markdown-it-attrs": "^3.0.1"
+    "hexo-cli": "^4.2.0",
+    "hexo-generator-feed": "^3.0.0",
+    "hexo-generator-index": "^2.0.0",
+    "hexo-renderer-ejs": "^1.0.0",
+    "hexo-renderer-markdown-it": "^4.1.0",
+    "hexo-server": "^2.0.0",
+    "hexo-theme-oncletom": "github:oncletom/hexo-theme#semver:^v2",
+    "markdown-it-attrs": "^3.0.3"
   },
   "optionalDependencies": {
-    "decktape": "^2.9.3"
+    "decktape": "^3.1.0"
   }
 }

@@ -36,7 +36,6 @@ skip_render:
 new_post_name: :year/:title.md # File name of new posts
 default_layout: talk
 titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
 filename_case: 1
 render_drafts: true
 post_asset_folder: true
@@ -65,7 +64,7 @@ per_page: 0
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: ../node_modules/hexo-theme-oncletom
+theme: oncletom
 layout: talks
 
 nunjucks:
@@ -73,6 +72,12 @@ nunjucks:
   throwOnUndefined: false
   watch: false
 
+pretty_urls:
+  trailing_html: false
+  trailing_index: false
+
+external_link:
+  enabled: true
 
 markdown:
   render:
