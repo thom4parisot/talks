@@ -1,5 +1,5 @@
 language: node_js
-node_js: v12
+node_js: v14
 cache: npm
 
 script: npm run build
