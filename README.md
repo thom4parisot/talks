@@ -16,18 +16,23 @@ You can find eventual talks in the [`proposals/`](proposals) folder. For sure I 
 
 ## Biography
 
-### English
+### In English
 
-I design and develop digital services for the greater good by combining
-UX research and agile practices.
-On my spare time, I bake sourdough bread for friends and family.
+I design and develop open source digital services with a user-centric approach in multidisciplinary teams.
+I focus my efforts on environmental projects, knowledge sharing and independant community spaces.
+I authored the book "Node.js, learning by doing" [^1].
 
-I am also the author of "Node.js, learning by doing",
-a book published in French at Éditions Eyrolles (ISBN : 978-2212139938).
+On my spare time, I bake sourdough bread for friends and family, hike and camp in the surroundings.
 
-I used to work at BBC R&D and to co-organise the Sud Web conference.
+I used to [work at BBC R&D](https://www.bbc.co.uk/rd/people/thomas-parisot) in London, and I have been involved in the [Sud Web conference](https://sudweb.fr).
 
-### Français
+- **Main website**: https://oncletom.io
+- **Professional website**: https://détour.studio
+
+[^1]: Parisot, T. (2018). _Node.js : bonnes pratiques pour la programmation Javascript applicative et modulaire_. Paris, France: Eyrolles.
+
+
+### En français
 
 Je conçois, accompagne et développe des services numériques en allant à la
 rencontre des usagers.
