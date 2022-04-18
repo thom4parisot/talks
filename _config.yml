@@ -3,20 +3,20 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: oncletom.io
+title: Thomas Parisot
 subtitle: Public talks, workshops and events about Web technologies and human experience.
 description: |
   I develop my ideas and share the knowledge by using many formats, ranging
   from public speaking, collaborative workshops and down-to-earth events (free or paid).
 author: Thomas Parisot
-email: hi@oncletom.io
-default_cover: https://oncletom.io/images/thomas-parisot.jpg
+email: hi@thom4.net
+default_cover: https://thom4.net/images/thomas-parisot.jpg
 lang: en-GB
-timezone: Europe/London
+timezone: Europe/Paris
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://oncletom.io/talks
+url: https://thom4.net/talks
 root: /talks/
 permalink: :year/:title/
 permalink_defaults:
@@ -64,7 +64,7 @@ per_page: 0
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: oncletom
+theme: thom4
 layout: talks
 
 nunjucks:
