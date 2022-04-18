@@ -123,5 +123,5 @@ Inject work directory and enable auto-reload.
 docker run -ti \
   -v $(pwd)/src:/app/src:ro \
   -p 0.0.0.0:5000:3000 \
-  oncletom/devcon-nodejs-app npm run start-dev
+  thom4/devcon-nodejs-app npm run start-dev
 ```

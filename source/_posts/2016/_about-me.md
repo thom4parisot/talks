@@ -2,7 +2,7 @@
 
 ## Bonjour,<br> I am **Thomas**
 
-[oncletom.io](https://oncletom.io) – [@oncletom](https://twitter.com/oncletom) {.footer}
+[thom4.net](https://thom4.net) – [@thom4parisot](https://twitter.com/thom4parisot) {.footer}
 
 @@@
 
@@ -18,7 +18,7 @@
 
 ![Full Stack JavaScript](../../2015/images/javascript.png)
 
-[oncletom.io/node.js](https://oncletom.io/node.js)
+[thom4.net/node.js](https://thom4.net/node.js)
 
 @@@
 

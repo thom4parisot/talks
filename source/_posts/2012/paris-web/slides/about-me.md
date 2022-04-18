@@ -8,6 +8,6 @@ Frontend / JavaScript Engineer
 
 <br>
 
-[oncletom.io](https://oncletom.io) –
-[@oncletom](https://twitter.com/oncletom) –
-[github.com/oncletom](https://github.com/oncletom)
+[thom4.net](https://thom4.net) –
+[@thom4parisot](https://twitter.com/thom4parisot) –
+[github.com/thom4parisot](https://github.com/thom4parisot)

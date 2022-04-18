@@ -6,14 +6,14 @@
   "scripts": {
     "prepare": "export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1",
     "build": "hexo generate",
-    "build:pdf": "decktape reveal \"https://oncletom.io/talks/$YEAR/$EVENT/\" slides-thomas-parisot.pdf",
+    "build:pdf": "decktape reveal \"https://thom4.net/talks/$YEAR/$EVENT/\" slides-thomas-parisot.pdf",
     "start": "hexo server",
     "new": "hexo new",
     "test": "exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/oncletom/talks.git"
+    "url": "git://github.com/thom4parisot/talks.git"
   },
   "keywords": [
     "talks",
@@ -24,11 +24,11 @@
     "sharing",
     "knowledge"
   ],
-  "author": "Thomas Parisot (https://oncletom.io)",
+  "author": "Thomas Parisot (https://thom4.net)",
   "license": "BSD",
   "readmeFilename": "README.md",
   "hexo": {
-    "version": "5.1.1"
+    "version": "5.4.2"
   },
   "dependencies": {
     "hexo": "^5.1.1",
@@ -39,7 +39,7 @@
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-markdown-it": "^4.1.0",
     "hexo-server": "^2.0.0",
-    "hexo-theme-oncletom": "github:oncletom/hexo-theme#semver:^v2",
+    "hexo-theme-thom4": "github:thom4parisot/hexo-theme#semver:^v2",
     "markdown-it-attrs": "^3.0.3"
   },
   "optionalDependencies": {

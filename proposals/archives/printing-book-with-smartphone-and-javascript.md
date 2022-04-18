@@ -16,4 +16,4 @@ And maybe, maybe we might print the book of the conference together ;-)
 
 ## Twitter Story
 
-> Book or ebook? Print or digital picture? Let's do all of them using JavaScript! w/ @oncletom
+> Book or ebook? Print or digital picture? Let's do all of them using JavaScript! w/ @thom4parisot

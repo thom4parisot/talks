@@ -2,7 +2,7 @@
 
 # Resources
 
-- https://twitter.com/oncletom/status/425638142981726209
+- https://twitter.com/thom4parisot/status/425638142981726209
 - https://twitter.com/tristanf/status/403542581780692992
 
 # Notes

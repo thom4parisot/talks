@@ -11,7 +11,7 @@ A 🥖🧀 living in 🇬🇧
 full stack engineer, user research, open source, <br>
 agile facilitation, mentoring, etc.
 
-[https://oncletom.io]() • [@oncletom](https://twitter.com/oncletom) {.footer}
+[https://thom4.net]() • [@thom4parisot](https://twitter.com/thom4parisot) {.footer}
 
 @@@
 

@@ -14,4 +14,4 @@
 
 # Pull Request
 
-[Mieux vaut plusieurs qu'une seule](https://oncletom.io/2013/the-55-commits-syndrome/).
+[Mieux vaut plusieurs qu'une seule](https://thom4.net/2013/the-55-commits-syndrome/).

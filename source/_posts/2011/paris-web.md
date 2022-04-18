@@ -6,7 +6,7 @@ event:
   name: Paris Web
   location: Paris
   url: http://paris-web.fr/2011/
-external: //files.oncletom.io/slides/2011/parisweb-lindustrialisation-de-lintgration-web-la-rvolution-de-lartisan-devenu-ouvrier.pdf
+external: //files.thom4.net/slides/2011/parisweb-lindustrialisation-de-lintgration-web-la-rvolution-de-lartisan-devenu-ouvrier.pdf
 video: http://www.dailymotion.com/video/xp5wtt_industrialisation-de-l-integration-web-la-revolution-de-l-artisan-devenu-ouvrier_tech
 ---
 

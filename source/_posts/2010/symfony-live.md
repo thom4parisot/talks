@@ -6,7 +6,7 @@ event:
   name: Symfony Live
   location: Paris
   url: http://live.symfony.com/
-external: //files.oncletom.io/slides/2010/symfonylive-an-offline-admin-generator-with-html-5-and-gears.pdf
+external: //files.thom4.net/slides/2010/symfonylive-an-offline-admin-generator-with-html-5-and-gears.pdf
 video:
 ---
 

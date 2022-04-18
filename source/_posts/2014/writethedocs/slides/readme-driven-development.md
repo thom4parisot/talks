@@ -36,7 +36,7 @@ Time to break your code.
 
 # Pull Requests
 
-[Better to split 'em](https://oncletom.io/2013/the-55-commits-syndrome/).
+[Better to split 'em](https://thom4.net/2013/the-55-commits-syndrome/).
 
 @@@
 

@@ -7,7 +7,7 @@
 ## **Immutable** build
 
 ```bash
-docker build -t oncletom/devcon-nodejs-app
+docker build -t thom4/devcon-nodejs-app
 
 Step 0 : FROM node:4-slim
  ---> 81876916bca2
@@ -26,7 +26,7 @@ Step 3 : RUN npm install
 ## Run
 
 ```bash
-docker run -ti oncletom/devcon-nodejs-app
+docker run -ti thom4/devcon-nodejs-app
 ```
 
 @@@
@@ -41,7 +41,7 @@ Nothing happened unless *requested*.
 
 ```bash
 # docker run -p [net-interface:host-port]:internal-port <image>
-docker run -ti -p 0.0.0.0:5000:3000 oncletom/devcon-nodejs-app
+docker run -ti -p 0.0.0.0:5000:3000 thom4/devcon-nodejs-app
 ```
 
 @@@
@@ -49,17 +49,17 @@ docker run -ti -p 0.0.0.0:5000:3000 oncletom/devcon-nodejs-app
 ## Port binding w/ *containers*
 
 ```bash
-docker run -d --name app oncletom/devcon-nodejs-app
+docker run -d --name app thom4/devcon-nodejs-app
 
-docker run -ti --link "app:app_alias" oncletom/devcon-nodejs-app <command>
+docker run -ti --link "app:app_alias" thom4/devcon-nodejs-app <command>
 ```
 
 ~~~~
 
 ```
-docker run -ti --link "app:app_alias" oncletom/devcon-nodejs-app env
-docker run -ti --link "app:app_alias" oncletom/devcon-nodejs-app ping app_alias
-docker run -ti --link "app:app_alias" oncletom/devcon-nodejs-app curl http://app:app_alias:3000
+docker run -ti --link "app:app_alias" thom4/devcon-nodejs-app env
+docker run -ti --link "app:app_alias" thom4/devcon-nodejs-app ping app_alias
+docker run -ti --link "app:app_alias" thom4/devcon-nodejs-app curl http://app:app_alias:3000
 ```
 
 
@@ -82,7 +82,7 @@ Think [Twelve-Factor](http://12factor.net/). {.footer}
 ~~~~
 
 ```
-docker run -ti --rm -p 0.0.0.0:5000:3000 -e MOTD="Hello Devcon" oncletom/devcon-nodejs-app
+docker run -ti --rm -p 0.0.0.0:5000:3000 -e MOTD="Hello Devcon" thom4/devcon-nodejs-app
 ```
 
 @@@
@@ -90,11 +90,11 @@ docker run -ti --rm -p 0.0.0.0:5000:3000 -e MOTD="Hello Devcon" oncletom/devcon-
 ## Multiply!
 
 ```bash
-docker run -d -P oncletom/devcon-nodejs-app
-docker run -d -P oncletom/devcon-nodejs-app
-docker run -d -P oncletom/devcon-nodejs-app
-docker run -d -P oncletom/devcon-nodejs-app
-docker run -d -P oncletom/devcon-nodejs-app
+docker run -d -P thom4/devcon-nodejs-app
+docker run -d -P thom4/devcon-nodejs-app
+docker run -d -P thom4/devcon-nodejs-app
+docker run -d -P thom4/devcon-nodejs-app
+docker run -d -P thom4/devcon-nodejs-app
 
 # …
 

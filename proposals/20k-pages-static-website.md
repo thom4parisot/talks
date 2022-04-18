@@ -16,4 +16,4 @@ You will eventually learn how to deploy such a website from a mobile phone on a 
 
 ## Twitter Story
 
-> Design and challenges to migrate a PHP/MySQL community website to a purely static one. From 10 to 20k pages. w/ @oncletom
+> Design and challenges to migrate a PHP/MySQL community website to a purely static one. From 10 to 20k pages. w/ @thom4parisot

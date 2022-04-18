@@ -6,7 +6,7 @@ event:
   name: TakeOff
   location: Lille
   url: http://takeoffconf.com/2013
-external: //files.oncletom.io/slides/2013/takeoff-business-logic-in-the-cloud-with-google-apps-scripts.pdf
+external: //files.thom4.net/slides/2013/takeoff-business-logic-in-the-cloud-with-google-apps-scripts.pdf
 video: https://www.youtube.com/watch?v=sLHEjTlOCdk
 ---
 

@@ -7,7 +7,7 @@ event:
   name: EBU DevCon
   location: Geneva
   url: https://tech.ebu.ch/devcon14
-video: https://files.oncletom.io/talks/2014/ebu-devcon.mp4
+video: https://files.thom4.net/talks/2014/ebu-devcon.mp4
 slides:
   - file: intro.md
   - file: abcd.md

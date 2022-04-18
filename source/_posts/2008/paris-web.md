@@ -7,7 +7,7 @@ event:
   name: Paris Web
   location: Paris
   url: http://paris-web.fr/2008/
-external: //files.oncletom.io/slides/2008/parisweb-dveloppement-efficace-avec-les-frameworks-css-presentation.pdf
+external: //files.thom4.net/slides/2008/parisweb-dveloppement-efficace-avec-les-frameworks-css-presentation.pdf
 ---
 
 Méconnus ou dénigrés, les frameworks ou briques de développement CSS ont pourtant atteint un certain seuil de maturité.

@@ -55,5 +55,5 @@ grunt.initConfig({
 });
 ```
 
-cf. [Dynamic Grunt Targets Using Templates](https://oncletom.io/2013/dynamic-grunt-targets-using-templates/)
+cf. [Dynamic Grunt Targets Using Templates](https://thom4.net/2013/dynamic-grunt-targets-using-templates/)
 

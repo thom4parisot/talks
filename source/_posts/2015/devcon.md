@@ -8,7 +8,7 @@ event:
   location: Geneva
   duration: 25
   url: https://tech.ebu.ch/events/devcon15
-video: https://files.oncletom.io/talks/2015/ebu-devcon.mp4
+video: https://files.thom4.net/talks/2015/ebu-devcon.mp4
 slides:
   - file: title.md
   - file: ../../_about-me.md
@@ -33,4 +33,4 @@ us, developers?
 
 We will investigate what Docker really is, how to think in term of layers
 and containers, and what are the key best practice in term of design and
-security. [Demonstrator can be found on GitHub](https://github.com/oncletom/devcon-2015-docker-demonstrator).
+security. [Demonstrator can be found on GitHub](https://github.com/thom4parisot/devcon-2015-docker-demonstrator).

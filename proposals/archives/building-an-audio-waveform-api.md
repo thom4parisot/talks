@@ -14,4 +14,4 @@ This is a journey in making a visually simple Canvas editing tool: the context, 
 
 ## Twitter Story
 
-> A journey through making a Canvas-based millisecond-precision audio editing tool by BBC R&D: challenges and lessons w/ @oncletom
+> A journey through making a Canvas-based millisecond-precision audio editing tool by BBC R&D: challenges and lessons w/ @thom4parisot

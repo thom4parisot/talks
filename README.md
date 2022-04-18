@@ -26,7 +26,7 @@ On my spare time, I bake sourdough bread for friends and family, hike and camp i
 
 I used to [work at BBC R&D](https://www.bbc.co.uk/rd/people/thomas-parisot) in London, and I have been involved in the [Sud Web conference](https://sudweb.fr).
 
-- **Main website**: https://oncletom.io
+- **Main website**: https://thom4.net
 - **Professional website**: https://détour.studio
 
 [^1]: Parisot, T. (2018). _Node.js : bonnes pratiques pour la programmation Javascript applicative et modulaire_. Paris, France: Eyrolles.
@@ -64,10 +64,10 @@ Thank you [decktape](https://github.com/astefanutti/decktape) for the amazing to
 
 *Location*: Crest, Drôme Valley, France.
 
-* **Twitter**: [@oncletom](https://twitter.com/oncletom)
-* **Github**: [@oncletom](https://github.com/oncletom)
-* **Website**: [oncletom.io](https://oncletom.io)
+* **Twitter**: [@thom4parisot](https://twitter.com/thom4parisot)
+* **Github**: [@thom4parisot](https://github.com/thom4parisot)
+* **Website**: [thom4.net](https://thom4.net)
 
 [bbcrd]: http://www.bbc.co.uk/rd
 [sudweb]: https://sudweb.fr/
-[photography]: https://oncletom.io/photography/
+[photography]: https://thom4.net/photography/

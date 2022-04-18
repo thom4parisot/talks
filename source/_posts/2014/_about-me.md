@@ -4,8 +4,8 @@
 
 ## *Thomas* Parisot
 
-[oncletom.io](https://oncletom.io) –
-[@oncletom](https://twitter.com/oncletom)
+[thom4.net](https://thom4.net) –
+[@thom4parisot](https://twitter.com/thom4parisot)
 
 @@@
 
@@ -19,14 +19,14 @@
 
 ## <span class="bbc">BBC R&D</span>
 
-[github.com/bbcrd](https://github.com/bbcrd)  
+[github.com/bbcrd](https://github.com/bbcrd)
 [bbc.co.uk/rd](http://bbc.co.uk/rd)
 
 @@@
 
 ![I published](../../images/npm.png)
 
-[npmjs.org/~oncletom](https://npmjs.org/~oncletom)
+[npmjs.org/~thom4](https://npmjs.org/~thom4)
 
 @@@
 

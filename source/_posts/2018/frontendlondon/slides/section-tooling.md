@@ -90,7 +90,7 @@ A ~~picture~~ video is worth 1000 words (when you can play a video)
 
 @@@
 
-<video data-autoplay src="https://oncletom.io/node.js/chapter-09/videos/browser-sync.mp4"></video>
+<video data-autoplay src="https://thom4.net/node.js/chapter-09/videos/browser-sync.mp4"></video>
 
 @@@
 

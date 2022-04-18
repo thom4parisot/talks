@@ -1,6 +1,6 @@
 <!-- .slide: data-background="../devcon/images/menerbes.jpg" -->
 
-### oncletom.io/talks/2014/develop-bbc/
+### thom4.net/talks/2014/develop-bbc/
 
 @@@
 

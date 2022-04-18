@@ -27,7 +27,7 @@ To read online, to contribute, to review.
 @@@
 
 ```sh
-git clone https://github.com/oncletom/nodebook
+git clone https://github.com/thom4parisot/nodebook
 ```
 
 @@@
