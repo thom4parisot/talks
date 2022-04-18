@@ -1,5 +1,5 @@
 svg {
-  fill: var(--light-accent);
+  fill: currentColor;
   height: .9em;
   width: .9em;
 }

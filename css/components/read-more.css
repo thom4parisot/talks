@@ -8,7 +8,7 @@ a.read-more {
 .read-more a:focus,
 a.read-more:hover,
 a.read-more:focus {
-  color: var(--dark-accent);
+  text-decoration: underline;
 }
 
   .read-more a::after,

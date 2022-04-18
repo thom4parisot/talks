@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
   const tilesContainer = document.querySelector('.site-blog .photography-tiles > ul');
 
   if (tilesContainer) {
-    get('https://oncletom.io/photography/atom.xml')
+    get('https://thom4.net/photography/atom.xml')
       .then(items => items.slice(0, 8).map(post => '<li>' + render({post}) + '</li>'))
       .then(items => tilesContainer.innerHTML = items.join(''));
   }

@@ -26,7 +26,7 @@ article .cover {
   }
 
 article.article .cover {
-  border-bottom: 4px solid var(--light-accent);
+  border-bottom: 4px solid var(--brand-color);
   border-radius: none;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -43,7 +43,12 @@ article.article .cover {
     grid-template-columns: 1fr 3fr;
     grid-row-gap: 0;
     grid-column-gap: 1rem;
+    max-width: calc(46rem + 12rem);
   }
+
+    article.article.with-aside .cover {
+      max-height: none;
+    }
 
   article.article.with-aside > * {
     grid-column: 2;
@@ -73,11 +78,12 @@ article.article .cover {
 
     article.article.with-aside .cover {
       border: none;
-      border-right: 4px solid var(--light-accent);
+      border-right: 4px solid var(--brand-color);
       border-radius: 0;
       border-top-left-radius: 8px;
       border-bottom-left-radius: 8px;
       grid-column: 1;
+      max-height: 300px;
     }
 
     article.article.with-aside img.is-cover {
@@ -113,7 +119,7 @@ article.article h1 {
   article h1 a,
   article h2 a,
   article h3 a {
-    color: var(--dark-shade);
+    color: inherit;
     text-decoration: none;
   }
 
@@ -164,6 +170,30 @@ article.article .post__content h4 {
       border-bottom: 1px solid var(--light-accent);
   }
 
+.post__content ins {
+  background-color: #C3D49280;
+  text-decoration: none;
+}
+
+.post__content ins::before {
+  display: block;
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+article .post__content ins.section {
+  display: block;
+}
+article .post__content ins::before,
+article[lang*="en"] .post__content ins::before {
+  content: "Content added on " attr(datetime);
+}
+article[lang*="fr"] .post__content ins::before {
+  content: "Contenu ajouté le " attr(datetime);
+}
+
+
 .post__content ul {
   padding-left: 0;
   list-style: inside;
@@ -173,7 +203,8 @@ article.article .post__content h4 {
   }
 
 article.article .post__content p img {
-  border: 1rem solid var(--light-accent);
+  border: 1rem solid #fff;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, .2);
   max-width: 100%;
   box-sizing: border-box;
 }

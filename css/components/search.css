@@ -6,7 +6,7 @@
 #search form {
   display: flex;
   background: #fff;
-  border: 2px solid var(--light-accent);
+  border: 2px solid var(--brand-color);
   border-radius: 8px;
 }
   #search form > input,

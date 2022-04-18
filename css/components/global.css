@@ -2,7 +2,7 @@
 
 body {
   background-color: var(--light-shade);
-  border-top: 4px solid var(--light-accent);
+  border-top: 4px solid var(--brand-color);
   color: var(--dark-shade);
   padding: 2rem;
   scroll-behavior: smooth;
@@ -32,6 +32,7 @@ details summary {
 
 ::selection {
   background-color: var(--light-accent);
+  color: var(--light-shade);
 }
 
 main[role="main"] {
@@ -84,9 +85,13 @@ hr {
   content: "";
   display: block;
   border: none;
-  border-top: 4px solid var(--light-accent);
+  border-top: 4px solid var(--brand-color);
   margin-bottom: 1rem;
   margin-left: 0;
   margin-top: 1rem;
   width: 160px;
+}
+
+footer.next + .next::before {
+  display: none;
 }

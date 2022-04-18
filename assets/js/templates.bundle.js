@@ -383,55 +383,38 @@ var utils = createCommonjsModule(function (module, exports) {
     });
   };
 });
-var utils_1 = utils.escapeRegExpChars;
-var utils_2 = utils.escapeXML;
-var utils_3 = utils.shallowCopy;
-var utils_4 = utils.shallowCopyFromList;
-var utils_5 = utils.cache;
-var utils_6 = utils.hyphenToCamel;
+utils.escapeRegExpChars;
+utils.escapeXML;
+utils.shallowCopy;
+utils.shallowCopyFromList;
+utils.cache;
+utils.hyphenToCamel;
 
-var _from = "ejs@3.1.5";
-var _id = "ejs@3.1.5";
-var _inBundle = false;
-var _integrity = "sha512-dldq3ZfFtgVTJMLjOe+/3sROTzALlL9E34V4/sDtUd/KlBSS0s6U1/+WPE1B4sj9CXHJpL1M6rhNJnc9Wbal9w==";
-var _location = "/ejs";
-var _phantomChildren = {
-};
-var _requested = {
-	type: "version",
-	registry: true,
-	raw: "ejs@3.1.5",
-	name: "ejs",
-	escapedName: "ejs",
-	rawSpec: "3.1.5",
-	saveSpec: null,
-	fetchSpec: "3.1.5"
-};
-var _requiredBy = [
-	"#DEV:/",
-	"#USER"
+var name = "ejs";
+var description = "Embedded JavaScript templates";
+var keywords = [
+	"template",
+	"engine",
+	"ejs"
 ];
-var _resolved = "https://registry.npmjs.org/ejs/-/ejs-3.1.5.tgz";
-var _shasum = "aed723844dc20acb4b170cd9ab1017e476a0d93b";
-var _spec = "ejs@3.1.5";
-var _where = "/Users/oncletom/workspace/hexo-theme";
-var author = {
-	name: "Matthew Eernisse",
-	email: "mde@fleegix.org",
-	url: "http://fleegix.org"
-};
+var version = "3.1.6";
+var author = "Matthew Eernisse <mde@fleegix.org> (http://fleegix.org)";
+var license = "Apache-2.0";
 var bin = {
-	ejs: "bin/cli.js"
+	ejs: "./bin/cli.js"
 };
-var bugs = {
-	url: "https://github.com/mde/ejs/issues"
+var main = "./lib/ejs.js";
+var jsdelivr = "ejs.min.js";
+var unpkg = "ejs.min.js";
+var repository = {
+	type: "git",
+	url: "git://github.com/mde/ejs.git"
 };
-var bundleDependencies = false;
+var bugs = "https://github.com/mde/ejs/issues";
+var homepage = "https://github.com/mde/ejs";
 var dependencies = {
 	jake: "^10.6.1"
 };
-var deprecated = false;
-var description = "Embedded JavaScript templates";
 var devDependencies = {
 	browserify: "^16.5.1",
 	eslint: "^6.8.0",
@@ -444,92 +427,48 @@ var devDependencies = {
 var engines = {
 	node: ">=0.10.0"
 };
-var homepage = "https://github.com/mde/ejs";
-var jsdelivr = "ejs.min.js";
-var keywords = [
-	"template",
-	"engine",
-	"ejs"
-];
-var license = "Apache-2.0";
-var main = "./lib/ejs.js";
-var name = "ejs";
-var repository = {
-	type: "git",
-	url: "git://github.com/mde/ejs.git"
-};
 var scripts = {
 	test: "mocha"
 };
-var unpkg = "ejs.min.js";
-var version = "3.1.5";
 const _package = {
-	_from: _from,
-	_id: _id,
-	_inBundle: _inBundle,
-	_integrity: _integrity,
-	_location: _location,
-	_phantomChildren: _phantomChildren,
-	_requested: _requested,
-	_requiredBy: _requiredBy,
-	_resolved: _resolved,
-	_shasum: _shasum,
-	_spec: _spec,
-	_where: _where,
-	author: author,
-	bin: bin,
-	bugs: bugs,
-	bundleDependencies: bundleDependencies,
-	dependencies: dependencies,
-	deprecated: deprecated,
+	name: name,
 	description: description,
+	keywords: keywords,
+	version: version,
+	author: author,
+	license: license,
+	bin: bin,
+	main: main,
+	jsdelivr: jsdelivr,
+	unpkg: unpkg,
+	repository: repository,
+	bugs: bugs,
+	homepage: homepage,
+	dependencies: dependencies,
 	devDependencies: devDependencies,
 	engines: engines,
-	homepage: homepage,
-	jsdelivr: jsdelivr,
-	keywords: keywords,
-	license: license,
-	main: main,
-	name: name,
-	repository: repository,
-	scripts: scripts,
-	unpkg: unpkg,
-	version: version
+	scripts: scripts
 };
 
 const _package$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  _from: _from,
-  _id: _id,
-  _inBundle: _inBundle,
-  _integrity: _integrity,
-  _location: _location,
-  _phantomChildren: _phantomChildren,
-  _requested: _requested,
-  _requiredBy: _requiredBy,
-  _resolved: _resolved,
-  _shasum: _shasum,
-  _spec: _spec,
-  _where: _where,
-  author: author,
-  bin: bin,
-  bugs: bugs,
-  bundleDependencies: bundleDependencies,
-  dependencies: dependencies,
-  deprecated: deprecated,
+  name: name,
   description: description,
+  keywords: keywords,
+  version: version,
+  author: author,
+  license: license,
+  bin: bin,
+  main: main,
+  jsdelivr: jsdelivr,
+  unpkg: unpkg,
+  repository: repository,
+  bugs: bugs,
+  homepage: homepage,
+  dependencies: dependencies,
   devDependencies: devDependencies,
   engines: engines,
-  homepage: homepage,
-  jsdelivr: jsdelivr,
-  keywords: keywords,
-  license: license,
-  main: main,
-  name: name,
-  repository: repository,
   scripts: scripts,
-  unpkg: unpkg,
-  version: version,
   'default': _package
 });
 
@@ -684,24 +623,24 @@ var ejs = createCommonjsModule(function (module, exports) {
       }
     } // Relative paths
     else {
-        // Look relative to a passed filename first
-        if (options.filename) {
-          filePath = exports.resolveInclude(path, options.filename);
+      // Look relative to a passed filename first
+      if (options.filename) {
+        filePath = exports.resolveInclude(path, options.filename);
 
-          if (fs.existsSync(filePath)) {
-            includePath = filePath;
-          }
-        } // Then look in any views directories
-
-
-        if (!includePath && Array.isArray(views)) {
-          includePath = resolvePaths(path, views);
+        if (fs.existsSync(filePath)) {
+          includePath = filePath;
         }
+      } // Then look in any views directories
 
-        if (!includePath && typeof options.includer !== 'function') {
-          throw new Error('Could not find the include file "' + options.escapeFunction(path) + '"');
-        }
+
+      if (!includePath && Array.isArray(views)) {
+        includePath = resolvePaths(path, views);
       }
+
+      if (!includePath && typeof options.includer !== 'function') {
+        throw new Error('Could not find the include file "' + options.escapeFunction(path) + '"');
+      }
+    }
 
     return includePath;
   }
@@ -978,31 +917,31 @@ var ejs = createCommonjsModule(function (module, exports) {
         utils.shallowCopy(opts, args.pop());
       } // Special casing for Express (settings + opts-in-data)
       else {
-          // Express 3 and 4
-          if (data.settings) {
-            // Pull a few things from known locations
-            if (data.settings.views) {
-              opts.views = data.settings.views;
-            }
+        // Express 3 and 4
+        if (data.settings) {
+          // Pull a few things from known locations
+          if (data.settings.views) {
+            opts.views = data.settings.views;
+          }
 
-            if (data.settings['view cache']) {
-              opts.cache = true;
-            } // Undocumented after Express 2, but still usable, esp. for
-            // items that are unsafe to be passed along with data, like `root`
-
-
-            viewOpts = data.settings['view options'];
-
-            if (viewOpts) {
-              utils.shallowCopy(opts, viewOpts);
-            }
-          } // Express 2 and lower, values set in app.locals, or people who just
-          // want to pass options in their data. NOTE: These values will override
-          // anything previously set in settings  or settings['view options']
+          if (data.settings['view cache']) {
+            opts.cache = true;
+          } // Undocumented after Express 2, but still usable, esp. for
+          // items that are unsafe to be passed along with data, like `root`
 
 
-          utils.shallowCopyFromList(opts, data, _OPTS_PASSABLE_WITH_DATA_EXPRESS);
-        }
+          viewOpts = data.settings['view options'];
+
+          if (viewOpts) {
+            utils.shallowCopy(opts, viewOpts);
+          }
+        } // Express 2 and lower, values set in app.locals, or people who just
+        // want to pass options in their data. NOTE: These values will override
+        // anything previously set in settings  or settings['view options']
+
+
+        utils.shallowCopyFromList(opts, data, _OPTS_PASSABLE_WITH_DATA_EXPRESS);
+      }
 
       opts.filename = filename;
     } else {
@@ -1100,6 +1039,9 @@ var ejs = createCommonjsModule(function (module, exports) {
       /** @type {FunctionConstructor} */
 
       var ctor;
+      /** @type {string} */
+
+      var sanitizedFilename = opts.filename ? JSON.stringify(opts.filename) : 'undefined';
 
       if (!this.source) {
         this.generateSource();
@@ -1135,7 +1077,7 @@ var ejs = createCommonjsModule(function (module, exports) {
       }
 
       if (opts.compileDebug) {
-        src = 'var __line = 1' + '\n' + '  , __lines = ' + JSON.stringify(this.templateText) + '\n' + '  , __filename = ' + (opts.filename ? JSON.stringify(opts.filename) : 'undefined') + ';' + '\n' + 'try {' + '\n' + this.source + '} catch (e) {' + '\n' + '  rethrow(e, __lines, __filename, __line, escapeFn);' + '\n' + '}' + '\n';
+        src = 'var __line = 1' + '\n' + '  , __lines = ' + JSON.stringify(this.templateText) + '\n' + '  , __filename = ' + sanitizedFilename + ';' + '\n' + 'try {' + '\n' + this.source + '} catch (e) {' + '\n' + '  rethrow(e, __lines, __filename, __line, escapeFn);' + '\n' + '}' + '\n';
       } else {
         src = this.source;
       }
@@ -1157,7 +1099,7 @@ var ejs = createCommonjsModule(function (module, exports) {
       }
 
       if (opts.compileDebug && opts.filename) {
-        src = src + '\n' + '//# sourceURL=' + opts.filename + '\n';
+        src = src + '\n' + '//# sourceURL=' + sanitizedFilename + '\n';
       }
 
       try {
@@ -1411,8 +1353,8 @@ var ejs = createCommonjsModule(function (module, exports) {
             }
           } // In string mode, just add the output
           else {
-              this._addOutput(line);
-            }
+            this._addOutput(line);
+          }
 
       }
 
@@ -1470,20 +1412,20 @@ var ejs = createCommonjsModule(function (module, exports) {
     window.ejs = exports;
   }
 });
-var ejs_1 = ejs.cache;
-var ejs_2 = ejs.fileLoader;
-var ejs_3 = ejs.localsName;
-var ejs_4 = ejs.promiseImpl;
-var ejs_5 = ejs.resolveInclude;
+ejs.cache;
+ejs.fileLoader;
+ejs.localsName;
+ejs.promiseImpl;
+ejs.resolveInclude;
 var ejs_6 = ejs.compile;
-var ejs_7 = ejs.render;
-var ejs_8 = ejs.renderFile;
-var ejs_9 = ejs.Template;
-var ejs_10 = ejs.clearCache;
-var ejs_11 = ejs.escapeXML;
-var ejs_12 = ejs.__express;
-var ejs_13 = ejs.VERSION;
-var ejs_14 = ejs.name;
+ejs.render;
+ejs.renderFile;
+ejs.Template;
+ejs.clearCache;
+ejs.escapeXML;
+ejs.__express;
+ejs.VERSION;
+ejs.name;
 
 const searchResultEjs = "<% if (post.layout === 'post') { %>\n<time class=\"metadata\" datetime=\"<%= post.date %>\"><%= new Date(post.date_as_int * 1000).toLocaleDateString(post.lang, {month: 'long', year: 'numeric'}) %></time>\n<% } %>\n<div>\n  <a href=\"<%= post.permalink %>\" rel=\"bookmark\"><%= post.title %></a>\n  <% if (post.excerpt) { %>\n  <details>\n    <summary>Display_summary</summary>\n    <%- post.excerpt %>\n  </details>\n  <% } %>\n<div>\n";
 

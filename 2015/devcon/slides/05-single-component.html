@@ -2,7 +2,7 @@
 <h2 id="Single-component"><a class="header-anchor" href="#Single-component">§</a><strong>Single</strong> component</h2>
 <p>@@@</p>
 <h2 id="Immutable-build"><a class="header-anchor" href="#Immutable-build">§</a><strong>Immutable</strong> build</h2>
-<pre><code class="language-bash">docker build -t oncletom/devcon-nodejs-app
+<pre><code class="language-bash">docker build -t thom4/devcon-nodejs-app
 
 Step 0 : FROM node:4-slim
  ---&gt; 81876916bca2
@@ -17,7 +17,7 @@ Step 3 : RUN npm install
 </code></pre>
 <p>@@@</p>
 <h2 id="Run"><a class="header-anchor" href="#Run">§</a>Run</h2>
-<pre><code class="language-bash">docker run -ti oncletom/devcon-nodejs-app
+<pre><code class="language-bash">docker run -ti thom4/devcon-nodejs-app
 </code></pre>
 <p>@@@</p>
 <h2 id="Explicit-behaviour"><a class="header-anchor" href="#Explicit-behaviour">§</a><strong>Explicit</strong> behaviour</h2>
@@ -25,19 +25,19 @@ Step 3 : RUN npm install
 <p>@@@</p>
 <h2 id="Port-binding-w-host"><a class="header-anchor" href="#Port-binding-w-host">§</a>Port binding w/ <em>host</em></h2>
 <pre><code class="language-bash"># docker run -p [net-interface:host-port]:internal-port &lt;image&gt;
-docker run -ti -p 0.0.0.0:5000:3000 oncletom/devcon-nodejs-app
+docker run -ti -p 0.0.0.0:5000:3000 thom4/devcon-nodejs-app
 </code></pre>
 <p>@@@</p>
 <h2 id="Port-binding-w-containers"><a class="header-anchor" href="#Port-binding-w-containers">§</a>Port binding w/ <em>containers</em></h2>
-<pre><code class="language-bash">docker run -d --name app oncletom/devcon-nodejs-app
+<pre><code class="language-bash">docker run -d --name app thom4/devcon-nodejs-app
 
-docker run -ti --link &quot;app:app_alias&quot; oncletom/devcon-nodejs-app &lt;command&gt;
+docker run -ti --link &quot;app:app_alias&quot; thom4/devcon-nodejs-app &lt;command&gt;
 </code></pre>
 <pre><code>
 ```
-docker run -ti --link &quot;app:app_alias&quot; oncletom/devcon-nodejs-app env
-docker run -ti --link &quot;app:app_alias&quot; oncletom/devcon-nodejs-app ping app_alias
-docker run -ti --link &quot;app:app_alias&quot; oncletom/devcon-nodejs-app curl http://app:app_alias:3000
+docker run -ti --link &quot;app:app_alias&quot; thom4/devcon-nodejs-app env
+docker run -ti --link &quot;app:app_alias&quot; thom4/devcon-nodejs-app ping app_alias
+docker run -ti --link &quot;app:app_alias&quot; thom4/devcon-nodejs-app curl http://app:app_alias:3000
 ```
 
 
@@ -58,15 +58,15 @@ DATABASE_URL=postgresql://host:port/db?pool=25
 Think [Twelve-Factor](http://12factor.net/). {.footer}
 
 </code></pre>
-<pre><code>docker run -ti --rm -p 0.0.0.0:5000:3000 -e MOTD=&quot;Hello Devcon&quot; oncletom/devcon-nodejs-app
+<pre><code>docker run -ti --rm -p 0.0.0.0:5000:3000 -e MOTD=&quot;Hello Devcon&quot; thom4/devcon-nodejs-app
 </code></pre>
 <p>@@@</p>
 <h2 id="Multiply"><a class="header-anchor" href="#Multiply">§</a>Multiply!</h2>
-<pre><code class="language-bash">docker run -d -P oncletom/devcon-nodejs-app
-docker run -d -P oncletom/devcon-nodejs-app
-docker run -d -P oncletom/devcon-nodejs-app
-docker run -d -P oncletom/devcon-nodejs-app
-docker run -d -P oncletom/devcon-nodejs-app
+<pre><code class="language-bash">docker run -d -P thom4/devcon-nodejs-app
+docker run -d -P thom4/devcon-nodejs-app
+docker run -d -P thom4/devcon-nodejs-app
+docker run -d -P thom4/devcon-nodejs-app
+docker run -d -P thom4/devcon-nodejs-app
 
 # …
 

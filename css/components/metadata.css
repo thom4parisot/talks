@@ -19,7 +19,7 @@ li ul.metadata {
 }
 
 .metadata {
-  color: var(--dark-accent);
+  color: var(--commented);
 }
 
 .metadata--type {

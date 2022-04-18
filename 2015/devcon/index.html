@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head><meta charset="utf-8">
-<title>Rethinking applications design with Docker • oncletom.io</title>
+<title>Rethinking applications design with Docker • Thomas Parisot</title>
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <link rel="preload" href="/assets/icons.svg">
 <link rel="preload" href="/assets/avatar.jpg">
@@ -18,36 +18,35 @@
 <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#D4C492">
 <meta name="msapplication-TileColor" content="#D4C492">
 <meta name="theme-color" content="#D4C492">
-<link rel="pgpkey" href="https://keybase.io/oncletom/pgp_keys.asc?fingerprint=FD7AA82DF0BB977542BB4F44CB88AA7D815E0D6B">
 <meta name="description" content="Docker has shaken the software world by making LXC a commodity. Now&amp;#10;that the universal runtime container runC is born, what is its impact on&amp;#10;us, developers?&amp;#10;We will investigate what Docker really is, how to think in term of layers&amp;#10;and containers, and what are the key best practice in term of design and&amp;#10;security. Demonstrator can be found on GitHub.">
 <meta name="keywords" content="">
-<link rel="alternate" type="application/rss+xml" title="oncletom.io" href="https://oncletom.io/feed/">
-<link rel="alternate" type="application/rss+xml" title="oncletom.io • Photography" href="https://oncletom.io/photography/feed/">
-<link rel="alternate" type="application/rss+xml" title="oncletom.io • Talks" href="https://oncletom.io/talks/feed/">
+<link rel="alternate" type="application/rss+xml" title="Thomas Parisot" href="https://thom4.net/feed/">
+<link rel="alternate" type="application/rss+xml" title="Thomas Parisot • Photography" href="https://thom4.net/photography/feed/">
+<link rel="alternate" type="application/rss+xml" title="Thomas Parisot • Talks" href="https://thom4.net/talks/feed/">
 <link rel="author" href="Thomas Parisot">
-<link rel="canonical" data-disqus-shortname="oncletom" href="https://oncletom.io/talks/2015/devcon/">
+<link rel="canonical" data-disqus-shortname="oncletom" href="https://thom4.net/talks/2015/devcon/">
 
-<link rel="prefetch" href="https://oncletom.io/talks/2015/web2day/">
-<link rel="prefetch" href="https://oncletom.io/talks/2015/bdx.io/">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@oncletom">
-<meta name="twitter:creator" content="@oncletom">
-<meta name="twitter:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<link rel="prefetch" href="https://thom4.net/talks/2015/web2day/">
+<link rel="prefetch" href="https://thom4.net/talks/2015/bdx.io/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@thom4parisot">
+<meta name="twitter:creator" content="@thom4parisot">
+<meta name="twitter:image" content="https://thom4.net/images/thomas-parisot.jpg">
 <meta name="twitter:description" content="Docker has shaken the software world by making LXC a commodity. Now&amp;#10;that the universal runtime container runC is born, what is its impact on&amp;#10;us, developers?&amp;#10;We will investigate what Docker really is, how to think in term of layers&amp;#10;and containers, and what are the key best practice in term of design and&amp;#10;security. Demonstrator can be found on GitHub.">
 <meta property="og:title" content="Rethinking applications design with Docker">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://oncletom.io/talks/2015/devcon/">
-<meta property="og:image" content="https://oncletom.io/images/thomas-parisot.jpg">
+<meta property="og:url" content="https://thom4.net/talks/2015/devcon/">
+<meta property="og:image" content="https://thom4.net/images/thomas-parisot.jpg">
 <meta property="og:description" content="Docker has shaken the software world by making LXC a commodity. Now&amp;#10;that the universal runtime container runC is born, what is its impact on&amp;#10;us, developers?&amp;#10;We will investigate what Docker really is, how to think in term of layers&amp;#10;and containers, and what are the key best practice in term of design and&amp;#10;security. Demonstrator can be found on GitHub.">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:locale:alternate" content="en_GB">
-<meta property="og:site_name" content="oncletom.io">
-<link rel="me" href="https://masto.oncletom.io/@thomas">
-<link rel="pingback" href="https://webmention.io/oncletom.io/xmlrpc">
-<link rel="webmention" href="https://webmention.io/oncletom.io/webmention">
+<meta property="og:site_name" content="Thomas Parisot">
+<link rel="me" href="https://diaspodon.fr/@thom4">
+<link rel="pingback" href="https://webmention.io/thom4.net/xmlrpc">
+<link rel="webmention" href="https://webmention.io/thom4.net/webmention">
 <meta property="algolia:search" data-application-id="QIP7Z1PL3B" data-api-key="5caf0f682ba8349e8a67872b9edde3f3" data-index-name="prod_blog">
 
-<meta name="generator" content="Hexo 5.1.1"></head>
+<meta name="generator" content="Hexo 5.4.2"></head>
 <body class="home site-talks content-post">
 <div class="reveal">
   <main class="slides" lang="en-GB">
@@ -78,7 +77,7 @@ This is a talk about **reproducibility**. {.fragment}
 
 ## Bonjour,<br> I am **Thomas**
 
-[oncletom.io](https://oncletom.io) – [@oncletom](https://twitter.com/oncletom) {.footer}
+[thom4.net](https://thom4.net) – [@thom4parisot](https://twitter.com/thom4parisot) {.footer}
 
 @@@
 
@@ -95,7 +94,7 @@ This is a talk about **reproducibility**. {.fragment}
 
 ![Full Stack JavaScript](../../images/javascript.png)
 
-[oncletom.io/node.js](https://oncletom.io/node.js)
+[thom4.net/node.js](https://thom4.net/node.js)
 
 @@@
 
@@ -381,7 +380,7 @@ CMD ["npm", "start"]
 ## **Immutable** build
 
 ```bash
-docker build -t oncletom/devcon-nodejs-app
+docker build -t thom4/devcon-nodejs-app
 
 Step 0 : FROM node:4-slim
  ---> 81876916bca2
@@ -400,7 +399,7 @@ Step 3 : RUN npm install
 ## Run
 
 ```bash
-docker run -ti oncletom/devcon-nodejs-app
+docker run -ti thom4/devcon-nodejs-app
 ```
 
 @@@
@@ -415,7 +414,7 @@ Nothing happened unless *requested*.
 
 ```bash
 # docker run -p [net-interface:host-port]:internal-port <image>
-docker run -ti -p 0.0.0.0:5000:3000 oncletom/devcon-nodejs-app
+docker run -ti -p 0.0.0.0:5000:3000 thom4/devcon-nodejs-app
 ```
 
 @@@
@@ -423,17 +422,17 @@ docker run -ti -p 0.0.0.0:5000:3000 oncletom/devcon-nodejs-app
 ## Port binding w/ *containers*
 
 ```bash
-docker run -d --name app oncletom/devcon-nodejs-app
+docker run -d --name app thom4/devcon-nodejs-app
 
-docker run -ti --link "app:app_alias" oncletom/devcon-nodejs-app <command>
+docker run -ti --link "app:app_alias" thom4/devcon-nodejs-app <command>
 ```
 
 ~~~~
 
 ```
-docker run -ti --link "app:app_alias" oncletom/devcon-nodejs-app env
-docker run -ti --link "app:app_alias" oncletom/devcon-nodejs-app ping app_alias
-docker run -ti --link "app:app_alias" oncletom/devcon-nodejs-app curl http://app:app_alias:3000
+docker run -ti --link "app:app_alias" thom4/devcon-nodejs-app env
+docker run -ti --link "app:app_alias" thom4/devcon-nodejs-app ping app_alias
+docker run -ti --link "app:app_alias" thom4/devcon-nodejs-app curl http://app:app_alias:3000
 ```
 
 
@@ -456,7 +455,7 @@ Think [Twelve-Factor](http://12factor.net/). {.footer}
 ~~~~
 
 ```
-docker run -ti --rm -p 0.0.0.0:5000:3000 -e MOTD="Hello Devcon" oncletom/devcon-nodejs-app
+docker run -ti --rm -p 0.0.0.0:5000:3000 -e MOTD="Hello Devcon" thom4/devcon-nodejs-app
 ```
 
 @@@
@@ -464,11 +463,11 @@ docker run -ti --rm -p 0.0.0.0:5000:3000 -e MOTD="Hello Devcon" oncletom/devcon-
 ## Multiply!
 
 ```bash
-docker run -d -P oncletom/devcon-nodejs-app
-docker run -d -P oncletom/devcon-nodejs-app
-docker run -d -P oncletom/devcon-nodejs-app
-docker run -d -P oncletom/devcon-nodejs-app
-docker run -d -P oncletom/devcon-nodejs-app
+docker run -d -P thom4/devcon-nodejs-app
+docker run -d -P thom4/devcon-nodejs-app
+docker run -d -P thom4/devcon-nodejs-app
+docker run -d -P thom4/devcon-nodejs-app
+docker run -d -P thom4/devcon-nodejs-app
 
 # …
 
@@ -770,7 +769,7 @@ Inject work directory and enable auto-reload.
 docker run -ti \
   -v $(pwd)/src:/app/src:ro \
   -p 0.0.0.0:5000:3000 \
-  oncletom/devcon-nodejs-app npm run start-dev
+  thom4/devcon-nodejs-app npm run start-dev
 ```
 </textarea>
         </section>

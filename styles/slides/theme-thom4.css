@@ -441,7 +441,7 @@ template {
     }
 
 .reveal {
-  font-family: Gill Sans, sans-serif;
+  font-family: Inconsolata, sans-serif;
   font-family: var(--type-headlines);
   font-size: 36px;
   font-weight: 300;
@@ -468,14 +468,14 @@ template {
     }
 
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 {
-    font-family: Gill Sans, sans-serif;
+    font-family: Inconsolata, sans-serif;
     font-family: var(--type-headlines);
     font-weight: 300;
     line-height: 1.25;
   }
 
 .reveal h1 small, .reveal h2 small, .reveal h3 small, .reveal h4 small, .reveal h5 small {
-      color: #495057;
+      color: #B15A17;
       color: var(--light-accent);
     }
 
@@ -490,7 +490,7 @@ template {
   }
 
 .reveal blockquote p {
-      border-left: 7px solid #495057;
+      border-left: 7px solid #B15A17;
       border-left: 7px solid var(--light-accent);
       padding-left: 1em;
     }
@@ -500,14 +500,14 @@ template {
   }
 
 .reveal table thead th {
-      border-bottom: 1px double #006fc9;
+      border-bottom: 1px double #733D15;
       border-bottom: 1px double var(--dark-accent);
       font-weight: normal;
       padding: .7em .5em;
     }
 
 .reveal table tbody td, .reveal table tbody th {
-      border-bottom: 1px solid #006fc9;
+      border-bottom: 1px solid #733D15;
       border-bottom: 1px solid var(--dark-accent);
       padding: .5em;
     }
@@ -542,19 +542,19 @@ template {
     }
 
 .reveal a {
-    color: #006fc9;
+    color: #0000FC;
     color: var(--link-foreground);
     text-decoration: underline;
   }
 
 .reveal em {
-    color: #006fc9;
+    color: #FE821F;
     color: var(--brand-color);
     font-style: normal;
   }
 
 .reveal strong {
-    background: #006fc9;
+    background: #733D15;
     background: var(--dark-accent);
     border-radius: 3px;
     color: #fff;
@@ -592,7 +592,7 @@ template {
     }
 
 .background-dark strong, .background-contrasted strong {
-      background: rgb(204, 226, 244);
+      background: rgb(255, 230, 210);
       background: color(var(--brand-color) tint(80%));
       color: #fff;
       text-shadow: 1px 1px 1px rgb(128, 128, 128);
@@ -608,14 +608,14 @@ template {
   }
 
 .contrasted body, .attention body {
-    background-color: #006fc9;
+    background-color: #733D15;
     background-color: var(--dark-accent);
     color: #fff;
   }
 
 .contrasted strong, .attention strong {
     background: #fff;
-    color: #006fc9;
+    color: #733D15;
     color: var(--dark-accent);
   }
 
@@ -626,59 +626,3 @@ template {
 .attention body {
     background-color: #000;
   }
-
-:root {
-  --brand-color:           #006fc9;
-  --dark-accent:           #006fc9;
-  --link-foreground:       #006fc9;
-
-  --type-headlines:    Gill Sans, sans-serif;
-
-  --light-accent:          #495057;
-  --light-shade:           #999;
-}
-
-.reveal strong {
-    background: transparent;
-    color: #fff;
-    display: inline-block;
-    font-weight: inherit;
-    padding: .05em .3em;
-    position: relative;
-  }
-
-.reveal strong:before {
-      background: #006fc9;
-      background: var(--brand-color);
-      content: "";
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      transform: skewX(-15deg);
-      width: 100%;
-      z-index: -1;
-    }
-
-.contrasted .reveal .state-background {
-      background-color: #006fc9;
-      background-color: var(--brand-color);
-    }
-
-.contrasted .reveal .slides .present {
-      color: #fff;
-      text-shadow: 1px 1px rgba(0, 0, 0, .5);
-    }
-
-.contrasted .reveal em {
-      color: #ff0;
-    }
-
-.contrasted .reveal strong {
-      color: #006fc9;
-      color: var(--brand-color);
-    }
-
-.contrasted .reveal strong:before {
-        background-color: #fff;
-      }

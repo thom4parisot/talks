@@ -36,15 +36,16 @@ figure.highlight pre {
 }
 
 figure.highlight .gutter pre {
-  border: 2px solid var(--light-accent);
+  border: 2px solid var(--brand-color);
   border-right: none;
   border-radius: 10px 0 0 10px;
+  color: var(--light-accent);
   text-align: right;
   user-select: none;
 }
 
 figure.highlight .code pre {
-  border: 2px solid var(--light-accent);
+  border: 2px solid var(--brand-color);
   border-left: none;
   border-radius: 0 10px 10px 0;
   max-width: 70vw;

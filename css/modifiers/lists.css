@@ -32,7 +32,6 @@ ol.with-metadata > li {
   ol.with-metadata > li .metadata {
     align-self: flex-start;
     font-size: 0.8em;
-    font-weight: bold;
     line-height: 2;
     min-width: 120px;
     text-transform: uppercase;
