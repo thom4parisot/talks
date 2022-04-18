@@ -15,7 +15,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment:
-      name: alwaysdata
+      name: github-pages
       url: https://oncletom.io/talks/
     steps:
     # Setup
