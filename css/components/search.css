@@ -25,10 +25,10 @@
   }
   #search form > input:valid + button:hover,
   #search form > input:valid + button:focus {
-    background: var(--light-accent);
+    color: var(--brand-color);
   }
   #search form > input:valid + button .icon {
-    fill: var(--dark-shade);
+    fill: currentColor;
   }
 
   #search .credits {

@@ -1,0 +1,14 @@
+.talks {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1440x;
+}
+
+.talks .talk .event-name {
+  padding: 0;
+}
+
+.talks .talk .title {
+  max-width: 46rem;
+}

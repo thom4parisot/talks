@@ -26,9 +26,10 @@ li ul.metadata {
   font-weight: bold;
 }
 
-.metadata--artifacts {
-  display: block !important;
+.metadata > li + .metadata--artifact {
+  margin-left: .5rem;
 }
-  .metadata--artifacts:empty::before {
-    display: none;
-  }
+
+.metadata--artifact::before {
+  display: none;
+}

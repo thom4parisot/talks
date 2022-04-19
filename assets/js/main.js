@@ -1,6 +1,7 @@
 import * as search from './search.js';
 import * as pictures from './pictures.js';
 import * as comments from './comments.js';
+import { installMasonryEvents } from './masonry.js'
 
 document.body.classList.add('js-enabled');
 
