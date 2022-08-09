@@ -1,3 +1,7 @@
 .comments-enabled .action__load-comments {
   display: none;
 }
+
+#comments .action {
+  margin-bottom: var(--main-font-gap);
+}

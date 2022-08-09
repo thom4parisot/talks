@@ -4,6 +4,7 @@
 
 .highlight table tbody td {
   border: none;
+  padding: 0;
 }
 
 .highlight .code {

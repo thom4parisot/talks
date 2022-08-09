@@ -234,6 +234,11 @@ var substr = 'ab'.substr(-1) === 'b' ? function (str, start, len) {
 var utils = createCommonjsModule(function (module, exports) {
 
   var regExpChars = /[|\\{}()[\]^$+*?.]/g;
+  var hasOwnProperty = Object.prototype.hasOwnProperty;
+
+  var hasOwn = function (obj, key) {
+    return hasOwnProperty.apply(obj, [key]);
+  };
   /**
    * Escape characters reserved in regular expressions.
    *
@@ -244,6 +249,7 @@ var utils = createCommonjsModule(function (module, exports) {
    * @static
    * @private
    */
+
 
   exports.escapeRegExpChars = function (string) {
     // istanbul ignore if
@@ -312,8 +318,18 @@ var utils = createCommonjsModule(function (module, exports) {
   exports.shallowCopy = function (to, from) {
     from = from || {};
 
-    for (var p in from) {
-      to[p] = from[p];
+    if (to !== null && to !== undefined) {
+      for (var p in from) {
+        if (!hasOwn(from, p)) {
+          continue;
+        }
+
+        if (p === '__proto__' || p === 'constructor') {
+          continue;
+        }
+
+        to[p] = from[p];
+      }
     }
 
     return to;
@@ -333,11 +349,24 @@ var utils = createCommonjsModule(function (module, exports) {
 
 
   exports.shallowCopyFromList = function (to, from, list) {
-    for (var i = 0; i < list.length; i++) {
-      var p = list[i];
+    list = list || [];
+    from = from || {};
 
-      if (typeof from[p] != 'undefined') {
-        to[p] = from[p];
+    if (to !== null && to !== undefined) {
+      for (var i = 0; i < list.length; i++) {
+        var p = list[i];
+
+        if (typeof from[p] != 'undefined') {
+          if (!hasOwn(from, p)) {
+            continue;
+          }
+
+          if (p === '__proto__' || p === 'constructor') {
+            continue;
+          }
+
+          to[p] = from[p];
+        }
       }
     }
 
@@ -382,6 +411,37 @@ var utils = createCommonjsModule(function (module, exports) {
       return match[1].toUpperCase();
     });
   };
+  /**
+   * Returns a null-prototype object in runtimes that support it
+   *
+   * @return {Object} Object, prototype will be set to null where possible
+   * @static
+   * @private
+   */
+
+
+  exports.createNullProtoObjWherePossible = function () {
+    if (typeof Object.create == 'function') {
+      return function () {
+        return Object.create(null);
+      };
+    }
+
+    if (!({
+      __proto__: null
+    } instanceof Object)) {
+      return function () {
+        return {
+          __proto__: null
+        };
+      };
+    } // Not possible, just pass through
+
+
+    return function () {
+      return {};
+    };
+  }();
 });
 utils.escapeRegExpChars;
 utils.escapeXML;
@@ -389,6 +449,7 @@ utils.shallowCopy;
 utils.shallowCopyFromList;
 utils.cache;
 utils.hyphenToCamel;
+utils.createNullProtoObjWherePossible;
 
 var name = "ejs";
 var description = "Embedded JavaScript templates";
@@ -397,7 +458,7 @@ var keywords = [
 	"engine",
 	"ejs"
 ];
-var version = "3.1.6";
+var version = "3.1.8";
 var author = "Matthew Eernisse <mde@fleegix.org> (http://fleegix.org)";
 var license = "Apache-2.0";
 var bin = {
@@ -413,13 +474,13 @@ var repository = {
 var bugs = "https://github.com/mde/ejs/issues";
 var homepage = "https://github.com/mde/ejs";
 var dependencies = {
-	jake: "^10.6.1"
+	jake: "^10.8.5"
 };
 var devDependencies = {
 	browserify: "^16.5.1",
 	eslint: "^6.8.0",
 	"git-directory-deploy": "^1.5.1",
-	jsdoc: "^3.6.4",
+	jsdoc: "^3.6.7",
 	"lru-cache": "^4.0.1",
 	mocha: "^7.1.1",
 	"uglify-js": "^3.3.16"
@@ -519,6 +580,7 @@ var ejs = createCommonjsModule(function (module, exports) {
   var _OPTS_PASSABLE_WITH_DATA_EXPRESS = _OPTS_PASSABLE_WITH_DATA.concat('cache');
 
   var _BOM = /^\uFEFF/;
+  var _JS_IDENTIFIER = /^[a-zA-Z_$][0-9a-zA-Z_$]*$/;
   /**
    * EJS template function cache. This can be a LRU object from lru-cache NPM
    * module. By default, it is {@link module:utils.cache}, a simple in-process
@@ -765,7 +827,7 @@ var ejs = createCommonjsModule(function (module, exports) {
 
 
   function includeFile(path, options) {
-    var opts = utils.shallowCopy({}, options);
+    var opts = utils.shallowCopy(utils.createNullProtoObjWherePossible(), options);
     opts.filename = getIncludePath(path, opts);
 
     if (typeof options.includer === 'function') {
@@ -869,8 +931,8 @@ var ejs = createCommonjsModule(function (module, exports) {
 
 
   exports.render = function (template, d, o) {
-    var data = d || {};
-    var opts = o || {}; // No options object -- if there are optiony names
+    var data = d || utils.createNullProtoObjWherePossible();
+    var opts = o || utils.createNullProtoObjWherePossible(); // No options object -- if there are optiony names
     // in the data, copy them to options
 
     if (arguments.length == 2) {
@@ -945,7 +1007,7 @@ var ejs = createCommonjsModule(function (module, exports) {
 
       opts.filename = filename;
     } else {
-      data = {};
+      data = utils.createNullProtoObjWherePossible();
     }
 
     return tryHandleCache(opts, data, cb);
@@ -968,8 +1030,8 @@ var ejs = createCommonjsModule(function (module, exports) {
   };
 
   function Template(text, opts) {
-    opts = opts || {};
-    var options = {};
+    opts = opts || utils.createNullProtoObjWherePossible();
+    var options = utils.createNullProtoObjWherePossible();
     this.templateText = text;
     /** @type {string | null} */
 
@@ -1048,7 +1110,15 @@ var ejs = createCommonjsModule(function (module, exports) {
         prepended += '  var __output = "";\n' + '  function __append(s) { if (s !== undefined && s !== null) __output += s }\n';
 
         if (opts.outputFunctionName) {
+          if (!_JS_IDENTIFIER.test(opts.outputFunctionName)) {
+            throw new Error('outputFunctionName is not a valid JS identifier.');
+          }
+
           prepended += '  var ' + opts.outputFunctionName + ' = __append;' + '\n';
+        }
+
+        if (opts.localsName && !_JS_IDENTIFIER.test(opts.localsName)) {
+          throw new Error('localsName is not a valid JS identifier.');
         }
 
         if (opts.destructuredLocals && opts.destructuredLocals.length) {
@@ -1056,6 +1126,10 @@ var ejs = createCommonjsModule(function (module, exports) {
 
           for (var i = 0; i < opts.destructuredLocals.length; i++) {
             var name = opts.destructuredLocals[i];
+
+            if (!_JS_IDENTIFIER.test(name)) {
+              throw new Error('destructuredLocals[' + i + '] is not a valid JS identifier.');
+            }
 
             if (i > 0) {
               destructuring += ',\n  ';
@@ -1145,7 +1219,7 @@ var ejs = createCommonjsModule(function (module, exports) {
 
       var returnedFn = opts.client ? fn : function anonymous(data) {
         var include = function (path, includeData) {
-          var d = utils.shallowCopy({}, data);
+          var d = utils.shallowCopy(utils.createNullProtoObjWherePossible(), data);
 
           if (includeData) {
             d = utils.shallowCopy(d, includeData);
@@ -1154,7 +1228,7 @@ var ejs = createCommonjsModule(function (module, exports) {
           return includeFile(path, opts)(d);
         };
 
-        return fn.apply(opts.context, [data || {}, escapeFn, include, rethrow]);
+        return fn.apply(opts.context, [data || utils.createNullProtoObjWherePossible(), escapeFn, include, rethrow]);
       };
 
       if (opts.filename && typeof Object.defineProperty === 'function') {
@@ -1431,7 +1505,7 @@ const searchResultEjs = "<% if (post.layout === 'post') { %>\n<time class=\"meta
 
 const nodebookUpdateEjs = "<span class=\"metadata\">\n  <img src=\"<%= commit.author.avatar_url %>&amp;size=30\" class=\"is-avatar\" alt=\"<%= commit.author.login %>\">\n  <time datetime=\"<%= commit.commit.author.date %>\"><%= new Date(commit.commit.author.date).toLocaleDateString('fr', {month: 'long', year: 'numeric'})%></time>\n</span>\n\n\n<pre class=\"message\"><a href=\"<%= commit.html_url %>\" rel=\"noreferrer noopener nofollow\" target=\"_blank\"><%= commit.commit.message %></a></pre>\n";
 
-const photographyTileEjs = "<article class=\"tile\">\n  <aside class=\"cover is-square is-empty\">\n    <img src=\"<%= post.image %>\" alt=\"\" loading=\"auto\">\n  </aside>\n  <a href=\"<%= post.permalink %>\" rel=\"bookmark\"><%= post.title %></a>\n</article>\n";
+const photographyTileEjs = "<article class=\"tile is-square\">\n  <img src=\"<%= post.image %>\" alt=\"\" loading=\"auto\">\n  <a href=\"<%= post.permalink %>\" rel=\"bookmark\"><%= post.title %></a>\n</article>\n";
 
 var searchResultTemplate = ejs_6(searchResultEjs, {
   client: false

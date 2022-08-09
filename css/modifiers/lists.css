@@ -8,13 +8,13 @@ ol.is-inline > li {
   display: inline;
 }
 
-.is-dotted > li:not(:first-of-type):before {
+.is-dotted > li:not(:last-of-type):after {
   content: "•";
-  padding-right: .3em;
+  padding-left: calc(var(--main-font-gap) / 2);
 }
-.is-dotted > li.metadata--artifacts:before {
+.is-dotted > li.metadata--artifacts:after {
   content: "";
-  padding-right: 0;
+  padding-left: 0;
 }
 
 ul.is-discrete,
@@ -26,13 +26,30 @@ ol.is-discrete {
 ul.with-metadata > li,
 ol.with-metadata > li {
   display: flex;
-  margin-bottom: .3rem;
+  flex-direction: column;
+  padding: calc(var(--main-font-gap) / 4) 0;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    & {
+      flex-direction: row;
+    }
+  }
+
+  a:after {
+    content: "";
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+  }
 }
   ul.with-metadata > li .metadata,
   ol.with-metadata > li .metadata {
     align-self: flex-start;
     font-size: 0.8em;
-    line-height: 2;
     min-width: 120px;
     text-transform: uppercase;
   }

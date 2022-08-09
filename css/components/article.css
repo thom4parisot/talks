@@ -4,8 +4,8 @@ article.article {
   position: relative;
 }
 
-article.article ~ .article {
-  margin-top: 8rem;
+ul li:not(:last-child) article.article.reading-note {
+  margin-bottom: calc(var(--main-font-gap) * 2);
 }
 
 article section.highlight {
@@ -13,14 +13,60 @@ article section.highlight {
   border-radius: 8px;
 }
 
+article.article.article__card {
+  display: grid;
+  column-gap: var(--main-font-gap);
+  grid-template-areas:
+    "cover"
+    "header"
+    "metadata"
+    "content"
+    "footer";
+}
+
+@media (width > 1024px) {
+  article.article.article__card {
+    grid-template-columns: auto 3fr;
+    grid-template-rows: calc(var(--main-font-gap) * 2) var(--main-font-gap) calc(var(--main-font-gap) * 8) var(--main-font-gap);
+    grid-template-areas:
+      "cover header"
+      "cover metadata"
+      "cover content"
+      "cover footer";
+  }
+}
+
+article.article > .post__header h1,
+article.article > h2,
+article.article > h3,
+article.article > .metadata {
+  grid-area: header;
+  margin-bottom: 0;
+}
+
+article.article > .metadata {
+  grid-area: metadata;
+}
+
+article.article .summary {
+  grid-area: content;
+  margin: var(--main-font-gap) 0;
+}
+article.article .read-more {
+  grid-area: footer;
+  margin-bottom: 0;
+}
+
 article .cover {
   background-color: var(--light-accent);
   border-top-left-radius: 7px;
   line-height: 0;
   overflow: hidden;
+  margin-bottom: calc(var(--main-font-gap) - 4px);
 }
   @media (width >= 768px) {
     article .cover {
+      max-height: calc(var(--main-font-gap) * 8);
       min-height: 300px;
     }
   }
@@ -30,8 +76,23 @@ article.article .cover {
   border-radius: none;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  max-height: 300px;
+  grid-area: cover;
 }
+  article.article__card .cover {
+    background: none;
+    border-radius: 0;
+    border: none;
+
+    img {
+      border-radius: 8px;
+    }
+  }
+  article.article.article__card .cover img {
+    object-fit: cover;
+    line-height: 0;
+    height: calc(var(--main-font-gap) * 12);
+    width: calc(var(--main-font-gap) * 16);
+  }
   @media(width >= 768px) {
     article.article .cover.full,
     article.article .cover.portrait {
@@ -56,9 +117,9 @@ article.article .cover {
 
   article .toc {
     background: var(--light-accent);
-    border: 4px solid #fff;
     list-style-position: inside;
-    padding: 1.5rem;
+    margin: var(--main-font-gap) 0;
+    padding: var(--main-font-gap);
 
     &, * {
       color: #fff;
@@ -83,6 +144,7 @@ article.article .cover {
       border-top-left-radius: 8px;
       border-bottom-left-radius: 8px;
       grid-column: 1;
+      grid-row: 1;
       max-height: 300px;
     }
 
@@ -113,16 +175,24 @@ article.article .cover:empty {
   min-height: 300px;
 }
 
-article.article h1 {
-  padding: 1rem 0;
+article h1 a,
+article h2 a,
+article h3 a {
+color: inherit;
+text-decoration: none;
 }
-  article h1 a,
-  article h2 a,
-  article h3 a {
-    color: inherit;
-    text-decoration: none;
-  }
 
+article.article .post__header {
+  margin-bottom: calc(var(--main-font-gap) * 2);
+
+  #post-title {
+    margin-bottom: 0;
+  }
+}
+
+article.article .post__footer {
+  margin-bottom: calc(var(--main-font-gap) * 2);
+}
 
 article.article .post__content h1:first-child,
 article.article .post__content h2:first-child,
@@ -152,11 +222,11 @@ article.article .post__content h4 {
 
 .post__content table {
   border-collapse: collapse;
-  margin: 1.5em 0;
+  margin: var(--main-font-gap) 0;
 }
 .post__content table td,
 .post__content table th {
-  padding: 0.25em;
+  padding: calc(var(--main-font-gap) / 2);
 }
   .post__content table thead th {
     vertical-align: bottom;
@@ -165,8 +235,8 @@ article.article .post__content h4 {
   }
   .post__content table tbody td,
   .post__content table tbody th {
-      padding-bottom: .5em;
-      padding-top: .5em;
+      padding-bottom: calc((var(--main-font-gap) / 2) - 1px);
+      padding-top: calc(var(--main-font-gap) / 2);
       border-bottom: 1px solid var(--light-accent);
   }
 
@@ -210,6 +280,6 @@ article.article .post__content p img {
 }
   @media (width >= 768px) {
     article.article .post__content p > img {
-      border-width: 2rem;
+      border-width: calc(var(--main-font-gap) * 2);
     }
   }

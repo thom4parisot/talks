@@ -2,8 +2,9 @@
   display: grid;
   padding: 0;
   grid-template-columns: 1fr;
-  grid-column-gap: 1px;
-  grid-row-gap: 1px;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  margin: var(--main-font-gap) 0;
   list-style: none;
 }
 
@@ -14,6 +15,7 @@
 @media (width >= 768px) {
   .tiles {
     grid-template-columns: repeat(2, 1fr);
+    margin: var(--main-font-gap) auto;
   }
 
   .tile .cover.is-square img {
@@ -21,43 +23,49 @@
   }
 }
 
-@media (width > 1024px) {
+@media (width >= 1280px) {
   .tiles {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, calc(var(--main-font-gap) * 12));
+    grid-template-rows: calc(var(--main-font-gap) * 12);
+    max-width: calc(var(--main-font-gap) * 12 * 4);
   }
 }
 
-.tile {
-  position: relative;
+.tiles--portrait {
+  column-gap: var(--main-font-gap);
+  row-gap: var(--main-font-gap);
+  grid-template-rows: auto;
 }
-  .tile.tile--portrait {
-    padding-bottom: 1rem;
-    padding-right: 1rem;
-  }
-    .tile.tile--portrait .cover {
+
+.tiles > li {
+  position: relative;
+  overflow: hidden;
+}
+    .tiles--portrait .tile .cover {
       float: left;
       margin-right: .5rem;
-      max-height: 120px;
+      max-height: calc(var(--main-font-gap) * 6);
       max-width: 100%;
     }
-    .tile.tile--portrait [itemprop="name"] {
+    .tiles--portrait .tile [itemprop="name"] {
       font-weight: bold;
     }
 
-
-  .tile .cover.is-square {
-    border-radius: 0;
-    position: relative;
-  }
-    .tile .cover.is-square img {
+    .tile.is-square {
+      aspect-ratio: 1;
+      line-height: 0;
+    }
+    .tile.is-square img {
       object-fit: cover;
+      height: 100%;
       width: 100%;
     }
 
   .tile a[rel="bookmark"] {
     background: var(--light-shade);
-    padding: .5rem 1rem;
-    margin: .5rem 0;
+    padding: calc(var(--main-font-gap) / 2);
+    line-height: var(--main-font-gap);
+    margin: 0;
     position: absolute;
   }
   .tiles > :nth-child(2n+1) .tile a[rel="bookmark"] {

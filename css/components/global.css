@@ -4,8 +4,20 @@ body {
   background-color: var(--light-shade);
   border-top: 4px solid var(--brand-color);
   color: var(--dark-shade);
-  padding: 2rem;
+  padding: calc(var(--main-font-gap) / 2);
   scroll-behavior: smooth;
+}
+
+@media screen and (width >= 768px) {
+  body {
+    padding: var(--main-font-gap);
+  }
+}
+
+@media screen and (width > 1024px) {
+  body {
+    padding: calc(var(--main-font-gap) * 2);
+  }
 }
 
 body > *:first-child {
@@ -16,27 +28,9 @@ details summary {
   cursor: pointer;
 }
 
-[lang="en"] a[lang="fr"]::after,
-[lang="en-GB"] a[lang="fr"]::after,
-[lang="en"] a[lang="fr-FR"]::after,
-[lang="en-GB"] a[lang="fr-FR"]::after,
-/* */
-[lang="fr"] a[lang="en"]::after,
-[lang="fr"] a[lang="en-GB"]::after,
-[lang="fr-FR"] a[lang="en"]::after,
-[lang="fr-FR"] a[lang="en-GB"]::after {
-  content: "\00A0(" attr(lang) ")";
-  opacity: .4;
-  text-decoration-color: transparent;
-}
-
 ::selection {
   background-color: var(--light-accent);
   color: var(--light-shade);
-}
-
-main[role="main"] {
-  padding-top: 2rem;
 }
 
 a {
@@ -86,9 +80,8 @@ hr {
   display: block;
   border: none;
   border-top: 4px solid var(--brand-color);
-  margin-bottom: 1rem;
-  margin-left: 0;
-  margin-top: 1rem;
+  margin: 0 0 -4px;
+  padding-top: var(--main-font-gap);
   width: 160px;
 }
 

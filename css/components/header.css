@@ -11,6 +11,10 @@ header.header .profile-picture {
   display: none;
 }
 
+header.header .profile-picture a {
+  line-height: 1;
+}
+
 header.header .presentation :first-child {
   margin-top: 0;
 }
@@ -24,9 +28,9 @@ header.header a {
   @media screen and (min-width: 768px) {
     header.header {
       display: grid;
-      grid-template-columns: 1fr 3fr;
-      grid-row-gap: 0;
-      grid-column-gap: 2rem;
+      grid-template-columns: auto 3fr;
+      grid-row-gap: calc(var(--main-font-gap) * 2);
+      grid-column-gap: calc(var(--main-font-gap) * 2);
     }
 
     header.header .profile-picture {
@@ -34,10 +38,12 @@ header.header a {
       grid-row: 1 / span 2;
     }
 
-    header.header .presentation p:first-child {
-      margin-top: 0;
+    header.header .profile-picture img {
+      height: calc(var(--main-font-gap) * 6);
+      vertical-align: bottom;
     }
 
+    header.header .presentation p:first-child,
     header.header nav .is-inline {
       margin: 0;
     }

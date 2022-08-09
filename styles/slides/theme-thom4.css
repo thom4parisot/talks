@@ -384,10 +384,22 @@ template {
 
   --border-radius-base: 8px;
 
-  --type-headlines: Inconsolata, sans-serif;
-  --type-body: Inconsolata, sans-serif;
+  --main-font: Inconsolata, sans-serif;
+  /* derived from https://www.glyphrstudio.com/online/ */
+  /* after nerding https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align */
+  --main-font-ascentHeight: 0.859;
+  --main-font-descentHeight: 0.190;
+  --main-font-capitalHeight: 0.675;
+  --main-font-lineHeight: calc(16px * 1.5);
+  --main-font-gap: var(--main-font-lineHeight);
+  --main-font-xHeight: 400;
+
+  --type-headlines: var(--main-font);
+  --type-body: var(--main-font);
   /* --type-body: Georgia, "Times New Roman", Times, serif; */
   --type-code: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+
 }
 
 .controls div.navigate-down {

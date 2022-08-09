@@ -3,6 +3,14 @@
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
 
+/* #search:not(:focus-within),
+#search:not(:target) {
+  display: none;
+}
+#search:target {
+  display: block;
+} */
+
 #search form {
   display: flex;
   background: #fff;
@@ -12,9 +20,10 @@
   #search form > input,
   #search form > button {
     background: transparent;
-    padding: 8px;
+    height: calc((var(--main-font-gap) * 2) - 4px);
     border: none;
     line-height: 1;
+    padding: 0 var(--main-font-gap);
   }
 
   #search form > input {
