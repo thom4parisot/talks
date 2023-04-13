@@ -8,8 +8,6 @@ const $$ = (selector) => {
   return Array.from(document.querySelectorAll(selector));
 };
 
-const random = (arr) => arr[Math.floor(Math.random() * arr.length)];
-
 Reveal.registerPlugin('randomColors', RandomColors());
 Reveal.registerPlugin('markdown', RevealMarkdown);
 
@@ -28,7 +26,13 @@ Reveal.initialize({
 });
 
 Reveal.addEventListener('ready', function() {
-  window.localStorage.setItem('reveal-speaker-layout', 'tall');
+  window.localStorage.setItem('reveal-speaker-layout', 'tall')
+
+  const link = document.createElement('link')
+  link.rel = 'stylesheet'
+  link.type = 'text/css'
+  link.href = window.location.search.match( /print-pdf/gi ) ? '/talks/styles/slides/print-pdf.css' : '/talks/styles/slides/print-paper.css';
+  $$('head')[0].appendChild(link)
 
   $$('a > img').forEach(function(el){
     el.parentNode.classList.add('image');
@@ -55,4 +59,16 @@ Reveal.addEventListener('ready', function() {
       section.setAttribute('data-state', 'code');
     }
   });
+})
+
+Reveal.addEventListener('pdf-ready', function() {
+  $$('.pdf-page').forEach(el => {
+    el.style.minHeight = el.style.height
+    el.style.height = ""
+
+    const speakerNotes = el.querySelector('.speaker-notes')
+    if (speakerNotes) {
+      speakerNotes.style.marginTop = el.style.minHeight
+    }
+  })
 });

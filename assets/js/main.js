@@ -1,11 +1,7 @@
 import * as search from './search.js';
 import * as pictures from './pictures.js';
-import * as comments from './comments.js';
 
 document.body.classList.add('js-enabled');
-
-document.addEventListener('DOMContentLoaded', (e) => comments.listen(window.location));
-window.addEventListener('hashchange', (e) => comments.listen(window.location));
 
 document.addEventListener('DOMContentLoaded', (e) => {
   const {get, render} = pictures;

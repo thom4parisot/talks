@@ -619,6 +619,18 @@ template {
     text-shadow: 1px 1px rgba(255, 255, 255, .5);
   }
 
+.reveal .slides .pdf-page {
+  page-break-after: unset !important;
+}
+
+.reveal .slides .pdf-page:not(:first-of-type) {
+    page-break-before: always;
+  }
+
+.reveal .slides .pdf-page .speaker-notes {
+    position: unset;
+  }
+
 .contrasted body, .attention body {
     background-color: #733D15;
     background-color: var(--dark-accent);

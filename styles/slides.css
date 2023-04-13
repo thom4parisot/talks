@@ -139,13 +139,6 @@ body {
 /*********************************************
  * CONTROLS
  *********************************************/
-@-webkit-keyframes bounce-right {
-  0%, 10%, 25%, 40%, 50% {
-    transform: translateX(0); }
-  20% {
-    transform: translateX(10px); }
-  30% {
-    transform: translateX(-5px); } }
 @keyframes bounce-right {
   0%, 10%, 25%, 40%, 50% {
     transform: translateX(0); }
@@ -153,13 +146,6 @@ body {
     transform: translateX(10px); }
   30% {
     transform: translateX(-5px); } }
-@-webkit-keyframes bounce-down {
-  0%, 10%, 25%, 40%, 50% {
-    transform: translateY(0); }
-  20% {
-    transform: translateY(10px); }
-  30% {
-    transform: translateY(-5px); } }
 @keyframes bounce-down {
   0%, 10%, 25%, 40%, 50% {
     transform: translateY(0); }
@@ -235,8 +221,7 @@ body {
 .reveal .controls .navigate-right .controls-arrow {
       transform: rotate(180deg); }
 .reveal .controls .navigate-right.highlight {
-      -webkit-animation: bounce-right 2s 50 both ease-out;
-              animation: bounce-right 2s 50 both ease-out; }
+      animation: bounce-right 2s 50 both ease-out; }
 .reveal .controls .navigate-up {
     right: 3.2em;
     bottom: 6.4em;
@@ -251,8 +236,7 @@ body {
 .reveal .controls .navigate-down .controls-arrow {
       transform: rotate(-90deg); }
 .reveal .controls .navigate-down.highlight {
-      -webkit-animation: bounce-down 2s 50 both ease-out;
-              animation: bounce-down 2s 50 both ease-out; }
+      animation: bounce-down 2s 50 both ease-out; }
 .reveal .controls[data-controls-back-arrows="faded"] .navigate-left.enabled,
   .reveal .controls[data-controls-back-arrows="faded"] .navigate-up.enabled {
     opacity: 0.3; }
@@ -460,8 +444,7 @@ body {
  * Aliased 'linear' for backwards compatibility
  *********************************************/
 .reveal.slide section {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
+  backface-visibility: hidden; }
 .reveal .slides > section[data-transition=slide].past,
 .reveal .slides > section[data-transition~=slide-out].past,
 .reveal.slide .slides > section:not([data-transition]).past {
@@ -479,8 +462,7 @@ body {
 .reveal.slide .slides > section > section:not([data-transition]).future {
   transform: translate(0, 150%); }
 .reveal.linear section {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
+  backface-visibility: hidden; }
 .reveal .slides > section[data-transition=linear].past,
 .reveal .slides > section[data-transition~=linear-out].past,
 .reveal.linear .slides > section:not([data-transition]).past {
@@ -597,8 +579,7 @@ body {
 .reveal.cube .slides section {
   padding: 30px;
   min-height: 700px;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   box-sizing: border-box;
   transform-style: preserve-3d; }
 .reveal.center.cube .slides section {
@@ -836,8 +817,7 @@ body {
 .reveal[data-background-transition=slide] > .backgrounds .slide-background,
 .reveal > .backgrounds .slide-background[data-background-transition=slide] {
   opacity: 1;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
+  backface-visibility: hidden; }
 .reveal[data-background-transition=slide] > .backgrounds .slide-background.past,
 .reveal > .backgrounds .slide-background.past[data-background-transition=slide] {
   transform: translate(-100%, 0); }
@@ -1169,8 +1149,7 @@ body {
   transition: all 400ms ease;
   transform-origin: 50% 0%;
   transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
+  backface-visibility: hidden; }
 .reveal .roll:hover span {
   background: rgba(0, 0, 0, 0.5);
   transform: translate3d(0px, 0px, -45px) rotateX(90deg); }
@@ -1181,8 +1160,7 @@ body {
   left: 0;
   top: 0;
   padding: 0 2px;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transform-origin: 50% 0%;
   transform: translate3d(0px, 110%, 0px) rotateX(-90deg); }
 /*********************************************
@@ -1257,8 +1235,7 @@ body {
 .zoomed .reveal *,
 .zoomed .reveal *:before,
 .zoomed .reveal *:after {
-  -webkit-backface-visibility: visible !important;
-          backface-visibility: visible !important; }
+  backface-visibility: visible !important; }
 .zoomed .reveal .progress,
 .zoomed .reveal .controls {
   opacity: 0; }
@@ -1328,6 +1305,9 @@ body {
   .reveal [data-state="random-color"] h3,
   .reveal [data-state="random-color"] h4,
   .reveal [data-state="random-color"] h5,
-  .reveal [data-state="random-color"] p {
+  .reveal [data-state="random-color"] p,
+  .reveal [data-state="random-color"] small,
+  .reveal [data-state="random-color"] a {
+    color: inherit;
     font-family: inherit;
   }

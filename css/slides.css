@@ -62,7 +62,10 @@ body {
   [data-state="random-color"] h3,
   [data-state="random-color"] h4,
   [data-state="random-color"] h5,
-  [data-state="random-color"] p {
+  [data-state="random-color"] p,
+  [data-state="random-color"] small,
+  [data-state="random-color"] a {
+    color: inherit;
     font-family: inherit;
   }
 }

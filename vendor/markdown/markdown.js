@@ -1,5 +1,6 @@
 import markdown from 'markdown-it';
 import markdownAttributes from 'markdown-it-attrs';
+import markdownMark from 'markdown-it-mark';
 import hljs from 'highlight.js/lib/core';
 
 import bashLang from 'highlight.js/lib/languages/bash.js';
@@ -19,7 +20,7 @@ const md = markdown({
 	highlight: (code, lang ) => hljs.highlightAuto(code, [lang]).value,
 })
 
-md.use(markdownAttributes)
+md.use(markdownAttributes).use(markdownMark)
 
 var DEFAULT_SLIDE_SEPARATOR = '^\r?\n---\r?\n$',
 	DEFAULT_NOTES_SEPARATOR = 'notes?:',
