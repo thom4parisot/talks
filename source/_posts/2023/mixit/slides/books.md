@@ -2,7 +2,7 @@
 
 # rien dans mon enfance
 
-Éric Pessan (2022), ISBN 978-2-490-36434-3
+Éric Pessan (2022). [978-2-490-36434-3](https://www.zotero.org/groups/5025104/thomas_parisot_-_prsentations/collections/7QSWMJ7W/items/GUH6LNMT).
 
 ~~~~
 
@@ -18,7 +18,7 @@ Rien dans mon enfance où je roulais des romans dans la poche de mon jean n'aura
 
 # La Vie algorithmique <br> <small>Critique de la raison numérique</small>
 
-Éric Sadin (2021), ISBN [978-2-37309-089-5](https://www.zotero.org/groups/5025104/thomas_parisot_-_prsentations/collections/7QSWMJ7W/items/L422L9SE)
+Éric Sadin (2021). [978-2-37309-089-5](https://www.zotero.org/groups/5025104/thomas_parisot_-_prsentations/collections/7QSWMJ7W/items/L422L9SE).
 
 ~~~~ 
 
@@ -30,7 +30,7 @@ Vous dormez paisiblement au cœur de la nuit. Dans le froid de l'hiver, le syst�
 
 # Code is Law
 
-Lawrence Lessig (2000)
+Lawrence Lessig (2000). [framablog.org](https://framablog.org/2010/05/22/code-is-law-lessig/).
 
 ~~~~ 
 
@@ -107,7 +107,7 @@ Lawrence Lessig est professeur de droit des affaires au Centre Berkman de la Har
 
 # Manifeste agile
 
-Beck & cie (2001)
+Beck & cie (2001). [manifesteagile.fr](https://manifesteagile.fr).
 
 ~~~~ 
 
@@ -129,7 +129,7 @@ Grâce à ce travail, nous en sommes venus à valoriser :
 
 # rien dans mon enfance
 
-Éric Pessan (2022), ISBN 978-2-490-36434-3
+Éric Pessan (2022). [978-2-490-36434-3](https://www.zotero.org/groups/5025104/thomas_parisot_-_prsentations/collections/7QSWMJ7W/items/GUH6LNMT).
 
 ~~~~ 
 
@@ -145,7 +145,7 @@ Rien dans mon enfance, où mon père faisait des détours pour arranger les auto
 
 # ils <br><small>défaut de langue</small>
 
-Natyot (2021), ISBN 979-10-96861-40-8
+Natyot (2021). [979-10-96861-40-8](https://www.zotero.org/groups/5025104/thomas_parisot_-_prsentations/collections/7QSWMJ7W/items/4R2TY6KS/item-details).
 
 ~~~~ 
 
@@ -204,7 +204,7 @@ sans se faire remarquer.
 
 # Code de conduite <br> <small>ou plutôt, consignes pour créer un cadre d'interaction bientraitant et protecteur</small>
 
-Julia Barbelane & cie (2O18)
+Julia Barbelane & cie (2O18). [sudweb.fr/2018](https://sudweb.fr/2018/code-de-conduite/).
 
 ~~~~ 
 
@@ -285,7 +285,7 @@ En ce qui concerne la personne à l’origine de la situation, l’exclusion est
 
 # Contre l'alternumérisme
 
-Julia Laïnae et Nicolas Alep (2020), ISBN 979-10-95432-22-7
+Julia Laïnae et Nicolas Alep (2020). [979-10-95432-22-7](https://www.zotero.org/groups/5025104/thomas_parisot_-_prsentations/collections/7QSWMJ7W/items/YJV7SACA/item-details)
 
 ~~~~ 
 
@@ -301,7 +301,7 @@ L'alternumérisme témoigne de cette fascination pour le numérique empêchant l
 
 # Quand je ne dis rien, je pense encore
 
-Camille Readman-Prud'homme (2021), ISBN 978-2-924652-35-0
+Camille Readman-Prud'homme (2021). [978-2-924652-35-0](https://www.zotero.org/groups/5025104/thomas_parisot_-_prsentations/collections/7QSWMJ7W/items/AAEXADC4/item-details).
 
 ~~~~ 
 
@@ -320,7 +320,7 @@ sont heureux
 
 # Refuser d'être un homme
 
-John Stoltenberg (1988), ISBN 978-2-84950-381-2
+John Stoltenberg (1988). [978-2-84950-381-2](https://www.zotero.org/groups/5025104/thomas_parisot_-_prsentations/collections/7QSWMJ7W/items/PFZ6RAYB/item-details).
 
 ~~~~ 
 
@@ -335,7 +335,7 @@ Les hommes ont exprimé leurs émotions à propos des femmes, de la mort et des 
 
 # Qui a tué mon père
 
-Édouard Louis (2019), ISBN 978-2-7578-7546-9
+Édouard Louis (2019). [978-2-7578-7546-9](https://www.zotero.org/groups/5025104/thomas_parisot_-_prsentations/collections/7QSWMJ7W/items/9SR5PNYC/item-details).
 
 ~~~~ 
 
@@ -357,7 +357,7 @@ Pour nous, c'était vivre ou mourir.
 
 # rien dans mon enfance
 
-Éric Pessan (2022), ISBN 978-2-490-36434-3
+Éric Pessan (2022). [978-2-490-36434-3](https://www.zotero.org/groups/5025104/thomas_parisot_-_prsentations/collections/7QSWMJ7W/items/GUH6LNMT).
 
 ~~~~ 
 
