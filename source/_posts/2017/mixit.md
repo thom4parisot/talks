@@ -7,6 +7,7 @@ event:
   location: Lyon
   duration: 20
   url: https://mixitconf.org/2017/travailler-moins-pour-gagner-moins
+category: [Featured]
 video: https://vimeo.com/217023172
 slides:
   - file: intro.md

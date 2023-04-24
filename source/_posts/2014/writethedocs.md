@@ -6,6 +6,7 @@ event:
   name: Write the Docs
   location: Budapest
   url: http://conf.writethedocs.org/eu/2014/
+category: [Featured]
 video: https://www.youtube.com/watch?v=2ZhLaahzrOQ
 slides:
   - file: epitaph.md
