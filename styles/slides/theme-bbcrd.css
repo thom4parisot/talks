@@ -603,6 +603,10 @@ template {
       text-shadow: 1px 1px rgba(0, 0, 0, .5);
     }
 
+.background-dark a:link, .background-dark a:visited, .background-contrasted a:link, .background-contrasted a:visited {
+      --link-foreground: var(--light-shade);
+    }
+
 .background-dark strong, .background-contrasted strong {
       background: rgb(204, 226, 244);
       background: color(var(--brand-color) tint(80%));

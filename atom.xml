@@ -6,7 +6,7 @@
   <link href="https://thom4.net/talks/atom.xml" rel="self"/>
   
   <link href="https://thom4.net/talks/"/>
-  <updated>2023-04-24T06:47:23.966Z</updated>
+  <updated>2024-04-25T14:09:59.631Z</updated>
   <id>https://thom4.net/talks/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Recruter avec amour</title>
+    <link href="https://thom4.net/talks/2024/mixit/"/>
+    <id>https://thom4.net/talks/2024/mixit/</id>
+    <published>2024-04-24T22:00:00.000Z</published>
+    <updated>2024-04-25T14:09:59.631Z</updated>
+    
+    <content type="html"><![CDATA[<p>Recruter c’est pas compliqué : on attend de quelqu’un·e des compétences —techniques principalement— avec un certain niveau d’aisance à les utiliser, à un certain prix.</p><p>Enfin, la maitrise, l’expérience et le salaire, c’est de l’ordre du “pas trop” ni du&quot;pas assez&quot;. Ou des “pas comme ceci” et des “plutôt comme ça”. Les évidences.</p><p>Et si on cherchait plutôt à se… rencontrer ? C’est-à-dire à écrire une “proposition” plutôt qu’une “annonce”, à se poser des “questions” plutôt que d’attendre des “bonnes réponses”, à construire une confiance mutuelle plutôt que d’attendre des signes de conformité ?</p><p>Le recrutement serait déjà un espace-temps de travail commun : celui de se proposer une manière de faire équipe alors qu’on ne se connait pas, un premier échange sur nos manières de fonctionner et un “oui” explicite à l’amélioration de notre relation de travail comme objectif principal, comme co-responsabilité partagée.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Recruter c’est pas compliqué : on attend de quelqu’un·e des compétences —techniques principalement— avec un certain niveau d’aisance à le</summary>
+      
+    
+    
+    
+    <category term="Featured" scheme="https://thom4.net/talks/categories/featured/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Ce (code) qui nous lit</title>
     <link href="https://thom4.net/talks/2023/mixit/"/>
     <id>https://thom4.net/talks/2023/mixit/</id>
     <published>2023-04-13T22:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.966Z</updated>
+    <updated>2024-04-25T14:09:59.631Z</updated>
     
     <content type="html"><![CDATA[<p>Balade sensible dans les mots qu’on lit, qu’on écrit, qu’on copie, qu’on partage, qu’on modifie. Nous voyagerons les yeux fermés dans du code, des commentaires de code, des descriptions de code — informatique, législatif, moral, éthique. Et si un livre sur les semences paysannes avait autant à voir avec le commentaire d’une fonction qui retourne “Hello World” ? Et si ça devenait évident si on écoutait cet entremêlement pendant une dizaine de minutes.</p>]]></content>
     
@@ -45,7 +67,7 @@
     <link href="https://thom4.net/talks/2022/paris-web/"/>
     <id>https://thom4.net/talks/2022/paris-web/</id>
     <published>2022-10-05T22:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.966Z</updated>
+    <updated>2024-04-25T14:09:59.631Z</updated>
     
     <content type="html"><![CDATA[<p>On travaille, beaucoup, sans forcément savoir où va l’argent issu de notre temps travaillé, dans une entreprise qui ne nous appartient même pas. On en porte même parfois les t-shirts pour en faire la publicité ! Devenir freelance, c’est tout un autre monde : trouver un comptable, comprendre les histoires de bilan annuel… quelle plaie. Auto-entrepreneur·e, au moins ça coûte pas cher. Pas besoin de se prendre la tête avec les cotisations sécu et les points retraite ! (les quoi ?!)</p><p>En attendant, c’est le statu quo et rien ne bouge. Nous, c’est Maïtané et Thomas. On est dans des structures collectives/coopératives, et on travaille ensemble sur des projets avec d’autres collectifs. Ça implique des fois de l’argent, des fois pas. Mais souvent beaucoup de plaisir ! On avait envie de vous parler de modèles éthiques, qu’on a pratiqué avec un style sans C(e)SS(e) renouvelé : auto-entreprise, CAE, Scop, et même association de loi 1901. On a choisi et navigué en évaluant plusieurs niveaux de précarité, d’autonomie, plusieurs niveaux de rapport au temps, d’indépendance/accompagnement et plusieurs niveaux de solidarité. Si tu te dis “j’en ai marre”, “plus jamais seul·e” ou même “en collectif jamais plus”, et bien on va t’en boucher un border-radius !</p>]]></content>
     
@@ -69,7 +91,7 @@
     <link href="https://thom4.net/talks/2019/master-dtct/"/>
     <id>https://thom4.net/talks/2019/master-dtct/</id>
     <published>2019-12-15T23:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.962Z</updated>
+    <updated>2024-04-25T14:09:59.631Z</updated>
     
     <content type="html"><![CDATA[<p>Live coding autour de “la question de la publication des contenus sur le web”.</p><p>Je décris à voix haute ce que je fais en utilisant la plate-forme <a href="https://glitch.com/">Glitch</a><br>pour écrire le texte d’une revue (Markdown), la structurer (HTML),<br>la mettre en forme (CSS) et la paginer (<a href="http://npmjs.com/pagedjs">Paged.js</a>).</p><p>Les étudiant·es observent des pratiques de design+développement et peuvent réutiliser<br>cette base de travail pour le reste de leur semaine de travail autour de la publication<br>et du web.</p>]]></content>
     
@@ -90,7 +112,7 @@
     <link href="https://thom4.net/talks/2019/uv-prioriser/"/>
     <id>https://thom4.net/talks/2019/uv-prioriser/</id>
     <published>2019-11-04T23:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.966Z</updated>
+    <updated>2024-04-25T14:09:59.631Z</updated>
     
     <content type="html"><![CDATA[<p>On a souvent trop de choses à faire et jamais le temps de tout faire… alors comment on s’en sort ?</p><p>Nous verrons plusieurs techniques pour sortir du flou : Kanban, user stories, definition of done, etc. Nous les mettrons en pratique pour nous entrainer sans enjeu, sur papier ou sur ordinateur (tu décides) et pour comprendre leurs subtilités. Un tour de clôture nous permettra de voir ce que ça a changé pour chacun-e d’entre nous.</p>]]></content>
     
@@ -111,7 +133,7 @@
     <link href="https://thom4.net/talks/2019/uv-lecture-salariat/"/>
     <id>https://thom4.net/talks/2019/uv-lecture-salariat/</id>
     <published>2019-10-14T22:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.962Z</updated>
+    <updated>2024-04-25T14:09:59.631Z</updated>
     
     <content type="html"><![CDATA[<p>Nous lisons tour à tour et à voix haute l’article “<a href="https://www.monde-diplomatique.fr/2017/07/LINHART/57684">Imaginer un salariat sans subordination</a>” de Danièle Linhart, directrice de recherche émérite au CNRS. A la fin de la lecture, nous partageons nos ressentis, notre vécu et ce qu’on aimerait changer par rapport à notre situation actuelle.</p><p>Venez avec votre casse-croûte !</p><p>Il n’est pas nécessaire d’avoir lu l’article au préalable.</p>]]></content>
     
@@ -131,7 +153,7 @@
     <link href="https://thom4.net/talks/2019/write-the-docs-paris/"/>
     <id>https://thom4.net/talks/2019/write-the-docs-paris/</id>
     <published>2019-06-12T22:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.966Z</updated>
+    <updated>2024-04-25T14:09:59.631Z</updated>
     
     
     
@@ -144,7 +166,7 @@
     <link href="https://thom4.net/talks/2019/la-peniche-web2print/"/>
     <id>https://thom4.net/talks/2019/la-peniche-web2print/</id>
     <published>2019-03-26T23:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.962Z</updated>
+    <updated>2024-04-25T14:09:59.631Z</updated>
     
     <content type="html"><![CDATA[<p>Word et OpenOffice sont parmi les outils les plus populaires pour produire des documents imprimables.</p><p>Et si on utilisait des outils plus légers et plus versatiles ? On pourrait écrire un texte une seule fois et le transformer en page web ou en support paginé imprimable. Sans installer de logiciel, directement dans un navigateur. On pourrait même aller jusqu’à générer un document Word à partir de ce même document texte.<br>Quel est le format de l’atelier ?</p><p>Le groupe va interagir avec un espace de travail projeté sur le mur avec un vidéo projecteur. Les modifications apportées sur l’espace de travail produiront un résultat imprimable/PDF en temps réel.</p><p>Chaque personne aura aussi le loisir de travailler en parallèle, à son rythme, sur son propre ordinateur.</p>]]></content>
     
@@ -165,7 +187,7 @@
     <link href="https://thom4.net/talks/2019/la-peniche-nodejs/"/>
     <id>https://thom4.net/talks/2019/la-peniche-nodejs/</id>
     <published>2019-03-24T23:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.962Z</updated>
+    <updated>2024-04-25T14:09:59.631Z</updated>
     
     <content type="html"><![CDATA[<p>Cet événement est un atelier collaboratif : le programme est composé sur place avec les souhaits exprimés par les participant·es de l’atelier, à partir des sujets/interrogations qui vous tiennent à cœur.</p><p>À la fin de la soirée, tu repars avec de nouvelles connaissances en programmation, des réponses à tes questions, de nouveaux outils, des pistes qui te sortent d’une situation complexe et de quoi nourrir tes réflexions.</p>]]></content>
     
@@ -185,7 +207,7 @@
     <link href="https://thom4.net/talks/2019/rennesjs/"/>
     <id>https://thom4.net/talks/2019/rennesjs/</id>
     <published>2019-01-23T23:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.962Z</updated>
+    <updated>2024-04-25T14:09:59.631Z</updated>
     
     <content type="html"><![CDATA[<p>Cet atelier est organisé de manière collaborative : d’abord nous exprimons nos attentes d’apprentissage, nous les organisons de sorte à garder des objectifs clairs tout au long de la soirée. Nous abordons ces sujets par la pratique à l’aide d’un vidéoprojecteur, d’un ordinateur et des fragments/intuitions de réponse que chacun·e possède dans sa tête. Quelque chose n’est pas clair ? Nous reformulons les concepts qui posent problème.</p><p>Vous repartez avec de nouvelles connaissances de programmation Node.js utiles au quotidien, peut-être en ayant appris quelque chose à quelqu’un·e d’autre et dans une ambiance où se tromper est source d’apprentissage.</p>]]></content>
     
@@ -205,7 +227,7 @@
     <link href="https://thom4.net/talks/2018/blendwebmix/"/>
     <id>https://thom4.net/talks/2018/blendwebmix/</id>
     <published>2018-10-23T22:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.886Z</updated>
+    <updated>2024-04-25T14:09:59.567Z</updated>
     
     <content type="html"><![CDATA[<p>À quoi ressemble une ville intelligente ?<br>Ce qu’on perçoit actuellement des ‘Smart Cities’ évoque de la captation massive de données sur les transports ou la qualité de l’air, mais il est difficile de voir au-delà de ces usages.<br>Comment réfléchir la place centrale de l’humain dans le futur de la ville ? Comment co-construire des stratégies territoriales résilientes et respectueuses des droits de tous ?</p><p>Nous proposons de présenter notre démarche de design itérative et de travail en équipe dans le cadre du projet de recherche-action Mind the Gaps.<br>Le projet étudie deux villes jumelées, Bristol (UK) et Bordeaux (FR), notamment sous l’angle des inégalités et de la qualité de vie.<br>Nous présenterons les enjeux et stratégies existantes des collectivités locales, ainsi que des initiatives pionnières de production de données citoyennes (Ideas for Change à Barcelone et The Bristol Approach).</p><p>Nous aborderons les questions clé du projet ainsi que notre méthodologie de documentation sur le terrain.</p>]]></content>
     
@@ -228,7 +250,7 @@ Ce qu’on perçoit actuellement des ‘Smart Cities’ évoque de la captation 
     <link href="https://thom4.net/talks/2018/mixit/"/>
     <id>https://thom4.net/talks/2018/mixit/</id>
     <published>2018-04-18T22:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.962Z</updated>
+    <updated>2024-04-25T14:09:59.627Z</updated>
     
     <content type="html"><![CDATA[<p>Les entreprises libérées : ça a l’air trop bien. Si on s’écoutait, on casserait et on referait tout comme on l’entend. Doit-on forcément quitter les entreprises traditionnelles pour vivre et travailler heureu·x·se ? Ces injonctions à l’autonomie peuvent pourtant être mal vécues. Il est difficile de savoir si c’est une mode ou un vrai truc qui fait du bien.</p><p>Nous avons tou·te·s un besoin d’autonomie et des envies de cadre différents. D’ailleurs on cultive cet équilibre chacun·e à sa façon, entre des activités pro et perso, entre des activités rémunérées ou non, entre des activités à temps plein ou temps partiel. C’est quoi cet équilibre dont on a besoin et comment on le crée ? On pourrait déjà commencer par soi-même pour construire ce qui nous convient.</p><p>Claire et Thomas sont freelance et salarié plutôt satisfait·e de leur équilibre. Elles animeront ces réflexions sous forme d’un dialogue à deux. Elles inviteront le public à partager leurs expériences et ressentis tout au long du dialogue.</p>]]></content>
     
@@ -250,7 +272,7 @@ Ce qu’on perçoit actuellement des ‘Smart Cities’ évoque de la captation 
     <link href="https://thom4.net/talks/2018/frontendlondon/"/>
     <id>https://thom4.net/talks/2018/frontendlondon/</id>
     <published>2018-02-21T23:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.886Z</updated>
+    <updated>2024-04-25T14:09:59.567Z</updated>
     
     <content type="html"><![CDATA[<p>The usual way of writing a technical book is to open the Word or LibreOffice application, to write some content, to make a backup, to send it by email to the publisher and to deal with the feedbacks. And repeat.</p><p>However in 2018 we can do differently by using open formats like Asciidoc, by using version control to propagate changes, by using collaborative platforms like GitHub or GitLab to collate feedbacks in any form as well as transforming text and code into readable and interactive artefacts.</p><p>It gives us a unique opportunity to approach the whole process of writing in term of “content experience”, of “toolchain” and of “distribution”.</p><p>In the end, a “book” becomes a “writing format” as we can reuse the same pattern to manage any kind of “content” — articles, publications, essays, documentation — that we can transform in physical books, e-books, interactive web pages etc.</p>]]></content>
     
@@ -274,7 +296,7 @@ Ce qu’on perçoit actuellement des ‘Smart Cities’ évoque de la captation 
     <link href="https://thom4.net/talks/2017/codeurs-en-seine/"/>
     <id>https://thom4.net/talks/2017/codeurs-en-seine/</id>
     <published>2017-11-22T23:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.798Z</updated>
+    <updated>2024-04-25T14:09:59.495Z</updated>
     
     <content type="html"><![CDATA[<p>Le livre représente un idéal certain, même en 2017 : écrire un livre c’est bien, être publié c’est bien et ça fait de nous quelqu’un·e de bien. En tous cas vu de loin, ça a l’air bien mieux que d’écrire le README d’un projet ou sa documentation, un papier scientifique ou encore un rapport qu’on nous a demandé pour avant-hier. L’écriture d’un README et celle d’un livre sont-elles si différentes que ça ?</p><p>Du numérique au papier, du stylo au clavier et d’un commit git au fichier ODT, nous verrons comment infuser la culture du web dans l’édition via des contenus et des formats ouverts, les pratiques collaboratives, entre autres.</p>]]></content>
     
@@ -296,7 +318,7 @@ Ce qu’on perçoit actuellement des ‘Smart Cities’ évoque de la captation 
     <link href="https://thom4.net/talks/2017/writethedocs/"/>
     <id>https://thom4.net/talks/2017/writethedocs/</id>
     <published>2017-09-11T22:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.814Z</updated>
+    <updated>2024-04-25T14:09:59.511Z</updated>
     
     <content type="html"><![CDATA[<p>The usual way of writing a technical book is to open the Word or LibreOffice application, to write some content, to make a backup, to send it by email to the publisher and to deal with the feedbacks. And repeat.</p><p>However in 2017 we can do differently by using open formats like Asciidoc, by using version control to propagate changes, by using collaborative platforms like GitHub or GitLab to collate feedbacks in any form as well as transforming text and code into readable and interactive artefacts.</p><p>It gives us a unique opportunity to approach the whole process of writing in term of “content experience”, of “toolchain” and of “distribution”.</p><p>In the end, a “book” becomes a “writing format” as we can reuse the same pattern to manage any kind of “content” — articles, publications, essays, documentation — that we can transform in physical books, e-books, interactive web pages etc.</p>]]></content>
     
@@ -318,7 +340,7 @@ Ce qu’on perçoit actuellement des ‘Smart Cities’ évoque de la captation 
     <link href="https://thom4.net/talks/2017/mixit/"/>
     <id>https://thom4.net/talks/2017/mixit/</id>
     <published>2017-04-20T22:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.798Z</updated>
+    <updated>2024-04-25T14:09:59.495Z</updated>
     
     <content type="html"><![CDATA[<p>Il y a un an j’ai décidé de passer à temps partiel, ou plutôt aux week-end de trois jours. Est-ce que ça m’aide à rattraper mon retard dans Game of Throne, augmenter le nombre d’heures que j’alloue à ma veille technique ou bien à passer pour quelqu’un qui n’aime pas travailler ?</p><p>À vrai dire, j’ai surtout pu augmenter ma qualité de vie malgré ma baisse de salaire, ainsi que dédier ce temps à du bénévolat, m’aérer l’esprit et voir du pays en me fatigant un peu moins.</p>]]></content>
     
@@ -340,7 +362,7 @@ Ce qu’on perçoit actuellement des ‘Smart Cities’ évoque de la captation 
     <link href="https://thom4.net/talks/2016/lse/"/>
     <id>https://thom4.net/talks/2016/lse/</id>
     <published>2016-11-08T23:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.754Z</updated>
+    <updated>2024-04-25T14:09:59.455Z</updated>
     
     <content type="html"><![CDATA[<p>The 21st century digital economy seems to be all about data. The bigger the better. The bigger the more difficult to browse from a human point of view too.</p><p>I present <strong>several facets of data</strong>, from analog to digital, computed to manually curated.</p>]]></content>
     
@@ -360,7 +382,7 @@ Ce qu’on perçoit actuellement des ‘Smart Cities’ évoque de la captation 
     <link href="https://thom4.net/talks/2016/e1/"/>
     <id>https://thom4.net/talks/2016/e1/</id>
     <published>2016-06-01T22:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.746Z</updated>
+    <updated>2024-04-25T14:09:59.447Z</updated>
     
     <content type="html"><![CDATA[<p>Notre startup avait tout pour réussir : un <strong>projet innovant</strong>, une <strong>équipe talentueuse</strong> et de l’argent pour tenir 12 mois sans contrat. Pourtant 6 mois après le lancement de l’activité commerciale, le premier chèque de salaire impayé se déclare. Comment en est-on arrivé là ? <strong>Comment on s’en sort</strong> ? Seul et/ou en groupe ? Surtout quand la <strong>confiance</strong> devient aussi rare que l’<strong>argent</strong>.</p>]]></content>
     
@@ -382,7 +404,7 @@ Ce qu’on perçoit actuellement des ‘Smart Cities’ évoque de la captation 
     <link href="https://thom4.net/talks/2016/sudweb/"/>
     <id>https://thom4.net/talks/2016/sudweb/</id>
     <published>2016-05-25T22:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.798Z</updated>
+    <updated>2024-04-25T14:09:59.495Z</updated>
     
     
     
@@ -395,7 +417,7 @@ Ce qu’on perçoit actuellement des ‘Smart Cities’ évoque de la captation 
     <link href="https://thom4.net/talks/2015/node-at-bbc/"/>
     <id>https://thom4.net/talks/2015/node-at-bbc/</id>
     <published>2015-11-26T23:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.710Z</updated>
+    <updated>2024-04-25T14:09:59.419Z</updated>
     
     <content type="html"><![CDATA[<p>What is the difference between a UI component, an npm <em>package</em>, a Docker image and a machine, either bare metal or a VM? Well, <em>none</em> really: we expec them to be resilient, composable and reliable.</p><p>This talk is a technical and functional journey around the concept of modular architectures, of quality and of resilience.</p>]]></content>
     
@@ -406,28 +428,6 @@ Ce qu’on perçoit actuellement des ‘Smart Cities’ évoque de la captation 
       
     
     
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Design d&#39;architecture modulaire à la BBC</title>
-    <link href="https://thom4.net/talks/2015/blendwebmix/"/>
-    <id>https://thom4.net/talks/2015/blendwebmix/</id>
-    <published>2015-10-27T23:00:00.000Z</published>
-    <updated>2023-04-24T06:47:23.678Z</updated>
-    
-    <content type="html"><![CDATA[<p>Quelle est la différence entre un composant visuel, un <em>package</em> npm, une image Docker et une machine, physique ou virtuelle ? À vrai dire, <em>aucune</em> : on attend d’eux résilience, composition et fiabilité.</p><p>Cette présentation est un voyage technique et fonctionnel autour des concepts des architectures modulaires, de qualité et de résilience, à la fois pour les machines et les êtres humaines que nous sommes.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Quelle est la différence entre un composant visuel, un &lt;em&gt;package&lt;/em&gt; npm, une image Docker et une machine, physique ou virtuelle ? À v</summary>
-      
-    
-    
-    
-    <category term="Featured" scheme="https://thom4.net/talks/categories/featured/"/>
     
     
   </entry>

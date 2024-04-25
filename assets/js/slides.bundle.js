@@ -16479,7 +16479,6 @@ function isLetter(ch) {
   var lc = ch | 0x20; // to lower case
   return lc >= 0x61 /* a */ && lc <= 0x7a /* z */;
 }
-
 var html_inline = function html_inline(state, silent) {
   var ch,
     match,
@@ -18031,7 +18030,6 @@ var _default$1 = {
     highlight: null,
     maxNesting: 100 // Internal protection, recursion limit
   },
-
   components: {
     core: {},
     block: {},
@@ -18075,7 +18073,6 @@ var zero = {
     highlight: null,
     maxNesting: 20 // Internal protection, recursion limit
   },
-
   components: {
     core: {
       rules: ['normalize', 'block', 'inline']
@@ -18126,7 +18123,6 @@ var commonmark = {
     highlight: null,
     maxNesting: 20 // Internal protection, recursion limit
   },
-
   components: {
     core: {
       rules: ['normalize', 'block', 'inline']
@@ -19287,7 +19283,6 @@ function test(tokens, i, t) {
     match: false,
     j: null // position of child
   };
-
   let ii = t.shift !== undefined ? i + t.shift : t.position;
   let token = get(tokens, ii); // supports negative ii
 
@@ -19574,8 +19569,7 @@ function inherit(original, ...objects) {
       result[key] = obj[key];
     }
   });
-  return (/** @type {T} */result
-  );
+  return /** @type {T} */result;
 }
 
 /**
@@ -20204,7 +20198,6 @@ const COMMON_KEYWORDS = ['of', 'and', 'for', 'in', 'not', 'or', 'if', 'then', 'p
 // common variable name
 'value' // common variable name
 ];
-
 const DEFAULT_KEYWORD_CLASSNAME = "keyword";
 
 /**
@@ -20725,7 +20718,6 @@ function BuildVuePlugin(hljs) {
     }
     // template: `<pre><code :class="className" v-html="highlighted"></code></pre>`
   };
-
   const VuePlugin = {
     install(Vue) {
       Vue.component('highlightjs', Component);
@@ -21974,7 +21966,6 @@ function bash(hljs) {
     } // default values
     ]
   };
-
   Object.assign(VAR, {
     className: 'variable',
     variants: [{
@@ -22584,7 +22575,6 @@ const ERROR_TYPES = ["EvalError", "InternalError", "RangeError", "ReferenceError
 const BUILT_IN_GLOBALS = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"];
 const BUILT_IN_VARIABLES = ["arguments", "this", "super", "console", "window", "document", "localStorage", "module", "global" // Node.js
 ];
-
 const BUILT_INS = [].concat(BUILT_IN_GLOBALS, BUILT_IN_VARIABLES, TYPES, ERROR_TYPES);
 
 /**
@@ -22725,7 +22715,6 @@ function javascript(hljs) {
     keywords: KEYWORDS$1,
     contains: [] // defined later
   };
-
   const HTML_TEMPLATE = {
     begin: 'html`',
     end: '',
@@ -22979,7 +22968,6 @@ function javascript(hljs) {
     }]
   };
 }
-
 var javascript_1 = javascript;
 
 core.registerLanguage('bash', bash_1);

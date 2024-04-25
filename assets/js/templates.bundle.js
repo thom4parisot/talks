@@ -419,6 +419,15 @@ var utils = createCommonjsModule(function (module, exports) {
       return {};
     };
   }();
+  exports.hasOwnOnlyObject = function (obj) {
+    var o = exports.createNullProtoObjWherePossible();
+    for (var p in obj) {
+      if (hasOwn(obj, p)) {
+        o[p] = obj[p];
+      }
+    }
+    return o;
+  };
 });
 utils.escapeRegExpChars;
 utils.escapeXML;
@@ -427,6 +436,7 @@ utils.shallowCopyFromList;
 utils.cache;
 utils.hyphenToCamel;
 utils.createNullProtoObjWherePossible;
+utils.hasOwnOnlyObject;
 
 var name = "ejs";
 var description = "Embedded JavaScript templates";
@@ -435,7 +445,7 @@ var keywords = [
 	"engine",
 	"ejs"
 ];
-var version = "3.1.9";
+var version = "3.1.10";
 var author = "Matthew Eernisse <mde@fleegix.org> (http://fleegix.org)";
 var license = "Apache-2.0";
 var bin = {
@@ -466,7 +476,7 @@ var engines = {
 	node: ">=0.10.0"
 };
 var scripts = {
-	test: "mocha -u tdd"
+	test: "npx jake test"
 };
 const _package = {
 	name: name,
@@ -976,8 +986,8 @@ var ejs = createCommonjsModule(function (module, exports) {
   exports.clearCache = function () {
     exports.cache.reset();
   };
-  function Template(text, opts) {
-    opts = opts || utils.createNullProtoObjWherePossible();
+  function Template(text, optsParam) {
+    var opts = utils.hasOwnOnlyObject(optsParam);
     var options = utils.createNullProtoObjWherePossible();
     this.templateText = text;
     /** @type {string | null} */
