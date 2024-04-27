@@ -11,7 +11,7 @@ A 🥖🧀 living in 🇬🇧
 full stack engineer, UX, user research, open source, <br>
 trainings, mentoring, conference organiser etc.
 
-[https://thom4.net]() • [@thom4parisot](https://twitter.com/thom4parisot) {.footer}
+[https://thom4.net]() • [@thom4parisot](https://twitter.com/thom4parisot)
 
 @@@
 
@@ -21,4 +21,4 @@ a small **social innovation co-op**<br>
 we use web technologies for the greater good<br>
 Bordeaux • London • Montréal
 
-[dtc-innovation.org](https://dtc-innovation.org/) {.footer}
+[dtc-innovation.org](https://dtc-innovation.org/)

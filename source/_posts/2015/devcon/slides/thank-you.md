@@ -1,3 +1,3 @@
 # Merci !*\**
 
-\* *en français dans le texte* {.footer}
+\* *en français dans le texte*

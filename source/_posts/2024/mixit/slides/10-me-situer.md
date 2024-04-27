@@ -14,7 +14,7 @@
 <span>en coopérative d'activités</span><!-- .element: class="fragment" -->\
 <span>📍 vallée de la Drôme</span><!-- .element: class="fragment" -->
 
-[thom4.net](https://thom4.net) • [détour.studio](https://détour.studio) {.footer}
+[thom4.net](https://thom4.net) • [détour.studio](https://détour.studio)
 
 @@@
 

@@ -1,6 +1,6 @@
 # Writing a book <br> in 2018
 
-February 22<sup>nd</sup> 2018 • [Front-end London][] {.footer}
+February 22<sup>nd</sup> 2018 • [Front-end London][]
 
 [Front-end London]:  https://www.frontendlondon.co.uk/archive#fel45
 
@@ -8,7 +8,7 @@ February 22<sup>nd</sup> 2018 • [Front-end London][] {.footer}
 
 # Writing a _technical_<br>book in 2018
 
-February 22<sup>nd</sup> 2018 • [Front-end London][] {.footer}
+February 22<sup>nd</sup> 2018 • [Front-end London][]
 
 [Front-end London]:  https://www.frontendlondon.co.uk/archive#fel45
 
@@ -21,6 +21,6 @@ February 22<sup>nd</sup> 2018 • [Front-end London][] {.footer}
 # A journey about <br> a *web developer* and <br> a *book publisher*.
 
 <small>Not so much about how painful it is to write an actual 300 pages book.
-<br>Watch [What I learned writing a lousy tech book][] (WTD 2014).<small> {.footer}
+<br>Watch [What I learned writing a lousy tech book][] (WTD 2014).<small>
 
 [What I learned writing a lousy tech book]: https://www.youtube.com/watch?v=w1L2SgQuv6Q

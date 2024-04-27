@@ -1,6 +1,6 @@
 # Writing a book <br> in 2017
 
-September 12<sup>th</sup> 2017 • [Write the Docs][] {.footer}
+September 12<sup>th</sup> 2017 • [Write the Docs][]
 
 [Write the Docs]: http://writethedocs.org/conf/eu/2017/
 
@@ -8,7 +8,7 @@ September 12<sup>th</sup> 2017 • [Write the Docs][] {.footer}
 
 # Writing a _technical_<br>book in 2017
 
-September 12<sup>th</sup> 2017 • [Write the Docs][] {.footer}
+September 12<sup>th</sup> 2017 • [Write the Docs][]
 
 [Write the Docs]: http://writethedocs.org/conf/eu/2017/
 
@@ -21,7 +21,7 @@ September 12<sup>th</sup> 2017 • [Write the Docs][] {.footer}
 ## A journey about <br> a *web developer* and <br> a *book publisher*.
 
 <small>Not so much about how painful it is to write an actual 300 pages book.
-<br>Watch [What I learned writing a lousy tech book][] (WTD 2014).<small> {.footer}
+<br>Watch [What I learned writing a lousy tech book][] (WTD 2014).<small>
 
 [What I learned writing a lousy tech book]: https://www.youtube.com/watch?v=w1L2SgQuv6Q
 

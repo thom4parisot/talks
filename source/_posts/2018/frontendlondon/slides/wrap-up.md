@@ -80,4 +80,4 @@ ETA June 2018. 4 years later, not too bad…
 
 _Featured article_ about mixing software/text/tooling for publishing purposes.
 
-[sciences-du-design.org/en](http://www.sciences-du-design.org/en/) {.footer}
+[sciences-du-design.org/en](http://www.sciences-du-design.org/en/)

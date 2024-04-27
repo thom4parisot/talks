@@ -21,7 +21,7 @@ No chance to mess up with *system packages*.
 Legacy apps and modern ones.
 Installable at all time. Now and in 5 years (hopefully).
 
-(want to try out *Go*, *Node.js* or *Spark*?) {.footer}
+(want to try out *Go*, *Node.js* or *Spark*?)
 
 @@@
 

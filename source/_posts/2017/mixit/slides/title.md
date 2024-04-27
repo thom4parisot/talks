@@ -1,6 +1,6 @@
 # Travailler moins pour gagner moins
 
-22 avril 2017 — [MiXiT](https://mixitconf.org/2017) {.footer}
+22 avril 2017 — [MiXiT](https://mixitconf.org/2017)
 
 ~~~~
 
