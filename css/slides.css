@@ -1,4 +1,4 @@
-@import '../../node_modules/reveal.js/css/reveal.css';
+@import '../../node_modules/reveal.js/dist/reveal.css';
 @import './includes/highlight.css';
 
 body {
@@ -48,13 +48,6 @@ body {
       font-weight: 500;
       text-shadow: none;
     }
-  }
-
-  footer,
-  .footer {
-    bottom: -25%;
-    position: absolute;
-    width: 100%;
   }
 
   [data-state="random-color"] h1,

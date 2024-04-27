@@ -1,38 +1,36 @@
-import Reveal from 'reveal.js';
-global.Reveal = Reveal;
+import Reveal from 'reveal.js'
 
-import RandomColors from 'reveal-random-colors';
-import RevealMarkdown from '../../vendor/markdown/markdown.js';
+import RandomColors from 'reveal-random-colors'
+import RevealMarkdown from 'reveal.js/plugin/markdown/plugin.js'
+import RevealNotes from 'reveal.js/plugin/notes/plugin.js'
+import { createDirectives } from 'marked-directive'
 
 const $$ = (selector) => {
   return Array.from(document.querySelectorAll(selector));
 };
 
-Reveal.registerPlugin('randomColors', RandomColors());
-Reveal.registerPlugin('markdown', RevealMarkdown);
+const markdown = RevealMarkdown()
+markdown.marked.use(createDirectives())
 
 Reveal.initialize({
+  plugins: [
+    markdown,
+    RevealNotes,
+    RandomColors
+  ],
   width: 1024,
   height: 728,
 
-  controls: /(localhost|#live)/.test(location.href) !== true,
+  controls: true,
+  scrollProgress: true,
   progress: true,
   history: true,
   center: true,
   overview: false,
-  rollingLinks: false,
-
-  transition: 'linear'
 });
 
-Reveal.addEventListener('ready', function() {
+Reveal.on('ready', function() {
   window.localStorage.setItem('reveal-speaker-layout', 'tall')
-
-  const link = document.createElement('link')
-  link.rel = 'stylesheet'
-  link.type = 'text/css'
-  link.href = window.location.search.match( /print-pdf/gi ) ? '/talks/styles/slides/print-pdf.css' : '/talks/styles/slides/print-paper.css';
-  $$('head')[0].appendChild(link)
 
   $$('a > img').forEach(function(el){
     el.parentNode.classList.add('image');
@@ -61,7 +59,7 @@ Reveal.addEventListener('ready', function() {
   });
 })
 
-Reveal.addEventListener('pdf-ready', function() {
+Reveal.on('pdf-ready', function() {
   $$('.pdf-page').forEach(el => {
     el.style.minHeight = el.style.height
     el.style.height = ""
@@ -71,4 +69,4 @@ Reveal.addEventListener('pdf-ready', function() {
       speakerNotes.style.marginTop = el.style.minHeight
     }
   })
-});
+})

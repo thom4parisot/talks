@@ -410,7 +410,7 @@ template {
   background: color(var(--brand-primary) shade(30%));
 }
 
-.code body {
+.code {
     background-color: #23241f;    /*monokai background color*/
     color: #fff;
   }
@@ -607,7 +607,7 @@ template {
     text-shadow: 1px 1px rgba(255, 255, 255, .5);
   }
 
-.contrasted body, .attention body {
+.contrasted, .attention {
     background-color: #D23B62;
     background-color: var(--dark-accent);
     color: #fff;
@@ -623,6 +623,6 @@ template {
     color: yellow;
   }
 
-.attention body {
+.attention {
     background-color: #000;
   }

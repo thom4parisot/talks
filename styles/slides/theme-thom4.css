@@ -422,10 +422,10 @@ template {
   background: color(var(--brand-primary) shade(30%));
 }
 
-.code body {
-    background-color: #23241f;    /*monokai background color*/
-    color: #fff;
-  }
+.code {
+  background-color: #23241f;    /*monokai background color*/
+  color: #fff;
+}
 
 .code .reveal pre {
       border: none;
@@ -603,11 +603,17 @@ template {
       text-shadow: 1px 1px rgba(0, 0, 0, .5);
     }
 
-.background-dark a:link, .background-dark a:visited, .background-contrasted a:link, .background-contrasted a:visited {
-      --link-foreground: var(--light-shade);
+[data-state="background-dark"],
+[data-state="background-contrasted"] {
+    color: #fff;
+    text-shadow: 1px 1px rgba(255, 255, 255, .5);
+}
+
+[data-state="background-dark"] a:link, [data-state="background-dark"] a:visited, [data-state="background-contrasted"] a:link, [data-state="background-contrasted"] a:visited {
+      --link-foreground: var(--light-shade) !important;
     }
 
-.background-dark strong, .background-contrasted strong {
+[data-state="background-dark"] strong, [data-state="background-contrasted"] strong {
       background: rgb(255, 230, 210);
       background: color(var(--brand-color) tint(80%));
       color: #fff;
@@ -616,11 +622,6 @@ template {
 
 .background-dark .slide-background.present::before {
     background-color: rgba(0, 0, 0, 0.1);
-  }
-
-.background-dark .slides .present {
-    color: #fff;
-    text-shadow: 1px 1px rgba(255, 255, 255, .5);
   }
 
 .reveal .slides .pdf-page {
@@ -635,11 +636,12 @@ template {
     position: unset;
   }
 
-.contrasted body, .attention body {
-    background-color: #733D15;
-    background-color: var(--dark-accent);
-    color: #fff;
-  }
+.contrasted,
+.attention {
+  background-color: #733D15;
+  background-color: var(--dark-accent);
+  color: #fff;
+}
 
 .contrasted strong, .attention strong {
     background: #fff;
@@ -651,6 +653,6 @@ template {
     color: yellow;
   }
 
-.attention body {
-    background-color: #000;
-  }
+.attention {
+  background-color: #000;
+}

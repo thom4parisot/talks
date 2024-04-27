@@ -1,6 +1,15 @@
-import { c as createCommonjsModule, g as getCjsExportFromNamespace } from './chunk__commonjsHelpers.js';
+import { g as getAugmentedNamespace } from './chunk__commonjsHelpers.js';
 
-const fs = {};
+var ejs = {};
+
+var empty = {};
+
+var empty$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  default: empty
+});
+
+var require$$0 = /*@__PURE__*/getAugmentedNamespace(empty$1);
 
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -55,7 +64,7 @@ function normalizeArray(parts, allowAboveRoot) {
 // Split a filename into [root, dir, basename, ext], unix version
 // 'root' is just a slash, or nothing.
 var splitPathRe = /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
-var splitPath = function (filename) {
+var splitPath = function splitPath(filename) {
   return splitPathRe.exec(filename).slice(1);
 };
 
@@ -183,7 +192,7 @@ function basename(path, ext) {
 function extname(path) {
   return splitPath(path)[3];
 }
-const require$$0 = {
+var path = {
   extname: extname,
   basename: basename,
   dirname: dirname,
@@ -212,11 +221,47 @@ var substr = 'ab'.substr(-1) === 'b' ? function (str, start, len) {
   return str.substr(start, len);
 };
 
-var utils = createCommonjsModule(function (module, exports) {
+var path$1 = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  basename: basename,
+  default: path,
+  delimiter: delimiter,
+  dirname: dirname,
+  extname: extname,
+  isAbsolute: isAbsolute,
+  join: join,
+  normalize: normalize,
+  relative: relative,
+  resolve: resolve,
+  sep: sep
+});
+
+var require$$1 = /*@__PURE__*/getAugmentedNamespace(path$1);
+
+var utils = {};
+
+/*
+ * EJS Embedded JavaScript templates
+ * Copyright 2112 Matthew Eernisse (mde@fleegix.org)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+*/
+(function (exports) {
 
   var regExpChars = /[|\\{}()[\]^$+*?.]/g;
   var hasOwnProperty = Object.prototype.hasOwnProperty;
-  var hasOwn = function (obj, key) {
+  var hasOwn = function hasOwn(obj, key) {
     return hasOwnProperty.apply(obj, [key]);
   };
 
@@ -364,16 +409,16 @@ var utils = createCommonjsModule(function (module, exports) {
    */
   exports.cache = {
     _data: {},
-    set: function (key, val) {
+    set: function set(key, val) {
       this._data[key] = val;
     },
-    get: function (key) {
+    get: function get(key) {
       return this._data[key];
     },
-    remove: function (key) {
+    remove: function remove(key) {
       delete this._data[key];
     },
-    reset: function () {
+    reset: function reset() {
       this._data = {};
     }
   };
@@ -428,15 +473,7 @@ var utils = createCommonjsModule(function (module, exports) {
     }
     return o;
   };
-});
-utils.escapeRegExpChars;
-utils.escapeXML;
-utils.shallowCopy;
-utils.shallowCopyFromList;
-utils.cache;
-utils.hyphenToCamel;
-utils.createNullProtoObjWherePossible;
-utils.hasOwnOnlyObject;
+})(utils);
 
 var name = "ejs";
 var description = "Embedded JavaScript templates";
@@ -478,7 +515,7 @@ var engines = {
 var scripts = {
 	test: "npx jake test"
 };
-const _package = {
+var require$$3 = {
 	name: name,
 	description: description,
 	keywords: keywords,
@@ -498,31 +535,24 @@ const _package = {
 	scripts: scripts
 };
 
-const _package$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  name: name,
-  description: description,
-  keywords: keywords,
-  version: version,
-  author: author,
-  license: license,
-  bin: bin,
-  main: main,
-  jsdelivr: jsdelivr,
-  unpkg: unpkg,
-  repository: repository,
-  bugs: bugs,
-  homepage: homepage,
-  dependencies: dependencies,
-  devDependencies: devDependencies,
-  engines: engines,
-  scripts: scripts,
-  'default': _package
-});
-
-const require$$1 = getCjsExportFromNamespace(_package$1);
-
-var ejs = createCommonjsModule(function (module, exports) {
+/*
+ * EJS Embedded JavaScript templates
+ * Copyright 2112 Matthew Eernisse (mde@fleegix.org)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+*/
+(function (exports) {
 
   /**
    * @file Embedded JavaScript templating engine. {@link http://ejs.co}
@@ -549,10 +579,12 @@ var ejs = createCommonjsModule(function (module, exports) {
    * @module ejs
    * @public
    */
-  var path = require$$0;
+  var fs = require$$0;
+  var path = require$$1;
+  var utils$1 = utils;
   var scopeOptionWarned = false;
   /** @type {string} */
-  var _VERSION_STRING = require$$1.version;
+  var _VERSION_STRING = require$$3.version;
   var _DEFAULT_OPEN_DELIMITER = '<';
   var _DEFAULT_CLOSE_DELIMITER = '>';
   var _DEFAULT_DELIMITER = '%';
@@ -575,7 +607,7 @@ var ejs = createCommonjsModule(function (module, exports) {
    * @type {Cache}
    */
 
-  exports.cache = utils.cache;
+  exports.cache = utils$1.cache;
 
   /**
    * Custom file loader. Useful for template preprocessing or restricting access
@@ -798,7 +830,7 @@ var ejs = createCommonjsModule(function (module, exports) {
    */
 
   function includeFile(path, options) {
-    var opts = utils.shallowCopy(utils.createNullProtoObjWherePossible(), options);
+    var opts = utils$1.shallowCopy(utils$1.createNullProtoObjWherePossible(), options);
     opts.filename = getIncludePath(path, opts);
     if (typeof options.includer === 'function') {
       var includerResult = options.includer(path, opts.filename);
@@ -896,13 +928,13 @@ var ejs = createCommonjsModule(function (module, exports) {
    */
 
   exports.render = function (template, d, o) {
-    var data = d || utils.createNullProtoObjWherePossible();
-    var opts = o || utils.createNullProtoObjWherePossible();
+    var data = d || utils$1.createNullProtoObjWherePossible();
+    var opts = o || utils$1.createNullProtoObjWherePossible();
 
     // No options object -- if there are optiony names
     // in the data, copy them to options
     if (arguments.length == 2) {
-      utils.shallowCopyFromList(opts, data, _OPTS_PASSABLE_WITH_DATA);
+      utils$1.shallowCopyFromList(opts, data, _OPTS_PASSABLE_WITH_DATA);
     }
     return handleCache(opts, template)(data);
   };
@@ -941,7 +973,7 @@ var ejs = createCommonjsModule(function (module, exports) {
       // Normal passed opts (data obj + opts obj)
       if (args.length) {
         // Use shallowCopy so we don't pollute passed in opts obj with new vals
-        utils.shallowCopy(opts, args.pop());
+        utils$1.shallowCopy(opts, args.pop());
       }
       // Special casing for Express (settings + opts-in-data)
       else {
@@ -958,17 +990,17 @@ var ejs = createCommonjsModule(function (module, exports) {
           // items that are unsafe to be passed along with data, like `root`
           viewOpts = data.settings['view options'];
           if (viewOpts) {
-            utils.shallowCopy(opts, viewOpts);
+            utils$1.shallowCopy(opts, viewOpts);
           }
         }
         // Express 2 and lower, values set in app.locals, or people who just
         // want to pass options in their data. NOTE: These values will override
         // anything previously set in settings  or settings['view options']
-        utils.shallowCopyFromList(opts, data, _OPTS_PASSABLE_WITH_DATA_EXPRESS);
+        utils$1.shallowCopyFromList(opts, data, _OPTS_PASSABLE_WITH_DATA_EXPRESS);
       }
       opts.filename = filename;
     } else {
-      data = utils.createNullProtoObjWherePossible();
+      data = utils$1.createNullProtoObjWherePossible();
     }
     return tryHandleCache(opts, data, cb);
   };
@@ -987,8 +1019,8 @@ var ejs = createCommonjsModule(function (module, exports) {
     exports.cache.reset();
   };
   function Template(text, optsParam) {
-    var opts = utils.hasOwnOnlyObject(optsParam);
-    var options = utils.createNullProtoObjWherePossible();
+    var opts = utils$1.hasOwnOnlyObject(optsParam);
+    var options = utils$1.createNullProtoObjWherePossible();
     this.templateText = text;
     /** @type {string | null} */
     this.mode = null;
@@ -996,7 +1028,7 @@ var ejs = createCommonjsModule(function (module, exports) {
     this.currentLine = 1;
     this.source = '';
     options.client = opts.client || false;
-    options.escapeFunction = opts.escape || opts.escapeFunction || utils.escapeXML;
+    options.escapeFunction = opts.escape || opts.escapeFunction || utils$1.escapeXML;
     options.compileDebug = opts.compileDebug !== false;
     options.debug = !!opts.debug;
     options.filename = opts.filename;
@@ -1031,15 +1063,15 @@ var ejs = createCommonjsModule(function (module, exports) {
     LITERAL: 'literal'
   };
   Template.prototype = {
-    createRegex: function () {
+    createRegex: function createRegex() {
       var str = _REGEX_STRING;
-      var delim = utils.escapeRegExpChars(this.opts.delimiter);
-      var open = utils.escapeRegExpChars(this.opts.openDelimiter);
-      var close = utils.escapeRegExpChars(this.opts.closeDelimiter);
+      var delim = utils$1.escapeRegExpChars(this.opts.delimiter);
+      var open = utils$1.escapeRegExpChars(this.opts.openDelimiter);
+      var close = utils$1.escapeRegExpChars(this.opts.closeDelimiter);
       str = str.replace(/%/g, delim).replace(/</g, open).replace(/>/g, close);
       return new RegExp(str);
     },
-    compile: function () {
+    compile: function compile() {
       /** @type {string} */
       var src;
       /** @type {ClientFunction} */
@@ -1144,14 +1176,14 @@ var ejs = createCommonjsModule(function (module, exports) {
       // created by the source-code, with the passed data as locals
       // Adds a local `include` function which allows full recursive include
       var returnedFn = opts.client ? fn : function anonymous(data) {
-        var include = function (path, includeData) {
-          var d = utils.shallowCopy(utils.createNullProtoObjWherePossible(), data);
+        var include = function include(path, includeData) {
+          var d = utils$1.shallowCopy(utils$1.createNullProtoObjWherePossible(), data);
           if (includeData) {
-            d = utils.shallowCopy(d, includeData);
+            d = utils$1.shallowCopy(d, includeData);
           }
           return includeFile(path, opts)(d);
         };
-        return fn.apply(opts.context, [data || utils.createNullProtoObjWherePossible(), escapeFn, include, rethrow]);
+        return fn.apply(opts.context, [data || utils$1.createNullProtoObjWherePossible(), escapeFn, include, rethrow]);
       };
       if (opts.filename && typeof Object.defineProperty === 'function') {
         var filename = opts.filename;
@@ -1167,7 +1199,7 @@ var ejs = createCommonjsModule(function (module, exports) {
       }
       return returnedFn;
     },
-    generateSource: function () {
+    generateSource: function generateSource() {
       var opts = this.opts;
       if (opts.rmWhitespace) {
         // Have to use two separate replace here as `^` and `$` operators don't
@@ -1201,7 +1233,7 @@ var ejs = createCommonjsModule(function (module, exports) {
         });
       }
     },
-    parseTemplateText: function () {
+    parseTemplateText: function parseTemplateText() {
       var str = this.templateText;
       var pat = this.regex;
       var result = pat.exec(str);
@@ -1222,7 +1254,7 @@ var ejs = createCommonjsModule(function (module, exports) {
       }
       return arr;
     },
-    _addOutput: function (line) {
+    _addOutput: function _addOutput(line) {
       if (this.truncate) {
         // Only replace single leading linebreak in the line after
         // -%> tag -- this is the single, trailing linebreak
@@ -1248,7 +1280,7 @@ var ejs = createCommonjsModule(function (module, exports) {
       line = line.replace(/"/g, '\\"');
       this.source += '    ; __append("' + line + '")' + '\n';
     },
-    scanLine: function (line) {
+    scanLine: function scanLine(line) {
       var self = this;
       var d = this.opts.delimiter;
       var o = this.opts.openDelimiter;
@@ -1344,7 +1376,7 @@ var ejs = createCommonjsModule(function (module, exports) {
    * @public
    * @func
    * */
-  exports.escapeXML = utils.escapeXML;
+  exports.escapeXML = utils$1.escapeXML;
 
   /**
    * Express.js support.
@@ -1381,37 +1413,23 @@ var ejs = createCommonjsModule(function (module, exports) {
   if (typeof window != 'undefined') {
     window.ejs = exports;
   }
-});
-ejs.cache;
-ejs.fileLoader;
-ejs.localsName;
-ejs.promiseImpl;
-ejs.resolveInclude;
-var ejs_6 = ejs.compile;
-ejs.render;
-ejs.renderFile;
-ejs.Template;
-ejs.clearCache;
-ejs.escapeXML;
-ejs.__express;
-ejs.VERSION;
-ejs.name;
+})(ejs);
 
-const searchResultEjs = "<% if (post.layout === 'post') { %>\n<time class=\"metadata\" datetime=\"<%= post.date %>\"><%= new Date(post.date_as_int * 1000).toLocaleDateString(post.lang, {month: 'long', year: 'numeric'}) %></time>\n<% } %>\n<div>\n  <a href=\"<%= post.permalink %>\" rel=\"bookmark\"><%= post.title %></a>\n  <% if (post.excerpt) { %>\n  <details>\n    <summary>Display_summary</summary>\n    <%- post.excerpt %>\n  </details>\n  <% } %>\n<div>\n";
+var searchResultEjs = "<% if (post.layout === 'post') { %>\n<time class=\"metadata\" datetime=\"<%= post.date %>\"><%= new Date(post.date_as_int * 1000).toLocaleDateString(post.lang, {month: 'long', year: 'numeric'}) %></time>\n<% } %>\n<div>\n  <a href=\"<%= post.permalink %>\" rel=\"bookmark\"><%= post.title %></a>\n  <% if (post.excerpt) { %>\n  <details>\n    <summary>Display_summary</summary>\n    <%- post.excerpt %>\n  </details>\n  <% } %>\n<div>\n";
 
-const nodebookUpdateEjs = "<span class=\"metadata\">\n  <img src=\"<%= commit.author.avatar_url %>&amp;size=30\" class=\"is-avatar\" alt=\"<%= commit.author.login %>\">\n  <time datetime=\"<%= commit.commit.author.date %>\"><%= new Date(commit.commit.author.date).toLocaleDateString('fr', {month: 'long', year: 'numeric'})%></time>\n</span>\n\n\n<pre class=\"message\"><a href=\"<%= commit.html_url %>\" rel=\"noreferrer noopener nofollow\" target=\"_blank\"><%= commit.commit.message %></a></pre>\n";
+var nodebookUpdateEjs = "<span class=\"metadata\">\n  <img src=\"<%= commit.author.avatar_url %>&amp;size=30\" class=\"is-avatar\" alt=\"<%= commit.author.login %>\">\n  <time datetime=\"<%= commit.commit.author.date %>\"><%= new Date(commit.commit.author.date).toLocaleDateString('fr', {month: 'long', year: 'numeric'})%></time>\n</span>\n\n\n<pre class=\"message\"><a href=\"<%= commit.html_url %>\" rel=\"noreferrer noopener nofollow\" target=\"_blank\"><%= commit.commit.message %></a></pre>\n";
 
-const photographyTileEjs = "<article class=\"tile is-square\">\n  <img src=\"<%= post.image %>\" alt=\"\" loading=\"auto\">\n  <a href=\"<%= post.permalink %>\" rel=\"bookmark\"><%= post.title %></a>\n</article>\n";
+var photographyTileEjs = "<article class=\"tile is-square\">\n  <img src=\"<%= post.image %>\" alt=\"\" loading=\"auto\">\n  <a href=\"<%= post.permalink %>\" rel=\"bookmark\"><%= post.title %></a>\n</article>\n";
 
 // import searchResultString from '../../../layout/common/search-result.ejs';
 
-var searchResultTemplate = ejs_6(searchResultEjs, {
+var searchResultTemplate = ejs.compile(searchResultEjs, {
   client: false
 });
-var nodebookUpdateTemplate = ejs_6(nodebookUpdateEjs, {
+var nodebookUpdateTemplate = ejs.compile(nodebookUpdateEjs, {
   client: false
 });
-var photographyTileTemplate = ejs_6(photographyTileEjs, {
+var photographyTileTemplate = ejs.compile(photographyTileEjs, {
   client: false
 });
 var search = function search(data) {
