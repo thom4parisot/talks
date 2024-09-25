@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head><meta charset="utf-8">
+<title>Appuyez sur Entrée pour envoyer ce message • Thomas Parisot</title>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="preload" href="/assets/icons.svg">
+<link rel="preload" href="/assets/avatar.jpg">
+<link rel="preload" href="/images/publications/nodejs-cover.png">
+<link rel="stylesheet" href="/talks/styles/slides.css?v=v3.4.0">
+<link rel="stylesheet" href="/talks/styles/slides/theme-thom4.css?v=v3.4.0">
+<meta name="viewport" content="initial-scale=1.0">
+<!-- generated via https://realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#D4C492">
+<meta name="msapplication-TileColor" content="#D4C492">
+<meta name="theme-color" content="#D4C492">
+<meta name="description" content="En pressant la touche Entrée, le message est parti se dupliquer dans tes courriels. Que s’est-il passé, de mon clavier jusque ton écran ?&amp;#10;S’envoyer un e-mail prend au plus quelques secondes. C’est une commodité. Et pourtant ça en traverse des pans de société. On les oublie tellement il y en a, tellement c’est commode que ça tourne 24/7.&amp;#10;Géopolitique d’un e-mail — des protocoles employés, couches réseaux traversées, câbles sous-marins parcourus, matériaux fondus, logiciels empilés, électronique assemblée, électricité acheminée, propriété privée notariée.&amp;#10;Géopolitique d’une commodité, pour quelques mots échangés, pour te demander comment tu allais, qu’adviennent ces octets si de battre ton cœur s’est arrêté si ce message tu ne pourras le consulter s’il reste enfoui à jamais tant qu’il y aura de l’électricité.&amp;#10;Ça sera un peu poétique, un peu politique, et j’espère, très expli-pratique.">
+<meta name="keywords" content="">
+<link rel="alternate" type="application/rss+xml" title="Thomas Parisot" href="https://thom4.net/feed/">
+<link rel="alternate" type="application/rss+xml" title="Thomas Parisot • Photography" href="https://thom4.net/photography/feed/">
+<link rel="alternate" type="application/rss+xml" title="Thomas Parisot • Talks" href="https://thom4.net/talks/feed/">
+<link rel="author" href="Thomas Parisot">
+
+<link rel="prefetch" href="https://thom4.net/talks/2024/mixit/">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@thom4parisot">
+<meta name="twitter:creator" content="@thom4parisot">
+<meta name="twitter:image" content="https://thom4.net/images/thomas-parisot.jpg">
+<meta name="twitter:description" content="En pressant la touche Entrée, le message est parti se dupliquer dans tes courriels. Que s’est-il passé, de mon clavier jusque ton écran ?&amp;#10;S’envoyer un e-mail prend au plus quelques secondes. C’est une commodité. Et pourtant ça en traverse des pans de société. On les oublie tellement il y en a, tellement c’est commode que ça tourne 24/7.&amp;#10;Géopolitique d’un e-mail — des protocoles employés, couches réseaux traversées, câbles sous-marins parcourus, matériaux fondus, logiciels empilés, électronique assemblée, électricité acheminée, propriété privée notariée.&amp;#10;Géopolitique d’une commodité, pour quelques mots échangés, pour te demander comment tu allais, qu’adviennent ces octets si de battre ton cœur s’est arrêté si ce message tu ne pourras le consulter s’il reste enfoui à jamais tant qu’il y aura de l’électricité.&amp;#10;Ça sera un peu poétique, un peu politique, et j’espère, très expli-pratique.">
+<meta property="og:title" content="Appuyez sur Entrée pour envoyer ce message">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://thom4.net/talks/2024/paris-web/">
+<meta property="og:image" content="https://thom4.net/images/thomas-parisot.jpg">
+<meta property="og:description" content="En pressant la touche Entrée, le message est parti se dupliquer dans tes courriels. Que s’est-il passé, de mon clavier jusque ton écran ?&amp;#10;S’envoyer un e-mail prend au plus quelques secondes. C’est une commodité. Et pourtant ça en traverse des pans de société. On les oublie tellement il y en a, tellement c’est commode que ça tourne 24/7.&amp;#10;Géopolitique d’un e-mail — des protocoles employés, couches réseaux traversées, câbles sous-marins parcourus, matériaux fondus, logiciels empilés, électronique assemblée, électricité acheminée, propriété privée notariée.&amp;#10;Géopolitique d’une commodité, pour quelques mots échangés, pour te demander comment tu allais, qu’adviennent ces octets si de battre ton cœur s’est arrêté si ce message tu ne pourras le consulter s’il reste enfoui à jamais tant qu’il y aura de l’électricité.&amp;#10;Ça sera un peu poétique, un peu politique, et j’espère, très expli-pratique.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:site_name" content="Thomas Parisot">
+<link rel="me authn" href="https://twitter.com/thom4parisot">
+<link rel="me" href="https://diaspodon.fr/@thom4">
+<link rel="me" href="https://github.com/thom4parisot">
+<link rel="me" href="https://gitlab.com/thom4parisot">
+<link rel="me" href="https://framagit.org/thom4parisot">
+<link rel="me" href="https://détour.studio">
+<link rel="me" href="https://oncletom.io">
+<link rel="pingback" href="https://webmention.io/thom4.net/xmlrpc">
+<link rel="webmention" href="https://webmention.io/thom4.net/webmention">
+<meta property="algolia:search" data-application-id="QIP7Z1PL3B" data-api-key="5caf0f682ba8349e8a67872b9edde3f3" data-index-name="prod_blog">
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body class="home site-talks content-post">
+<div class="reveal">
+  <main class="slides" lang="fr">
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template>
+<!-- .slide: data-background="images/serre-des-comilles.jpg" data-state="background-dark" -->
+
+
+# Appuyez sur Entrée pour envoyer ce message
+
+26 septembre 2024 — [Paris-Web][]\
+[thom4.net/talks/2024/paris-web](/talks/2024/paris-web/)
+
+
+[Paris-Web]: https://www.paris-web.fr/2024/conference/appuyez-sur-entree-pour-envoyer-ce-message
+
+
+@@@
+
+<!-- .slide: data-background="images/serre-des-comilles.jpg" -->
+
+~~~~
+
+Vous connaissez la lecture de paysage ?
+
+Cette pratique où on tente de distinguer les éléments, par contraste, par distance pour _voir_, _comprendre_, _interpréter_ et _apprendre_.
+
+Par exemple dans cette photo, on distingue une piste, des arbres encore verts et un couvert végétal très sec. On le sait grâce à sa couleur jaunie. On ressent cette sécheresse. On aperçoit une citerne au deuxième plan. Ele est remplie de 20K litres d'eau, destinée aux pompiers en cas d'incendie. Pompiers qui interviennent grâce aux pistes qu'on voit également à l'écran — les Défenses de Forêt Contre les Incendies (DFCI).
+
+Bref, pourquoi je vous parle de lecture de paysage alors qu'on n'est pas là pour ça ?\
+Parce que je vais m'inspirer de ce cheminement de pensée.
+
+Pour expliquer quoi ?
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="../mixit/images/massif-saou.jpg" data-state="background-dark" -->
+
+## 👋🏻 Salut c'est *Thomas*
+
+Développeur Web\
+salarié indépendant en <abbr title="Coopérative d'Activité et d'Emploi">CAE</abbr>\
+📍 Crest
+
+[thom4.net](https://thom4.net) • [détour.studio](https://détour.studio)
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><span>486 000+</span><!-- .element: class="r-fit-text" style="margin-top: 0" -->
+emails auront été envoyés pendant cette présentation\
+([chiffres France 2011, Contactlab](https://www.arobase.org/actu/chiffres-email.htm))
+
+~~~~
+
+Basé sur 1,4 milliards emails envoyés quotidiennement en France, hors-spam.
+Le spam compte pour au moins la moitié des émissions de courriels.
+
+À multiplier par 237 pour un chiffre mondial.
+
+Source 2011, Contactlab : https://www.arobase.org/actu/chiffres-email.htm
+
+@@@
+
+<!-- .slide: data-background="images/serre-des-comilles.jpg"  data-state="background-dark" -->
+
+# Les paysages qu'on va traverser ensemble
+
+[🔎 contenu d'un courriel](#/enveloppe)<!-- .element: class="fragment" -->\
+[☎️ transmission de courriel](#/transport)<!-- .element: class="fragment" -->\
+[📬 transport des données](#/infrastructure)<!-- .element: class="fragment" -->\
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/serre-des-comilles.jpg"  data-state="background-dark" id="enveloppe" -->
+
+# 🔎 Qu'est-ce qu'il y a dans l'enveloppe ?
+
+(biologie d'un courriel)
+
+@@@
+
+<!-- .slide: data-background="images/email-ui.png" data-background-size="60%"  -->
+
+@@@
+
+<!-- .slide: data-background="images/email-ui-show-raw.png" data-background-size="60%"  -->
+
+
+@@@
+
+<!-- .slide: data-background="images/email-raw.png" data-background-size="60%"  -->
+
+@@@
+
+## Un courriel,<br> c'est _que_ du texte
+
+@@@
+
+## Un courriel,<br> c'est un _courrier_ <span>électronique</span><!-- .element: class="fragment "-->
+
+@@@
+
+<!-- .slide: data-background="images/email-courrier.png" data-background-size="contain" -->
+
+
+@@@
+
+## Donc des entêtes
+
+@@@
+
+<!-- .slide: data-background="images/email-entete.png" -->
+
+@@@
+
+## Donc des pages _délimitées_
+
+@@@
+
+<!-- .slide: data-background="images/email-delimiteurs.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/email-delimiteurs-html.png" data-background-size="contain" -->
+
+@@@
+
+## Donc des éléments _encodés_ / _à décoder_
+
+<span class="fragment">(c'est-à-dire, des _images_, de l'_audio_, des _vidéos_)</span>
+
+<span class="fragment">(et… y compris le _texte_ !)</span>
+
+@@@
+
+<!-- .slide: data-background="images/email-unicode.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/unicode-e-accent.png" data-background-size="contain" -->
+
+
+@@@
+
+<!-- .slide: data-background="images/bibliotheque-index.jpg" data-background-size="contain" -->
+
+~~~~
+
+https://fr.wikipedia.org/wiki/Catalogue_de_biblioth%C3%A8que#/media/Fichier:Manchester_Central_Library,_March_2010_(4467481691).jpg
+
+@@@
+
+<!-- .slide: data-background="images/unicode-a.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/unicode-ponctuations-chelou.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/unicode-cherokee.png" data-background-size="contain" -->
+
+~~~~
+
+https://fr.wikipedia.org/wiki/Syllabaire_cherokee
+
+
+@@@
+
+<!-- .slide: data-background="images/unicode-emoji.png" data-background-size="contain" -->
+
+
+@@@
+
+<!-- .slide: data-background="images/email-image.png" data-background-size="contain" -->
+
+@@@
+
+![](images/base64-decode.png)
+
+@@@
+
+<!-- .slide: data-background="images/png-file-format.svg" data-background-size="contain" -->
+
+~~~~
+
+https://www.nayuki.io/page/png-file-chunk-inspector
+
+@@@
+
+
+<!-- .slide: data-background="images/partition.png" data-background-size="contain" -->
+
+~~~~
+
+https://www.mamie-note.fr/cours/le-mode-mineur/les-limites-du-mode-majeur/
+
+@@@
+
+# Le _point commun_ de tous ces éléments ?
+
+C'est standardisé ou open source.
+
+([HTML](https://html.spec.whatwg.org/), [PNG](https://www.rfc-editor.org/info/rfc2083), [Base64](https://www.rfc-editor.org/info/rfc4648), [Internet Message Format](https://www.ietf.org/info/rfc2822), [Unicode/UTF-8](https://www.rfc-editor.org/info/rfc2279))
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/serre-des-comilles.jpg"  data-state="background-dark" id="transport" -->
+
+# ☎️ Comment se parlent les machines ?
+
+(elles se cherchent et communiquent)
+
+@@@
+
+## Comme un… _courrier_
+
+@@@
+
+## `test@example.com`
+
+_test_ : destinataire\
+_@_ : chez\
+_example.com_ : serveur
+
+
+@@@
+
+## `test@example.com`
+
+_test_ : destinataire\
+_@_ : chez\
+_example.com_ : ~~serveur~~ foyer numérique
+
+@@@
+
+# Atteindre le foyer numérique
+
+(trouver l'adresse à partir du nom)
+
+
+@@@
+
+<!-- .slide: data-background="images/dns-root.png" -->
+
+@@@
+
+<!-- .slide: data-background="images/base-adresse.png" data-background-size="contain" -->
+
+
+@@@
+
+<!-- .slide: data-background="images/dns-records.png" data-background-size="contain" -->
+
+@@@
+
+<!-- .slide: data-background="images/annuaire.png" data-background-size="contain" -->
+
+@@@
+
+# Trouver un itinéraire
+
+(vous passerez par `154.54.6.222` puis `154.54.6.217` avant d'arriver en `154.54.83.73`)
+
+@@@
+
+<!-- .slide: data-background="images/traceroute-seattle-paris.png" -->
+
+@@@
+
+<!-- .slide: data-background="images/traceroute-grenoble-paris.png" -->
+
+
+
+@@@
+
+# Dialogue entre machines
+
+<span class="fragment">salut, c'est orateurices@paris-web.fr</span><span class="fragment">, j'ai une lettre pour coucou@thom4.net, je peux ?</span><span class="fragment"> Tiens, la voilà.</span>
+
+@@@
+
+```smtp
+S: MAIL FROM:<orateurices@paris-web.fr>
+R: 250 OK
+
+S: RCPT TO:<coucou@thom4.net>
+R: 250 OK
+
+S: DATA
+R: 354 Start mail input; end with <CRLF>.<CRLF>
+S: Title: Bravo, votre sujet pour Paris Web est retenu
+S: … … …
+S: <CRLF>.<CRLF>
+R: 250 OK
+```
+
+~~~~
+
+http://www.iprelax.fr/smtp/821-3.php
+
+@@@
+
+# Le _point commun_ de tous ces éléments ?
+
+C'est standardisé ou open source.
+
+([BGP](https://datatracker.ietf.org/doc/html/rfc4271), [DNS](https://datatracker.ietf.org/doc/html/rfc1035), [SMTP](https://www.rfc-editor.org/info/rfc2821), [IMAP](https://www.rfc-editor.org/info/rfc2060), [TCP/IP](https://datatracker.ietf.org/doc/html/rfc9293), [iana.org](https://www.iana.org/))
+
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/serre-des-comilles.jpg"  data-state="background-dark" id="infrastructure" -->
+
+# 📬 Quel réseau de transport ?
+
+(et si on suivait le cordon de notre modem ?)
+
+~~~~
+
+Métaphore la plus adaptée sera celle des poupées russes, ou des ruisseaux qui deviennent cours d'eau, puis rivières, puis fleuves.
+
+@@@
+
+## Fournisseur d'accès
+
+(raccordement à son réseau connecté à un réseau connecté à un autre réseau…)
+
+@@@
+
+## Boucle locale
+
+(accrochez vos ceintures)
+
+@@@
+
+<!-- .slide: data-background="images/infra-nra.jpg" -->
+
+~~~~
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Hell%C3%A9an_-_NRA-MeD.jpg/1280px-Hell%C3%A9an_-_NRA-MeD.jpg
+
+Plus de 21K en France (https://www.ariase.com/box/carte-nra)
+
+
+@@@
+
+## Concentrateur réseau local (_hub_)
+
+@@@
+
+<!-- .slide: data-background="images/infra-nra-crest.jpg" -->
+
+~~~~ 
+
+https://www.ledauphine.com/faits-divers-justice/2021/02/17/crest-une-deuxieme-installation-d-orange-incendiee-en-24-heures
+
+@@@
+
+## Point d'échange Internet
+
+(nœud de raccordement nationaux)
+
+@@@
+
+<!-- .slide: data-background="images/infra-ixp.png" -->
+
+@@@
+
+<!-- .slide: data-background="images/infra-ixp-paris.png" -->
+
+
+@@@
+
+<!-- .slide: data-background="images/infra-datacenter.jpg" -->
+
+@@@
+
+
+## Datacenter
+
+(stockage de données, nœuds de raccordement nationaux)
+
+~~~~~
+
+https://en.wikipedia.org/wiki/Data_center#Data_Center_Levels_and_Tiers
+
+https://www.youtube.com/watch?v=XZmGGAbHqa0
+
+@@@
+
+<!-- .slide: data-background="images/infra-datacenter-inside.jpg" -->
+
+@@@
+
+## câblage terrestre (_Internet backbone_)
+
+(lien entre les nœuds)
+
+~~~~
+
+https://fr.wikipedia.org/wiki/Maillage_de_l'infrastructure_Internet_en_France
+
+@@@
+
+
+<!-- .slide: data-background="images/infra-fibre-optique.jpg" -->
+
+~~~~
+
+https://commons.wikimedia.org/wiki/File:Verlegte_Glasfaserkabeln_in_einem_Dorf.jpg
+
+
+@@@
+
+<!-- .slide: data-background="images/infra-fibre-optique-detail.jpg" -->
+
+~~~~
+
+https://en.wikipedia.org/wiki/Fiber-optic_cable#/media/File:RibbonCutout2.jpg
+
+@@@
+
+<!-- .slide: data-background="images/infra-reseau-free.webp" -->
+
+~~~~ 
+
+https://www.universfreebox.com/article/29910/Le-reseau-longue-distance-du-groupe-Iliad-Free-compte-pres-de-80-000-km-lineaires-de-fibre-optique
+
+@@@
+
+<!-- .slide: data-background="images/infra-reseau-ielo.png" data-background-size="contain" -->
+
+~~~~ 
+
+https://www.ielo.net/#/
+
+
+@@@
+
+<!-- .slide: data-background="images/traceroute-seattle-paris.png" -->
+
+@@@
+
+## câblage _sous-marin_
+
+~~~~
+
+via https://fr.wikipedia.org/wiki/C%C3%A2ble_sous-marin
+https://shs.cairn.info/revue-defense-nationale-2015-9-page-117?lang=fr
+https://histochronum.com/accueil-1-copy/les-cables-sous-marins-et-les-mega-constellations-de-satellites/la-technique/
+
+@@@
+
+<!-- .slide: data-background="images/infra-cables-monde.png" -->
+
+~~~~
+
+https://www.submarinecablemap.com/
+
+@@@
+
+<!-- .slide: data-background="images/infra-cables-europe-ouest.png" -->
+
+
+@@@
+
+<!-- .slide: data-background="images/infra-cables-pole-nord.png" -->
+
+@@@
+
+<!-- .slide: data-background="images/infra-cables-far-north.png" -->
+
+~~~~
+
+https://www.farnorthfiber.com/
+
+@@@
+
+<!-- .slide: data-background="images/infra-cables-dunant.png" -->
+
+@@@
+
+<!-- .slide: data-background="images/infra-cables-monde.png" -->
+
+@@@
+
+<!-- .slide: data-background="images/infra-cables-monde-google.png" -->
+
+@@@
+
+<!-- .slide: data-background="images/documentaire-cables-verge.jpg" -->
+
+~~~~
+
+@@@
+
+<!-- .slide: data-background="images/documentaire-cables-arte.jpg" data-background-size="contain" -->
+
+~~~~
+
+https://www.arte.tv/fr/videos/101363-000-A/les-pionniers-des-cables-sous-marins/
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/serre-des-comilles.jpg"  data-state="background-dark" id="impact" -->
+
+# 🌿 Approche sensible
+
+(toutes les autres questions qu'on se pose)
+
+@@@
+
+<!-- .slide: data-background="images/xkcd-dependency_2x.png" data-background-size="contain"  -->
+
+~~~~
+
+[source : xkcd](https://xkcd.com/2347/)
+
+@@@
+
+## Ça représente quoi par rapport au reste ?
+
+@@@
+
+<!-- .slide: data-background="images/stats-usage.png" data-background-size="contain" -->
+
+@@@
+
+## Quel impact environnemental ?
+
+@@@
+
+<!-- .slide: data-background="images/environnement-carbone.png" data-background-size="contain" -->
+
+~~~~
+
+https://www.arcep.fr/la-regulation/grands-dossiers-thematiques-transverses/lempreinte-environnementale-du-numerique.html
+
+> D'après les deux premiers rapports publiés le 19 janvier 2022 [4], les terminaux (et en particulier les écrans et téléviseurs) génèrent l’essentiel des impacts environnementaux (de 65 à 92%), suivi des centres de données (de 4 à 20%) puis des réseaux (de 4 à 13%). Le troisième volet, publié le 6 mars 2023, fait une évaluation prospective de l'impact du numérique en France, à horizon 2030 et 2050 [5].
+
+@@@
+
+## Qui décide ?
+
+Enchevêtrement de droits d'accès, de puissance économique des opérateurs de câbles et de lois nationales.
+
+@@@
+
+## Comment ~~manger~~ surfer mieux ?
+
+[FAI militant](https://www.fdn.fr/), [relocaliser ses services clés](https://www.chatons.org/), acheter d'occasion, favoriser des services conviviaux et respectueux des données.
+</textarea>
+        </section>
+      
+        <section
+          data-separator-notes="^~~~~"
+          data-separator-vertical="\n@@@\n"
+          data-markdown>
+          <textarea data-template><!-- .slide: data-background="images/serre-des-comilles.jpg" data-state="background-dark" -->
+
+## 🙏🏻 Merci pour la balade
+</textarea>
+        </section>
+      
+  </main>
+</div>
+
+<script src="/talks/assets/js/slides.bundle.js" type="module"></script>
+<script src="/talks/vendor/notes/notes.js" defer></script>
+
+
+<script src="/talks/assets/js/main.js?v=3.4.0" type="module"></script>
+</body>
+</html>

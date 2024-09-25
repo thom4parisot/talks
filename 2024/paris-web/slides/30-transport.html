@@ -1,0 +1,62 @@
+<!-- .slide: data-background="images/serre-des-comilles.jpg"  data-state="background-dark" id="transport" -->
+<h1 id="☎️-Comment-se-parlent-les-machines"><a class="header-anchor" href="#☎️-Comment-se-parlent-les-machines">§</a>☎️ Comment se parlent les machines ?</h1>
+<p>(elles se cherchent et communiquent)</p>
+<p>@@@</p>
+<h2 id="Comme-un…-courrier"><a class="header-anchor" href="#Comme-un…-courrier">§</a>Comme un… <em>courrier</em></h2>
+<p>@@@</p>
+<h2 id="test-example-com"><a class="header-anchor" href="#test-example-com">§</a><code>test@example.com</code></h2>
+<p><em>test</em> : destinataire<br>
+<em>@</em> : chez<br>
+<em><a href="http://example.com">example.com</a></em> : serveur</p>
+<p>@@@</p>
+<h2 id="test-example-com-v2"><a class="header-anchor" href="#test-example-com-v2">§</a><code>test@example.com</code></h2>
+<p><em>test</em> : destinataire<br>
+<em>@</em> : chez<br>
+<em><a href="http://example.com">example.com</a></em> : <s>serveur</s> foyer numérique</p>
+<p>@@@</p>
+<h1 id="Atteindre-le-foyer-numerique"><a class="header-anchor" href="#Atteindre-le-foyer-numerique">§</a>Atteindre le foyer numérique</h1>
+<p>(trouver l’adresse à partir du nom)</p>
+<p>@@@</p>
+<!-- .slide: data-background="images/dns-root.png" -->
+<p>@@@</p>
+<!-- .slide: data-background="images/base-adresse.png" data-background-size="contain" -->
+<p>@@@</p>
+<!-- .slide: data-background="images/dns-records.png" data-background-size="contain" -->
+<p>@@@</p>
+<!-- .slide: data-background="images/annuaire.png" data-background-size="contain" -->
+<p>@@@</p>
+<h1 id="Trouver-un-itineraire"><a class="header-anchor" href="#Trouver-un-itineraire">§</a>Trouver un itinéraire</h1>
+<p>(vous passerez par <code>154.54.6.222</code> puis <code>154.54.6.217</code> avant d’arriver en <code>154.54.83.73</code>)</p>
+<p>@@@</p>
+<!-- .slide: data-background="images/traceroute-seattle-paris.png" -->
+<p>@@@</p>
+<!-- .slide: data-background="images/traceroute-grenoble-paris.png" -->
+<p>@@@</p>
+<h1 id="Dialogue-entre-machines"><a class="header-anchor" href="#Dialogue-entre-machines">§</a>Dialogue entre machines</h1>
+<p><span class="fragment">salut, c’est <a href="mailto:orateurices@paris-web.fr">orateurices@paris-web.fr</a></span><span class="fragment">, j’ai une lettre pour <a href="mailto:coucou@thom4.net">coucou@thom4.net</a>, je peux ?</span><span class="fragment"> Tiens, la voilà.</span></p>
+<p>@@@</p>
+<pre><code class="language-smtp">S: MAIL FROM:&lt;orateurices@paris-web.fr&gt;
+R: 250 OK
+
+S: RCPT TO:&lt;coucou@thom4.net&gt;
+R: 250 OK
+
+S: DATA
+R: 354 Start mail input; end with &lt;CRLF&gt;.&lt;CRLF&gt;
+S: Title: Bravo, votre sujet pour Paris Web est retenu
+S: … … …
+S: &lt;CRLF&gt;.&lt;CRLF&gt;
+R: 250 OK
+</code></pre>
+<pre><code>
+http://www.iprelax.fr/smtp/821-3.php
+
+@@@
+
+# Le _point commun_ de tous ces éléments ?
+
+C'est standardisé ou open source.
+
+([BGP](https://datatracker.ietf.org/doc/html/rfc4271), [DNS](https://datatracker.ietf.org/doc/html/rfc1035), [SMTP](https://www.rfc-editor.org/info/rfc2821), [IMAP](https://www.rfc-editor.org/info/rfc2060), [TCP/IP](https://datatracker.ietf.org/doc/html/rfc9293), [iana.org](https://www.iana.org/))
+
+</code></pre>
