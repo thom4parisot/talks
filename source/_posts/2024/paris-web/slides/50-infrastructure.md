@@ -1,0 +1,190 @@
+<!-- .slide: data-background="images/serre-des-comilles.jpg"  data-state="background-dark" id="infrastructure" -->
+
+# 📬 Quel réseau de transport ?
+
+(et si on suivait le cordon de notre modem ?)
+
+~~~~
+
+Métaphore la plus adaptée sera celle des poupées russes, ou des ruisseaux qui deviennent cours d'eau, puis rivières, puis fleuves.
+
+@@@
+
+## Fournisseur d'accès
+
+(raccordement à son réseau connecté à un réseau connecté à un autre réseau…)
+
+@@@
+
+## Boucle locale
+
+(accrochez vos ceintures)
+
+@@@
+
+<!-- .slide: data-background="images/infra-nra.jpg" -->
+
+~~~~
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Hell%C3%A9an_-_NRA-MeD.jpg/1280px-Hell%C3%A9an_-_NRA-MeD.jpg
+
+Plus de 21K en France (https://www.ariase.com/box/carte-nra)
+
+
+@@@
+
+## Concentrateur réseau local (_hub_)
+
+@@@
+
+<!-- .slide: data-background="images/infra-nra-crest.jpg" -->
+
+~~~~ 
+
+https://www.ledauphine.com/faits-divers-justice/2021/02/17/crest-une-deuxieme-installation-d-orange-incendiee-en-24-heures
+
+@@@
+
+## Point d'échange Internet
+
+(nœud de raccordement nationaux)
+
+@@@
+
+<!-- .slide: data-background="images/infra-ixp.png" -->
+
+@@@
+
+<!-- .slide: data-background="images/infra-ixp-paris.png" -->
+
+
+@@@
+
+<!-- .slide: data-background="images/infra-datacenter.jpg" -->
+
+@@@
+
+
+## Datacenter
+
+(stockage de données, nœuds de raccordement nationaux)
+
+~~~~~
+
+https://en.wikipedia.org/wiki/Data_center#Data_Center_Levels_and_Tiers
+
+https://www.youtube.com/watch?v=XZmGGAbHqa0
+
+@@@
+
+<!-- .slide: data-background="images/infra-datacenter-inside.jpg" -->
+
+@@@
+
+## câblage terrestre (_Internet backbone_)
+
+(lien entre les nœuds)
+
+~~~~
+
+https://fr.wikipedia.org/wiki/Maillage_de_l'infrastructure_Internet_en_France
+
+@@@
+
+
+<!-- .slide: data-background="images/infra-fibre-optique.jpg" -->
+
+~~~~
+
+https://commons.wikimedia.org/wiki/File:Verlegte_Glasfaserkabeln_in_einem_Dorf.jpg
+
+
+@@@
+
+<!-- .slide: data-background="images/infra-fibre-optique-detail.jpg" -->
+
+~~~~
+
+https://en.wikipedia.org/wiki/Fiber-optic_cable#/media/File:RibbonCutout2.jpg
+
+@@@
+
+<!-- .slide: data-background="images/infra-reseau-free.webp" -->
+
+~~~~ 
+
+https://www.universfreebox.com/article/29910/Le-reseau-longue-distance-du-groupe-Iliad-Free-compte-pres-de-80-000-km-lineaires-de-fibre-optique
+
+@@@
+
+<!-- .slide: data-background="images/infra-reseau-ielo.png" data-background-size="contain" -->
+
+~~~~ 
+
+https://www.ielo.net/#/
+
+
+@@@
+
+<!-- .slide: data-background="images/traceroute-seattle-paris.png" -->
+
+@@@
+
+## câblage _sous-marin_
+
+~~~~
+
+via https://fr.wikipedia.org/wiki/C%C3%A2ble_sous-marin
+https://shs.cairn.info/revue-defense-nationale-2015-9-page-117?lang=fr
+https://histochronum.com/accueil-1-copy/les-cables-sous-marins-et-les-mega-constellations-de-satellites/la-technique/
+
+@@@
+
+<!-- .slide: data-background="images/infra-cables-monde.png" -->
+
+~~~~
+
+https://www.submarinecablemap.com/
+
+@@@
+
+<!-- .slide: data-background="images/infra-cables-europe-ouest.png" -->
+
+
+@@@
+
+<!-- .slide: data-background="images/infra-cables-pole-nord.png" -->
+
+@@@
+
+<!-- .slide: data-background="images/infra-cables-far-north.png" -->
+
+~~~~
+
+https://www.farnorthfiber.com/
+
+@@@
+
+<!-- .slide: data-background="images/infra-cables-dunant.png" -->
+
+@@@
+
+<!-- .slide: data-background="images/infra-cables-monde.png" -->
+
+@@@
+
+<!-- .slide: data-background="images/infra-cables-monde-google.png" -->
+
+@@@
+
+<!-- .slide: data-background="images/documentaire-cables-verge.jpg" -->
+
+~~~~
+
+@@@
+
+<!-- .slide: data-background="images/documentaire-cables-arte.jpg" data-background-size="contain" -->
+
+~~~~
+
+https://www.arte.tv/fr/videos/101363-000-A/les-pionniers-des-cables-sous-marins/
