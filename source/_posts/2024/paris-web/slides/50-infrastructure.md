@@ -47,7 +47,7 @@ https://www.ledauphine.com/faits-divers-justice/2021/02/17/crest-une-deuxieme-in
 
 @@@
 
-## Point d'échange Internet
+## Point d'échange Internet (<abbr title="Internet eXchange Point">IXP</abbr>)
 
 (entrée sur l'autoroute)
 

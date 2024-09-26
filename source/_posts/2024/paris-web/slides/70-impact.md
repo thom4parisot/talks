@@ -50,6 +50,17 @@ Enchevêtrement de droits d'accès, de puissance économique des opérateurs de 
 
 @@@
 
+<!-- .slide: data-background="images/email-blue-check.png" data-background-size="contain" -->
+
+~~~~
+
+Quand une entreprise qui possède des câbles sous-marins, des téléphones, les services par défaut du téléphone, le navigateur web et la régie publicitaire dominante
+et que cette entreprise
+
+https://workspaceupdates.googleblog.com/2023/05/expanding-gmail-security-BIMI.html
+
+@@@
+
 ## Comment ~~manger~~ surfer mieux ?
 
 [FAI militant](https://www.fdn.fr/), [relocaliser ses services clés](https://www.chatons.org/), acheter d'occasion, favoriser des services conviviaux et respectueux des données.
