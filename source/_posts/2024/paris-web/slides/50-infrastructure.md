@@ -211,4 +211,4 @@ https://www.arte.tv/fr/videos/101363-000-A/les-pionniers-des-cables-sous-marins/
 
 # Le _point commun_ de tous ces éléments ?
 
-Ce sont des équipements essentiellement privés.<!-- .element: class="fragment" -->
+Ce sont des équipements essentiellement privés avec des droits de péage.<!-- .element: class="fragment" -->
