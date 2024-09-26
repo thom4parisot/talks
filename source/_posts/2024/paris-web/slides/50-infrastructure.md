@@ -142,6 +142,22 @@ https://histochronum.com/accueil-1-copy/les-cables-sous-marins-et-les-mega-const
 
 @@@
 
+<!-- .slide: data-background="images/infra-cable.jpg" -->
+
+~~~~
+
+https://commons.wikimedia.org/wiki/File:HAW-1_Submarine_Telephone_Cable_in_Hanauma_Bay_June_2021.jpg
+
+@@@
+
+<!-- .slide: data-background="images/infra-cable-coupe.jpg" -->
+
+~~~~
+
+https://commons.wikimedia.org/wiki/File:Basslink_Cable_Cross_Section.jpg
+
+@@@
+
 <!-- .slide: data-background="images/infra-cables-monde.png" -->
 
 ~~~~
@@ -190,3 +206,9 @@ https://www.farnorthfiber.com/
 ~~~~
 
 https://www.arte.tv/fr/videos/101363-000-A/les-pionniers-des-cables-sous-marins/
+
+@@@
+
+# Le _point commun_ de tous ces éléments ?
+
+Ce sont des équipements essentiellement privés.<!-- .element: class="fragment" -->

@@ -1,8 +1,16 @@
 <!-- .slide: data-background="images/serre-des-comilles.jpg"  data-state="background-dark" id="impact" -->
 
-# 🌿 Approche sensible
+# 🌿 Conclusion sensible
 
-(toutes les autres questions qu'on se pose)
+(toutes ces questions qu'on se pose)
+
+@@@
+
+# 🤩
+
+~~~~
+
+
 
 @@@
 
