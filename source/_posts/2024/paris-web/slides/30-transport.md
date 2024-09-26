@@ -6,7 +6,7 @@
 
 @@@
 
-## Comme un… _courrier_
+## Comme du _courrier_ postal
 
 @@@
 
@@ -24,6 +24,12 @@ _example.com_ : serveur
 _test_ : destinataire\
 _@_ : chez\
 _example.com_ : ~~serveur~~ foyer numérique
+
+<small>(parce que dans un même foyer il peut y avoir plusieurs serveurs)</small>
+
+~~~~
+
+C'est un peu le principe des boîtes aux lettres dans un immeuble. Chaque boîte étant un serveur.
 
 @@@
 
@@ -51,9 +57,9 @@ _example.com_ : ~~serveur~~ foyer numérique
 
 @@@
 
-# Trouver un itinéraire
+# Logistique d'acheminement
 
-(vous passerez par `154.54.6.222` puis `154.54.6.217` avant d'arriver en `154.54.83.73`)
+(vous tournerez en direction de `154.54.6.222` puis `154.54.6.217` avant d'arriver en `154.54.83.73`)
 
 @@@
 

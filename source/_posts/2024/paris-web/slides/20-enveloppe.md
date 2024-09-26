@@ -1,6 +1,6 @@
 <!-- .slide: data-background="images/serre-des-comilles.jpg"  data-state="background-dark" id="enveloppe" -->
 
-# 🔎 Qu'est-ce qu'il y a dans l'enveloppe ?
+# 🔎 Qu'est-ce qu'il y a<br> dans l'enveloppe ?
 
 (biologie d'un courriel)
 
@@ -23,7 +23,7 @@
 
 @@@
 
-## Un courriel,<br> c'est un _courrier_ <span>électronique</span><!-- .element: class="fragment "-->
+## Un courriel,<br>c'est — littéralement —<br>un _courrier_ électronique
 
 @@@
 
@@ -54,9 +54,9 @@
 
 ## Donc des éléments _encodés_ / _à décoder_
 
-<span class="fragment">(c'est-à-dire, des _images_, de l'_audio_, des _vidéos_)</span>
+<span class="fragment">(c'est-à-dire des _images_, de l'_audio_, des _vidéos_)</span>
 
-<span class="fragment">(et… y compris le _texte_ !)</span>
+<span class="fragment">(y compris le _texte_ !)</span>
 
 @@@
 

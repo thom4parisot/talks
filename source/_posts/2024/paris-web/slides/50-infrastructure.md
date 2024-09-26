@@ -10,15 +10,15 @@ Métaphore la plus adaptée sera celle des poupées russes, ou des ruisseaux qui
 
 @@@
 
-## Fournisseur d'accès
+## Fournisseur d'accès (<abbr title="Fournisseur d'Accès à Internet">FAI</abbr>)
 
-(raccordement à son réseau connecté à un réseau connecté à un autre réseau…)
+(raccordement à son réseau, qui est connecté à un autre réseau lui-même connecté à encore un autre réseau…)
 
 @@@
 
 ## Boucle locale
 
-(accrochez vos ceintures)
+(du chemin à la départementale)
 
 @@@
 
@@ -35,6 +35,8 @@ Plus de 21K en France (https://www.ariase.com/box/carte-nra)
 
 ## Concentrateur réseau local (_hub_)
 
+(de la départementale à la nationale)
+
 @@@
 
 <!-- .slide: data-background="images/infra-nra-crest.jpg" -->
@@ -47,7 +49,7 @@ https://www.ledauphine.com/faits-divers-justice/2021/02/17/crest-une-deuxieme-in
 
 ## Point d'échange Internet
 
-(nœud de raccordement nationaux)
+(entrée sur l'autoroute)
 
 @@@
 

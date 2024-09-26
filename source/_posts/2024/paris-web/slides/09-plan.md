@@ -1,5 +1,5 @@
 <span>486 000+</span><!-- .element: class="r-fit-text" style="margin-top: 0" -->
-emails auront été envoyés pendant cette présentation\
+emails envoyés pendant la durée de cette présentation\
 ([chiffres France 2011, Contactlab](https://www.arobase.org/actu/chiffres-email.htm))
 
 ~~~~
@@ -17,6 +17,6 @@ Source 2011, Contactlab : https://www.arobase.org/actu/chiffres-email.htm
 
 # Les paysages qu'on va traverser ensemble
 
-[🔎 contenu d'un courriel](#/enveloppe)<!-- .element: class="fragment" -->\
-[☎️ transmission de courriel](#/transport)<!-- .element: class="fragment" -->\
-[📬 transport des données](#/infrastructure)<!-- .element: class="fragment" -->\
+🔎 [contenu d'un courriel](#/enveloppe)\
+☎️ [transmission de courriel](#/transport)\
+📬 [transport des données](#/infrastructure)
