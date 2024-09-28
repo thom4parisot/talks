@@ -35,14 +35,11 @@ jobs:
         NODE_ENV: production
 
     # Deploy
-    - name: Install mc
-      run: |
-        wget --quiet https://dl.min.io/client/mc/release/linux-amd64/mc
-        chmod +x mc
-    - name: Setup mc
-      run: ./mc alias set deuxfleurs https://garage.deuxfleurs.fr "${{ secrets.MINIO_ACCESS_KEY_ID }}" ${{ secrets.MINIO_SECRET_ACCESS_KEY }} --api S3v4
-
     - name: Transfer
       if: ${{ contains(github.event.head_commit.message, '[deploy]') }}
-      run: ./mc mirror --preserve --overwrite --summary --quiet ./public/ deuxfleurs/thom4.net/talks/
+      run: aws s3 sync --delete --only-show-errors --exact-timestamps --endpoint-url https://garage.deuxfleurs.fr ./public/ s3://thom4.net/talks/
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.MINIO_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.MINIO_SECRET_ACCESS_KEY }}
+        AWS_DEFAULT_REGION: garage
 
