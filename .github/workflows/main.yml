@@ -41,7 +41,7 @@ jobs:
         known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
 
     - name: Transfer
-      run: rsync --compress --archive --stats --delete ./public/ oncletom@${{ secrets.SSH_HOST }}:./photography/
+      run: rsync --compress --archive --stats --delete ./public/ oncletom@${{ secrets.SSH_HOST }}:./talks/
 
     # Deploy
     # - name: Transfer
