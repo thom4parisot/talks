@@ -2,6 +2,7 @@
 title: Monolithe
 lang: fr
 date: 2015-10-16
+category: [Talk]
 event:
   name: bdx.io
   location: Bordeaux

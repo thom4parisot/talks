@@ -2,6 +2,7 @@
 title: Se libérer des entreprises pour créer son équilibre et payer ses factures
 lang: fr
 date: 2018-04-19
+category: [Talk]
 with:
   - Claire Zuliani (https://www.clairezuliani.com/)
 event:

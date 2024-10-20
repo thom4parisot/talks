@@ -3,6 +3,7 @@ title: Exploration ludique de Node.js
 lang: fr
 layout: workshop
 date: 2019-03-25
+category: [Workshop]
 event:
   name: La Turbine.coop
   location: Grenoble

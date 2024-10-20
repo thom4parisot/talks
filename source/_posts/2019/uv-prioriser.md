@@ -3,6 +3,7 @@ title: Gagner du temps en mettant des priorités
 lang: fr
 layout: workshop
 date: 2019-11-05
+category: [Workshop]
 event:
   name: Usine Vivante
   location: Crest

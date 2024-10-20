@@ -3,6 +3,7 @@ title: Le Web en Offline avec Gears et HTML5
 lang: fr
 date: 2009-10-10
 layout: workshop
+category: [Workshop]
 event:
   name: Paris Web
   location: Paris

@@ -2,6 +2,7 @@
 title: README, un fichier nommé plaisir
 lang: fr
 date: 2014-03-06
+category: [Talk]
 event:
   name: ChtiJS
   location: Lille

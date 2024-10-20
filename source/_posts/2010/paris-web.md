@@ -3,6 +3,7 @@ title: Industrialiser l'artisanat de l'intégration Web
 lang: fr
 date: 2010-10-16
 layout: workshop
+category: [Workshop]
 event:
   name: Paris Web
   location: Paris

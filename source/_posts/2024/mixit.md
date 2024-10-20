@@ -2,6 +2,7 @@
 title: Recruter avec amour
 lang: fr
 date: 2024-04-25
+image: images/common-lens.jpg
 event:
   name: MiXiT
   location: Lyon
@@ -9,7 +10,7 @@ event:
   url: https://mixitconf.org/fr/2024/recruter-avec-amour
 cover:
 video:
-category: [Featured]
+category: [Featured, Talk]
 slides:
   - file: 00-title.md
   - file: 01-intro.md

@@ -2,6 +2,7 @@
 title: Business Logic in the Cloud with Google Apps Scripts
 lang: en-GB
 date: 2013-01-18
+category: [Talk]
 event:
   name: TakeOff
   location: Lille

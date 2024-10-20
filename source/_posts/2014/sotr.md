@@ -2,6 +2,7 @@
 title: Solid Grunt
 lang: en-GB
 date: 2014-06-06
+category: [Talk]
 event:
   name: Scotch on the Rocks
   location: Edinburgh

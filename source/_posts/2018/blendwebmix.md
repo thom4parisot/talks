@@ -4,6 +4,7 @@ lang: fr
 date: 2018-10-24
 with:
   - Noémie Girard (https://noemiegirard.co/)
+category: [Talk]
 event:
   name: BlendWebMix
   location: Lyon

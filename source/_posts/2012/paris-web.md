@@ -2,6 +2,7 @@
 title: README, un fichier nommé plaisir
 lang: fr
 date: 2012-10-18
+category: [Talk]
 event:
   name: Paris Web
   location: Paris

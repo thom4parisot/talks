@@ -3,6 +3,7 @@ title: Open Source code at the BBC
 lang: en-GB
 theme: bbcrd
 date: 2014-10-01
+category: [Talk]
 event:
   name: EBU DevCon
   location: Geneva

@@ -3,6 +3,7 @@ title: Open Source at the BBC
 lang: en-GB
 theme: bbcrd
 date: 2014-11-13
+category: [Talk]
 event:
   name: '{ develop: BBC }'
   location: London

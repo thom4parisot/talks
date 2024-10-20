@@ -2,6 +2,7 @@
 title: "Data for 🙋 and 🤖"
 lang: en-GB
 date: 2016-11-09
+category: [Lecture]
 event:
   name: London School of Economics
   location: London

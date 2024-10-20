@@ -3,6 +3,7 @@ title: Créer un livre numérique avec du texte et un navigateur web
 lang: fr
 layout: workshop
 date: 2019-03-27
+category: [Workshop]
 event:
   name: La Turbine.coop
   location: Grenoble

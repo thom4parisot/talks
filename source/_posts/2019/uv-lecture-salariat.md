@@ -3,6 +3,7 @@ title: Imaginer un salariat sans subordination
 lang: fr
 layout: workshop
 date: 2019-10-15
+category: [Workshop]
 event:
   name: Usine Vivante
   location: Crest

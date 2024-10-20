@@ -2,6 +2,7 @@
 title: Solid Grunt
 lang: fr
 date: 2013-11-23
+category: [Talk]
 event:
   name: FranceJS
   location: Toulouse

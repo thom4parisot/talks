@@ -9,7 +9,7 @@ event:
   url: https://mixitconf.org/fr/2023/ce-code-qui-nous-lit
 cover: images/londres-river-lea.jpg
 video: https://vimeo.com/819306914
-category: [Featured]
+category: [Talk]
 slides:
   - file: title.md
   - file: books.md

@@ -2,6 +2,7 @@
 title: README.book
 lang: fr
 date: 2017-11-23
+category: [Talk]
 event:
   name: Codeurs en Seine
   location: Rouen

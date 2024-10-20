@@ -2,6 +2,7 @@
 title: End-to-end modular architecture at the BBC
 lang: en-GB
 date: 2015-06-04
+category: [Talk]
 event:
   name: Web2day
   location: Nantes

@@ -3,6 +3,7 @@ title: Imprimer une revue avec du texte et un navigateur web
 lang: fr
 layout: workshop
 date: 2019-12-16
+category: [Lecture]
 event:
   name: Master Design Transdisciplinaire, Cultures et Territoires
   location: Toulouse

@@ -3,6 +3,7 @@ title: Renforcer sa pratique de Node.js
 lang: fr
 layout: workshop
 date: 2019-01-24
+category: [Workshop]
 event:
   name: RennesJS
   location: Rennes

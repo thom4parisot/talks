@@ -2,6 +2,7 @@
 title: README Driven Development
 lang: en-GB
 date: 2014-07-19
+category: [Talk]
 event:
   name: Open Knowledge Festival
   location: Berlin

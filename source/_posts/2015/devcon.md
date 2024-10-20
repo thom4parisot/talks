@@ -3,6 +3,7 @@ title: Rethinking applications design with Docker
 lang: en-GB
 theme: bbcrd
 date: 2015-10-07
+category: [Talk]
 event:
   name: EBU DevCon
   location: Geneva

@@ -2,6 +2,7 @@
 title: "L'industrialisation de l'intégration Web : la révolution de l'artisan devenu ouvrier"
 lang: fr
 date: 2011-10-14
+category: [Talk]
 event:
   name: Paris Web
   location: Paris

@@ -8,7 +8,7 @@ event:
   location: Lyon
   duration: 25
   url: http://2015.blendwebmix.com/programme/an-end-to-end-modular-architecture-at-the-bbc.html
-category: [Featured]
+category: [Talk]
 video: https://www.youtube.com/watch?v=unv-G5RlWkg
 slides:
   - file: intro.md

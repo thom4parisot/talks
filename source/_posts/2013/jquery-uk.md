@@ -2,6 +2,7 @@
 title: The Promise of jQuery Deferred
 lang: en-GB
 date: 2013-04-19
+category: [Talk]
 event:
   name: jQuery UK 2013
   location: Oxford

@@ -2,6 +2,7 @@
 title: Writing a book in 2017
 lang: en-GB
 date: 2017-09-12
+category: [Talk]
 event:
   name: Write the Docs
   location: Prague

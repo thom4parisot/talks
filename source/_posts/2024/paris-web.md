@@ -2,6 +2,7 @@
 title: Appuyez sur Entrée pour envoyer ce message
 lang: fr
 date: 2024-09-26
+image: images/serre-des-comilles.jpg
 event:
   name: Paris-Web
   location: Paris
@@ -9,7 +10,7 @@ event:
   url: https://www.paris-web.fr/2024/conference/appuyez-sur-entree-pour-envoyer-ce-message
 cover:
 video:
-category: [Featured]
+category: [Featured, Talk]
 slides:
   - file: 00-title.md
   - file: 05-me-situer.md

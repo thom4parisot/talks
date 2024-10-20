@@ -2,6 +2,7 @@
 title: UX.js
 lang: en-GB
 date: 2014-11-17
+category: [Talk]
 event:
   name: DotJS
   location: Paris

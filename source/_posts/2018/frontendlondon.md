@@ -7,7 +7,7 @@ event:
   location: London
   duration: 30
   url: https://www.frontendlondon.co.uk/archive#fel45
-category: [Featured]
+category: [Featured, Talk]
 cover: images/peak-district-train.jpg
 video: https://www.youtube.com/watch?v=ac_QcHv-tyo
 slides:

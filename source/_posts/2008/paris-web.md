@@ -3,6 +3,7 @@ title: Développement efficace avec les frameworks CSS
 lang: fr
 date: 2008-11-15
 layout: workshop
+category: [Workshop]
 event:
   name: Paris Web
   location: Paris
