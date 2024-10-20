@@ -15,7 +15,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment:
-      name: github-pages
+      name: production
       url: https://thom4.net/talks/
     steps:
     # Setup
@@ -34,12 +34,21 @@ jobs:
       env:
         NODE_ENV: production
 
-    # Deploy
+    - name: Setup SSH
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: "${{ secrets.SSH_PRIVATE_KEY }}"
+        known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+
     - name: Transfer
-      if: ${{ contains(github.event.head_commit.message, '[deploy]') }}
-      run: aws s3 sync --delete --only-show-errors --exact-timestamps --endpoint-url https://garage.deuxfleurs.fr ./public/ s3://thom4.net/talks/
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.MINIO_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.MINIO_SECRET_ACCESS_KEY }}
-        AWS_DEFAULT_REGION: garage
+      run: rsync --compress --archive --stats --delete ./public/* oncletom@${{ secrets.SSH_HOST }}:./photography/
+
+    # Deploy
+    # - name: Transfer
+    #   if: ${{ contains(github.event.head_commit.message, '[deploy]') }}
+    #   run: aws s3 sync --delete --only-show-errors --exact-timestamps --endpoint-url https://garage.deuxfleurs.fr ./public/ s3://thom4.net/talks/
+    #   env:
+    #     AWS_ACCESS_KEY_ID: ${{ secrets.MINIO_ACCESS_KEY_ID }}
+    #     AWS_SECRET_ACCESS_KEY: ${{ secrets.MINIO_SECRET_ACCESS_KEY }}
+    #     AWS_DEFAULT_REGION: garage
 
