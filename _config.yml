@@ -10,7 +10,7 @@ description: |
   from public speaking, collaborative workshops and down-to-earth events (free or paid).
 author: Thomas Parisot
 email: hi@thom4.net
-default_cover: https://thom4.net/images/thomas-parisot.jpg
+default_cover: https://thom4.net/assets/avatar.avif
 lang: en-GB
 timezone: Europe/Paris
 
@@ -91,6 +91,7 @@ markdown:
     permalinkSymbol: §
   plugins:
   - markdown-it-abbr
+  - markdown-it-bracketed-spans
   - markdown-it-attrs
   - markdown-it-footnote
   - markdown-it-ins

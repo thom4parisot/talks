@@ -40,7 +40,8 @@
     "hexo-renderer-markdown-it": "^4.1.0",
     "hexo-server": "^2.0.0",
     "hexo-theme-thom4": "github:thom4parisot/hexo-theme#semver:^v2",
-    "markdown-it-attrs": "^3.0.3"
+    "markdown-it-attrs": "^3.0.3",
+    "markdown-it-bracketed-spans": "^1.0.1"
   },
   "optionalDependencies": {
     "decktape": "^3.1.0"

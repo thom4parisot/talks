@@ -2,7 +2,12 @@
 
 Cette présentation aurait pu s'appeler
 
-# Et si on apprenait à se rencontrer <span>**professionnellement** ?</span><!-- .element: class="fragment" -->
+# Et si on apprenait à se rencontrer [**professionnellement** ?]{.fragment}
+
+*test*{.footer}
+
+[test]
+[test]{ .footer }
 
 @@@
 
@@ -11,13 +16,13 @@ Cette présentation aurait pu s'appeler
 @@@
 
 Est-ce que
-<span>en passant du temps à travailler ensemble,</span><!-- .element: class="fragment" --><br>
-<span>on génère **enthousiasme et curiosité**,</span><!-- .element: class="fragment" --><br>
-<span>on peut <q>avoir une **communication honnête et ouverte**</q>,</span><!-- .element: class="fragment" -->
-<span><q>**nourrir notre propre croissance**</q></span><!-- .element: class="fragment" --><br>
-<span>et celle d'**autrui** ?</span><!-- .element: class="fragment" -->
+[en passant du temps à travailler ensemble,]{.fragment}<br>
+[on génère **enthousiasme et curiosité**,]{.fragment}<br>
+[on peut <q>avoir une **communication honnête et ouverte**</q>,]{.fragment}
+[<q>**nourrir notre propre croissance**</q>]{.fragment}br>
+[et celle d'**autrui** ?]{.fragment}
 
-<span>Bref, *faire équipe*.</span><!-- .element: class="fragment" -->
+[Bref, *faire équipe*.]{.fragment}
 
 @@@
 
