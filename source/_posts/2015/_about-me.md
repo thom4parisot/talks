@@ -2,7 +2,7 @@
 
 ## Bonjour,<br> I am **Thomas**
 
-[thom4.net](https://thom4.net) – [@thom4parisot](https://twitter.com/thom4parisot)
+[thom4.net](https://thom4.net) – [@thom4parisot](https://twitter.com/thom4parisot) {.footer}
 
 @@@
 

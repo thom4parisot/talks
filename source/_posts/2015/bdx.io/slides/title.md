@@ -6,4 +6,4 @@
 
 # Monolithe
 
-16 Octobre 2015 — [bdx.io](http://www.bdx.io/)
+16 Octobre 2015 — [bdx.io](http://www.bdx.io/) {.footer}

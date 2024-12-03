@@ -22,7 +22,7 @@
 
 https://blog.jessfraz.com/post/docker-containers-on-the-desktop/
 
-(All your sockets are belong to us!)
+(All your sockets are belong to us!) {.footer}
 
 @@@
 

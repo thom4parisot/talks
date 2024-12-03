@@ -2,7 +2,7 @@
 
 ## Bonjour,<br> je suis **Thomas** Parisot
 
-[thom4.net](https://thom4.net) – [@thom4parisot](https://twitter.com/thom4parisot)
+[thom4.net](https://thom4.net) – [@thom4parisot](https://twitter.com/thom4parisot) {.footer}
 
 @@@
 
@@ -16,4 +16,4 @@ code, node.js, pain, permaculture, photographie etc.
 
 innovation numérique au service du bien commun
 
-[dtc-innovation.org](https://dtc-innovation.org/)
+[dtc-innovation.org](https://dtc-innovation.org/) {.footer}

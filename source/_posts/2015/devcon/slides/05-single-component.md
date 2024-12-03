@@ -77,7 +77,7 @@ NODE_ENV=test
 DATABASE_URL=postgresql://host:port/db?pool=25
 ```
 
-Think [Twelve-Factor](http://12factor.net/).
+Think [Twelve-Factor](http://12factor.net/). {.footer}
 
 ~~~~
 

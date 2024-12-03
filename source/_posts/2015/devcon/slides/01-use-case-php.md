@@ -2,7 +2,7 @@
 
 # Once upon a time…
 
-(when I was a PHP developer…)
+(when I was a PHP developer…) {.footer}
 
 @@@
 

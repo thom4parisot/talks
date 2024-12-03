@@ -147,7 +147,7 @@ Run and tweak code in your browser.
 
 ![](images/asciidoctor-bash-dollar.png)
 
-Hat tip to [Remy Sharp][] <br> 👉 [remysharp.com/2017/03/27/dollar-in-code-examples][dollar-code]
+Hat tip to [Remy Sharp][] <br> 👉 [remysharp.com/2017/03/27/dollar-in-code-examples][dollar-code] {.footer}
 
 [dollar-code]: https://remysharp.com/2017/03/27/dollar-in-code-examples
 [Remy Sharp]: https://remysharp.com/
