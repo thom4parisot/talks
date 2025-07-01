@@ -16,41 +16,27 @@ You can find eventual talks in the [`proposals/`](proposals) folder. For sure I 
 
 ## Biography
 
-### In English
-
-I design and develop open source digital services with a user-centric approach in multidisciplinary teams.
-I focus my efforts on environmental projects, knowledge sharing and independant community spaces.
-I authored the book "Node.js, learning by doing" [^1].
-
-On my spare time, I bake sourdough bread for friends and family, hike and camp in the surroundings.
-
-I used to [work at BBC R&D](https://www.bbc.co.uk/rd/people/thomas-parisot) in London, and I have been involved in the [Sud Web conference](https://sudweb.fr).
-
-- **Main website**: https://thom4.net
-- **Professional website**: https://détour.studio
-
-[^1]: Parisot, T. (2018). _Node.js : bonnes pratiques pour la programmation Javascript applicative et modulaire_. Paris, France: Eyrolles.
-
-
 ### En français
 
-Je conçois, accompagne et développe des services numériques en allant à la
-rencontre des usagers.
-J'utilise une combinaison de technologies web, de pratiques agiles et de pédagogie active
-pour mettre à l'aise les personnes avec qui je travaille.
+Développement web orienté usages dans des équipes multi-disciplinaires.\
+J'ai un goût prononcé pour les connaissances partagées, la restauration du vivant et l'accessibilité numérique.
+Mes pratiques de travail sont teintées du [manifeste agile](https://manifesteagile.fr/), de soin en santé mentale, de [convivialité](https://fr.wikipedia.org/wiki/Outil_convivial) et de logiciels libres.
 
-Je crois beaucoup à l'apprentissage multidisciplinaire, au travail convivial et à l'autonomie.
-J'apporter mes connaissances et mon énergie de manière bénévole à des
-associations locales, en œuvrant à la restauration de la biodiversité et du vivant.
+Mon [activité professionnelle](https://détour.studio/) est hébergée
+par la [coopérative d'activités Solstice](https://solstice.coop/)
+en ruralité, dans la vallée de la Drôme.\
+Des contributions notables :
+- un [livre sur Node.js](https://github.com/thom4parisot/nodebook#readme) en publication multi-formats (papier, web, PDF et code) ;
+- un [article scientifique "Repenser les chaînes de publication par l’intégration des pratiques du développement logiciel"](https://shs.cairn.info/revue-sciences-du-design-2018-2-page-45?lang=fr) ;
+- le [budget ouvert de la ville de Montreuil](https://www.montreuil.fr/vie-citoyenne/finances-et-marches-publics/explorer-les-comptes-de-la-ville).
 
-Avant je travaillais dans [le département R&D de la BBC](https://bbc.co.uk/rd)
-et je co-organisais la conférence [Sud Web](https://sudweb.fr).
-J'ai aussi co-fondé une startup et [on s'est bien raté](https://www.youtube.com/watch?v=NVpH1w_aSUk).
+Dans de précédentes vies, j'ai travaillé à Londres dans [le département R&D de la BBC](https://www.bbc.co.uk/rd/author/?id=author-people-thomas-parisot) et à Bordeaux en [agence numérique](https://www.clever-age.com/),
+co-organisé les conférences [Sud Web](https://sudweb.fr) et
+co-fondé une [<span lang=en>startup</span> qui a terminé aux prud'hommes](https://www.youtube.com/watch?v=NVpH1w_aSUk).
 
 ----
 
-![](thomas-parisot.jpg)
-*Photo Credit*: [Noems](https://twitter.com/noeems).
+![]([thomas-parisot.jpg](https://thom4.net/assets/avatar.avif))
 
 ## Export
 
